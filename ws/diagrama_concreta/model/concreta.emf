@@ -1,0 +1,44 @@
+@namespace(uri="concreta",prefix="concreta")
+@gmf
+package concreta;
+
+@gmf.diagram
+class MKJDiagramaClases {
+    val MKJClase[*] listaClases;
+    val MKJRelacion[*] listaRelaciones;
+    val MKJPaquete[*] listaPaquetes;
+}
+
+@gmf.node(label = "nombre")
+class MKJPaquete{
+	attr String nombre;
+	attr String ruta;
+	val MKJPaquete[*] paquetes;
+	val MKJClase[*] clases;
+}
+
+@gmf.node(label = "name")
+class MKJClase {
+	attr String name;
+    @gmf.compartment
+    val MKJAtributo[*] atributos;
+    @gmf.compartment
+    val MKJmetodo[*] metodos;
+}
+
+@gmf.node(label = "name")
+class MKJAtributo {
+	attr String name;
+
+}
+
+@gmf.node(label = "name")
+class MKJmetodo {
+	attr String name;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class MKJRelacion {
+    ref MKJClase source;
+    ref MKJClase target;
+}

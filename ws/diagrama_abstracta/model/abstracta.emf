@@ -1,0 +1,47 @@
+@namespace(
+	uri="abstracta",
+	prefix="abstracta")
+@gmf
+package abstracta;
+
+class MKJPaquete{
+	
+	attr String nombre;
+	attr String ruta;
+	
+	val MKJPaquete[*] paquetes;
+	val MKJClase[*] clases;
+}
+
+class MKJClase {
+	attr String name;
+    val MKJAtributo[*] atributos;
+    val MKJmetodo[*] metodos;
+    val MKJRelacion[*] relaciones;
+}
+
+class MKJAtributo {
+	attr String nombre;
+
+}
+
+class MKJmetodo {
+	attr String nombre;
+	attr boolean retorno;
+	val MKJAtributo[*] listaParametros;
+}
+
+class MKJRelacion {
+    attr String name;
+    attr String tipo;
+    attr String multiplicidad1;
+    attr String multiplicidad2;
+    attr String rol1;
+    attr String rol2;
+    attr String navegabilidad1;	
+    attr String navegabilidad2;
+
+    ref MKJClase source;
+    ref MKJClase target;
+}
+
