@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link abstracta.MKJClase#getName <em>Name</em>}</li>
+ *   <li>{@link abstracta.MKJClase#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.MKJClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.MKJClase#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.MKJClase#getRelaciones <em>Relaciones</em>}</li>
@@ -53,6 +54,32 @@ public interface MKJClase extends EObject {
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ruta</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ruta</em>' attribute.
+	 * @see #setRuta(String)
+	 * @see abstracta.AbstractaPackage#getMKJClase_Ruta()
+	 * @model
+	 * @generated
+	 */
+	String getRuta();
+
+	/**
+	 * Sets the value of the '{@link abstracta.MKJClase#getRuta <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ruta</em>' attribute.
+	 * @see #getRuta()
+	 * @generated
+	 */
+	void setRuta(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.
 	 * The list contents are of type {@link abstracta.MKJAtributo}.
 	 * <!-- begin-user-doc -->
@@ -70,7 +97,7 @@ public interface MKJClase extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Metodos</b></em>' containment reference list.
-	 * The list contents are of type {@link abstracta.MKJmetodo}.
+	 * The list contents are of type {@link abstracta.MKJMetodo}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Metodos</em>' containment reference list isn't clear,
@@ -82,7 +109,7 @@ public interface MKJClase extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<MKJmetodo> getMetodos();
+	EList<MKJMetodo> getMetodos();
 
 	/**
 	 * Returns the value of the '<em><b>Relaciones</b></em>' containment reference list.

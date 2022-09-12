@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/diagrama_abstracta/src" modelPluginID="diagrama_abstracta"
+    modelName="Abstracta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>abstracta.emf</foreignModel>
+  <genPackages prefix="Abstracta" disposableProviderFactory="true" ecorePackage="abstracta.ecore#/">
+    <genClasses ecoreClass="abstracta.ecore#//ModelFactory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//ModelFactory/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//ModelFactory/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//ModelFactory/paquetes"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MKJPaquete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJPaquete/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJPaquete/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJPaquete/paquetes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJPaquete/clases"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MKJClase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJClase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJClase/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/atributos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/metodos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/relaciones"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MKJAtributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MKJMetodo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJMetodo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJMetodo/retorno"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJMetodo/listaParametros"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MKJRelacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/multiplicidad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/multiplicidad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/rol1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/rol2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/navegabilidad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/navegabilidad2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJRelacion/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJRelacion/target"/>
+    </genClasses>
+    <genClasses ecoreClass="abstracta.ecore#//MHJAsociacion"/>
+    <genClasses ecoreClass="abstracta.ecore#//MKJContainment"/>
+    <genClasses ecoreClass="abstracta.ecore#//MKJAgregacion"/>
+    <genClasses ecoreClass="abstracta.ecore#//MKJHerencia"/>
+    <genClasses ecoreClass="abstracta.ecore#//MKJInterface"/>
+  </genPackages>
+</genmodel:GenModel>

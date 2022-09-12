@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link concreta.MKJClase#getIdentificador <em>Identificador</em>}</li>
  *   <li>{@link concreta.MKJClase#getName <em>Name</em>}</li>
  *   <li>{@link concreta.MKJClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link concreta.MKJClase#getMetodos <em>Metodos</em>}</li>
@@ -25,6 +26,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface MKJClase extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Identificador</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Identificador</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Identificador</em>' attribute.
+	 * @see #setIdentificador(String)
+	 * @see concreta.ConcretaPackage#getMKJClase_Identificador()
+	 * @model
+	 * @generated
+	 */
+	String getIdentificador();
+
+	/**
+	 * Sets the value of the '{@link concreta.MKJClase#getIdentificador <em>Identificador</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Identificador</em>' attribute.
+	 * @see #getIdentificador()
+	 * @generated
+	 */
+	void setIdentificador(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,13 +90,14 @@ public interface MKJClase extends EObject {
 	 * @return the value of the '<em>Atributos</em>' containment reference list.
 	 * @see concreta.ConcretaPackage#getMKJClase_Atributos()
 	 * @model containment="true"
+	 *        annotation="gmf.compartment layout='list'"
 	 * @generated
 	 */
 	EList<MKJAtributo> getAtributos();
 
 	/**
 	 * Returns the value of the '<em><b>Metodos</b></em>' containment reference list.
-	 * The list contents are of type {@link concreta.MKJmetodo}.
+	 * The list contents are of type {@link concreta.MKJMetodo}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Metodos</em>' containment reference list isn't clear,
@@ -79,8 +107,9 @@ public interface MKJClase extends EObject {
 	 * @return the value of the '<em>Metodos</em>' containment reference list.
 	 * @see concreta.ConcretaPackage#getMKJClase_Metodos()
 	 * @model containment="true"
+	 *        annotation="gmf.compartment layout='list' collapsible='false'"
 	 * @generated
 	 */
-	EList<MKJmetodo> getMetodos();
+	EList<MKJMetodo> getMetodos();
 
 } // MKJClase

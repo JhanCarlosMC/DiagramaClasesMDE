@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
+  <listaDiagramas nombre="Diagram One">
+    <listaClases name="Empresa">
+      <atributos name="nombre"/>
+    </listaClases>
+    <listaClases name="Empleado">
+      <atributos name="nombre"/>
+      <atributos name="cedula"/>
+      <metodos name="getNombre()"/>
+      <metodos name="getCedula()"/>
+    </listaClases>
+    <listaClases name="Producto">
+      <atributos name="nombre"/>
+      <metodos name="getNombre()"/>
+    </listaClases>
+    <listaPaquetes/>
+    <listaAsociaciones source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.2"/>
+    <listaConteiments source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.2"/>
+    <listaConteiments source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1"/>
+  </listaDiagramas>
+  <listaDiagramas nombre="Diagram tu">
+    <listaClases name="Hola">
+      <atributos/>
+    </listaClases>
+    <listaClases name="Hola 2"/>
+    <listaPaquetes nombre="Adio"/>
+    <listaPaquetes nombre="Adio"/>
+  </listaDiagramas>
+</concreta:ModelFactory>

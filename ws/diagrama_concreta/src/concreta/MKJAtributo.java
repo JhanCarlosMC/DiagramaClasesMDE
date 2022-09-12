@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJAtributo()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' border.color='255,255,255'"
  * @generated
  */
 public interface MKJAtributo extends EObject {

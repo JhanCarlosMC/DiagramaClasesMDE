@@ -68,6 +68,10 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	protected AbstractaSwitch<Adapter> modelSwitch =
 		new AbstractaSwitch<Adapter>() {
 			@Override
+			public Adapter caseModelFactory(ModelFactory object) {
+				return createModelFactoryAdapter();
+			}
+			@Override
 			public Adapter caseMKJPaquete(MKJPaquete object) {
 				return createMKJPaqueteAdapter();
 			}
@@ -80,12 +84,32 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 				return createMKJAtributoAdapter();
 			}
 			@Override
-			public Adapter caseMKJmetodo(MKJmetodo object) {
-				return createMKJmetodoAdapter();
+			public Adapter caseMKJMetodo(MKJMetodo object) {
+				return createMKJMetodoAdapter();
 			}
 			@Override
 			public Adapter caseMKJRelacion(MKJRelacion object) {
 				return createMKJRelacionAdapter();
+			}
+			@Override
+			public Adapter caseMHJAsociacion(MHJAsociacion object) {
+				return createMHJAsociacionAdapter();
+			}
+			@Override
+			public Adapter caseMKJContainment(MKJContainment object) {
+				return createMKJContainmentAdapter();
+			}
+			@Override
+			public Adapter caseMKJAgregacion(MKJAgregacion object) {
+				return createMKJAgregacionAdapter();
+			}
+			@Override
+			public Adapter caseMKJHerencia(MKJHerencia object) {
+				return createMKJHerenciaAdapter();
+			}
+			@Override
+			public Adapter caseMKJInterface(MKJInterface object) {
+				return createMKJInterfaceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -106,6 +130,20 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.ModelFactory <em>Model Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.ModelFactory
+	 * @generated
+	 */
+	public Adapter createModelFactoryAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link abstracta.MKJPaquete <em>MKJ Paquete</em>}'.
@@ -150,16 +188,16 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.MKJmetodo <em>MK Jmetodo</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.MKJMetodo <em>MKJ Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.MKJmetodo
+	 * @see abstracta.MKJMetodo
 	 * @generated
 	 */
-	public Adapter createMKJmetodoAdapter() {
+	public Adapter createMKJMetodoAdapter() {
 		return null;
 	}
 
@@ -174,6 +212,76 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMKJRelacionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.MHJAsociacion <em>MHJ Asociacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.MHJAsociacion
+	 * @generated
+	 */
+	public Adapter createMHJAsociacionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.MKJContainment <em>MKJ Containment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.MKJContainment
+	 * @generated
+	 */
+	public Adapter createMKJContainmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.MKJAgregacion <em>MKJ Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.MKJAgregacion
+	 * @generated
+	 */
+	public Adapter createMKJAgregacionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.MKJHerencia <em>MKJ Herencia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.MKJHerencia
+	 * @generated
+	 */
+	public Adapter createMKJHerenciaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.MKJInterface <em>MKJ Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.MKJInterface
+	 * @generated
+	 */
+	public Adapter createMKJInterfaceAdapter() {
 		return null;
 	}
 

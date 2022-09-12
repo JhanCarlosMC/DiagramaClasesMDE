@@ -56,6 +56,52 @@ public interface AbstractaPackage extends EPackage {
 	AbstractaPackage eINSTANCE = abstracta.impl.AbstractaPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link abstracta.impl.ModelFactoryImpl <em>Model Factory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.ModelFactoryImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getModelFactory()
+	 * @generated
+	 */
+	int MODEL_FACTORY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__NOMBRE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__RUTA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Paquetes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__PAQUETES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Model Factory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,7 +109,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMKJPaquete()
 	 * @generated
 	 */
-	int MKJ_PAQUETE = 0;
+	int MKJ_PAQUETE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -118,7 +164,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMKJClase()
 	 * @generated
 	 */
-	int MKJ_CLASE = 1;
+	int MKJ_CLASE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -130,13 +176,22 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_CLASE__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CLASE__RUTA = 1;
+
+	/**
 	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__ATRIBUTOS = 1;
+	int MKJ_CLASE__ATRIBUTOS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Metodos</b></em>' containment reference list.
@@ -145,7 +200,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__METODOS = 2;
+	int MKJ_CLASE__METODOS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Relaciones</b></em>' containment reference list.
@@ -154,7 +209,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__RELACIONES = 3;
+	int MKJ_CLASE__RELACIONES = 4;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Clase</em>' class.
@@ -163,7 +218,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE_FEATURE_COUNT = 4;
+	int MKJ_CLASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJAtributoImpl <em>MKJ Atributo</em>}' class.
@@ -173,7 +228,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMKJAtributo()
 	 * @generated
 	 */
-	int MKJ_ATRIBUTO = 2;
+	int MKJ_ATRIBUTO = 3;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -194,14 +249,14 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_ATRIBUTO_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.MKJmetodoImpl <em>MK Jmetodo</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.MKJmetodoImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getMKJmetodo()
+	 * @see abstracta.impl.MKJMetodoImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMKJMetodo()
 	 * @generated
 	 */
-	int MK_JMETODO = 3;
+	int MKJ_METODO = 4;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -210,7 +265,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MK_JMETODO__NOMBRE = 0;
+	int MKJ_METODO__NOMBRE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Retorno</b></em>' attribute.
@@ -219,7 +274,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MK_JMETODO__RETORNO = 1;
+	int MKJ_METODO__RETORNO = 1;
 
 	/**
 	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
@@ -228,16 +283,16 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MK_JMETODO__LISTA_PARAMETROS = 2;
+	int MKJ_METODO__LISTA_PARAMETROS = 2;
 
 	/**
-	 * The number of structural features of the '<em>MK Jmetodo</em>' class.
+	 * The number of structural features of the '<em>MKJ Metodo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MK_JMETODO_FEATURE_COUNT = 3;
+	int MKJ_METODO_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
@@ -247,7 +302,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMKJRelacion()
 	 * @generated
 	 */
-	int MKJ_RELACION = 4;
+	int MKJ_RELACION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -259,22 +314,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_RELACION__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_RELACION__TIPO = 1;
-
-	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__MULTIPLICIDAD1 = 2;
+	int MKJ_RELACION__MULTIPLICIDAD1 = 1;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
@@ -283,7 +329,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__MULTIPLICIDAD2 = 3;
+	int MKJ_RELACION__MULTIPLICIDAD2 = 2;
 
 	/**
 	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
@@ -292,7 +338,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__ROL1 = 4;
+	int MKJ_RELACION__ROL1 = 3;
 
 	/**
 	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
@@ -301,7 +347,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__ROL2 = 5;
+	int MKJ_RELACION__ROL2 = 4;
 
 	/**
 	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
@@ -310,7 +356,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__NAVEGABILIDAD1 = 6;
+	int MKJ_RELACION__NAVEGABILIDAD1 = 5;
 
 	/**
 	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
@@ -319,7 +365,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__NAVEGABILIDAD2 = 7;
+	int MKJ_RELACION__NAVEGABILIDAD2 = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -328,7 +374,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__SOURCE = 8;
+	int MKJ_RELACION__SOURCE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -337,7 +383,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__TARGET = 9;
+	int MKJ_RELACION__TARGET = 8;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Relacion</em>' class.
@@ -346,8 +392,551 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION_FEATURE_COUNT = 10;
+	int MKJ_RELACION_FEATURE_COUNT = 9;
 
+	/**
+	 * The meta object id for the '{@link abstracta.impl.MHJAsociacionImpl <em>MHJ Asociacion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.MHJAsociacionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMHJAsociacion()
+	 * @generated
+	 */
+	int MHJ_ASOCIACION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__SOURCE = MKJ_RELACION__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION__TARGET = MKJ_RELACION__TARGET;
+
+	/**
+	 * The number of structural features of the '<em>MHJ Asociacion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MHJ_ASOCIACION_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link abstracta.impl.MKJContainmentImpl <em>MKJ Containment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.MKJContainmentImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMKJContainment()
+	 * @generated
+	 */
+	int MKJ_CONTAINMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__SOURCE = MKJ_RELACION__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT__TARGET = MKJ_RELACION__TARGET;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Containment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTAINMENT_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link abstracta.impl.MKJAgregacionImpl <em>MKJ Agregacion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.MKJAgregacionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMKJAgregacion()
+	 * @generated
+	 */
+	int MKJ_AGREGACION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__SOURCE = MKJ_RELACION__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__TARGET = MKJ_RELACION__TARGET;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Agregacion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link abstracta.impl.MKJHerenciaImpl <em>MKJ Herencia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.MKJHerenciaImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMKJHerencia()
+	 * @generated
+	 */
+	int MKJ_HERENCIA = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__SOURCE = MKJ_RELACION__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__TARGET = MKJ_RELACION__TARGET;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Herencia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link abstracta.impl.MKJInterfaceImpl <em>MKJ Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.MKJInterfaceImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMKJInterface()
+	 * @generated
+	 */
+	int MKJ_INTERFACE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__SOURCE = MKJ_RELACION__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__TARGET = MKJ_RELACION__TARGET;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.ModelFactory <em>Model Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model Factory</em>'.
+	 * @see abstracta.ModelFactory
+	 * @generated
+	 */
+	EClass getModelFactory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.ModelFactory#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see abstracta.ModelFactory#getNombre()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EAttribute getModelFactory_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.ModelFactory#getRuta <em>Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ruta</em>'.
+	 * @see abstracta.ModelFactory#getRuta()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EAttribute getModelFactory_Ruta();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link abstracta.ModelFactory#getPaquetes <em>Paquetes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Paquetes</em>'.
+	 * @see abstracta.ModelFactory#getPaquetes()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_Paquetes();
 
 	/**
 	 * Returns the meta object for class '{@link abstracta.MKJPaquete <em>MKJ Paquete</em>}'.
@@ -425,6 +1014,17 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMKJClase_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link abstracta.MKJClase#getRuta <em>Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ruta</em>'.
+	 * @see abstracta.MKJClase#getRuta()
+	 * @see #getMKJClase()
+	 * @generated
+	 */
+	EAttribute getMKJClase_Ruta();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link abstracta.MKJClase#getAtributos <em>Atributos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -479,47 +1079,47 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMKJAtributo_Nombre();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.MKJmetodo <em>MK Jmetodo</em>}'.
+	 * Returns the meta object for class '{@link abstracta.MKJMetodo <em>MKJ Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MK Jmetodo</em>'.
-	 * @see abstracta.MKJmetodo
+	 * @return the meta object for class '<em>MKJ Metodo</em>'.
+	 * @see abstracta.MKJMetodo
 	 * @generated
 	 */
-	EClass getMKJmetodo();
+	EClass getMKJMetodo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MKJmetodo#getNombre <em>Nombre</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MKJMetodo#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.MKJmetodo#getNombre()
-	 * @see #getMKJmetodo()
+	 * @see abstracta.MKJMetodo#getNombre()
+	 * @see #getMKJMetodo()
 	 * @generated
 	 */
-	EAttribute getMKJmetodo_Nombre();
+	EAttribute getMKJMetodo_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MKJmetodo#isRetorno <em>Retorno</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MKJMetodo#isRetorno <em>Retorno</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Retorno</em>'.
-	 * @see abstracta.MKJmetodo#isRetorno()
-	 * @see #getMKJmetodo()
+	 * @see abstracta.MKJMetodo#isRetorno()
+	 * @see #getMKJMetodo()
 	 * @generated
 	 */
-	EAttribute getMKJmetodo_Retorno();
+	EAttribute getMKJMetodo_Retorno();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.MKJmetodo#getListaParametros <em>Lista Parametros</em>}'.
+	 * Returns the meta object for the containment reference list '{@link abstracta.MKJMetodo#getListaParametros <em>Lista Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Lista Parametros</em>'.
-	 * @see abstracta.MKJmetodo#getListaParametros()
-	 * @see #getMKJmetodo()
+	 * @see abstracta.MKJMetodo#getListaParametros()
+	 * @see #getMKJMetodo()
 	 * @generated
 	 */
-	EReference getMKJmetodo_ListaParametros();
+	EReference getMKJMetodo_ListaParametros();
 
 	/**
 	 * Returns the meta object for class '{@link abstracta.MKJRelacion <em>MKJ Relacion</em>}'.
@@ -541,17 +1141,6 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMKJRelacion_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MKJRelacion#getTipo <em>Tipo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see abstracta.MKJRelacion#getTipo()
-	 * @see #getMKJRelacion()
-	 * @generated
-	 */
-	EAttribute getMKJRelacion_Tipo();
 
 	/**
 	 * Returns the meta object for the attribute '{@link abstracta.MKJRelacion#getMultiplicidad1 <em>Multiplicidad1</em>}'.
@@ -642,6 +1231,56 @@ public interface AbstractaPackage extends EPackage {
 	EReference getMKJRelacion_Target();
 
 	/**
+	 * Returns the meta object for class '{@link abstracta.MHJAsociacion <em>MHJ Asociacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MHJ Asociacion</em>'.
+	 * @see abstracta.MHJAsociacion
+	 * @generated
+	 */
+	EClass getMHJAsociacion();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.MKJContainment <em>MKJ Containment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Containment</em>'.
+	 * @see abstracta.MKJContainment
+	 * @generated
+	 */
+	EClass getMKJContainment();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.MKJAgregacion <em>MKJ Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Agregacion</em>'.
+	 * @see abstracta.MKJAgregacion
+	 * @generated
+	 */
+	EClass getMKJAgregacion();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.MKJHerencia <em>MKJ Herencia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Herencia</em>'.
+	 * @see abstracta.MKJHerencia
+	 * @generated
+	 */
+	EClass getMKJHerencia();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.MKJInterface <em>MKJ Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Interface</em>'.
+	 * @see abstracta.MKJInterface
+	 * @generated
+	 */
+	EClass getMKJInterface();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -663,6 +1302,40 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.ModelFactoryImpl <em>Model Factory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.ModelFactoryImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getModelFactory()
+		 * @generated
+		 */
+		EClass MODEL_FACTORY = eINSTANCE.getModelFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FACTORY__NOMBRE = eINSTANCE.getModelFactory_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FACTORY__RUTA = eINSTANCE.getModelFactory_Ruta();
+
+		/**
+		 * The meta object literal for the '<em><b>Paquetes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__PAQUETES = eINSTANCE.getModelFactory_Paquetes();
+
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -724,6 +1397,14 @@ public interface AbstractaPackage extends EPackage {
 		EAttribute MKJ_CLASE__NAME = eINSTANCE.getMKJClase_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_CLASE__RUTA = eINSTANCE.getMKJClase_Ruta();
+
+		/**
 		 * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -766,14 +1447,14 @@ public interface AbstractaPackage extends EPackage {
 		EAttribute MKJ_ATRIBUTO__NOMBRE = eINSTANCE.getMKJAtributo_Nombre();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.MKJmetodoImpl <em>MK Jmetodo</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.MKJmetodoImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getMKJmetodo()
+		 * @see abstracta.impl.MKJMetodoImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMKJMetodo()
 		 * @generated
 		 */
-		EClass MK_JMETODO = eINSTANCE.getMKJmetodo();
+		EClass MKJ_METODO = eINSTANCE.getMKJMetodo();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -781,7 +1462,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MK_JMETODO__NOMBRE = eINSTANCE.getMKJmetodo_Nombre();
+		EAttribute MKJ_METODO__NOMBRE = eINSTANCE.getMKJMetodo_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Retorno</b></em>' attribute feature.
@@ -789,7 +1470,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MK_JMETODO__RETORNO = eINSTANCE.getMKJmetodo_Retorno();
+		EAttribute MKJ_METODO__RETORNO = eINSTANCE.getMKJMetodo_Retorno();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' containment reference list feature.
@@ -797,7 +1478,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MK_JMETODO__LISTA_PARAMETROS = eINSTANCE.getMKJmetodo_ListaParametros();
+		EReference MKJ_METODO__LISTA_PARAMETROS = eINSTANCE.getMKJMetodo_ListaParametros();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
@@ -816,14 +1497,6 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MKJ_RELACION__NAME = eINSTANCE.getMKJRelacion_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MKJ_RELACION__TIPO = eINSTANCE.getMKJRelacion_Tipo();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad1</b></em>' attribute feature.
@@ -888,6 +1561,56 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MKJ_RELACION__TARGET = eINSTANCE.getMKJRelacion_Target();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.MHJAsociacionImpl <em>MHJ Asociacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.MHJAsociacionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMHJAsociacion()
+		 * @generated
+		 */
+		EClass MHJ_ASOCIACION = eINSTANCE.getMHJAsociacion();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.MKJContainmentImpl <em>MKJ Containment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.MKJContainmentImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMKJContainment()
+		 * @generated
+		 */
+		EClass MKJ_CONTAINMENT = eINSTANCE.getMKJContainment();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.MKJAgregacionImpl <em>MKJ Agregacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.MKJAgregacionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMKJAgregacion()
+		 * @generated
+		 */
+		EClass MKJ_AGREGACION = eINSTANCE.getMKJAgregacion();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.MKJHerenciaImpl <em>MKJ Herencia</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.MKJHerenciaImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMKJHerencia()
+		 * @generated
+		 */
+		EClass MKJ_HERENCIA = eINSTANCE.getMKJHerencia();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.MKJInterfaceImpl <em>MKJ Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.MKJInterfaceImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMKJInterface()
+		 * @generated
+		 */
+		EClass MKJ_INTERFACE = eINSTANCE.getMKJInterface();
 
 	}
 

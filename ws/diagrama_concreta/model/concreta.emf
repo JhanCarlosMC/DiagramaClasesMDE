@@ -2,11 +2,25 @@
 @gmf
 package concreta;
 
+class ModelFactory{
+	attr String nombre;
+	attr String ruta;
+	
+	val MKJDiagramaClases[*] listaDiagramas;
+}
+
 @gmf.diagram
 class MKJDiagramaClases {
+	attr String nombre;
+	
     val MKJClase[*] listaClases;
-    val MKJRelacion[*] listaRelaciones;
     val MKJPaquete[*] listaPaquetes;
+    
+    val MKJAsociacion[*] listaAsociaciones;
+    val MKJConteinment[*] listaConteiments;
+    val MKJAgregacion[*] listaAgregaciones;
+    val MKJHerencia[*] listaHerencias;
+    val MKJInterface[*] listaInterfaces;
 }
 
 @gmf.node(label = "nombre")
@@ -19,26 +33,53 @@ class MKJPaquete{
 
 @gmf.node(label = "name")
 class MKJClase {
+	attr String identificador;
 	attr String name;
-    @gmf.compartment
+    @gmf.compartment(layout = "list")
     val MKJAtributo[*] atributos;
-    @gmf.compartment
-    val MKJmetodo[*] metodos;
+    @gmf.compartment(layout = "list", collapsible = "false")
+    val MKJMetodo[*] metodos;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", border.color = "255,255,255")
 class MKJAtributo {
 	attr String name;
 
 }
 
-@gmf.node(label = "name")
-class MKJmetodo {
+@gmf.node(label = "name",border.color = "255,255,255")
+class MKJMetodo {
 	attr String name;
 }
 
 @gmf.link(source="source", target="target", style="dot", width="2")
-class MKJRelacion {
+class MKJAsociacion {
+	//ATRIBUTOS
+
+    ref MKJClase source;
+    ref MKJClase target;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class MKJConteinment {
+    ref MKJClase source;
+    ref MKJClase target;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class MKJAgregacion {
+    ref MKJClase source;
+    ref MKJClase target;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class MKJHerencia {
+    ref MKJClase source;
+    ref MKJClase target;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class MKJInterface {
     ref MKJClase source;
     ref MKJClase target;
 }

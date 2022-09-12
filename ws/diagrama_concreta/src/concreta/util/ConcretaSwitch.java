@@ -66,6 +66,12 @@ public class ConcretaSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ConcretaPackage.MODEL_FACTORY: {
+				ModelFactory modelFactory = (ModelFactory)theEObject;
+				T result = caseModelFactory(modelFactory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ConcretaPackage.MKJ_DIAGRAMA_CLASES: {
 				MKJDiagramaClases mkjDiagramaClases = (MKJDiagramaClases)theEObject;
 				T result = caseMKJDiagramaClases(mkjDiagramaClases);
@@ -90,20 +96,59 @@ public class ConcretaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ConcretaPackage.MK_JMETODO: {
-				MKJmetodo mkJmetodo = (MKJmetodo)theEObject;
-				T result = caseMKJmetodo(mkJmetodo);
+			case ConcretaPackage.MKJ_METODO: {
+				MKJMetodo mkjMetodo = (MKJMetodo)theEObject;
+				T result = caseMKJMetodo(mkjMetodo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ConcretaPackage.MKJ_RELACION: {
-				MKJRelacion mkjRelacion = (MKJRelacion)theEObject;
-				T result = caseMKJRelacion(mkjRelacion);
+			case ConcretaPackage.MKJ_ASOCIACION: {
+				MKJAsociacion mkjAsociacion = (MKJAsociacion)theEObject;
+				T result = caseMKJAsociacion(mkjAsociacion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConcretaPackage.MKJ_CONTEINMENT: {
+				MKJConteinment mkjConteinment = (MKJConteinment)theEObject;
+				T result = caseMKJConteinment(mkjConteinment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConcretaPackage.MKJ_AGREGACION: {
+				MKJAgregacion mkjAgregacion = (MKJAgregacion)theEObject;
+				T result = caseMKJAgregacion(mkjAgregacion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConcretaPackage.MKJ_HERENCIA: {
+				MKJHerencia mkjHerencia = (MKJHerencia)theEObject;
+				T result = caseMKJHerencia(mkjHerencia);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConcretaPackage.MKJ_INTERFACE: {
+				MKJInterface mkjInterface = (MKJInterface)theEObject;
+				T result = caseMKJInterface(mkjInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model Factory</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModelFactory(ModelFactory object) {
+		return null;
 	}
 
 	/**
@@ -167,32 +212,92 @@ public class ConcretaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MK Jmetodo</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Metodo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MK Jmetodo</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Metodo</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMKJmetodo(MKJmetodo object) {
+	public T caseMKJMetodo(MKJMetodo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MKJ Relacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MKJ Relacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Asociacion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMKJRelacion(MKJRelacion object) {
+	public T caseMKJAsociacion(MKJAsociacion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Conteinment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Conteinment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMKJConteinment(MKJConteinment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Agregacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Agregacion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMKJAgregacion(MKJAgregacion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Herencia</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Herencia</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMKJHerencia(MKJHerencia object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Interface</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMKJInterface(MKJInterface object) {
 		return null;
 	}
 

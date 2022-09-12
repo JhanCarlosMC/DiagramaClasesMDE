@@ -56,15 +56,30 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ConcretaPackage.MODEL_FACTORY: return createModelFactory();
 			case ConcretaPackage.MKJ_DIAGRAMA_CLASES: return createMKJDiagramaClases();
 			case ConcretaPackage.MKJ_PAQUETE: return createMKJPaquete();
 			case ConcretaPackage.MKJ_CLASE: return createMKJClase();
 			case ConcretaPackage.MKJ_ATRIBUTO: return createMKJAtributo();
-			case ConcretaPackage.MK_JMETODO: return createMKJmetodo();
-			case ConcretaPackage.MKJ_RELACION: return createMKJRelacion();
+			case ConcretaPackage.MKJ_METODO: return createMKJMetodo();
+			case ConcretaPackage.MKJ_ASOCIACION: return createMKJAsociacion();
+			case ConcretaPackage.MKJ_CONTEINMENT: return createMKJConteinment();
+			case ConcretaPackage.MKJ_AGREGACION: return createMKJAgregacion();
+			case ConcretaPackage.MKJ_HERENCIA: return createMKJHerencia();
+			case ConcretaPackage.MKJ_INTERFACE: return createMKJInterface();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelFactory createModelFactory() {
+		ModelFactoryImpl modelFactory = new ModelFactoryImpl();
+		return modelFactory;
 	}
 
 	/**
@@ -112,9 +127,9 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MKJmetodo createMKJmetodo() {
-		MKJmetodoImpl mkJmetodo = new MKJmetodoImpl();
-		return mkJmetodo;
+	public MKJMetodo createMKJMetodo() {
+		MKJMetodoImpl mkjMetodo = new MKJMetodoImpl();
+		return mkjMetodo;
 	}
 
 	/**
@@ -122,9 +137,49 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MKJRelacion createMKJRelacion() {
-		MKJRelacionImpl mkjRelacion = new MKJRelacionImpl();
-		return mkjRelacion;
+	public MKJAsociacion createMKJAsociacion() {
+		MKJAsociacionImpl mkjAsociacion = new MKJAsociacionImpl();
+		return mkjAsociacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJConteinment createMKJConteinment() {
+		MKJConteinmentImpl mkjConteinment = new MKJConteinmentImpl();
+		return mkjConteinment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJAgregacion createMKJAgregacion() {
+		MKJAgregacionImpl mkjAgregacion = new MKJAgregacionImpl();
+		return mkjAgregacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJHerencia createMKJHerencia() {
+		MKJHerenciaImpl mkjHerencia = new MKJHerenciaImpl();
+		return mkjHerencia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJInterface createMKJInterface() {
+		MKJInterfaceImpl mkjInterface = new MKJInterfaceImpl();
+		return mkjInterface;
 	}
 
 	/**

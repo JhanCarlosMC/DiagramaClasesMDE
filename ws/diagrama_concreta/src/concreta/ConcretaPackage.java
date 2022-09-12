@@ -56,6 +56,52 @@ public interface ConcretaPackage extends EPackage {
 	ConcretaPackage eINSTANCE = concreta.impl.ConcretaPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link concreta.impl.ModelFactoryImpl <em>Model Factory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see concreta.impl.ModelFactoryImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getModelFactory()
+	 * @generated
+	 */
+	int MODEL_FACTORY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__NOMBRE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__RUTA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Lista Diagramas</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_DIAGRAMAS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Model Factory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link concreta.impl.MKJDiagramaClasesImpl <em>MKJ Diagrama Clases</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,7 +109,16 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJDiagramaClases()
 	 * @generated
 	 */
-	int MKJ_DIAGRAMA_CLASES = 0;
+	int MKJ_DIAGRAMA_CLASES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_DIAGRAMA_CLASES__NOMBRE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Lista Clases</b></em>' containment reference list.
@@ -72,16 +127,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_DIAGRAMA_CLASES__LISTA_CLASES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Lista Relaciones</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_DIAGRAMA_CLASES__LISTA_RELACIONES = 1;
+	int MKJ_DIAGRAMA_CLASES__LISTA_CLASES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Lista Paquetes</b></em>' containment reference list.
@@ -93,13 +139,58 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_DIAGRAMA_CLASES__LISTA_PAQUETES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Lista Asociaciones</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_DIAGRAMA_CLASES__LISTA_ASOCIACIONES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Lista Conteiments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_DIAGRAMA_CLASES__LISTA_CONTEIMENTS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Lista Agregaciones</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_DIAGRAMA_CLASES__LISTA_AGREGACIONES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Lista Herencias</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_DIAGRAMA_CLASES__LISTA_HERENCIAS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Lista Interfaces</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_DIAGRAMA_CLASES__LISTA_INTERFACES = 7;
+
+	/**
 	 * The number of structural features of the '<em>MKJ Diagrama Clases</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_DIAGRAMA_CLASES_FEATURE_COUNT = 3;
+	int MKJ_DIAGRAMA_CLASES_FEATURE_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
@@ -109,7 +200,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJPaquete()
 	 * @generated
 	 */
-	int MKJ_PAQUETE = 1;
+	int MKJ_PAQUETE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -164,7 +255,16 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJClase()
 	 * @generated
 	 */
-	int MKJ_CLASE = 2;
+	int MKJ_CLASE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Identificador</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CLASE__IDENTIFICADOR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -173,7 +273,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__NAME = 0;
+	int MKJ_CLASE__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
@@ -182,7 +282,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__ATRIBUTOS = 1;
+	int MKJ_CLASE__ATRIBUTOS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Metodos</b></em>' containment reference list.
@@ -191,7 +291,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__METODOS = 2;
+	int MKJ_CLASE__METODOS = 3;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Clase</em>' class.
@@ -200,7 +300,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE_FEATURE_COUNT = 3;
+	int MKJ_CLASE_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJAtributoImpl <em>MKJ Atributo</em>}' class.
@@ -210,7 +310,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJAtributo()
 	 * @generated
 	 */
-	int MKJ_ATRIBUTO = 3;
+	int MKJ_ATRIBUTO = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -231,14 +331,14 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_ATRIBUTO_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link concreta.impl.MKJmetodoImpl <em>MK Jmetodo</em>}' class.
+	 * The meta object id for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see concreta.impl.MKJmetodoImpl
-	 * @see concreta.impl.ConcretaPackageImpl#getMKJmetodo()
+	 * @see concreta.impl.MKJMetodoImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJMetodo()
 	 * @generated
 	 */
-	int MK_JMETODO = 4;
+	int MKJ_METODO = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -247,26 +347,26 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MK_JMETODO__NAME = 0;
+	int MKJ_METODO__NAME = 0;
 
 	/**
-	 * The number of structural features of the '<em>MK Jmetodo</em>' class.
+	 * The number of structural features of the '<em>MKJ Metodo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MK_JMETODO_FEATURE_COUNT = 1;
+	int MKJ_METODO_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link concreta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
+	 * The meta object id for the '{@link concreta.impl.MKJAsociacionImpl <em>MKJ Asociacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see concreta.impl.MKJRelacionImpl
-	 * @see concreta.impl.ConcretaPackageImpl#getMKJRelacion()
+	 * @see concreta.impl.MKJAsociacionImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJAsociacion()
 	 * @generated
 	 */
-	int MKJ_RELACION = 5;
+	int MKJ_ASOCIACION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -275,7 +375,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__SOURCE = 0;
+	int MKJ_ASOCIACION__SOURCE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -284,17 +384,208 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__TARGET = 1;
+	int MKJ_ASOCIACION__TARGET = 1;
 
 	/**
-	 * The number of structural features of the '<em>MKJ Relacion</em>' class.
+	 * The number of structural features of the '<em>MKJ Asociacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION_FEATURE_COUNT = 2;
+	int MKJ_ASOCIACION_FEATURE_COUNT = 2;
 
+	/**
+	 * The meta object id for the '{@link concreta.impl.MKJConteinmentImpl <em>MKJ Conteinment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see concreta.impl.MKJConteinmentImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJConteinment()
+	 * @generated
+	 */
+	int MKJ_CONTEINMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Conteinment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link concreta.impl.MKJAgregacionImpl <em>MKJ Agregacion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see concreta.impl.MKJAgregacionImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJAgregacion()
+	 * @generated
+	 */
+	int MKJ_AGREGACION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Agregacion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link concreta.impl.MKJHerenciaImpl <em>MKJ Herencia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see concreta.impl.MKJHerenciaImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJHerencia()
+	 * @generated
+	 */
+	int MKJ_HERENCIA = 9;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Herencia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_HERENCIA_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link concreta.impl.MKJInterfaceImpl <em>MKJ Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see concreta.impl.MKJInterfaceImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJInterface()
+	 * @generated
+	 */
+	int MKJ_INTERFACE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_INTERFACE_FEATURE_COUNT = 2;
+
+
+	/**
+	 * Returns the meta object for class '{@link concreta.ModelFactory <em>Model Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model Factory</em>'.
+	 * @see concreta.ModelFactory
+	 * @generated
+	 */
+	EClass getModelFactory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.ModelFactory#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see concreta.ModelFactory#getNombre()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EAttribute getModelFactory_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.ModelFactory#getRuta <em>Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ruta</em>'.
+	 * @see concreta.ModelFactory#getRuta()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EAttribute getModelFactory_Ruta();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.ModelFactory#getListaDiagramas <em>Lista Diagramas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Diagramas</em>'.
+	 * @see concreta.ModelFactory#getListaDiagramas()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaDiagramas();
 
 	/**
 	 * Returns the meta object for class '{@link concreta.MKJDiagramaClases <em>MKJ Diagrama Clases</em>}'.
@@ -305,6 +596,17 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMKJDiagramaClases();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJDiagramaClases#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see concreta.MKJDiagramaClases#getNombre()
+	 * @see #getMKJDiagramaClases()
+	 * @generated
+	 */
+	EAttribute getMKJDiagramaClases_Nombre();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaClases <em>Lista Clases</em>}'.
@@ -318,17 +620,6 @@ public interface ConcretaPackage extends EPackage {
 	EReference getMKJDiagramaClases_ListaClases();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaRelaciones <em>Lista Relaciones</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Relaciones</em>'.
-	 * @see concreta.MKJDiagramaClases#getListaRelaciones()
-	 * @see #getMKJDiagramaClases()
-	 * @generated
-	 */
-	EReference getMKJDiagramaClases_ListaRelaciones();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaPaquetes <em>Lista Paquetes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -338,6 +629,61 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMKJDiagramaClases_ListaPaquetes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaAsociaciones <em>Lista Asociaciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Asociaciones</em>'.
+	 * @see concreta.MKJDiagramaClases#getListaAsociaciones()
+	 * @see #getMKJDiagramaClases()
+	 * @generated
+	 */
+	EReference getMKJDiagramaClases_ListaAsociaciones();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaConteiments <em>Lista Conteiments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Conteiments</em>'.
+	 * @see concreta.MKJDiagramaClases#getListaConteiments()
+	 * @see #getMKJDiagramaClases()
+	 * @generated
+	 */
+	EReference getMKJDiagramaClases_ListaConteiments();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaAgregaciones <em>Lista Agregaciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Agregaciones</em>'.
+	 * @see concreta.MKJDiagramaClases#getListaAgregaciones()
+	 * @see #getMKJDiagramaClases()
+	 * @generated
+	 */
+	EReference getMKJDiagramaClases_ListaAgregaciones();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaHerencias <em>Lista Herencias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Herencias</em>'.
+	 * @see concreta.MKJDiagramaClases#getListaHerencias()
+	 * @see #getMKJDiagramaClases()
+	 * @generated
+	 */
+	EReference getMKJDiagramaClases_ListaHerencias();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.MKJDiagramaClases#getListaInterfaces <em>Lista Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Interfaces</em>'.
+	 * @see concreta.MKJDiagramaClases#getListaInterfaces()
+	 * @see #getMKJDiagramaClases()
+	 * @generated
+	 */
+	EReference getMKJDiagramaClases_ListaInterfaces();
 
 	/**
 	 * Returns the meta object for class '{@link concreta.MKJPaquete <em>MKJ Paquete</em>}'.
@@ -404,6 +750,17 @@ public interface ConcretaPackage extends EPackage {
 	EClass getMKJClase();
 
 	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJClase#getIdentificador <em>Identificador</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Identificador</em>'.
+	 * @see concreta.MKJClase#getIdentificador()
+	 * @see #getMKJClase()
+	 * @generated
+	 */
+	EAttribute getMKJClase_Identificador();
+
+	/**
 	 * Returns the meta object for the attribute '{@link concreta.MKJClase#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,57 +815,185 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMKJAtributo_Name();
 
 	/**
-	 * Returns the meta object for class '{@link concreta.MKJmetodo <em>MK Jmetodo</em>}'.
+	 * Returns the meta object for class '{@link concreta.MKJMetodo <em>MKJ Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MK Jmetodo</em>'.
-	 * @see concreta.MKJmetodo
+	 * @return the meta object for class '<em>MKJ Metodo</em>'.
+	 * @see concreta.MKJMetodo
 	 * @generated
 	 */
-	EClass getMKJmetodo();
+	EClass getMKJMetodo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link concreta.MKJmetodo#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link concreta.MKJMetodo#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see concreta.MKJmetodo#getName()
-	 * @see #getMKJmetodo()
+	 * @see concreta.MKJMetodo#getName()
+	 * @see #getMKJMetodo()
 	 * @generated
 	 */
-	EAttribute getMKJmetodo_Name();
+	EAttribute getMKJMetodo_Name();
 
 	/**
-	 * Returns the meta object for class '{@link concreta.MKJRelacion <em>MKJ Relacion</em>}'.
+	 * Returns the meta object for class '{@link concreta.MKJAsociacion <em>MKJ Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MKJ Relacion</em>'.
-	 * @see concreta.MKJRelacion
+	 * @return the meta object for class '<em>MKJ Asociacion</em>'.
+	 * @see concreta.MKJAsociacion
 	 * @generated
 	 */
-	EClass getMKJRelacion();
+	EClass getMKJAsociacion();
 
 	/**
-	 * Returns the meta object for the reference '{@link concreta.MKJRelacion#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link concreta.MKJAsociacion#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see concreta.MKJRelacion#getSource()
-	 * @see #getMKJRelacion()
+	 * @see concreta.MKJAsociacion#getSource()
+	 * @see #getMKJAsociacion()
 	 * @generated
 	 */
-	EReference getMKJRelacion_Source();
+	EReference getMKJAsociacion_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link concreta.MKJRelacion#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link concreta.MKJAsociacion#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see concreta.MKJRelacion#getTarget()
-	 * @see #getMKJRelacion()
+	 * @see concreta.MKJAsociacion#getTarget()
+	 * @see #getMKJAsociacion()
 	 * @generated
 	 */
-	EReference getMKJRelacion_Target();
+	EReference getMKJAsociacion_Target();
+
+	/**
+	 * Returns the meta object for class '{@link concreta.MKJConteinment <em>MKJ Conteinment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Conteinment</em>'.
+	 * @see concreta.MKJConteinment
+	 * @generated
+	 */
+	EClass getMKJConteinment();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJConteinment#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see concreta.MKJConteinment#getSource()
+	 * @see #getMKJConteinment()
+	 * @generated
+	 */
+	EReference getMKJConteinment_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJConteinment#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see concreta.MKJConteinment#getTarget()
+	 * @see #getMKJConteinment()
+	 * @generated
+	 */
+	EReference getMKJConteinment_Target();
+
+	/**
+	 * Returns the meta object for class '{@link concreta.MKJAgregacion <em>MKJ Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Agregacion</em>'.
+	 * @see concreta.MKJAgregacion
+	 * @generated
+	 */
+	EClass getMKJAgregacion();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJAgregacion#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see concreta.MKJAgregacion#getSource()
+	 * @see #getMKJAgregacion()
+	 * @generated
+	 */
+	EReference getMKJAgregacion_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJAgregacion#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see concreta.MKJAgregacion#getTarget()
+	 * @see #getMKJAgregacion()
+	 * @generated
+	 */
+	EReference getMKJAgregacion_Target();
+
+	/**
+	 * Returns the meta object for class '{@link concreta.MKJHerencia <em>MKJ Herencia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Herencia</em>'.
+	 * @see concreta.MKJHerencia
+	 * @generated
+	 */
+	EClass getMKJHerencia();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJHerencia#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see concreta.MKJHerencia#getSource()
+	 * @see #getMKJHerencia()
+	 * @generated
+	 */
+	EReference getMKJHerencia_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJHerencia#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see concreta.MKJHerencia#getTarget()
+	 * @see #getMKJHerencia()
+	 * @generated
+	 */
+	EReference getMKJHerencia_Target();
+
+	/**
+	 * Returns the meta object for class '{@link concreta.MKJInterface <em>MKJ Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Interface</em>'.
+	 * @see concreta.MKJInterface
+	 * @generated
+	 */
+	EClass getMKJInterface();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJInterface#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see concreta.MKJInterface#getSource()
+	 * @see #getMKJInterface()
+	 * @generated
+	 */
+	EReference getMKJInterface_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link concreta.MKJInterface#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see concreta.MKJInterface#getTarget()
+	 * @see #getMKJInterface()
+	 * @generated
+	 */
+	EReference getMKJInterface_Target();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -533,6 +1018,40 @@ public interface ConcretaPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link concreta.impl.ModelFactoryImpl <em>Model Factory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see concreta.impl.ModelFactoryImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getModelFactory()
+		 * @generated
+		 */
+		EClass MODEL_FACTORY = eINSTANCE.getModelFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FACTORY__NOMBRE = eINSTANCE.getModelFactory_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FACTORY__RUTA = eINSTANCE.getModelFactory_Ruta();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Diagramas</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_DIAGRAMAS = eINSTANCE.getModelFactory_ListaDiagramas();
+
+		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJDiagramaClasesImpl <em>MKJ Diagrama Clases</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -543,6 +1062,14 @@ public interface ConcretaPackage extends EPackage {
 		EClass MKJ_DIAGRAMA_CLASES = eINSTANCE.getMKJDiagramaClases();
 
 		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_DIAGRAMA_CLASES__NOMBRE = eINSTANCE.getMKJDiagramaClases_Nombre();
+
+		/**
 		 * The meta object literal for the '<em><b>Lista Clases</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -551,20 +1078,52 @@ public interface ConcretaPackage extends EPackage {
 		EReference MKJ_DIAGRAMA_CLASES__LISTA_CLASES = eINSTANCE.getMKJDiagramaClases_ListaClases();
 
 		/**
-		 * The meta object literal for the '<em><b>Lista Relaciones</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MKJ_DIAGRAMA_CLASES__LISTA_RELACIONES = eINSTANCE.getMKJDiagramaClases_ListaRelaciones();
-
-		/**
 		 * The meta object literal for the '<em><b>Lista Paquetes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference MKJ_DIAGRAMA_CLASES__LISTA_PAQUETES = eINSTANCE.getMKJDiagramaClases_ListaPaquetes();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Asociaciones</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_DIAGRAMA_CLASES__LISTA_ASOCIACIONES = eINSTANCE.getMKJDiagramaClases_ListaAsociaciones();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Conteiments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_DIAGRAMA_CLASES__LISTA_CONTEIMENTS = eINSTANCE.getMKJDiagramaClases_ListaConteiments();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Agregaciones</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_DIAGRAMA_CLASES__LISTA_AGREGACIONES = eINSTANCE.getMKJDiagramaClases_ListaAgregaciones();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Herencias</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_DIAGRAMA_CLASES__LISTA_HERENCIAS = eINSTANCE.getMKJDiagramaClases_ListaHerencias();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Interfaces</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_DIAGRAMA_CLASES__LISTA_INTERFACES = eINSTANCE.getMKJDiagramaClases_ListaInterfaces();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
@@ -619,6 +1178,14 @@ public interface ConcretaPackage extends EPackage {
 		EClass MKJ_CLASE = eINSTANCE.getMKJClase();
 
 		/**
+		 * The meta object literal for the '<em><b>Identificador</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_CLASE__IDENTIFICADOR = eINSTANCE.getMKJClase_Identificador();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -661,14 +1228,14 @@ public interface ConcretaPackage extends EPackage {
 		EAttribute MKJ_ATRIBUTO__NAME = eINSTANCE.getMKJAtributo_Name();
 
 		/**
-		 * The meta object literal for the '{@link concreta.impl.MKJmetodoImpl <em>MK Jmetodo</em>}' class.
+		 * The meta object literal for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see concreta.impl.MKJmetodoImpl
-		 * @see concreta.impl.ConcretaPackageImpl#getMKJmetodo()
+		 * @see concreta.impl.MKJMetodoImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJMetodo()
 		 * @generated
 		 */
-		EClass MK_JMETODO = eINSTANCE.getMKJmetodo();
+		EClass MKJ_METODO = eINSTANCE.getMKJMetodo();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -676,17 +1243,17 @@ public interface ConcretaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MK_JMETODO__NAME = eINSTANCE.getMKJmetodo_Name();
+		EAttribute MKJ_METODO__NAME = eINSTANCE.getMKJMetodo_Name();
 
 		/**
-		 * The meta object literal for the '{@link concreta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
+		 * The meta object literal for the '{@link concreta.impl.MKJAsociacionImpl <em>MKJ Asociacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see concreta.impl.MKJRelacionImpl
-		 * @see concreta.impl.ConcretaPackageImpl#getMKJRelacion()
+		 * @see concreta.impl.MKJAsociacionImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJAsociacion()
 		 * @generated
 		 */
-		EClass MKJ_RELACION = eINSTANCE.getMKJRelacion();
+		EClass MKJ_ASOCIACION = eINSTANCE.getMKJAsociacion();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -694,7 +1261,7 @@ public interface ConcretaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MKJ_RELACION__SOURCE = eINSTANCE.getMKJRelacion_Source();
+		EReference MKJ_ASOCIACION__SOURCE = eINSTANCE.getMKJAsociacion_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -702,7 +1269,111 @@ public interface ConcretaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MKJ_RELACION__TARGET = eINSTANCE.getMKJRelacion_Target();
+		EReference MKJ_ASOCIACION__TARGET = eINSTANCE.getMKJAsociacion_Target();
+
+		/**
+		 * The meta object literal for the '{@link concreta.impl.MKJConteinmentImpl <em>MKJ Conteinment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see concreta.impl.MKJConteinmentImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJConteinment()
+		 * @generated
+		 */
+		EClass MKJ_CONTEINMENT = eINSTANCE.getMKJConteinment();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_CONTEINMENT__SOURCE = eINSTANCE.getMKJConteinment_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_CONTEINMENT__TARGET = eINSTANCE.getMKJConteinment_Target();
+
+		/**
+		 * The meta object literal for the '{@link concreta.impl.MKJAgregacionImpl <em>MKJ Agregacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see concreta.impl.MKJAgregacionImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJAgregacion()
+		 * @generated
+		 */
+		EClass MKJ_AGREGACION = eINSTANCE.getMKJAgregacion();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_AGREGACION__SOURCE = eINSTANCE.getMKJAgregacion_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_AGREGACION__TARGET = eINSTANCE.getMKJAgregacion_Target();
+
+		/**
+		 * The meta object literal for the '{@link concreta.impl.MKJHerenciaImpl <em>MKJ Herencia</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see concreta.impl.MKJHerenciaImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJHerencia()
+		 * @generated
+		 */
+		EClass MKJ_HERENCIA = eINSTANCE.getMKJHerencia();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_HERENCIA__SOURCE = eINSTANCE.getMKJHerencia_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_HERENCIA__TARGET = eINSTANCE.getMKJHerencia_Target();
+
+		/**
+		 * The meta object literal for the '{@link concreta.impl.MKJInterfaceImpl <em>MKJ Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see concreta.impl.MKJInterfaceImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJInterface()
+		 * @generated
+		 */
+		EClass MKJ_INTERFACE = eINSTANCE.getMKJInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_INTERFACE__SOURCE = eINSTANCE.getMKJInterface_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_INTERFACE__TARGET = eINSTANCE.getMKJInterface_Target();
 
 	}
 

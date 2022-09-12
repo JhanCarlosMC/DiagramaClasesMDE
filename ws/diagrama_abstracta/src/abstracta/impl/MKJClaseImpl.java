@@ -5,8 +5,8 @@ package abstracta.impl;
 import abstracta.AbstractaPackage;
 import abstracta.MKJAtributo;
 import abstracta.MKJClase;
+import abstracta.MKJMetodo;
 import abstracta.MKJRelacion;
-import abstracta.MKJmetodo;
 
 import java.util.Collection;
 
@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getRelaciones <em>Relaciones</em>}</li>
@@ -62,6 +63,26 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RUTA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected String ruta = RUTA_EDEFAULT;
+
+	/**
 	 * The cached value of the '{@link #getAtributos() <em>Atributos</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,7 +100,7 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MKJmetodo> metodos;
+	protected EList<MKJMetodo> metodos;
 
 	/**
 	 * The cached value of the '{@link #getRelaciones() <em>Relaciones</em>}' containment reference list.
@@ -136,6 +157,27 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRuta(String newRuta) {
+		String oldRuta = ruta;
+		ruta = newRuta;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_CLASE__RUTA, oldRuta, ruta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<MKJAtributo> getAtributos() {
 		if (atributos == null) {
 			atributos = new EObjectContainmentEList<MKJAtributo>(MKJAtributo.class, this, AbstractaPackage.MKJ_CLASE__ATRIBUTOS);
@@ -148,9 +190,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MKJmetodo> getMetodos() {
+	public EList<MKJMetodo> getMetodos() {
 		if (metodos == null) {
-			metodos = new EObjectContainmentEList<MKJmetodo>(MKJmetodo.class, this, AbstractaPackage.MKJ_CLASE__METODOS);
+			metodos = new EObjectContainmentEList<MKJMetodo>(MKJMetodo.class, this, AbstractaPackage.MKJ_CLASE__METODOS);
 		}
 		return metodos;
 	}
@@ -195,6 +237,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_CLASE__NAME:
 				return getName();
+			case AbstractaPackage.MKJ_CLASE__RUTA:
+				return getRuta();
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
 				return getAtributos();
 			case AbstractaPackage.MKJ_CLASE__METODOS:
@@ -217,13 +261,16 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 			case AbstractaPackage.MKJ_CLASE__NAME:
 				setName((String)newValue);
 				return;
+			case AbstractaPackage.MKJ_CLASE__RUTA:
+				setRuta((String)newValue);
+				return;
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
 				getAtributos().clear();
 				getAtributos().addAll((Collection<? extends MKJAtributo>)newValue);
 				return;
 			case AbstractaPackage.MKJ_CLASE__METODOS:
 				getMetodos().clear();
-				getMetodos().addAll((Collection<? extends MKJmetodo>)newValue);
+				getMetodos().addAll((Collection<? extends MKJMetodo>)newValue);
 				return;
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				getRelaciones().clear();
@@ -243,6 +290,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_CLASE__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case AbstractaPackage.MKJ_CLASE__RUTA:
+				setRuta(RUTA_EDEFAULT);
 				return;
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
 				getAtributos().clear();
@@ -267,6 +317,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_CLASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AbstractaPackage.MKJ_CLASE__RUTA:
+				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
 				return atributos != null && !atributos.isEmpty();
 			case AbstractaPackage.MKJ_CLASE__METODOS:
@@ -289,6 +341,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", ruta: ");
+		result.append(ruta);
 		result.append(')');
 		return result.toString();
 	}

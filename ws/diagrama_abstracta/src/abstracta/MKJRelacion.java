@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link abstracta.MKJRelacion#getName <em>Name</em>}</li>
- *   <li>{@link abstracta.MKJRelacion#getTipo <em>Tipo</em>}</li>
  *   <li>{@link abstracta.MKJRelacion#getMultiplicidad1 <em>Multiplicidad1</em>}</li>
  *   <li>{@link abstracta.MKJRelacion#getMultiplicidad2 <em>Multiplicidad2</em>}</li>
  *   <li>{@link abstracta.MKJRelacion#getRol1 <em>Rol1</em>}</li>
@@ -55,32 +54,6 @@ public interface MKJRelacion extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Tipo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tipo</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tipo</em>' attribute.
-	 * @see #setTipo(String)
-	 * @see abstracta.AbstractaPackage#getMKJRelacion_Tipo()
-	 * @model
-	 * @generated
-	 */
-	String getTipo();
-
-	/**
-	 * Sets the value of the '{@link abstracta.MKJRelacion#getTipo <em>Tipo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tipo</em>' attribute.
-	 * @see #getTipo()
-	 * @generated
-	 */
-	void setTipo(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Multiplicidad1</b></em>' attribute.

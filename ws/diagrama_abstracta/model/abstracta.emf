@@ -1,8 +1,13 @@
-@namespace(
-	uri="abstracta",
-	prefix="abstracta")
-@gmf
+@namespace(uri="abstracta",prefix="abstracta")
+
 package abstracta;
+
+class ModelFactory{
+	attr String nombre;
+	attr String ruta;
+	
+	val MKJPaquete[*] paquetes;
+}
 
 class MKJPaquete{
 	
@@ -15,8 +20,9 @@ class MKJPaquete{
 
 class MKJClase {
 	attr String name;
+	attr String ruta;
     val MKJAtributo[*] atributos;
-    val MKJmetodo[*] metodos;
+    val MKJMetodo[*] metodos;
     val MKJRelacion[*] relaciones;
 }
 
@@ -25,15 +31,16 @@ class MKJAtributo {
 
 }
 
-class MKJmetodo {
+class MKJMetodo {
 	attr String nombre;
 	attr boolean retorno;
 	val MKJAtributo[*] listaParametros;
 }
 
+//heredar los atributos de las relaciones
+
 class MKJRelacion {
     attr String name;
-    attr String tipo;
     attr String multiplicidad1;
     attr String multiplicidad2;
     attr String rol1;
@@ -45,3 +52,22 @@ class MKJRelacion {
     ref MKJClase target;
 }
 
+class MHJAsociacion extends MKJRelacion{
+	
+}
+
+class MKJContainment extends MKJRelacion{
+
+}
+
+class MKJAgregacion extends MKJRelacion{
+
+}
+
+class MKJHerencia extends MKJRelacion{
+
+}
+
+class MKJInterface extends MKJRelacion{
+
+}

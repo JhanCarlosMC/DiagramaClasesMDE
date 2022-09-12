@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/diagrama_concreta/src" modelPluginID="diagrama_concreta"
+    modelName="Concreta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>concreta.emf</foreignModel>
+  <genPackages prefix="Concreta" disposableProviderFactory="true" ecorePackage="concreta.ecore#/">
+    <genClasses ecoreClass="concreta.ecore#//ModelFactory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//ModelFactory/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//ModelFactory/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//ModelFactory/listaDiagramas"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJDiagramaClases">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJDiagramaClases/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaClases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaPaquetes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaAsociaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaConteiments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaAgregaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaHerencias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJDiagramaClases/listaInterfaces"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJPaquete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJPaquete/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJPaquete/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJPaquete/paquetes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJPaquete/clases"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJClase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJClase/identificador"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJClase/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJClase/atributos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJClase/metodos"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJAtributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/name"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJMetodo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJMetodo/name"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJAsociacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJAsociacion/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJAsociacion/target"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJConteinment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJConteinment/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJConteinment/target"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJAgregacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJAgregacion/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJAgregacion/target"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJHerencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJHerencia/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJHerencia/target"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJInterface/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJInterface/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

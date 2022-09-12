@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link abstracta.impl.MKJRelacionImpl#getName <em>Name</em>}</li>
- *   <li>{@link abstracta.impl.MKJRelacionImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link abstracta.impl.MKJRelacionImpl#getMultiplicidad1 <em>Multiplicidad1</em>}</li>
  *   <li>{@link abstracta.impl.MKJRelacionImpl#getMultiplicidad2 <em>Multiplicidad2</em>}</li>
  *   <li>{@link abstracta.impl.MKJRelacionImpl#getRol1 <em>Rol1</em>}</li>
@@ -56,26 +55,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTipo()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TIPO_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTipo()
-	 * @generated
-	 * @ordered
-	 */
-	protected String tipo = TIPO_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMultiplicidad1() <em>Multiplicidad1</em>}' attribute.
@@ -255,27 +234,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_RELACION__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTipo() {
-		return tipo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTipo(String newTipo) {
-		String oldTipo = tipo;
-		tipo = newTipo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_RELACION__TIPO, oldTipo, tipo));
 	}
 
 	/**
@@ -490,8 +448,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_RELACION__NAME:
 				return getName();
-			case AbstractaPackage.MKJ_RELACION__TIPO:
-				return getTipo();
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				return getMultiplicidad1();
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD2:
@@ -524,9 +480,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_RELACION__NAME:
 				setName((String)newValue);
-				return;
-			case AbstractaPackage.MKJ_RELACION__TIPO:
-				setTipo((String)newValue);
 				return;
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				setMultiplicidad1((String)newValue);
@@ -567,9 +520,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 			case AbstractaPackage.MKJ_RELACION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case AbstractaPackage.MKJ_RELACION__TIPO:
-				setTipo(TIPO_EDEFAULT);
-				return;
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				setMultiplicidad1(MULTIPLICIDAD1_EDEFAULT);
 				return;
@@ -608,8 +558,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_RELACION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case AbstractaPackage.MKJ_RELACION__TIPO:
-				return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				return MULTIPLICIDAD1_EDEFAULT == null ? multiplicidad1 != null : !MULTIPLICIDAD1_EDEFAULT.equals(multiplicidad1);
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD2:
@@ -642,8 +590,6 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", tipo: ");
-		result.append(tipo);
 		result.append(", multiplicidad1: ");
 		result.append(multiplicidad1);
 		result.append(", multiplicidad2: ");

@@ -56,14 +56,30 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case AbstractaPackage.MODEL_FACTORY: return createModelFactory();
 			case AbstractaPackage.MKJ_PAQUETE: return createMKJPaquete();
 			case AbstractaPackage.MKJ_CLASE: return createMKJClase();
 			case AbstractaPackage.MKJ_ATRIBUTO: return createMKJAtributo();
-			case AbstractaPackage.MK_JMETODO: return createMKJmetodo();
+			case AbstractaPackage.MKJ_METODO: return createMKJMetodo();
 			case AbstractaPackage.MKJ_RELACION: return createMKJRelacion();
+			case AbstractaPackage.MHJ_ASOCIACION: return createMHJAsociacion();
+			case AbstractaPackage.MKJ_CONTAINMENT: return createMKJContainment();
+			case AbstractaPackage.MKJ_AGREGACION: return createMKJAgregacion();
+			case AbstractaPackage.MKJ_HERENCIA: return createMKJHerencia();
+			case AbstractaPackage.MKJ_INTERFACE: return createMKJInterface();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelFactory createModelFactory() {
+		ModelFactoryImpl modelFactory = new ModelFactoryImpl();
+		return modelFactory;
 	}
 
 	/**
@@ -101,9 +117,9 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MKJmetodo createMKJmetodo() {
-		MKJmetodoImpl mkJmetodo = new MKJmetodoImpl();
-		return mkJmetodo;
+	public MKJMetodo createMKJMetodo() {
+		MKJMetodoImpl mkjMetodo = new MKJMetodoImpl();
+		return mkjMetodo;
 	}
 
 	/**
@@ -114,6 +130,56 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	public MKJRelacion createMKJRelacion() {
 		MKJRelacionImpl mkjRelacion = new MKJRelacionImpl();
 		return mkjRelacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MHJAsociacion createMHJAsociacion() {
+		MHJAsociacionImpl mhjAsociacion = new MHJAsociacionImpl();
+		return mhjAsociacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJContainment createMKJContainment() {
+		MKJContainmentImpl mkjContainment = new MKJContainmentImpl();
+		return mkjContainment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJAgregacion createMKJAgregacion() {
+		MKJAgregacionImpl mkjAgregacion = new MKJAgregacionImpl();
+		return mkjAgregacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJHerencia createMKJHerencia() {
+		MKJHerenciaImpl mkjHerencia = new MKJHerenciaImpl();
+		return mkjHerencia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJInterface createMKJInterface() {
+		MKJInterfaceImpl mkjInterface = new MKJInterfaceImpl();
+		return mkjInterface;
 	}
 
 	/**

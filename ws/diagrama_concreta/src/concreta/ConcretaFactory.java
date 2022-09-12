@@ -22,6 +22,15 @@ public interface ConcretaFactory extends EFactory {
 	ConcretaFactory eINSTANCE = concreta.impl.ConcretaFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Model Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Factory</em>'.
+	 * @generated
+	 */
+	ModelFactory createModelFactory();
+
+	/**
 	 * Returns a new object of class '<em>MKJ Diagrama Clases</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,22 +67,58 @@ public interface ConcretaFactory extends EFactory {
 	MKJAtributo createMKJAtributo();
 
 	/**
-	 * Returns a new object of class '<em>MK Jmetodo</em>'.
+	 * Returns a new object of class '<em>MKJ Metodo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MK Jmetodo</em>'.
+	 * @return a new object of class '<em>MKJ Metodo</em>'.
 	 * @generated
 	 */
-	MKJmetodo createMKJmetodo();
+	MKJMetodo createMKJMetodo();
 
 	/**
-	 * Returns a new object of class '<em>MKJ Relacion</em>'.
+	 * Returns a new object of class '<em>MKJ Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MKJ Relacion</em>'.
+	 * @return a new object of class '<em>MKJ Asociacion</em>'.
 	 * @generated
 	 */
-	MKJRelacion createMKJRelacion();
+	MKJAsociacion createMKJAsociacion();
+
+	/**
+	 * Returns a new object of class '<em>MKJ Conteinment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MKJ Conteinment</em>'.
+	 * @generated
+	 */
+	MKJConteinment createMKJConteinment();
+
+	/**
+	 * Returns a new object of class '<em>MKJ Agregacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MKJ Agregacion</em>'.
+	 * @generated
+	 */
+	MKJAgregacion createMKJAgregacion();
+
+	/**
+	 * Returns a new object of class '<em>MKJ Herencia</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MKJ Herencia</em>'.
+	 * @generated
+	 */
+	MKJHerencia createMKJHerencia();
+
+	/**
+	 * Returns a new object of class '<em>MKJ Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MKJ Interface</em>'.
+	 * @generated
+	 */
+	MKJInterface createMKJInterface();
 
 	/**
 	 * Returns the package supported by this factory.

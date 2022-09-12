@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="concreta" nsURI="concreta" nsPrefix="concreta">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaDiagramas" upperBound="-1"
+        eType="#//MKJDiagramaClases" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJDiagramaClases">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaClases" upperBound="-1"
+        eType="#//MKJClase" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaPaquetes" upperBound="-1"
+        eType="#//MKJPaquete" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaAsociaciones" upperBound="-1"
+        eType="#//MKJAsociacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaConteiments" upperBound="-1"
+        eType="#//MKJConteinment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaAgregaciones" upperBound="-1"
+        eType="#//MKJAgregacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaHerencias" upperBound="-1"
+        eType="#//MKJHerencia" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaInterfaces" upperBound="-1"
+        eType="#//MKJInterface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJPaquete">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paquetes" upperBound="-1"
+        eType="#//MKJPaquete" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clases" upperBound="-1"
+        eType="#//MKJClase" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJClase">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
+        eType="#//MKJAtributo" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metodos" upperBound="-1"
+        eType="#//MKJMetodo" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+        <details key="collapsible" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJAtributo">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="border.color" value="255,255,255"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJMetodo">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="border.color" value="255,255,255"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJAsociacion">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJConteinment">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJAgregacion">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJHerencia">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJInterface">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
+</ecore:EPackage>

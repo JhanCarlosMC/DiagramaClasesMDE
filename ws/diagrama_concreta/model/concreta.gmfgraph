@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="concreta">
+  <figures name="Default">
+    <descriptors name="MKJPaqueteFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJPaqueteFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MKJPaqueteLabelFigure" text="MKJPaquete"/>
+      </actualFigure>
+      <accessors accessor="getFigureMKJPaqueteLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MKJClaseFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJClaseFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MKJClaseLabelFigure" text="MKJClase">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="MKJClaseAtributosCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="MKJClaseMetodosCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureMKJClaseLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getMKJClaseAtributosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors accessor="getMKJClaseMetodosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="MKJAtributoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJAtributoFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MKJAtributoLabelFigure" text="MKJAtributo"/>
+      </actualFigure>
+      <accessors accessor="getFigureMKJAtributoLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MKJMetodoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJMetodoFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MKJMetodoLabelFigure" text="MKJMetodo"/>
+      </actualFigure>
+      <accessors accessor="getFigureMKJMetodoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MKJAsociacionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAsociacionFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+    <descriptors name="MKJConteinmentFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+    <descriptors name="MKJAgregacionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+    <descriptors name="MKJHerenciaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJHerenciaFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+    <descriptors name="MKJInterfaceFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJInterfaceFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+  </figures>
+  <nodes name="MKJPaquete" figure="MKJPaqueteFigure"/>
+  <nodes name="MKJClase" figure="MKJClaseFigure"/>
+  <nodes name="MKJAtributo" figure="MKJAtributoFigure"/>
+  <nodes name="MKJMetodo" figure="MKJMetodoFigure"/>
+  <connections name="MKJAsociacion" figure="MKJAsociacionFigure"/>
+  <connections name="MKJConteinment" figure="MKJConteinmentFigure"/>
+  <connections name="MKJAgregacion" figure="MKJAgregacionFigure"/>
+  <connections name="MKJHerencia" figure="MKJHerenciaFigure"/>
+  <connections name="MKJInterface" figure="MKJInterfaceFigure"/>
+  <compartments name="MKJClaseAtributosCompartment" figure="MKJClaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="MKJClaseMetodosCompartment" figure="MKJClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <labels name="MKJPaqueteLabel" figure="MKJPaqueteFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="MKJClaseLabel" figure="MKJClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="MKJAtributoLabel" figure="MKJAtributoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="MKJMetodoLabel" figure="MKJMetodoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+</gmfgraph:Canvas>

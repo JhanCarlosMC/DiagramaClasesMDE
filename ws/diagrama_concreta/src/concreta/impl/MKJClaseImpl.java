@@ -5,7 +5,7 @@ package concreta.impl;
 import concreta.ConcretaPackage;
 import concreta.MKJAtributo;
 import concreta.MKJClase;
-import concreta.MKJmetodo;
+import concreta.MKJMetodo;
 
 import java.util.Collection;
 
@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link concreta.impl.MKJClaseImpl#getIdentificador <em>Identificador</em>}</li>
  *   <li>{@link concreta.impl.MKJClaseImpl#getName <em>Name</em>}</li>
  *   <li>{@link concreta.impl.MKJClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link concreta.impl.MKJClaseImpl#getMetodos <em>Metodos</em>}</li>
@@ -39,6 +40,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class MKJClaseImpl extends EObjectImpl implements MKJClase {
+	/**
+	 * The default value of the '{@link #getIdentificador() <em>Identificador</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdentificador()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IDENTIFICADOR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIdentificador() <em>Identificador</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdentificador()
+	 * @generated
+	 * @ordered
+	 */
+	protected String identificador = IDENTIFICADOR_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +98,7 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MKJmetodo> metodos;
+	protected EList<MKJMetodo> metodos;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,6 +117,27 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	protected EClass eStaticClass() {
 		return ConcretaPackage.Literals.MKJ_CLASE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getIdentificador() {
+		return identificador;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdentificador(String newIdentificador) {
+		String oldIdentificador = identificador;
+		identificador = newIdentificador;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_CLASE__IDENTIFICADOR, oldIdentificador, identificador));
 	}
 
 	/**
@@ -136,9 +178,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MKJmetodo> getMetodos() {
+	public EList<MKJMetodo> getMetodos() {
 		if (metodos == null) {
-			metodos = new EObjectContainmentEList<MKJmetodo>(MKJmetodo.class, this, ConcretaPackage.MKJ_CLASE__METODOS);
+			metodos = new EObjectContainmentEList<MKJMetodo>(MKJMetodo.class, this, ConcretaPackage.MKJ_CLASE__METODOS);
 		}
 		return metodos;
 	}
@@ -167,6 +209,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ConcretaPackage.MKJ_CLASE__IDENTIFICADOR:
+				return getIdentificador();
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				return getName();
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:
@@ -186,6 +230,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ConcretaPackage.MKJ_CLASE__IDENTIFICADOR:
+				setIdentificador((String)newValue);
+				return;
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				setName((String)newValue);
 				return;
@@ -195,7 +242,7 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return;
 			case ConcretaPackage.MKJ_CLASE__METODOS:
 				getMetodos().clear();
-				getMetodos().addAll((Collection<? extends MKJmetodo>)newValue);
+				getMetodos().addAll((Collection<? extends MKJMetodo>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -209,6 +256,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ConcretaPackage.MKJ_CLASE__IDENTIFICADOR:
+				setIdentificador(IDENTIFICADOR_EDEFAULT);
+				return;
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -230,6 +280,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ConcretaPackage.MKJ_CLASE__IDENTIFICADOR:
+				return IDENTIFICADOR_EDEFAULT == null ? identificador != null : !IDENTIFICADOR_EDEFAULT.equals(identificador);
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:
@@ -250,7 +302,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (identificador: ");
+		result.append(identificador);
+		result.append(", name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

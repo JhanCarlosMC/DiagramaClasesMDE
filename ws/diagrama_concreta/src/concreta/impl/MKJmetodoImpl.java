@@ -3,7 +3,7 @@
 package concreta.impl;
 
 import concreta.ConcretaPackage;
-import concreta.MKJmetodo;
+import concreta.MKJMetodo;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>MK Jmetodo</b></em>'.
+ * An implementation of the model object '<em><b>MKJ Metodo</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link concreta.impl.MKJmetodoImpl#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.impl.MKJMetodoImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
+public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MKJmetodoImpl() {
+	protected MKJMetodoImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ConcretaPackage.Literals.MK_JMETODO;
+		return ConcretaPackage.Literals.MKJ_METODO;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MK_JMETODO__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_METODO__NAME, oldName, name));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ConcretaPackage.MK_JMETODO__NAME:
+			case ConcretaPackage.MKJ_METODO__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ConcretaPackage.MK_JMETODO__NAME:
+			case ConcretaPackage.MKJ_METODO__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MK_JMETODO__NAME:
+			case ConcretaPackage.MKJ_METODO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MK_JMETODO__NAME:
+			case ConcretaPackage.MKJ_METODO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -160,4 +160,4 @@ public class MKJmetodoImpl extends EObjectImpl implements MKJmetodo {
 		return result.toString();
 	}
 
-} //MKJmetodoImpl
+} //MKJMetodoImpl

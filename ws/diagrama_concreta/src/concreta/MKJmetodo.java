@@ -6,21 +6,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>MK Jmetodo</b></em>'.
+ * A representation of the model object '<em><b>MKJ Metodo</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link concreta.MKJmetodo#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.MKJMetodo#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see concreta.ConcretaPackage#getMKJmetodo()
- * @model annotation="gmf.node label='name'"
+ * @see concreta.ConcretaPackage#getMKJMetodo()
+ * @model annotation="gmf.node label='name' border.color='255,255,255'"
  * @generated
  */
-public interface MKJmetodo extends EObject {
+public interface MKJMetodo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -31,14 +31,14 @@ public interface MKJmetodo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see concreta.ConcretaPackage#getMKJmetodo_Name()
+	 * @see concreta.ConcretaPackage#getMKJMetodo_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link concreta.MKJmetodo#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link concreta.MKJMetodo#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -47,4 +47,4 @@ public interface MKJmetodo extends EObject {
 	 */
 	void setName(String value);
 
-} // MKJmetodo
+} // MKJMetodo

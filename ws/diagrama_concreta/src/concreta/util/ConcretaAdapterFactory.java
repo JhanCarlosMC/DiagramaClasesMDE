@@ -68,6 +68,10 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 	protected ConcretaSwitch<Adapter> modelSwitch =
 		new ConcretaSwitch<Adapter>() {
 			@Override
+			public Adapter caseModelFactory(ModelFactory object) {
+				return createModelFactoryAdapter();
+			}
+			@Override
 			public Adapter caseMKJDiagramaClases(MKJDiagramaClases object) {
 				return createMKJDiagramaClasesAdapter();
 			}
@@ -84,12 +88,28 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 				return createMKJAtributoAdapter();
 			}
 			@Override
-			public Adapter caseMKJmetodo(MKJmetodo object) {
-				return createMKJmetodoAdapter();
+			public Adapter caseMKJMetodo(MKJMetodo object) {
+				return createMKJMetodoAdapter();
 			}
 			@Override
-			public Adapter caseMKJRelacion(MKJRelacion object) {
-				return createMKJRelacionAdapter();
+			public Adapter caseMKJAsociacion(MKJAsociacion object) {
+				return createMKJAsociacionAdapter();
+			}
+			@Override
+			public Adapter caseMKJConteinment(MKJConteinment object) {
+				return createMKJConteinmentAdapter();
+			}
+			@Override
+			public Adapter caseMKJAgregacion(MKJAgregacion object) {
+				return createMKJAgregacionAdapter();
+			}
+			@Override
+			public Adapter caseMKJHerencia(MKJHerencia object) {
+				return createMKJHerenciaAdapter();
+			}
+			@Override
+			public Adapter caseMKJInterface(MKJInterface object) {
+				return createMKJInterfaceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -110,6 +130,20 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link concreta.ModelFactory <em>Model Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see concreta.ModelFactory
+	 * @generated
+	 */
+	public Adapter createModelFactoryAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link concreta.MKJDiagramaClases <em>MKJ Diagrama Clases</em>}'.
@@ -168,30 +202,86 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link concreta.MKJmetodo <em>MK Jmetodo</em>}'.
+	 * Creates a new adapter for an object of class '{@link concreta.MKJMetodo <em>MKJ Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see concreta.MKJmetodo
+	 * @see concreta.MKJMetodo
 	 * @generated
 	 */
-	public Adapter createMKJmetodoAdapter() {
+	public Adapter createMKJMetodoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link concreta.MKJRelacion <em>MKJ Relacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link concreta.MKJAsociacion <em>MKJ Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see concreta.MKJRelacion
+	 * @see concreta.MKJAsociacion
 	 * @generated
 	 */
-	public Adapter createMKJRelacionAdapter() {
+	public Adapter createMKJAsociacionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link concreta.MKJConteinment <em>MKJ Conteinment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see concreta.MKJConteinment
+	 * @generated
+	 */
+	public Adapter createMKJConteinmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link concreta.MKJAgregacion <em>MKJ Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see concreta.MKJAgregacion
+	 * @generated
+	 */
+	public Adapter createMKJAgregacionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link concreta.MKJHerencia <em>MKJ Herencia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see concreta.MKJHerencia
+	 * @generated
+	 */
+	public Adapter createMKJHerenciaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link concreta.MKJInterface <em>MKJ Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see concreta.MKJInterface
+	 * @generated
+	 */
+	public Adapter createMKJInterfaceAdapter() {
 		return null;
 	}
 
