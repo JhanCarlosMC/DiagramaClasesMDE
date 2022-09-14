@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJClase()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='156,233,91' border.color='0,0,0' margin='1'"
  * @generated
  */
 public interface MKJClase extends EObject {

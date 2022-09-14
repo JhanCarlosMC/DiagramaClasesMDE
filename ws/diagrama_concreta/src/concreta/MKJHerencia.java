@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJHerencia()
- * @model annotation="gmf.link source='source' target='target' style='dot' width='2'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='2' target.decoration='closedarrow' color='0,0,0'"
  * @generated
  */
 public interface MKJHerencia extends EObject {

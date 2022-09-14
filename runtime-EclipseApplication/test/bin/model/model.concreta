@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
   <listaDiagramas nombre="Diagram One">
+    <listaClases name="Persona">
+      <atributos name="nombre"/>
+      <atributos name="cedula"/>
+      <metodos name="getCedula()"/>
+    </listaClases>
     <listaClases name="Empresa">
       <atributos name="nombre"/>
     </listaClases>
-    <listaClases name="Empleado">
-      <atributos name="nombre"/>
-      <atributos name="cedula"/>
-      <metodos name="getNombre()"/>
-      <metodos name="getCedula()"/>
-    </listaClases>
     <listaClases name="Producto">
+      <atributos name="id"/>
       <atributos name="nombre"/>
-      <metodos name="getNombre()"/>
     </listaClases>
-    <listaPaquetes/>
-    <listaAsociaciones source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.2"/>
-    <listaConteiments source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.2"/>
-    <listaConteiments source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaClases name="Empleado"/>
+    <listaClases name="Cliente"/>
+    <listaClases name="Factura">
+      <atributos name="id"/>
+    </listaClases>
+    <listaClases name="TipoProducto"/>
+    <listaPaquetes nombre="Root"/>
+    <listaAsociaciones source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.5"/>
+    <listaConteiments source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.0"/>
+    <listaConteiments source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.2"/>
+    <listaAgregaciones source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.5"/>
+    <listaHerencias source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.3"/>
+    <listaHerencias source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.4"/>
+    <listaInterfaces source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.6"/>
   </listaDiagramas>
   <listaDiagramas nombre="Diagram tu">
     <listaClases name="Hola">

@@ -11,7 +11,6 @@ import concreta.MKJDiagramaClases;
 import concreta.MKJHerencia;
 import concreta.MKJInterface;
 import concreta.MKJPaquete;
-import concreta.MKJRelacion;
 
 import java.util.Collection;
 

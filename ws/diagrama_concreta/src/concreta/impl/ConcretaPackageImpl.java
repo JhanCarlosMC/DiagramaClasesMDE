@@ -14,9 +14,8 @@ import concreta.MKJHerencia;
 import concreta.MKJInterface;
 import concreta.MKJMetodo;
 import concreta.MKJPaquete;
-import concreta.MKJRelacion;
-
 import concreta.ModelFactory;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -770,27 +769,33 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		  (mkjPaqueteEClass, 
 		   source, 
 		   new String[] {
-			 "label", "nombre"
+			 "label", "nombre",
+			 "color", "232,232,232"
 		   });	
 		addAnnotation
 		  (mkjClaseEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "color", "156,233,91",
+			 "border.color", "0,0,0",
+			 "margin", "1"
 		   });	
 		addAnnotation
 		  (mkjAtributoEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name",
-			 "border.color", "255,255,255"
+			 "border.color", "255,255,255",
+			 "color", "156,233,91"
 		   });	
 		addAnnotation
 		  (mkjMetodoEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name",
-			 "border.color", "255,255,255"
+			 "border.color", "255,255,255",
+			 "color", "156,233,91"
 		   });
 	}
 
@@ -831,8 +836,9 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
-			 "style", "dot",
-			 "width", "2"
+			 "style", "solid",
+			 "width", "2",
+			 "color", "0,0,0"
 		   });	
 		addAnnotation
 		  (mkjConteinmentEClass, 
@@ -840,8 +846,10 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
-			 "style", "dot",
-			 "width", "2"
+			 "style", "solid",
+			 "width", "2",
+			 "source.decoration", "filledrhomb",
+			 "color", "0,0,0"
 		   });	
 		addAnnotation
 		  (mkjAgregacionEClass, 
@@ -849,8 +857,10 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
-			 "style", "dot",
-			 "width", "2"
+			 "style", "solid",
+			 "width", "2",
+			 "source.decoration", "rhomb",
+			 "color", "0,0,0"
 		   });	
 		addAnnotation
 		  (mkjHerenciaEClass, 
@@ -858,8 +868,10 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
-			 "style", "dot",
-			 "width", "2"
+			 "style", "solid",
+			 "width", "2",
+			 "target.decoration", "closedarrow",
+			 "color", "0,0,0"
 		   });	
 		addAnnotation
 		  (mkjInterfaceEClass, 
@@ -868,7 +880,9 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 			 "source", "source",
 			 "target", "target",
 			 "style", "dot",
-			 "width", "2"
+			 "width", "2",
+			 "target.decoration", "closedarrow",
+			 "color", "0,0,0"
 		   });
 	}
 
