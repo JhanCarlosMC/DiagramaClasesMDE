@@ -29,20 +29,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="MKJPaquete">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
+      <details key="color" value="232,232,232"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paquetes" upperBound="-1"
-        eType="#//MKJPaquete" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="clases" upperBound="-1"
-        eType="#//MKJClase" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJClase">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
+      <details key="color" value="156,233,91"/>
+      <details key="border.color" value="0,0,0"/>
+      <details key="margin" value="1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//MKJAtributo" containment="true">
       <eAnnotations source="gmf.compartment">
@@ -61,6 +62,7 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
       <details key="border.color" value="255,255,255"/>
+      <details key="color" value="156,233,91"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -68,35 +70,52 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
       <details key="border.color" value="255,255,255"/>
+      <details key="color" value="156,233,91"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
+        eType="#//MKJAtributo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MKJAsociacion">
+  <eClassifiers xsi:type="ecore:EClass" name="MKJRelacion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidad1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidad2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rol1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rol2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidad1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegabilidad2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJAsociacion" eSuperTypes="#//MKJRelacion">
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="style" value="dot"/>
+      <details key="style" value="solid"/>
       <details key="width" value="2"/>
+      <details key="color" value="0,0,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MKJConteinment">
+  <eClassifiers xsi:type="ecore:EClass" name="MKJConteinment" eSuperTypes="#//MKJRelacion">
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="style" value="dot"/>
+      <details key="style" value="solid"/>
       <details key="width" value="2"/>
+      <details key="source.decoration" value="filledrhomb"/>
+      <details key="color" value="0,0,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MKJAgregacion">
+  <eClassifiers xsi:type="ecore:EClass" name="MKJAgregacion" eSuperTypes="#//MKJRelacion">
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="style" value="dot"/>
+      <details key="style" value="solid"/>
       <details key="width" value="2"/>
+      <details key="source.decoration" value="rhomb"/>
+      <details key="color" value="0,0,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
@@ -105,8 +124,10 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="style" value="dot"/>
+      <details key="style" value="solid"/>
       <details key="width" value="2"/>
+      <details key="target.decoration" value="closedarrow"/>
+      <details key="color" value="0,0,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
@@ -117,6 +138,8 @@
       <details key="target" value="target"/>
       <details key="style" value="dot"/>
       <details key="width" value="2"/>
+      <details key="target.decoration" value="closedarrow"/>
+      <details key="color" value="0,0,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>

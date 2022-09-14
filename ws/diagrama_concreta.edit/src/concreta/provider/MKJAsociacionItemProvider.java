@@ -5,6 +5,7 @@ package concreta.provider;
 
 import concreta.ConcretaPackage;
 
+import concreta.MKJAsociacion;
 import java.util.Collection;
 import java.util.List;
 
@@ -29,13 +30,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * @generated
  */
 public class MKJAsociacionItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends MKJRelacionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -126,7 +121,10 @@ public class MKJAsociacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MKJAsociacion_type");
+		String label = ((MKJAsociacion)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MKJAsociacion_type") :
+			getString("_UI_MKJAsociacion_type") + " " + label;
 	}
 	
 
@@ -153,17 +151,6 @@ public class MKJAsociacionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ConcretaEditPlugin.INSTANCE;
 	}
 
 }

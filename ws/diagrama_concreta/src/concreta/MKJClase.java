@@ -17,12 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link concreta.MKJClase#getIdentificador <em>Identificador</em>}</li>
  *   <li>{@link concreta.MKJClase#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.MKJClase#getRuta <em>Ruta</em>}</li>
  *   <li>{@link concreta.MKJClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link concreta.MKJClase#getMetodos <em>Metodos</em>}</li>
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJClase()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='156,233,91' border.color='0,0,0' margin='1'"
  * @generated
  */
 public interface MKJClase extends EObject {
@@ -77,6 +78,32 @@ public interface MKJClase extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ruta</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ruta</em>' attribute.
+	 * @see #setRuta(String)
+	 * @see concreta.ConcretaPackage#getMKJClase_Ruta()
+	 * @model
+	 * @generated
+	 */
+	String getRuta();
+
+	/**
+	 * Sets the value of the '{@link concreta.MKJClase#getRuta <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ruta</em>' attribute.
+	 * @see #getRuta()
+	 * @generated
+	 */
+	void setRuta(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.

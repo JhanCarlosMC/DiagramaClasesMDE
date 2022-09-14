@@ -92,6 +92,10 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 				return createMKJMetodoAdapter();
 			}
 			@Override
+			public Adapter caseMKJRelacion(MKJRelacion object) {
+				return createMKJRelacionAdapter();
+			}
+			@Override
 			public Adapter caseMKJAsociacion(MKJAsociacion object) {
 				return createMKJAsociacionAdapter();
 			}
@@ -212,6 +216,20 @@ public class ConcretaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMKJMetodoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link concreta.MKJRelacion <em>MKJ Relacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see concreta.MKJRelacion
+	 * @generated
+	 */
+	public Adapter createMKJRelacionAdapter() {
 		return null;
 	}
 

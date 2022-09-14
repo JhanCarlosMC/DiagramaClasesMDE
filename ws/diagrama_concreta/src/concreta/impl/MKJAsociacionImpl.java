@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class MKJAsociacionImpl extends EObjectImpl implements MKJAsociacion {
+public class MKJAsociacionImpl extends MKJRelacionImpl implements MKJAsociacion {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->

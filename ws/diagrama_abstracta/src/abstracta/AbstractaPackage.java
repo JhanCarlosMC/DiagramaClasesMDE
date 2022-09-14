@@ -705,76 +705,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_HERENCIA = 9;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__NAME = MKJ_RELACION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
-
-	/**
-	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__ROL1 = MKJ_RELACION__ROL1;
-
-	/**
-	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__ROL2 = MKJ_RELACION__ROL2;
-
-	/**
-	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
-
-	/**
-	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_HERENCIA__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
-
-	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_HERENCIA__SOURCE = MKJ_RELACION__SOURCE;
+	int MKJ_HERENCIA__SOURCE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -783,7 +720,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_HERENCIA__TARGET = MKJ_RELACION__TARGET;
+	int MKJ_HERENCIA__TARGET = 1;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Herencia</em>' class.
@@ -792,7 +729,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_HERENCIA_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+	int MKJ_HERENCIA_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJInterfaceImpl <em>MKJ Interface</em>}' class.
@@ -805,76 +742,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_INTERFACE = 10;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__NAME = MKJ_RELACION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
-
-	/**
-	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__ROL1 = MKJ_RELACION__ROL1;
-
-	/**
-	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__ROL2 = MKJ_RELACION__ROL2;
-
-	/**
-	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
-
-	/**
-	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_INTERFACE__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
-
-	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_INTERFACE__SOURCE = MKJ_RELACION__SOURCE;
+	int MKJ_INTERFACE__SOURCE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -883,7 +757,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_INTERFACE__TARGET = MKJ_RELACION__TARGET;
+	int MKJ_INTERFACE__TARGET = 1;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Interface</em>' class.
@@ -892,7 +766,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_INTERFACE_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+	int MKJ_INTERFACE_FEATURE_COUNT = 2;
 
 
 	/**
@@ -1271,6 +1145,28 @@ public interface AbstractaPackage extends EPackage {
 	EClass getMKJHerencia();
 
 	/**
+	 * Returns the meta object for the reference '{@link abstracta.MKJHerencia#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see abstracta.MKJHerencia#getSource()
+	 * @see #getMKJHerencia()
+	 * @generated
+	 */
+	EReference getMKJHerencia_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link abstracta.MKJHerencia#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see abstracta.MKJHerencia#getTarget()
+	 * @see #getMKJHerencia()
+	 * @generated
+	 */
+	EReference getMKJHerencia_Target();
+
+	/**
 	 * Returns the meta object for class '{@link abstracta.MKJInterface <em>MKJ Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1279,6 +1175,28 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMKJInterface();
+
+	/**
+	 * Returns the meta object for the reference '{@link abstracta.MKJInterface#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see abstracta.MKJInterface#getSource()
+	 * @see #getMKJInterface()
+	 * @generated
+	 */
+	EReference getMKJInterface_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link abstracta.MKJInterface#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see abstracta.MKJInterface#getTarget()
+	 * @see #getMKJInterface()
+	 * @generated
+	 */
+	EReference getMKJInterface_Target();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1603,6 +1521,22 @@ public interface AbstractaPackage extends EPackage {
 		EClass MKJ_HERENCIA = eINSTANCE.getMKJHerencia();
 
 		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_HERENCIA__SOURCE = eINSTANCE.getMKJHerencia_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_HERENCIA__TARGET = eINSTANCE.getMKJHerencia_Target();
+
+		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJInterfaceImpl <em>MKJ Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1611,6 +1545,22 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MKJ_INTERFACE = eINSTANCE.getMKJInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_INTERFACE__SOURCE = eINSTANCE.getMKJInterface_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_INTERFACE__TARGET = eINSTANCE.getMKJInterface_Target();
 
 	}
 

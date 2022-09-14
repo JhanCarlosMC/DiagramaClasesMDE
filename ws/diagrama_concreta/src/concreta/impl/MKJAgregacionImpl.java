@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class MKJAgregacionImpl extends EObjectImpl implements MKJAgregacion {
+public class MKJAgregacionImpl extends MKJRelacionImpl implements MKJAgregacion {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->

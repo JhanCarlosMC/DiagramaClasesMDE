@@ -15,15 +15,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MKJAsociacionTest extends TestCase {
-
-	/**
-	 * The fixture for this MKJ Asociacion test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MKJAsociacion fixture = null;
+public class MKJAsociacionTest extends MKJRelacionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +37,14 @@ public class MKJAsociacionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this MKJ Asociacion test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(MKJAsociacion fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this MKJ Asociacion test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected MKJAsociacion getFixture() {
-		return fixture;
+		return (MKJAsociacion)fixture;
 	}
 
 	/**

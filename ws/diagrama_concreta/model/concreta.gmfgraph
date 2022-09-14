@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="concreta">
   <figures name="Default">
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledRhomb">
+      <template x="-1" y="1"/>
+      <template/>
+      <template x="-1" y="-1"/>
+      <template x="-2"/>
+      <template x="-1" y="1"/>
+    </figures>
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="Rhomb">
+      <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+      <template x="-1" y="1"/>
+      <template/>
+      <template x="-1" y="-1"/>
+      <template x="-2"/>
+      <template x="-1" y="1"/>
+    </figures>
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="ClosedArrow">
+      <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+      <template/>
+      <template x="-2" y="2"/>
+      <template x="-2" y="-2"/>
+      <template/>
+    </figures>
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="ClosedArrow">
+      <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+      <template/>
+      <template x="-2" y="2"/>
+      <template x="-2" y="-2"/>
+      <template/>
+    </figures>
     <descriptors name="MKJPaqueteFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJPaqueteFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="232" green="232" blue="232"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -12,8 +42,10 @@
     </descriptors>
     <descriptors name="MKJClaseFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJClaseFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="156" green="233" blue="91"/>
         <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
+          <insets top="1" left="1" bottom="1" right="1"/>
         </border>
         <children xsi:type="gmfgraph:Label" name="MKJClaseLabelFigure" text="MKJClase">
           <maximumSize dx="10000" dy="50"/>
@@ -28,6 +60,7 @@
     <descriptors name="MKJAtributoFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJAtributoFigure">
         <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="156" green="233" blue="91"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -38,6 +71,7 @@
     <descriptors name="MKJMetodoFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJMetodoFigure">
         <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="156" green="233" blue="91"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -46,19 +80,29 @@
       <accessors accessor="getFigureMKJMetodoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="MKJAsociacionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAsociacionFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAsociacionFigure" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
     <descriptors name="MKJConteinmentFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.0">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
     <descriptors name="MKJAgregacionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.1">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
     <descriptors name="MKJHerenciaFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJHerenciaFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJHerenciaFigure" lineWidth="2" targetDecoration="//@figures.0/@figures.2">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
     <descriptors name="MKJInterfaceFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJInterfaceFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJInterfaceFigure" lineWidth="2" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.3">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
   </figures>
   <nodes name="MKJPaquete" figure="MKJPaqueteFigure"/>

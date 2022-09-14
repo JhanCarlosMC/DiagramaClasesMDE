@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link concreta.impl.MKJClaseImpl#getIdentificador <em>Identificador</em>}</li>
  *   <li>{@link concreta.impl.MKJClaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.impl.MKJClaseImpl#getRuta <em>Ruta</em>}</li>
  *   <li>{@link concreta.impl.MKJClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link concreta.impl.MKJClaseImpl#getMetodos <em>Metodos</em>}</li>
  * </ul>
@@ -79,6 +80,26 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RUTA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected String ruta = RUTA_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getAtributos() <em>Atributos</em>}' containment reference list.
@@ -166,6 +187,27 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRuta(String newRuta) {
+		String oldRuta = ruta;
+		ruta = newRuta;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_CLASE__RUTA, oldRuta, ruta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<MKJAtributo> getAtributos() {
 		if (atributos == null) {
 			atributos = new EObjectContainmentEList<MKJAtributo>(MKJAtributo.class, this, ConcretaPackage.MKJ_CLASE__ATRIBUTOS);
@@ -213,6 +255,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return getIdentificador();
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				return getName();
+			case ConcretaPackage.MKJ_CLASE__RUTA:
+				return getRuta();
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:
 				return getAtributos();
 			case ConcretaPackage.MKJ_CLASE__METODOS:
@@ -235,6 +279,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return;
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				setName((String)newValue);
+				return;
+			case ConcretaPackage.MKJ_CLASE__RUTA:
+				setRuta((String)newValue);
 				return;
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:
 				getAtributos().clear();
@@ -262,6 +309,9 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ConcretaPackage.MKJ_CLASE__RUTA:
+				setRuta(RUTA_EDEFAULT);
+				return;
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:
 				getAtributos().clear();
 				return;
@@ -284,6 +334,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return IDENTIFICADOR_EDEFAULT == null ? identificador != null : !IDENTIFICADOR_EDEFAULT.equals(identificador);
 			case ConcretaPackage.MKJ_CLASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ConcretaPackage.MKJ_CLASE__RUTA:
+				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:
 				return atributos != null && !atributos.isEmpty();
 			case ConcretaPackage.MKJ_CLASE__METODOS:
@@ -306,6 +358,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		result.append(identificador);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", ruta: ");
+		result.append(ruta);
 		result.append(')');
 		return result.toString();
 	}

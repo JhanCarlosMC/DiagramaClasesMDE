@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class MKJConteinmentImpl extends EObjectImpl implements MKJConteinment {
+public class MKJConteinmentImpl extends MKJRelacionImpl implements MKJConteinment {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -48,6 +48,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="MHJAsociacion" eSuperTypes="#//MKJRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="MKJContainment" eSuperTypes="#//MKJRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="MKJAgregacion" eSuperTypes="#//MKJRelacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MKJHerencia" eSuperTypes="#//MKJRelacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MKJInterface" eSuperTypes="#//MKJRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJHerencia">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -65,6 +65,7 @@ public class MKJClaseItemProvider
 
 			addIdentificadorPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addRutaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -105,6 +106,28 @@ public class MKJClaseItemProvider
 				 getString("_UI_MKJClase_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MKJClase_name_feature", "_UI_MKJClase_type"),
 				 ConcretaPackage.Literals.MKJ_CLASE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ruta feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRutaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJClase_ruta_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJClase_ruta_feature", "_UI_MKJClase_type"),
+				 ConcretaPackage.Literals.MKJ_CLASE__RUTA,
 				 true,
 				 false,
 				 false,
@@ -184,6 +207,7 @@ public class MKJClaseItemProvider
 		switch (notification.getFeatureID(MKJClase.class)) {
 			case ConcretaPackage.MKJ_CLASE__IDENTIFICADOR:
 			case ConcretaPackage.MKJ_CLASE__NAME:
+			case ConcretaPackage.MKJ_CLASE__RUTA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ConcretaPackage.MKJ_CLASE__ATRIBUTOS:

@@ -23,63 +23,75 @@ class MKJDiagramaClases {
     val MKJInterface[*] listaInterfaces;
 }
 
-@gmf.node(label = "nombre")
+@gmf.node(label = "nombre", color = "232,232,232")
 class MKJPaquete{
 	attr String nombre;
 	attr String ruta;
-	val MKJPaquete[*] paquetes;
-	val MKJClase[*] clases;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "156,233,91", border.color ="0,0,0", margin="1")
 class MKJClase {
 	attr String identificador;
 	attr String name;
+	attr String ruta;
+	
     @gmf.compartment(layout = "list")
     val MKJAtributo[*] atributos;
     @gmf.compartment(layout = "list", collapsible = "false")
     val MKJMetodo[*] metodos;
 }
 
-@gmf.node(label = "name", border.color = "255,255,255")
+@gmf.node(label = "name", border.color = "255,255,255", color = "156,233,91")
 class MKJAtributo {
 	attr String name;
 
 }
 
-@gmf.node(label = "name",border.color = "255,255,255")
+@gmf.node(label = "name",border.color = "255,255,255",color = "156,233,91")
 class MKJMetodo {
 	attr String name;
+	
+	val MKJAtributo[*] parametros;
 }
 
-@gmf.link(source="source", target="target", style="dot", width="2")
-class MKJAsociacion {
-	//ATRIBUTOS
+class MKJRelacion {
+    attr String name;
+    attr String multiplicidad1;
+    attr String multiplicidad2;
+    attr String rol1;
+    attr String rol2;
+    attr String navegabilidad1;	
+    attr String navegabilidad2;
+
+}
+
+@gmf.link(source="source", target="target", style="solid", width="2", color = "0,0,0")
+class MKJAsociacion extends MKJRelacion{
 
     ref MKJClase source;
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="dot", width="2")
-class MKJConteinment {
+@gmf.link(source="source", target="target", style="solid", width="2", source.decoration = "filledrhomb", color = "0,0,0")
+class MKJConteinment extends MKJRelacion{
     ref MKJClase source;
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="dot", width="2")
-class MKJAgregacion {
+@gmf.link(source="source", target="target", style="solid", width="2", source.decoration = "rhomb", color = "0,0,0")
+class MKJAgregacion extends MKJRelacion{
     ref MKJClase source;
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="dot", width="2")
-class MKJHerencia {
+@gmf.link(source="source", target="target", style="solid", width="2", target.decoration = "closedarrow", color = "0,0,0")
+class MKJHerencia{
     ref MKJClase source;
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="dot", width="2")
-class MKJInterface {
+@gmf.link(source="source", target="target", style="dot", width="2", target.decoration = "closedarrow", color = "0,0,0")
+class MKJInterface{
     ref MKJClase source;
     ref MKJClase target;
 }

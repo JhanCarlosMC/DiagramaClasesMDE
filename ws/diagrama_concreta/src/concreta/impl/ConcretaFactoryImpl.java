@@ -62,6 +62,7 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 			case ConcretaPackage.MKJ_CLASE: return createMKJClase();
 			case ConcretaPackage.MKJ_ATRIBUTO: return createMKJAtributo();
 			case ConcretaPackage.MKJ_METODO: return createMKJMetodo();
+			case ConcretaPackage.MKJ_RELACION: return createMKJRelacion();
 			case ConcretaPackage.MKJ_ASOCIACION: return createMKJAsociacion();
 			case ConcretaPackage.MKJ_CONTEINMENT: return createMKJConteinment();
 			case ConcretaPackage.MKJ_AGREGACION: return createMKJAgregacion();
@@ -130,6 +131,16 @@ public class ConcretaFactoryImpl extends EFactoryImpl implements ConcretaFactory
 	public MKJMetodo createMKJMetodo() {
 		MKJMetodoImpl mkjMetodo = new MKJMetodoImpl();
 		return mkjMetodo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MKJRelacion createMKJRelacion() {
+		MKJRelacionImpl mkjRelacion = new MKJRelacionImpl();
+		return mkjRelacion;
 	}
 
 	/**

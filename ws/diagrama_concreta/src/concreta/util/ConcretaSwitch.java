@@ -102,21 +102,30 @@ public class ConcretaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ConcretaPackage.MKJ_RELACION: {
+				MKJRelacion mkjRelacion = (MKJRelacion)theEObject;
+				T result = caseMKJRelacion(mkjRelacion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ConcretaPackage.MKJ_ASOCIACION: {
 				MKJAsociacion mkjAsociacion = (MKJAsociacion)theEObject;
 				T result = caseMKJAsociacion(mkjAsociacion);
+				if (result == null) result = caseMKJRelacion(mkjAsociacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ConcretaPackage.MKJ_CONTEINMENT: {
 				MKJConteinment mkjConteinment = (MKJConteinment)theEObject;
 				T result = caseMKJConteinment(mkjConteinment);
+				if (result == null) result = caseMKJRelacion(mkjConteinment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ConcretaPackage.MKJ_AGREGACION: {
 				MKJAgregacion mkjAgregacion = (MKJAgregacion)theEObject;
 				T result = caseMKJAgregacion(mkjAgregacion);
+				if (result == null) result = caseMKJRelacion(mkjAgregacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -223,6 +232,21 @@ public class ConcretaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMKJMetodo(MKJMetodo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Relacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Relacion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMKJRelacion(MKJRelacion object) {
 		return null;
 	}
 

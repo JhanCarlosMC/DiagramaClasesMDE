@@ -23,12 +23,11 @@
     <genClasses ecoreClass="concreta.ecore#//MKJPaquete">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJPaquete/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJPaquete/ruta"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJPaquete/paquetes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJPaquete/clases"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MKJClase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJClase/identificador"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJClase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJClase/ruta"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJClase/atributos"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJClase/metodos"/>
     </genClasses>
@@ -37,6 +36,16 @@
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MKJMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJMetodo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJMetodo/parametros"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//MKJRelacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/multiplicidad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/multiplicidad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/rol1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/rol2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/navegabilidad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJRelacion/navegabilidad2"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MKJAsociacion">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//MKJAsociacion/source"/>

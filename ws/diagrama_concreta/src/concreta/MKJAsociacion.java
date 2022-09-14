@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJAsociacion()
- * @model annotation="gmf.link source='source' target='target' style='dot' width='2'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='2' color='0,0,0'"
  * @generated
  */
-public interface MKJAsociacion extends EObject {
+public interface MKJAsociacion extends MKJRelacion {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->

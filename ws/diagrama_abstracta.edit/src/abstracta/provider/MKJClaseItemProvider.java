@@ -236,16 +236,6 @@ public class MKJClaseItemProvider
 			(createChildParameter
 				(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES,
 				 AbstractaFactory.eINSTANCE.createMKJAgregacion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES,
-				 AbstractaFactory.eINSTANCE.createMKJHerencia()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES,
-				 AbstractaFactory.eINSTANCE.createMKJInterface()));
 	}
 
 	/**
