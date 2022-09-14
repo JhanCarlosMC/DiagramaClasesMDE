@@ -14,6 +14,7 @@ import concreta.MKJHerencia;
 import concreta.MKJInterface;
 import concreta.MKJMetodo;
 import concreta.MKJPaquete;
+import concreta.MKJRelacion;
 import concreta.ModelFactory;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -71,6 +72,13 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	private EClass mkjMetodoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mkjRelacionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -317,24 +325,6 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMKJPaquete_Paquetes() {
-		return (EReference)mkjPaqueteEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMKJPaquete_Clases() {
-		return (EReference)mkjPaqueteEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMKJClase() {
 		return mkjClaseEClass;
 	}
@@ -362,8 +352,17 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMKJClase_Ruta() {
+		return (EAttribute)mkjClaseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMKJClase_Atributos() {
-		return (EReference)mkjClaseEClass.getEStructuralFeatures().get(2);
+		return (EReference)mkjClaseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -372,7 +371,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * @generated
 	 */
 	public EReference getMKJClase_Metodos() {
-		return (EReference)mkjClaseEClass.getEStructuralFeatures().get(3);
+		return (EReference)mkjClaseEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -409,6 +408,87 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 */
 	public EAttribute getMKJMetodo_Name() {
 		return (EAttribute)mkjMetodoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMKJMetodo_Parametros() {
+		return (EReference)mkjMetodoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMKJRelacion() {
+		return mkjRelacionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Name() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Multiplicidad1() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Multiplicidad2() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Rol1() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Rol2() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Navegabilidad1() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJRelacion_Navegabilidad2() {
+		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -592,12 +672,11 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		mkjPaqueteEClass = createEClass(MKJ_PAQUETE);
 		createEAttribute(mkjPaqueteEClass, MKJ_PAQUETE__NOMBRE);
 		createEAttribute(mkjPaqueteEClass, MKJ_PAQUETE__RUTA);
-		createEReference(mkjPaqueteEClass, MKJ_PAQUETE__PAQUETES);
-		createEReference(mkjPaqueteEClass, MKJ_PAQUETE__CLASES);
 
 		mkjClaseEClass = createEClass(MKJ_CLASE);
 		createEAttribute(mkjClaseEClass, MKJ_CLASE__IDENTIFICADOR);
 		createEAttribute(mkjClaseEClass, MKJ_CLASE__NAME);
+		createEAttribute(mkjClaseEClass, MKJ_CLASE__RUTA);
 		createEReference(mkjClaseEClass, MKJ_CLASE__ATRIBUTOS);
 		createEReference(mkjClaseEClass, MKJ_CLASE__METODOS);
 
@@ -606,6 +685,16 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 
 		mkjMetodoEClass = createEClass(MKJ_METODO);
 		createEAttribute(mkjMetodoEClass, MKJ_METODO__NAME);
+		createEReference(mkjMetodoEClass, MKJ_METODO__PARAMETROS);
+
+		mkjRelacionEClass = createEClass(MKJ_RELACION);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__NAME);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__MULTIPLICIDAD1);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__MULTIPLICIDAD2);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__ROL1);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__ROL2);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__NAVEGABILIDAD1);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__NAVEGABILIDAD2);
 
 		mkjAsociacionEClass = createEClass(MKJ_ASOCIACION);
 		createEReference(mkjAsociacionEClass, MKJ_ASOCIACION__SOURCE);
@@ -656,6 +745,9 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		mkjAsociacionEClass.getESuperTypes().add(this.getMKJRelacion());
+		mkjConteinmentEClass.getESuperTypes().add(this.getMKJRelacion());
+		mkjAgregacionEClass.getESuperTypes().add(this.getMKJRelacion());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelFactoryEClass, ModelFactory.class, "ModelFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -676,12 +768,11 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		initEClass(mkjPaqueteEClass, MKJPaquete.class, "MKJPaquete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJPaquete_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJPaquete_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MKJPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMKJPaquete_Paquetes(), this.getMKJPaquete(), null, "paquetes", null, 0, -1, MKJPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMKJPaquete_Clases(), this.getMKJClase(), null, "clases", null, 0, -1, MKJPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjClaseEClass, MKJClase.class, "MKJClase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJClase_Identificador(), ecorePackage.getEString(), "identificador", null, 0, 1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJClase_Name(), ecorePackage.getEString(), "name", null, 0, 1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJClase_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMKJClase_Atributos(), this.getMKJAtributo(), null, "atributos", null, 0, -1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMKJClase_Metodos(), this.getMKJMetodo(), null, "metodos", null, 0, -1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -690,6 +781,16 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 
 		initEClass(mkjMetodoEClass, MKJMetodo.class, "MKJMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJMetodo_Name(), ecorePackage.getEString(), "name", null, 0, 1, MKJMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMKJMetodo_Parametros(), this.getMKJAtributo(), null, "parametros", null, 0, -1, MKJMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mkjRelacionEClass, MKJRelacion.class, "MKJRelacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMKJRelacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Multiplicidad1(), ecorePackage.getEString(), "multiplicidad1", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Multiplicidad2(), ecorePackage.getEString(), "multiplicidad2", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Rol1(), ecorePackage.getEString(), "rol1", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Rol2(), ecorePackage.getEString(), "rol2", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Navegabilidad1(), ecorePackage.getEString(), "navegabilidad1", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Navegabilidad2(), ecorePackage.getEString(), "navegabilidad2", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjAsociacionEClass, MKJAsociacion.class, "MKJAsociacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMKJAsociacion_Source(), this.getMKJClase(), null, "source", null, 0, 1, MKJAsociacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -221,31 +221,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_PAQUETE__RUTA = 1;
 
 	/**
-	 * The feature id for the '<em><b>Paquetes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_PAQUETE__PAQUETES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Clases</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MKJ_PAQUETE__CLASES = 3;
-
-	/**
 	 * The number of structural features of the '<em>MKJ Paquete</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_PAQUETE_FEATURE_COUNT = 4;
+	int MKJ_PAQUETE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJClaseImpl <em>MKJ Clase</em>}' class.
@@ -276,13 +258,22 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_CLASE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CLASE__RUTA = 2;
+
+	/**
 	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__ATRIBUTOS = 2;
+	int MKJ_CLASE__ATRIBUTOS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Metodos</b></em>' containment reference list.
@@ -291,7 +282,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__METODOS = 3;
+	int MKJ_CLASE__METODOS = 4;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Clase</em>' class.
@@ -300,7 +291,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE_FEATURE_COUNT = 4;
+	int MKJ_CLASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJAtributoImpl <em>MKJ Atributo</em>}' class.
@@ -350,13 +341,104 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_METODO__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_METODO__PARAMETROS = 1;
+
+	/**
 	 * The number of structural features of the '<em>MKJ Metodo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_METODO_FEATURE_COUNT = 1;
+	int MKJ_METODO_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link concreta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see concreta.impl.MKJRelacionImpl
+	 * @see concreta.impl.ConcretaPackageImpl#getMKJRelacion()
+	 * @generated
+	 */
+	int MKJ_RELACION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__MULTIPLICIDAD1 = 1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__MULTIPLICIDAD2 = 2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__ROL1 = 3;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__ROL2 = 4;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__NAVEGABILIDAD1 = 5;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION__NAVEGABILIDAD2 = 6;
+
+	/**
+	 * The number of structural features of the '<em>MKJ Relacion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_RELACION_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJAsociacionImpl <em>MKJ Asociacion</em>}' class.
@@ -366,7 +448,70 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJAsociacion()
 	 * @generated
 	 */
-	int MKJ_ASOCIACION = 6;
+	int MKJ_ASOCIACION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ASOCIACION__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -375,7 +520,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ASOCIACION__SOURCE = 0;
+	int MKJ_ASOCIACION__SOURCE = MKJ_RELACION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -384,7 +529,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ASOCIACION__TARGET = 1;
+	int MKJ_ASOCIACION__TARGET = MKJ_RELACION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Asociacion</em>' class.
@@ -393,7 +538,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ASOCIACION_FEATURE_COUNT = 2;
+	int MKJ_ASOCIACION_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJConteinmentImpl <em>MKJ Conteinment</em>}' class.
@@ -403,7 +548,70 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJConteinment()
 	 * @generated
 	 */
-	int MKJ_CONTEINMENT = 7;
+	int MKJ_CONTEINMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CONTEINMENT__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -412,7 +620,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CONTEINMENT__SOURCE = 0;
+	int MKJ_CONTEINMENT__SOURCE = MKJ_RELACION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -421,7 +629,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CONTEINMENT__TARGET = 1;
+	int MKJ_CONTEINMENT__TARGET = MKJ_RELACION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Conteinment</em>' class.
@@ -430,7 +638,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CONTEINMENT_FEATURE_COUNT = 2;
+	int MKJ_CONTEINMENT_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJAgregacionImpl <em>MKJ Agregacion</em>}' class.
@@ -440,7 +648,70 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJAgregacion()
 	 * @generated
 	 */
-	int MKJ_AGREGACION = 8;
+	int MKJ_AGREGACION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__NAME = MKJ_RELACION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+
+	/**
+	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__ROL1 = MKJ_RELACION__ROL1;
+
+	/**
+	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__ROL2 = MKJ_RELACION__ROL2;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+
+	/**
+	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_AGREGACION__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -449,7 +720,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_AGREGACION__SOURCE = 0;
+	int MKJ_AGREGACION__SOURCE = MKJ_RELACION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -458,7 +729,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_AGREGACION__TARGET = 1;
+	int MKJ_AGREGACION__TARGET = MKJ_RELACION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Agregacion</em>' class.
@@ -467,7 +738,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_AGREGACION_FEATURE_COUNT = 2;
+	int MKJ_AGREGACION_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJHerenciaImpl <em>MKJ Herencia</em>}' class.
@@ -477,7 +748,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJHerencia()
 	 * @generated
 	 */
-	int MKJ_HERENCIA = 9;
+	int MKJ_HERENCIA = 10;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -514,7 +785,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @see concreta.impl.ConcretaPackageImpl#getMKJInterface()
 	 * @generated
 	 */
-	int MKJ_INTERFACE = 10;
+	int MKJ_INTERFACE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -718,28 +989,6 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMKJPaquete_Ruta();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link concreta.MKJPaquete#getPaquetes <em>Paquetes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Paquetes</em>'.
-	 * @see concreta.MKJPaquete#getPaquetes()
-	 * @see #getMKJPaquete()
-	 * @generated
-	 */
-	EReference getMKJPaquete_Paquetes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link concreta.MKJPaquete#getClases <em>Clases</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Clases</em>'.
-	 * @see concreta.MKJPaquete#getClases()
-	 * @see #getMKJPaquete()
-	 * @generated
-	 */
-	EReference getMKJPaquete_Clases();
-
-	/**
 	 * Returns the meta object for class '{@link concreta.MKJClase <em>MKJ Clase</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -770,6 +1019,17 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMKJClase_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJClase#getRuta <em>Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ruta</em>'.
+	 * @see concreta.MKJClase#getRuta()
+	 * @see #getMKJClase()
+	 * @generated
+	 */
+	EAttribute getMKJClase_Ruta();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link concreta.MKJClase#getAtributos <em>Atributos</em>}'.
@@ -834,6 +1094,104 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMKJMetodo_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link concreta.MKJMetodo#getParametros <em>Parametros</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametros</em>'.
+	 * @see concreta.MKJMetodo#getParametros()
+	 * @see #getMKJMetodo()
+	 * @generated
+	 */
+	EReference getMKJMetodo_Parametros();
+
+	/**
+	 * Returns the meta object for class '{@link concreta.MKJRelacion <em>MKJ Relacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MKJ Relacion</em>'.
+	 * @see concreta.MKJRelacion
+	 * @generated
+	 */
+	EClass getMKJRelacion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see concreta.MKJRelacion#getName()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getMultiplicidad1 <em>Multiplicidad1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicidad1</em>'.
+	 * @see concreta.MKJRelacion#getMultiplicidad1()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Multiplicidad1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getMultiplicidad2 <em>Multiplicidad2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicidad2</em>'.
+	 * @see concreta.MKJRelacion#getMultiplicidad2()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Multiplicidad2();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getRol1 <em>Rol1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rol1</em>'.
+	 * @see concreta.MKJRelacion#getRol1()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Rol1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getRol2 <em>Rol2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rol2</em>'.
+	 * @see concreta.MKJRelacion#getRol2()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Rol2();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getNavegabilidad1 <em>Navegabilidad1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navegabilidad1</em>'.
+	 * @see concreta.MKJRelacion#getNavegabilidad1()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Navegabilidad1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getNavegabilidad2 <em>Navegabilidad2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navegabilidad2</em>'.
+	 * @see concreta.MKJRelacion#getNavegabilidad2()
+	 * @see #getMKJRelacion()
+	 * @generated
+	 */
+	EAttribute getMKJRelacion_Navegabilidad2();
 
 	/**
 	 * Returns the meta object for class '{@link concreta.MKJAsociacion <em>MKJ Asociacion</em>}'.
@@ -1152,22 +1510,6 @@ public interface ConcretaPackage extends EPackage {
 		EAttribute MKJ_PAQUETE__RUTA = eINSTANCE.getMKJPaquete_Ruta();
 
 		/**
-		 * The meta object literal for the '<em><b>Paquetes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MKJ_PAQUETE__PAQUETES = eINSTANCE.getMKJPaquete_Paquetes();
-
-		/**
-		 * The meta object literal for the '<em><b>Clases</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MKJ_PAQUETE__CLASES = eINSTANCE.getMKJPaquete_Clases();
-
-		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJClaseImpl <em>MKJ Clase</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1192,6 +1534,14 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MKJ_CLASE__NAME = eINSTANCE.getMKJClase_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_CLASE__RUTA = eINSTANCE.getMKJClase_Ruta();
 
 		/**
 		 * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
@@ -1244,6 +1594,80 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MKJ_METODO__NAME = eINSTANCE.getMKJMetodo_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_METODO__PARAMETROS = eINSTANCE.getMKJMetodo_Parametros();
+
+		/**
+		 * The meta object literal for the '{@link concreta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see concreta.impl.MKJRelacionImpl
+		 * @see concreta.impl.ConcretaPackageImpl#getMKJRelacion()
+		 * @generated
+		 */
+		EClass MKJ_RELACION = eINSTANCE.getMKJRelacion();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__NAME = eINSTANCE.getMKJRelacion_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicidad1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__MULTIPLICIDAD1 = eINSTANCE.getMKJRelacion_Multiplicidad1();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicidad2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__MULTIPLICIDAD2 = eINSTANCE.getMKJRelacion_Multiplicidad2();
+
+		/**
+		 * The meta object literal for the '<em><b>Rol1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__ROL1 = eINSTANCE.getMKJRelacion_Rol1();
+
+		/**
+		 * The meta object literal for the '<em><b>Rol2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__ROL2 = eINSTANCE.getMKJRelacion_Rol2();
+
+		/**
+		 * The meta object literal for the '<em><b>Navegabilidad1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__NAVEGABILIDAD1 = eINSTANCE.getMKJRelacion_Navegabilidad1();
+
+		/**
+		 * The meta object literal for the '<em><b>Navegabilidad2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_RELACION__NAVEGABILIDAD2 = eINSTANCE.getMKJRelacion_Navegabilidad2();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJAsociacionImpl <em>MKJ Asociacion</em>}' class.

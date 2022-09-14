@@ -3,6 +3,7 @@
 package concreta.provider;
 
 
+import concreta.ConcretaFactory;
 import concreta.ConcretaPackage;
 import concreta.MKJMetodo;
 
@@ -14,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -88,6 +90,36 @@ public class MKJMetodoItemProvider
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ConcretaPackage.Literals.MKJ_METODO__PARAMETROS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns MKJMetodo.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,6 +160,9 @@ public class MKJMetodoItemProvider
 			case ConcretaPackage.MKJ_METODO__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ConcretaPackage.MKJ_METODO__PARAMETROS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -142,6 +177,11 @@ public class MKJMetodoItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ConcretaPackage.Literals.MKJ_METODO__PARAMETROS,
+				 ConcretaFactory.eINSTANCE.createMKJAtributo()));
 	}
 
 	/**

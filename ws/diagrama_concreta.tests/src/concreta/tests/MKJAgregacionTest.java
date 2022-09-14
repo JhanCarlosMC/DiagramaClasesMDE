@@ -15,15 +15,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MKJAgregacionTest extends TestCase {
-
-	/**
-	 * The fixture for this MKJ Agregacion test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MKJAgregacion fixture = null;
+public class MKJAgregacionTest extends MKJRelacionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +37,14 @@ public class MKJAgregacionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this MKJ Agregacion test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(MKJAgregacion fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this MKJ Agregacion test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected MKJAgregacion getFixture() {
-		return fixture;
+		return (MKJAgregacion)fixture;
 	}
 
 	/**

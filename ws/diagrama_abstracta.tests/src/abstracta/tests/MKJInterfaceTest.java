@@ -5,6 +5,8 @@ package abstracta.tests;
 import abstracta.AbstractaFactory;
 import abstracta.MKJInterface;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MKJInterfaceTest extends MKJRelacionTest {
+public class MKJInterfaceTest extends TestCase {
+
+	/**
+	 * The fixture for this MKJ Interface test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MKJInterface fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class MKJInterfaceTest extends MKJRelacionTest {
 	}
 
 	/**
+	 * Sets the fixture for this MKJ Interface test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(MKJInterface fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this MKJ Interface test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected MKJInterface getFixture() {
-		return (MKJInterface)fixture;
+		return fixture;
 	}
 
 	/**

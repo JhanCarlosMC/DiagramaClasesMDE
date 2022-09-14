@@ -126,14 +126,12 @@ public class AbstractaSwitch<T> extends Switch<T> {
 			case AbstractaPackage.MKJ_HERENCIA: {
 				MKJHerencia mkjHerencia = (MKJHerencia)theEObject;
 				T result = caseMKJHerencia(mkjHerencia);
-				if (result == null) result = caseMKJRelacion(mkjHerencia);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.MKJ_INTERFACE: {
 				MKJInterface mkjInterface = (MKJInterface)theEObject;
 				T result = caseMKJInterface(mkjInterface);
-				if (result == null) result = caseMKJRelacion(mkjInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

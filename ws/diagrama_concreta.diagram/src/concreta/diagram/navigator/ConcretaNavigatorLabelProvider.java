@@ -20,7 +20,12 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
+import concreta.MKJAgregacion;
+import concreta.MKJAsociacion;
+import concreta.MKJConteinment;
 import concreta.MKJDiagramaClases;
+import concreta.MKJHerencia;
+import concreta.MKJInterface;
 import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
@@ -285,21 +290,39 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getMKJAsociacion_4001Text(View view) {
-		return ""; //$NON-NLS-1$
+		MKJAsociacion domainModelElement = (MKJAsociacion) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
 	* @generated
 	*/
 	private String getMKJConteinment_4002Text(View view) {
-		return ""; //$NON-NLS-1$
+		MKJConteinment domainModelElement = (MKJConteinment) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
 	* @generated
 	*/
 	private String getMKJAgregacion_4003Text(View view) {
-		return ""; //$NON-NLS-1$
+		MKJAgregacion domainModelElement = (MKJAgregacion) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**

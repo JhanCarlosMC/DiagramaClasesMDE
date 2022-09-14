@@ -5,6 +5,7 @@ package concreta.provider;
 
 import concreta.ConcretaPackage;
 
+import concreta.MKJConteinment;
 import java.util.Collection;
 import java.util.List;
 
@@ -29,13 +30,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * @generated
  */
 public class MKJConteinmentItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends MKJRelacionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -126,7 +121,10 @@ public class MKJConteinmentItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MKJConteinment_type");
+		String label = ((MKJConteinment)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MKJConteinment_type") :
+			getString("_UI_MKJConteinment_type") + " " + label;
 	}
 	
 
@@ -153,17 +151,6 @@ public class MKJConteinmentItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ConcretaEditPlugin.INSTANCE;
 	}
 
 }

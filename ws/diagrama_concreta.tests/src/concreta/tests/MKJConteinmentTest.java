@@ -15,15 +15,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MKJConteinmentTest extends TestCase {
-
-	/**
-	 * The fixture for this MKJ Conteinment test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MKJConteinment fixture = null;
+public class MKJConteinmentTest extends MKJRelacionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +37,14 @@ public class MKJConteinmentTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this MKJ Conteinment test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(MKJConteinment fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this MKJ Conteinment test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected MKJConteinment getFixture() {
-		return fixture;
+		return (MKJConteinment)fixture;
 	}
 
 	/**

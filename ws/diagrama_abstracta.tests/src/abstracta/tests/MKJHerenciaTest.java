@@ -5,6 +5,8 @@ package abstracta.tests;
 import abstracta.AbstractaFactory;
 import abstracta.MKJHerencia;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MKJHerenciaTest extends MKJRelacionTest {
+public class MKJHerenciaTest extends TestCase {
+
+	/**
+	 * The fixture for this MKJ Herencia test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MKJHerencia fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class MKJHerenciaTest extends MKJRelacionTest {
 	}
 
 	/**
+	 * Sets the fixture for this MKJ Herencia test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(MKJHerencia fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this MKJ Herencia test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected MKJHerencia getFixture() {
-		return (MKJHerencia)fixture;
+		return fixture;
 	}
 
 	/**

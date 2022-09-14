@@ -488,8 +488,44 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMKJHerencia_Source() {
+		return (EReference)mkjHerenciaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMKJHerencia_Target() {
+		return (EReference)mkjHerenciaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMKJInterface() {
 		return mkjInterfaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMKJInterface_Source() {
+		return (EReference)mkjInterfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMKJInterface_Target() {
+		return (EReference)mkjInterfaceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -564,8 +600,12 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		mkjAgregacionEClass = createEClass(MKJ_AGREGACION);
 
 		mkjHerenciaEClass = createEClass(MKJ_HERENCIA);
+		createEReference(mkjHerenciaEClass, MKJ_HERENCIA__SOURCE);
+		createEReference(mkjHerenciaEClass, MKJ_HERENCIA__TARGET);
 
 		mkjInterfaceEClass = createEClass(MKJ_INTERFACE);
+		createEReference(mkjInterfaceEClass, MKJ_INTERFACE__SOURCE);
+		createEReference(mkjInterfaceEClass, MKJ_INTERFACE__TARGET);
 	}
 
 	/**
@@ -599,8 +639,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		mhjAsociacionEClass.getESuperTypes().add(this.getMKJRelacion());
 		mkjContainmentEClass.getESuperTypes().add(this.getMKJRelacion());
 		mkjAgregacionEClass.getESuperTypes().add(this.getMKJRelacion());
-		mkjHerenciaEClass.getESuperTypes().add(this.getMKJRelacion());
-		mkjInterfaceEClass.getESuperTypes().add(this.getMKJRelacion());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelFactoryEClass, ModelFactory.class, "ModelFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -647,8 +685,12 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEClass(mkjAgregacionEClass, MKJAgregacion.class, "MKJAgregacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mkjHerenciaEClass, MKJHerencia.class, "MKJHerencia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMKJHerencia_Source(), this.getMKJClase(), null, "source", null, 0, 1, MKJHerencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMKJHerencia_Target(), this.getMKJClase(), null, "target", null, 0, 1, MKJHerencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjInterfaceEClass, MKJInterface.class, "MKJInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMKJInterface_Source(), this.getMKJClase(), null, "source", null, 0, 1, MKJInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMKJInterface_Target(), this.getMKJClase(), null, "target", null, 0, 1, MKJInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

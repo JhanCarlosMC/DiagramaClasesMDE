@@ -19,21 +19,14 @@
       <atributos name="id"/>
     </listaClases>
     <listaClases name="TipoProducto"/>
-    <listaPaquetes nombre="Root"/>
-    <listaAsociaciones source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.5"/>
+    <listaPaquetes nombre="Root" ruta=""/>
+    <listaPaquetes nombre="mundo" ruta="Root/"/>
+    <listaAsociaciones name="" multiplicidad1="" rol1="" rol2="" navegabilidad1="" navegabilidad2="" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.5"/>
     <listaConteiments source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.0"/>
     <listaConteiments source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.2"/>
     <listaAgregaciones source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.5"/>
     <listaHerencias source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.3"/>
-    <listaHerencias source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.4"/>
+    <listaHerencias name="" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.4"/>
     <listaInterfaces source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.6"/>
-  </listaDiagramas>
-  <listaDiagramas nombre="Diagram tu">
-    <listaClases name="Hola">
-      <atributos/>
-    </listaClases>
-    <listaClases name="Hola 2"/>
-    <listaPaquetes nombre="Adio"/>
-    <listaPaquetes nombre="Adio"/>
   </listaDiagramas>
 </concreta:ModelFactory>

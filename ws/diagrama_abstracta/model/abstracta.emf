@@ -64,10 +64,12 @@ class MKJAgregacion extends MKJRelacion{
 
 }
 
-class MKJHerencia extends MKJRelacion{
-
+class MKJHerencia{
+	ref MKJClase source;
+    ref MKJClase target;
 }
 
-class MKJInterface extends MKJRelacion{
-
+class MKJInterface{
+	ref MKJClase source;
+    ref MKJClase target;
 }

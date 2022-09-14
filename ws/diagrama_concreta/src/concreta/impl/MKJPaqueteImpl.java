@@ -32,8 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link concreta.impl.MKJPaqueteImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link concreta.impl.MKJPaqueteImpl#getRuta <em>Ruta</em>}</li>
- *   <li>{@link concreta.impl.MKJPaqueteImpl#getPaquetes <em>Paquetes</em>}</li>
- *   <li>{@link concreta.impl.MKJPaqueteImpl#getClases <em>Clases</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,26 +76,6 @@ public class MKJPaqueteImpl extends EObjectImpl implements MKJPaquete {
 	 * @ordered
 	 */
 	protected String ruta = RUTA_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getPaquetes() <em>Paquetes</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPaquetes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MKJPaquete> paquetes;
-
-	/**
-	 * The cached value of the '{@link #getClases() <em>Clases</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getClases()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MKJClase> clases;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,46 +143,6 @@ public class MKJPaqueteImpl extends EObjectImpl implements MKJPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MKJPaquete> getPaquetes() {
-		if (paquetes == null) {
-			paquetes = new EObjectContainmentEList<MKJPaquete>(MKJPaquete.class, this, ConcretaPackage.MKJ_PAQUETE__PAQUETES);
-		}
-		return paquetes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MKJClase> getClases() {
-		if (clases == null) {
-			clases = new EObjectContainmentEList<MKJClase>(MKJClase.class, this, ConcretaPackage.MKJ_PAQUETE__CLASES);
-		}
-		return clases;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ConcretaPackage.MKJ_PAQUETE__PAQUETES:
-				return ((InternalEList<?>)getPaquetes()).basicRemove(otherEnd, msgs);
-			case ConcretaPackage.MKJ_PAQUETE__CLASES:
-				return ((InternalEList<?>)getClases()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -212,10 +150,6 @@ public class MKJPaqueteImpl extends EObjectImpl implements MKJPaquete {
 				return getNombre();
 			case ConcretaPackage.MKJ_PAQUETE__RUTA:
 				return getRuta();
-			case ConcretaPackage.MKJ_PAQUETE__PAQUETES:
-				return getPaquetes();
-			case ConcretaPackage.MKJ_PAQUETE__CLASES:
-				return getClases();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -235,14 +169,6 @@ public class MKJPaqueteImpl extends EObjectImpl implements MKJPaquete {
 			case ConcretaPackage.MKJ_PAQUETE__RUTA:
 				setRuta((String)newValue);
 				return;
-			case ConcretaPackage.MKJ_PAQUETE__PAQUETES:
-				getPaquetes().clear();
-				getPaquetes().addAll((Collection<? extends MKJPaquete>)newValue);
-				return;
-			case ConcretaPackage.MKJ_PAQUETE__CLASES:
-				getClases().clear();
-				getClases().addAll((Collection<? extends MKJClase>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -261,12 +187,6 @@ public class MKJPaqueteImpl extends EObjectImpl implements MKJPaquete {
 			case ConcretaPackage.MKJ_PAQUETE__RUTA:
 				setRuta(RUTA_EDEFAULT);
 				return;
-			case ConcretaPackage.MKJ_PAQUETE__PAQUETES:
-				getPaquetes().clear();
-				return;
-			case ConcretaPackage.MKJ_PAQUETE__CLASES:
-				getClases().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -283,10 +203,6 @@ public class MKJPaqueteImpl extends EObjectImpl implements MKJPaquete {
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case ConcretaPackage.MKJ_PAQUETE__RUTA:
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
-			case ConcretaPackage.MKJ_PAQUETE__PAQUETES:
-				return paquetes != null && !paquetes.isEmpty();
-			case ConcretaPackage.MKJ_PAQUETE__CLASES:
-				return clases != null && !clases.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

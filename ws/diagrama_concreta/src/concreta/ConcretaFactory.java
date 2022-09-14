@@ -76,6 +76,15 @@ public interface ConcretaFactory extends EFactory {
 	MKJMetodo createMKJMetodo();
 
 	/**
+	 * Returns a new object of class '<em>MKJ Relacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MKJ Relacion</em>'.
+	 * @generated
+	 */
+	MKJRelacion createMKJRelacion();
+
+	/**
 	 * Returns a new object of class '<em>MKJ Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

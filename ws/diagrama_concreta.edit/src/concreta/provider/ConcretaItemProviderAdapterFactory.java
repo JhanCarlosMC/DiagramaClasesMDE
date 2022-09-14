@@ -210,6 +210,29 @@ public class ConcretaItemProviderAdapterFactory extends ConcretaAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link concreta.MKJRelacion} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MKJRelacionItemProvider mkjRelacionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link concreta.MKJRelacion}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMKJRelacionAdapter() {
+		if (mkjRelacionItemProvider == null) {
+			mkjRelacionItemProvider = new MKJRelacionItemProvider(this);
+		}
+
+		return mkjRelacionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link concreta.MKJAsociacion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -429,6 +452,7 @@ public class ConcretaItemProviderAdapterFactory extends ConcretaAdapterFactory i
 		if (mkjClaseItemProvider != null) mkjClaseItemProvider.dispose();
 		if (mkjAtributoItemProvider != null) mkjAtributoItemProvider.dispose();
 		if (mkjMetodoItemProvider != null) mkjMetodoItemProvider.dispose();
+		if (mkjRelacionItemProvider != null) mkjRelacionItemProvider.dispose();
 		if (mkjAsociacionItemProvider != null) mkjAsociacionItemProvider.dispose();
 		if (mkjConteinmentItemProvider != null) mkjConteinmentItemProvider.dispose();
 		if (mkjAgregacionItemProvider != null) mkjAgregacionItemProvider.dispose();

@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model annotation="gmf.link source='source' target='target' style='solid' width='2' source.decoration='filledrhomb' color='0,0,0'"
  * @generated
  */
-public interface MKJConteinment extends EObject {
+public interface MKJConteinment extends MKJRelacion {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
