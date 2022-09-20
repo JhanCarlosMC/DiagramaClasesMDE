@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="ASCII"?>
-<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasLasClases="//@paquetes.0/@paquetes.0/@clases.0 //@paquetes.0/@paquetes.0/@clases.1 //@paquetes.0/@paquetes.0/@clases.2" listaTodosLosPaquetes="//@paquetes.0 //@paquetes.0/@paquetes.0">
-  <paquetes nombre="Root" ruta="">
-    <paquetes nombre="Main" ruta="Root/">
-      <clases name="Empresa" ruta="Root/Main/">
-        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="*" rol1="uno" rol2="uno" navegabilidad1="true" navegabilidad2="true"/>
-        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="*" rol1="tres" rol2="cuatro" navegabilidad1="true" navegabilidad2="true"/>
-      </clases>
-      <clases name="Empleado" ruta="Root/Main/">
-        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="*" rol1="cuatro" rol2="tres" navegabilidad1="true" navegabilidad2="true"/>
-      </clases>
-      <clases name="Producto" ruta="Root/Main/">
-        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="*" rol1="uno" rol2="uno" navegabilidad1="true" navegabilidad2="true"/>
-      </clases>
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasLasClases="//@paquetes.0/@paquetes.0/@paquetes.0/@clases.0 //@paquetes.0/@paquetes.0/@paquetes.0/@clases.1 //@paquetes.0/@paquetes.0/@paquetes.0/@clases.2" listaTodosLosPaquetes="//@paquetes.0/@paquetes.0 //@paquetes.0/@paquetes.0/@paquetes.0">
+  <paquetes nombre="" ruta="">
+    <paquetes nombre="Root" ruta="/">
+      <paquetes nombre="Principal" ruta="/Root/">
+        <clases name="Colegio" ruta="/Root/Principal/">
+          <atributos nombre="Nombre"/>
+          <relaciones xsi:type="abstracta:MHJAsociacion" rol2=""/>
+          <relaciones xsi:type="abstracta:MHJAsociacion"/>
+        </clases>
+        <clases name="Profesor" ruta="/Root/Principal/">
+          <atributos nombre="Nombre"/>
+          <atributos nombre="Cedula"/>
+          <atributos nombre="Materia"/>
+          <metodos nombre="obtenerEstudiantesPorMateria()"/>
+          <relaciones xsi:type="abstracta:MHJAsociacion"/>
+        </clases>
+        <clases name="Estudiantes" ruta="/Root/Principal/">
+          <atributos nombre="Nombre"/>
+          <atributos nombre="DocumentoIdentidad"/>
+          <atributos nombre="Edad"/>
+          <relaciones xsi:type="abstracta:MHJAsociacion" rol1=""/>
+        </clases>
+      </paquetes>
     </paquetes>
   </paquetes>
 </abstracta:ModelFactory>

@@ -17,6 +17,7 @@ import concreta.ModelFactory;
 public class TransformacionM2T {
 
 	private abstracta.ModelFactory modelFactoryAbstracta;
+	StringBuilder textoCod = new StringBuilder();
 
 	public TransformacionM2T(abstracta.ModelFactory modelFactoryAbstracta) {
 		super();
@@ -27,7 +28,7 @@ public class TransformacionM2T {
 		String mensaje = "";
 		String pathRaiz = "";
 	
-		StringBuilder textoCod = new StringBuilder();
+		
 		DirectoryDialog fd = new DirectoryDialog(new Shell(), SWT.SELECTED);
 		fd.setText("Generación de código");
 		pathRaiz = fd.open();
@@ -51,6 +52,7 @@ public class TransformacionM2T {
 			FileWriter escribir=new FileWriter(archivo+"/"+nombre,true);
 			escribir.write(cadena);
 			escribir.close();
+			textoCod = new StringBuilder();
 		}
 
 		catch(Exception e)
@@ -66,24 +68,28 @@ public class TransformacionM2T {
 		agregarEncabezado(clase, textoCodigo);
 		agregarConstructor(clase, textoCodigo);
 		agregarMetodosSetyGet(clase, textoCodigo);
-		agregarAtributos(clase, textoCodigo);
+		agregarMetodos(clase, textoCodigo);
+	}
+
+	private void agregarMetodos(abstracta.MKJClase clase, StringBuilder textoCodigo) {
+		// TODO Auto-generated method stub
+		for(int i =0; i< clase.getMetodos().size(); i++) {
+			textoCodigo.append("\n	def " + clase.getMetodos().get(i).getNombre() + "(): \n");
+			textoCodigo.append("		return null" +  "\n");
+		}
 	}
 
 	private void agregarMetodosSetyGet(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-		
-	}
-
-	private void agregarAtributos(abstracta.MKJClase clase, StringBuilder textoCodigo) {
-		// TODO Auto-generated method stub
-		for(MKJAtributo atributo: clase.getAtributos()) {
-			textoCodigo.append("");
+		for(int i =0; i< clase.getAtributos().size(); i++) {
+			textoCodigo.append("\n	def get" + clase.getAtributos().get(i).getNombre() + "(self): \n");
+			textoCodigo.append("		return self." + clase.getAtributos().get(i).getNombre() + "\n");
 		}
 	}
 
 	private void agregarConstructor(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-		textoCodigo.append("def __init__(self,");
+		textoCodigo.append("	def __init__(self,");
 		for(int i =0; i< clase.getAtributos().size(); i++) {
 			textoCodigo.append(clase.getAtributos().get(i).getNombre());
 			if(i != clase.getAtributos().size()-1) {
@@ -93,7 +99,7 @@ public class TransformacionM2T {
 		textoCodigo.append("): \n");
 		
 		for(int i =0; i< clase.getAtributos().size(); i++) {
-			textoCodigo.append("	self."+clase.getAtributos().get(i).getNombre()+ "=" + clase.getAtributos().get(i).getNombre());
+			textoCodigo.append("		self."+clase.getAtributos().get(i).getNombre()+ "=" + clase.getAtributos().get(i).getNombre() + "\n");
 		}
 		
 	}

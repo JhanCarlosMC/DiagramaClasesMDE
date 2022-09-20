@@ -4,8 +4,10 @@ import java.util.Iterator;
 
 import abstracta.AbstractaFactory;
 import concreta.MKJAsociacion;
+import concreta.MKJAtributo;
 import concreta.MKJClase;
 import concreta.MKJDiagramaClases;
+import concreta.MKJMetodo;
 import concreta.MKJPaquete;
 import concreta.ModelFactory;
 
@@ -38,7 +40,6 @@ public class TransformacionM2M {
 			for (MKJAsociacion asociacion : diagramaConcreta.getListaAsociaciones()) {
 				crearAsociacion(asociacion);
 			}
-			
 		}
 
 		return mensaje;
@@ -82,8 +83,20 @@ public class TransformacionM2M {
 			abstracta.MKJClase mkjClase= AbstractaFactory.eINSTANCE.createMKJClase();
 			mkjClase.setName(clase.getName());
 			mkjClase.setRuta(clase.getRuta());
-			modelFactoryAbstracta.getListaTodasLasClases().add(mkjClase);
 			
+			for(MKJAtributo atributo : clase.getAtributos()) {
+				abstracta.MKJAtributo mkjAtributo = AbstractaFactory.eINSTANCE.createMKJAtributo();
+				mkjAtributo.setNombre(atributo.getName());
+				mkjClase.getAtributos().add(mkjAtributo);
+			}
+			
+			for(MKJMetodo metodo : clase.getMetodos()) {
+				abstracta.MKJMetodo mkjMetodo = AbstractaFactory.eINSTANCE.createMKJMetodo();
+				mkjMetodo.setNombre(metodo.getName());
+				mkjClase.getMetodos().add(mkjMetodo);
+			}
+			
+			modelFactoryAbstracta.getListaTodasLasClases().add(mkjClase);
 			abstracta.MKJPaquete paquetePadre = obtenerPaquete(ruta);
 			paquetePadre.getClases().add(mkjClase);
 		}
