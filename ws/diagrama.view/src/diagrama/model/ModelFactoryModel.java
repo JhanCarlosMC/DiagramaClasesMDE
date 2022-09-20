@@ -116,89 +116,22 @@ public class ModelFactoryModel {
 	}
 
 	public void generarM2M() {
-		// TODO Auto-generated method stub
-		// ModelFactory modelFactory = cargar();
+
 		modelFactoryConcreta = cargarConcreta();
 		modelFactoryAbstracta = cargarAbstracta();
-
+		
 		TransformacionM2M transformacionM2M = new TransformacionM2M(modelFactoryConcreta, modelFactoryAbstracta);
 		transformacionM2M.transformarM2M();
 		salvarAbstracta();
 	}
 
-	private void crearPaquete(MKJPaquete paquete) {
-		// TODO Auto-generated method stub
-		String ruta = paquete.getRuta();
-		String[] split = ruta.split("/");
-
-		for (int i = 0; i < split.length; i++) {
-			String nombrePaquete = split[0];
-			MKJPaquete paqueteAux = obtenerPaquete(nombrePaquete);
-			if (paqueteAux != null) {
-				// crearPaquete
-			}
-		}
-	}
-
-	private MKJPaquete obtenerPaquete(String nombrePaquete) {
-		// TODO Auto-generated method stub
-
-		return null;
-	}
-
-	private ArrayList<Object> obtenerRelacionesSalientes(String nombreClase) {
-		System.out.println("Nombre clase: " + nombreClase);
-
-		ArrayList<Object> listaRelaciones = new ArrayList<>();
-
-		for (MKJDiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-			for (MKJAgregacion agregacion : diagrama.getListaAgregaciones()) {
-				if (agregacion.getSource().getName().equals(nombreClase)) {
-					listaRelaciones.add(agregacion);
-					System.out.println("Relacion agregacion saliente con: " + agregacion.getSource().getName());
-				}
-			}
-			for (MKJConteinment containtment : diagrama.getListaConteiments()) {
-				if (containtment.getSource().getName().equals(nombreClase)) {
-					listaRelaciones.add(containtment);
-					System.out.println("Relacion containtment saliente con: " + containtment.getSource().getName());
-				}
-			}
-			for (MKJHerencia herencia : diagrama.getListaHerencias()) {
-				if (herencia.getSource().getName().equals(nombreClase)) {
-					listaRelaciones.add(herencia);
-					System.out.println("Relacion herencia saliente con: " + herencia.getSource().getName());
-				}
-			}
-			for (MKJInterface mkjinterface : diagrama.getListaInterfaces()) {
-				if (mkjinterface.getSource().getName().equals(nombreClase)) {
-					listaRelaciones.add(mkjinterface);
-					System.out.println("Relacion interface saliente con: " + mkjinterface.getSource().getName());
-				}
-			}
-			for (MKJAsociacion asociacion : diagrama.getListaAsociaciones()) {
-				if (asociacion.getSource().getName().equals(nombreClase)) {
-					listaRelaciones.add(asociacion);
-					System.out.println("Relacion asociacion saliente con: " + asociacion.getSource().getName());
-				}
-			}
-		}
-		return listaRelaciones;
-
-	}
-
-	private MKJClase obtenerClase(String name) {
-		MKJClase clase = null;
-
-		for (MKJDiagramaClases diagrama : modelFactory.getListaDiagramas()) {
-			for (MKJClase mkjclase : diagrama.getListaClases()) {
-				if (mkjclase.getName().equals(name)) {
-					return mkjclase;
-				}
-			}
-		}
-		return clase;
-
+	public void generarM2T() {
+		modelFactoryConcreta = cargarConcreta();
+		modelFactoryAbstracta = cargarAbstracta();
+		
+		TransformacionM2T transformacionM2T = new TransformacionM2T(modelFactoryAbstracta);
+		transformacionM2T.transformarM2T();
+		salvarAbstracta();
 	}
 
 }
