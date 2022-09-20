@@ -93,13 +93,31 @@ public interface AbstractaPackage extends EPackage {
 	int MODEL_FACTORY__PAQUETES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Lista Todas Las Clases</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_TODAS_LAS_CLASES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Lista Todos Los Paquetes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES = 4;
+
+	/**
 	 * The number of structural features of the '<em>Model Factory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FACTORY_FEATURE_COUNT = 3;
+	int MODEL_FACTORY_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
@@ -813,6 +831,28 @@ public interface AbstractaPackage extends EPackage {
 	EReference getModelFactory_Paquetes();
 
 	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaTodasLasClases <em>Lista Todas Las Clases</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Todas Las Clases</em>'.
+	 * @see abstracta.ModelFactory#getListaTodasLasClases()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaTodasLasClases();
+
+	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaTodosLosPaquetes <em>Lista Todos Los Paquetes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Todos Los Paquetes</em>'.
+	 * @see abstracta.ModelFactory#getListaTodosLosPaquetes()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaTodosLosPaquetes();
+
+	/**
 	 * Returns the meta object for class '{@link abstracta.MKJPaquete <em>MKJ Paquete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1253,6 +1293,22 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODEL_FACTORY__PAQUETES = eINSTANCE.getModelFactory_Paquetes();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Todas Las Clases</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_TODAS_LAS_CLASES = eINSTANCE.getModelFactory_ListaTodasLasClases();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Todos Los Paquetes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES = eINSTANCE.getModelFactory_ListaTodosLosPaquetes();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.

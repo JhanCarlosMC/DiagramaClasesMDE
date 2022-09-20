@@ -6,6 +6,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="paquetes" upperBound="-1"
         eType="#//MKJPaquete" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaTodasLasClases" upperBound="-1"
+        eType="#//MKJClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaTodosLosPaquetes"
+        upperBound="-1" eType="#//MKJPaquete"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJPaquete">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
