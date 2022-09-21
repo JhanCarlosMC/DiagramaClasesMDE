@@ -36,13 +36,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJClase">
     <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="label" value="nombre"/>
       <details key="color" value="156,233,91"/>
       <details key="border.color" value="0,0,0"/>
       <details key="margin" value="1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//MKJAtributo" containment="true">
@@ -60,24 +60,25 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJAtributo">
     <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="label" value="nombre"/>
       <details key="border.color" value="255,255,255"/>
       <details key="color" value="156,233,91"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJMetodo">
     <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="label" value="nombre"/>
       <details key="border.color" value="255,255,255"/>
       <details key="color" value="156,233,91"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semantics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
         eType="#//MKJAtributo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJRelacion">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidad1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidad2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rol1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

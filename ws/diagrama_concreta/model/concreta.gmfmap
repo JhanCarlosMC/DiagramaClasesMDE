@@ -18,7 +18,7 @@
         <diagramLabel
             href="concreta.gmfgraph#MKJClaseLabel"/>
         <features
-            href="concreta.ecore#//MKJClase/name"/>
+            href="concreta.ecore#//MKJClase/nombre"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -37,7 +37,7 @@
             <diagramLabel
                 href="concreta.gmfgraph#MKJAtributoLabel"/>
             <features
-                href="concreta.ecore#//MKJAtributo/name"/>
+                href="concreta.ecore#//MKJAtributo/nombre"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -58,7 +58,7 @@
             <diagramLabel
                 href="concreta.gmfgraph#MKJMetodoLabel"/>
             <features
-                href="concreta.ecore#//MKJMetodo/name"/>
+                href="concreta.ecore#//MKJMetodo/nombre"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"

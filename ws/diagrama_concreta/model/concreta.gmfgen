@@ -18,11 +18,11 @@
         <containmentMetaFeature href="concreta.genmodel#//concreta/MKJClase/atributos"/>
         <childMetaFeature href="concreta.genmodel#//concreta/MKJClase/atributos"/>
       </modelFacet>
-      <labels visualID="5001" editPartClassName="MKJAtributoNameEditPart" itemSemanticEditPolicyClassName="MKJAtributoNameItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5001" editPartClassName="MKJAtributoNombreEditPart" itemSemanticEditPolicyClassName="MKJAtributoNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMKJAtributoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//concreta/MKJAtributo/name"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MKJAtributo/nombre"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -37,11 +37,11 @@
         <containmentMetaFeature href="concreta.genmodel#//concreta/MKJClase/metodos"/>
         <childMetaFeature href="concreta.genmodel#//concreta/MKJClase/metodos"/>
       </modelFacet>
-      <labels visualID="5002" editPartClassName="MKJMetodoNameEditPart" itemSemanticEditPolicyClassName="MKJMetodoNameItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5002" editPartClassName="MKJMetodoNombreEditPart" itemSemanticEditPolicyClassName="MKJMetodoNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMKJMetodoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//concreta/MKJMetodo/name"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MKJMetodo/nombre"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -57,11 +57,11 @@
         <containmentMetaFeature href="concreta.genmodel#//concreta/MKJDiagramaClases/listaClases"/>
         <childMetaFeature href="concreta.genmodel#//concreta/MKJDiagramaClases/listaClases"/>
       </modelFacet>
-      <labels visualID="5003" editPartClassName="MKJClaseNameEditPart" itemSemanticEditPolicyClassName="MKJClaseNameItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5003" editPartClassName="MKJClaseNombreEditPart" itemSemanticEditPolicyClassName="MKJClaseNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMKJClaseLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="concreta.genmodel#//concreta/MKJClase/name"/>
+          <metaFeatures href="concreta.genmodel#//concreta/MKJClase/nombre"/>
         </modelFacet>
       </labels>
     </topLevelNodes>

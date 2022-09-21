@@ -52,16 +52,6 @@ public class ModelFactoryModel {
 		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI
 				.createURI("platform:/resource/test/src/model/model.concreta");
 
-		// 2.CON LA SIGUIENTE RUTA (platform:/plugin/) SE CARGAR EL RECURSO DE ALGUNOS
-		// DE LOS PLUGINS(whoownme.model) EN LOS QUE SE ESTA TRABJANDO EN EL WORKSPACE
-		// org.eclipse.emf.common.util.URI uri =
-		// org.eclipse.emf.common.util.URI.createURI("platform:/plugin/whoownme.model/resource/model.whoownme");
-
-		// 3. CON LA SIGUIENTE RUTA (file:\\E:\\) SE CARGA EL RECURSO INDICANDO UNA RUTA
-		// DESDE EL DIRECTORIO DE ARCHIVOS DE WIMDOWS
-		// org.eclipse.emf.common.util.URI uri =
-		// org.eclipse.emf.common.util.URI.createURI("file:\\E:\\varios\\td\\whoownme\\whoownme\\whoownme.model\\resource\\model.whoownme");
-
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 
 		try {

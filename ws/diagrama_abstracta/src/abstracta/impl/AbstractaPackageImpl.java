@@ -281,7 +281,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMKJClase_Name() {
+	public EAttribute getMKJClase_Nombre() {
 		return (EAttribute)mkjClaseEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -389,7 +389,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMKJRelacion_Name() {
+	public EAttribute getMKJRelacion_Nombre() {
 		return (EAttribute)mkjRelacionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -588,7 +588,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(mkjPaqueteEClass, MKJ_PAQUETE__CLASES);
 
 		mkjClaseEClass = createEClass(MKJ_CLASE);
-		createEAttribute(mkjClaseEClass, MKJ_CLASE__NAME);
+		createEAttribute(mkjClaseEClass, MKJ_CLASE__NOMBRE);
 		createEAttribute(mkjClaseEClass, MKJ_CLASE__RUTA);
 		createEReference(mkjClaseEClass, MKJ_CLASE__ATRIBUTOS);
 		createEReference(mkjClaseEClass, MKJ_CLASE__METODOS);
@@ -603,7 +603,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(mkjMetodoEClass, MKJ_METODO__LISTA_PARAMETROS);
 
 		mkjRelacionEClass = createEClass(MKJ_RELACION);
-		createEAttribute(mkjRelacionEClass, MKJ_RELACION__NAME);
+		createEAttribute(mkjRelacionEClass, MKJ_RELACION__NOMBRE);
 		createEAttribute(mkjRelacionEClass, MKJ_RELACION__MULTIPLICIDAD1);
 		createEAttribute(mkjRelacionEClass, MKJ_RELACION__MULTIPLICIDAD2);
 		createEAttribute(mkjRelacionEClass, MKJ_RELACION__ROL1);
@@ -675,7 +675,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getMKJPaquete_Clases(), this.getMKJClase(), null, "clases", null, 0, -1, MKJPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjClaseEClass, MKJClase.class, "MKJClase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMKJClase_Name(), ecorePackage.getEString(), "name", null, 0, 1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJClase_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJClase_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMKJClase_Atributos(), this.getMKJAtributo(), null, "atributos", null, 0, -1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMKJClase_Metodos(), this.getMKJMetodo(), null, "metodos", null, 0, -1, MKJClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -690,7 +690,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getMKJMetodo_ListaParametros(), this.getMKJAtributo(), null, "listaParametros", null, 0, -1, MKJMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjRelacionEClass, MKJRelacion.class, "MKJRelacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMKJRelacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJRelacion_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJRelacion_Multiplicidad1(), ecorePackage.getEString(), "multiplicidad1", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJRelacion_Multiplicidad2(), ecorePackage.getEString(), "multiplicidad2", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJRelacion_Rol1(), ecorePackage.getEString(), "rol1", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

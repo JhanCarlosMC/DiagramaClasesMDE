@@ -15,40 +15,67 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link concreta.MKJMetodo#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.MKJMetodo#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link concreta.MKJMetodo#getSemantics <em>Semantics</em>}</li>
  *   <li>{@link concreta.MKJMetodo#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJMetodo()
- * @model annotation="gmf.node label='name' border.color='255,255,255' color='156,233,91'"
+ * @model annotation="gmf.node label='nombre' border.color='255,255,255' color='156,233,91'"
  * @generated
  */
 public interface MKJMetodo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see concreta.ConcretaPackage#getMKJMetodo_Name()
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see concreta.ConcretaPackage#getMKJMetodo_Nombre()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link concreta.MKJMetodo#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link concreta.MKJMetodo#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
 	 * @generated
 	 */
-	void setName(String value);
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Semantics</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Semantics</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Semantics</em>' attribute.
+	 * @see #setSemantics(String)
+	 * @see concreta.ConcretaPackage#getMKJMetodo_Semantics()
+	 * @model
+	 * @generated
+	 */
+	String getSemantics();
+
+	/**
+	 * Sets the value of the '{@link concreta.MKJMetodo#getSemantics <em>Semantics</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Semantics</em>' attribute.
+	 * @see #getSemantics()
+	 * @generated
+	 */
+	void setSemantics(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Parametros</b></em>' containment reference list.

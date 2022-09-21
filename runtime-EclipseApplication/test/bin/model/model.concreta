@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
   <listaDiagramas nombre="Diagrama Colegio">
-    <listaClases name="Colegio" ruta="/Root/Principal/">
-      <atributos name="Nombre"/>
+    <listaClases identificador="" nombre="Colegio" ruta="Root/Principal/">
+      <atributos nombre="nombre"/>
     </listaClases>
-    <listaClases name="Profesor" ruta="/Root/Principal/">
-      <atributos name="Nombre"/>
-      <atributos name="Cedula"/>
-      <atributos name="Materia"/>
-      <metodos name="obtenerEstudiantesPorMateria()"/>
+    <listaClases identificador="" nombre="Profesor" ruta="Root/Principal/">
+      <atributos nombre="nombre"/>
+      <atributos nombre="cedula"/>
+      <atributos nombre="especialidad"/>
+      <metodos/>
     </listaClases>
-    <listaClases name="Estudiantes" ruta="/Root/Principal/">
-      <atributos name="Nombre"/>
-      <atributos name="DocumentoIdentidad"/>
-      <atributos name="Edad"/>
+    <listaClases identificador="" nombre="Estudiante" ruta="Root/Secundario/">
+      <atributos nombre="nombre"/>
+      <atributos nombre="edad"/>
+      <atributos nombre="anioCursado"/>
     </listaClases>
-    <listaPaquetes nombre="Principal" ruta="/Root/"/>
-    <listaPaquetes nombre="Root"/>
+    <listaPaquetes nombre="Principal" ruta="Root/"/>
+    <listaPaquetes nombre="Root" ruta=""/>
+    <listaPaquetes nombre="Secundario" ruta="Root/"/>
     <listaAsociaciones rol2="" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.2"/>
     <listaAsociaciones source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1"/>
   </listaDiagramas>

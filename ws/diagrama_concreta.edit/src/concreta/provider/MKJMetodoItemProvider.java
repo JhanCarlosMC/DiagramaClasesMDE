@@ -63,25 +63,48 @@ public class MKJMetodoItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addNombrePropertyDescriptor(object);
+			addSemanticsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Nombre feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addNombrePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MKJMetodo_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MKJMetodo_name_feature", "_UI_MKJMetodo_type"),
-				 ConcretaPackage.Literals.MKJ_METODO__NAME,
+				 getString("_UI_MKJMetodo_nombre_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJMetodo_nombre_feature", "_UI_MKJMetodo_type"),
+				 ConcretaPackage.Literals.MKJ_METODO__NOMBRE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Semantics feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSemanticsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJMetodo_semantics_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJMetodo_semantics_feature", "_UI_MKJMetodo_type"),
+				 ConcretaPackage.Literals.MKJ_METODO__SEMANTICS,
 				 true,
 				 false,
 				 false,
@@ -139,7 +162,7 @@ public class MKJMetodoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJMetodo)object).getName();
+		String label = ((MKJMetodo)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJMetodo_type") :
 			getString("_UI_MKJMetodo_type") + " " + label;
@@ -158,7 +181,8 @@ public class MKJMetodoItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MKJMetodo.class)) {
-			case ConcretaPackage.MKJ_METODO__NAME:
+			case ConcretaPackage.MKJ_METODO__NOMBRE:
+			case ConcretaPackage.MKJ_METODO__SEMANTICS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ConcretaPackage.MKJ_METODO__PARAMETROS:

@@ -16,16 +16,19 @@ import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
 import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
+import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseMetodosCompartmentEditPart;
 import concreta.diagram.edit.parts.MKJClaseNameEditPart;
+import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJConteinmentEditPart;
 import concreta.diagram.edit.parts.MKJDiagramaClasesEditPart;
 import concreta.diagram.edit.parts.MKJHerenciaEditPart;
 import concreta.diagram.edit.parts.MKJInterfaceEditPart;
 import concreta.diagram.edit.parts.MKJMetodoEditPart;
 import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
+import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 
@@ -180,7 +183,7 @@ public class ConcretaVisualIDRegistry {
 			}
 			break;
 		case MKJClaseEditPart.VISUAL_ID:
-			if (MKJClaseNameEditPart.VISUAL_ID == nodeVisualID) {
+			if (MKJClaseNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (MKJClaseMKJClaseAtributosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
@@ -196,12 +199,12 @@ public class ConcretaVisualIDRegistry {
 			}
 			break;
 		case MKJAtributoEditPart.VISUAL_ID:
-			if (MKJAtributoNameEditPart.VISUAL_ID == nodeVisualID) {
+			if (MKJAtributoNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case MKJMetodoEditPart.VISUAL_ID:
-			if (MKJMetodoNameEditPart.VISUAL_ID == nodeVisualID) {
+			if (MKJMetodoNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

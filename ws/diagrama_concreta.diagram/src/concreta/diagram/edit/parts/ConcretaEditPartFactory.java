@@ -31,8 +31,8 @@ public class ConcretaEditPartFactory implements EditPartFactory {
 			case MKJClaseEditPart.VISUAL_ID:
 				return new MKJClaseEditPart(view);
 
-			case MKJClaseNameEditPart.VISUAL_ID:
-				return new MKJClaseNameEditPart(view);
+			case MKJClaseNombreEditPart.VISUAL_ID:
+				return new MKJClaseNombreEditPart(view);
 
 			case MKJPaqueteEditPart.VISUAL_ID:
 				return new MKJPaqueteEditPart(view);
@@ -43,14 +43,14 @@ public class ConcretaEditPartFactory implements EditPartFactory {
 			case MKJAtributoEditPart.VISUAL_ID:
 				return new MKJAtributoEditPart(view);
 
-			case MKJAtributoNameEditPart.VISUAL_ID:
-				return new MKJAtributoNameEditPart(view);
+			case MKJAtributoNombreEditPart.VISUAL_ID:
+				return new MKJAtributoNombreEditPart(view);
 
 			case MKJMetodoEditPart.VISUAL_ID:
 				return new MKJMetodoEditPart(view);
 
-			case MKJMetodoNameEditPart.VISUAL_ID:
-				return new MKJMetodoNameEditPart(view);
+			case MKJMetodoNombreEditPart.VISUAL_ID:
+				return new MKJMetodoNombreEditPart(view);
 
 			case MKJClaseMKJClaseAtributosCompartmentEditPart.VISUAL_ID:
 				return new MKJClaseMKJClaseAtributosCompartmentEditPart(view);

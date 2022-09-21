@@ -21,7 +21,7 @@ class MKJPaquete{
 }
 
 class MKJClase {
-	attr String name;
+	attr String nombre;
 	attr String ruta;
     val MKJAtributo[*] atributos;
     val MKJMetodo[*] metodos;
@@ -42,7 +42,7 @@ class MKJMetodo {
 //heredar los atributos de las relaciones
 
 class MKJRelacion {
-    attr String name;
+    attr String nombre;
     attr String multiplicidad1;
     attr String multiplicidad2;
     attr String rol1;

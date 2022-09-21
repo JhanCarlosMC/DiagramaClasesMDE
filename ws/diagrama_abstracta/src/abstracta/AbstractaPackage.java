@@ -185,13 +185,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_CLASE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__NAME = 0;
+	int MKJ_CLASE__NOMBRE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
@@ -323,13 +323,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_RELACION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__NAME = 0;
+	int MKJ_RELACION__NOMBRE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -423,13 +423,13 @@ public interface AbstractaPackage extends EPackage {
 	int MHJ_ASOCIACION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__NAME = MKJ_RELACION__NAME;
+	int MHJ_ASOCIACION__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -523,13 +523,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_CONTAINMENT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CONTAINMENT__NAME = MKJ_RELACION__NAME;
+	int MKJ_CONTAINMENT__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -623,13 +623,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_AGREGACION = 8;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_AGREGACION__NAME = MKJ_RELACION__NAME;
+	int MKJ_AGREGACION__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -917,15 +917,15 @@ public interface AbstractaPackage extends EPackage {
 	EClass getMKJClase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MKJClase#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MKJClase#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see abstracta.MKJClase#getName()
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see abstracta.MKJClase#getNombre()
 	 * @see #getMKJClase()
 	 * @generated
 	 */
-	EAttribute getMKJClase_Name();
+	EAttribute getMKJClase_Nombre();
 
 	/**
 	 * Returns the meta object for the attribute '{@link abstracta.MKJClase#getRuta <em>Ruta</em>}'.
@@ -1046,15 +1046,15 @@ public interface AbstractaPackage extends EPackage {
 	EClass getMKJRelacion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MKJRelacion#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MKJRelacion#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see abstracta.MKJRelacion#getName()
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see abstracta.MKJRelacion#getNombre()
 	 * @see #getMKJRelacion()
 	 * @generated
 	 */
-	EAttribute getMKJRelacion_Name();
+	EAttribute getMKJRelacion_Nombre();
 
 	/**
 	 * Returns the meta object for the attribute '{@link abstracta.MKJRelacion#getMultiplicidad1 <em>Multiplicidad1</em>}'.
@@ -1363,12 +1363,12 @@ public interface AbstractaPackage extends EPackage {
 		EClass MKJ_CLASE = eINSTANCE.getMKJClase();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_CLASE__NAME = eINSTANCE.getMKJClase_Name();
+		EAttribute MKJ_CLASE__NOMBRE = eINSTANCE.getMKJClase_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
@@ -1465,12 +1465,12 @@ public interface AbstractaPackage extends EPackage {
 		EClass MKJ_RELACION = eINSTANCE.getMKJRelacion();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_RELACION__NAME = eINSTANCE.getMKJRelacion_Name();
+		EAttribute MKJ_RELACION__NOMBRE = eINSTANCE.getMKJRelacion_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad1</b></em>' attribute feature.

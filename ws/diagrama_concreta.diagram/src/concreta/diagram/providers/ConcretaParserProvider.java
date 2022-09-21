@@ -18,8 +18,11 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import concreta.ConcretaPackage;
 import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
+import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseNameEditPart;
+import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
+import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 import concreta.diagram.parsers.MessageFormatParser;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
@@ -32,18 +35,18 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser mKJClaseName_5003Parser;
+	private IParser mKJClaseNombre_5003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMKJClaseName_5003Parser() {
-		if (mKJClaseName_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJClase_Name() };
+	private IParser getMKJClaseNombre_5003Parser() {
+		if (mKJClaseNombre_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJClase_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			mKJClaseName_5003Parser = parser;
+			mKJClaseNombre_5003Parser = parser;
 		}
-		return mKJClaseName_5003Parser;
+		return mKJClaseNombre_5003Parser;
 	}
 
 	/**
@@ -66,35 +69,35 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser mKJAtributoName_5001Parser;
+	private IParser mKJAtributoNombre_5001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMKJAtributoName_5001Parser() {
-		if (mKJAtributoName_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJAtributo_Name() };
+	private IParser getMKJAtributoNombre_5001Parser() {
+		if (mKJAtributoNombre_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJAtributo_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			mKJAtributoName_5001Parser = parser;
+			mKJAtributoNombre_5001Parser = parser;
 		}
-		return mKJAtributoName_5001Parser;
+		return mKJAtributoNombre_5001Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser mKJMetodoName_5002Parser;
+	private IParser mKJMetodoNombre_5002Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMKJMetodoName_5002Parser() {
-		if (mKJMetodoName_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJMetodo_Name() };
+	private IParser getMKJMetodoNombre_5002Parser() {
+		if (mKJMetodoNombre_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJMetodo_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			mKJMetodoName_5002Parser = parser;
+			mKJMetodoNombre_5002Parser = parser;
 		}
-		return mKJMetodoName_5002Parser;
+		return mKJMetodoNombre_5002Parser;
 	}
 
 	/**
@@ -102,14 +105,14 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case MKJClaseNameEditPart.VISUAL_ID:
-			return getMKJClaseName_5003Parser();
+		case MKJClaseNombreEditPart.VISUAL_ID:
+			return getMKJClaseNombre_5003Parser();
 		case MKJPaqueteNombreEditPart.VISUAL_ID:
 			return getMKJPaqueteNombre_5004Parser();
-		case MKJAtributoNameEditPart.VISUAL_ID:
-			return getMKJAtributoName_5001Parser();
-		case MKJMetodoNameEditPart.VISUAL_ID:
-			return getMKJMetodoName_5002Parser();
+		case MKJAtributoNombreEditPart.VISUAL_ID:
+			return getMKJAtributoNombre_5001Parser();
+		case MKJMetodoNombreEditPart.VISUAL_ID:
+			return getMKJMetodoNombre_5002Parser();
 		}
 		return null;
 	}

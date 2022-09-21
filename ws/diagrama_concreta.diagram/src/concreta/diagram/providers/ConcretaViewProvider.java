@@ -49,16 +49,19 @@ import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
 import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
+import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseMetodosCompartmentEditPart;
 import concreta.diagram.edit.parts.MKJClaseNameEditPart;
+import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJConteinmentEditPart;
 import concreta.diagram.edit.parts.MKJDiagramaClasesEditPart;
 import concreta.diagram.edit.parts.MKJHerenciaEditPart;
 import concreta.diagram.edit.parts.MKJInterfaceEditPart;
 import concreta.diagram.edit.parts.MKJMetodoEditPart;
 import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
+import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
@@ -277,7 +280,7 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		Node label5003 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJClaseNameEditPart.VISUAL_ID));
+		Node label5003 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJClaseNombreEditPart.VISUAL_ID));
 		createCompartment(node,
 				ConcretaVisualIDRegistry.getType(MKJClaseMKJClaseAtributosCompartmentEditPart.VISUAL_ID), true, false,
 				true, true);
@@ -347,7 +350,7 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		Node label5001 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJAtributoNameEditPart.VISUAL_ID));
+		Node label5001 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJAtributoNombreEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -376,7 +379,7 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		Node label5002 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJMetodoNameEditPart.VISUAL_ID));
+		Node label5002 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJMetodoNombreEditPart.VISUAL_ID));
 		return node;
 	}
 

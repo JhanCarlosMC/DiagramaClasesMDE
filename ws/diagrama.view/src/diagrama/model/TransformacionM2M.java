@@ -24,10 +24,12 @@ public class TransformacionM2M {
 
 	public String transformarM2M() {
 		String mensaje = "Se ha realizado la transformacion M2M";
-		modelFactoryAbstracta.getPaquetes().get(0).getClases().clear();
-		modelFactoryAbstracta.getPaquetes().get(0).getPaquetes().clear();
-		modelFactoryAbstracta.getListaTodasLasClases().clear();
-		modelFactoryAbstracta.getListaTodosLosPaquetes().clear();
+		if (modelFactoryAbstracta.getListaTodasLasClases().size() != 0) {
+			modelFactoryAbstracta.getPaquetes().get(0).getClases().clear();
+			modelFactoryAbstracta.getPaquetes().get(0).getPaquetes().clear();
+			modelFactoryAbstracta.getListaTodasLasClases().clear();
+			modelFactoryAbstracta.getListaTodosLosPaquetes().clear();
+		}
 
 		for (MKJDiagramaClases diagramaConcreta : modelFactoryConcreta.getListaDiagramas()) {
 			// Crear los paquetes
@@ -49,10 +51,12 @@ public class TransformacionM2M {
 		// TODO Auto-generated method stub
 		MKJClase sourceConcreta = asociacion.getSource();
 		MKJClase targetConcreta = asociacion.getTarget();
-		
-		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getName(), sourceConcreta.getRuta());
-		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getName(), targetConcreta.getRuta());
-		
+
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),
+				sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),
+				targetConcreta.getRuta());
+
 		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMHJAsociacion();
 		relacionSource.setMultiplicidad1(asociacion.getMultiplicidad1());
 		relacionSource.setMultiplicidad2(asociacion.getMultiplicidad2());
@@ -60,9 +64,9 @@ public class TransformacionM2M {
 		relacionSource.setNavegabilidad2(asociacion.getNavegabilidad2());
 		relacionSource.setRol1(asociacion.getRol1());
 		relacionSource.setRol2(asociacion.getRol2());
-		
+
 		sourceAbstracta.getRelaciones().add(relacionSource);
-		
+
 		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMHJAsociacion();
 		relacionTarget.setMultiplicidad1(asociacion.getMultiplicidad2());
 		relacionTarget.setMultiplicidad2(asociacion.getMultiplicidad1());
@@ -70,41 +74,41 @@ public class TransformacionM2M {
 		relacionTarget.setNavegabilidad2(asociacion.getNavegabilidad1());
 		relacionTarget.setRol1(asociacion.getRol2());
 		relacionTarget.setRol2(asociacion.getRol1());
-		
+
 		targetAbstracta.getRelaciones().add(relacionTarget);
 	}
 
 	private void crearClase(MKJClase clase) {
 		String ruta = clase.getRuta();
-		String name = clase.getName();
-		
-		abstracta.MKJClase claseAbstracta = obtenerClaseAbstracta(name,ruta);
-		if(claseAbstracta == null) {
-			abstracta.MKJClase mkjClase= AbstractaFactory.eINSTANCE.createMKJClase();
-			mkjClase.setName(clase.getName());
+		String name = clase.getNombre();
+
+		abstracta.MKJClase claseAbstracta = obtenerClaseAbstracta(name, ruta);
+		if (claseAbstracta == null) {
+			abstracta.MKJClase mkjClase = AbstractaFactory.eINSTANCE.createMKJClase();
+			mkjClase.setNombre(clase.getNombre());
 			mkjClase.setRuta(clase.getRuta());
-			
-			for(MKJAtributo atributo : clase.getAtributos()) {
+
+			for (MKJAtributo atributo : clase.getAtributos()) {
 				abstracta.MKJAtributo mkjAtributo = AbstractaFactory.eINSTANCE.createMKJAtributo();
-				mkjAtributo.setNombre(atributo.getName());
+				mkjAtributo.setNombre(atributo.getNombre());
 				mkjClase.getAtributos().add(mkjAtributo);
 			}
-			
-			for(MKJMetodo metodo : clase.getMetodos()) {
+
+			for (MKJMetodo metodo : clase.getMetodos()) {
 				abstracta.MKJMetodo mkjMetodo = AbstractaFactory.eINSTANCE.createMKJMetodo();
-				mkjMetodo.setNombre(metodo.getName());
+				mkjMetodo.setNombre(metodo.getNombre());
 				mkjClase.getMetodos().add(mkjMetodo);
 			}
-			
+
 			modelFactoryAbstracta.getListaTodasLasClases().add(mkjClase);
 			abstracta.MKJPaquete paquetePadre = obtenerPaquete(ruta);
 			paquetePadre.getClases().add(mkjClase);
 		}
 	}
-	
+
 	private abstracta.MKJPaquete obtenerPaquete(String ruta) {
 		for (abstracta.MKJPaquete mkjPaquete : modelFactoryAbstracta.getListaTodosLosPaquetes()) {
-			String rutaAux= mkjPaquete.getRuta() + mkjPaquete.getNombre()+"/";
+			String rutaAux = mkjPaquete.getRuta() + mkjPaquete.getNombre() + "/";
 			if (rutaAux.equals(ruta)) {
 				return mkjPaquete;
 			}
@@ -115,15 +119,15 @@ public class TransformacionM2M {
 	private abstracta.MKJClase obtenerClaseAbstracta(String name, String ruta) {
 
 		abstracta.MKJPaquete mkjPaquete = modelFactoryAbstracta.getPaquetes().get(0);
-		
+
 		for (abstracta.MKJClase mkjClase : mkjPaquete.getClases()) {
-			if(mkjClase.getName().equals(name)) {
+			if (mkjClase.getNombre().equals(name)) {
 				return mkjClase;
 			}
 		}
 		for (abstracta.MKJPaquete mkjPaquete2 : mkjPaquete.getPaquetes()) {
 			abstracta.MKJClase mkjClase = obtenerClasePaquete(mkjPaquete2, name, ruta);
-			if(mkjClase != null) {
+			if (mkjClase != null) {
 				return mkjClase;
 			}
 		}
@@ -133,13 +137,13 @@ public class TransformacionM2M {
 	private abstracta.MKJClase obtenerClasePaquete(abstracta.MKJPaquete mkjPaquete, String name, String ruta) {
 		// TODO Auto-generated method stub
 		for (abstracta.MKJClase mkjClase : mkjPaquete.getClases()) {
-			if(mkjClase.getName().equals(name)) {
+			if (mkjClase.getNombre().equals(name)) {
 				return mkjClase;
 			}
 		}
 		for (abstracta.MKJPaquete mkjPaquete2 : mkjPaquete.getPaquetes()) {
 			abstracta.MKJClase mkjClase = obtenerClasePaquete(mkjPaquete2, name, ruta);
-			if(mkjClase != null) {
+			if (mkjClase != null) {
 				return mkjClase;
 			}
 		}
@@ -148,7 +152,7 @@ public class TransformacionM2M {
 
 	private void crearPaquete(MKJPaquete paquete) {
 
-		String ruta = paquete.getRuta()+ paquete.getNombre();
+		String ruta = paquete.getRuta() + paquete.getNombre();
 		String[] split = ruta.split("/");
 		abstracta.MKJPaquete paqueteParent = null;
 

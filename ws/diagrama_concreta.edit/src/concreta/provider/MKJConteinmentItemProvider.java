@@ -112,7 +112,7 @@ public class MKJConteinmentItemProvider extends MKJRelacionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJConteinment)object).getName();
+		String label = ((MKJConteinment)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJConteinment_type") :
 			getString("_UI_MKJConteinment_type") + " " + label;

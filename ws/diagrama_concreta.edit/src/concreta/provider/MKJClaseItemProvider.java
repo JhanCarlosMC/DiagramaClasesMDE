@@ -64,7 +64,7 @@ public class MKJClaseItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIdentificadorPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
+			addNombrePropertyDescriptor(object);
 			addRutaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -93,19 +93,19 @@ public class MKJClaseItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Nombre feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addNombrePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MKJClase_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MKJClase_name_feature", "_UI_MKJClase_type"),
-				 ConcretaPackage.Literals.MKJ_CLASE__NAME,
+				 getString("_UI_MKJClase_nombre_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJClase_nombre_feature", "_UI_MKJClase_type"),
+				 ConcretaPackage.Literals.MKJ_CLASE__NOMBRE,
 				 true,
 				 false,
 				 false,
@@ -186,7 +186,7 @@ public class MKJClaseItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJClase)object).getName();
+		String label = ((MKJClase)object).getIdentificador();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJClase_type") :
 			getString("_UI_MKJClase_type") + " " + label;
@@ -206,7 +206,7 @@ public class MKJClaseItemProvider
 
 		switch (notification.getFeatureID(MKJClase.class)) {
 			case ConcretaPackage.MKJ_CLASE__IDENTIFICADOR:
-			case ConcretaPackage.MKJ_CLASE__NAME:
+			case ConcretaPackage.MKJ_CLASE__NOMBRE:
 			case ConcretaPackage.MKJ_CLASE__RUTA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

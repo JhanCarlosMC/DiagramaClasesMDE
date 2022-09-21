@@ -29,10 +29,10 @@ class MKJPaquete{
 	attr String ruta;
 }
 
-@gmf.node(label = "name", color = "156,233,91", border.color ="0,0,0", margin="1")
+@gmf.node(label = "nombre", color = "156,233,91", border.color ="0,0,0", margin="1")
 class MKJClase {
 	attr String identificador;
-	attr String name;
+	attr String nombre;
 	attr String ruta;
 	
     @gmf.compartment(layout = "list")
@@ -41,21 +41,22 @@ class MKJClase {
     val MKJMetodo[*] metodos;
 }
 
-@gmf.node(label = "name", border.color = "255,255,255", color = "156,233,91")
+@gmf.node(label = "nombre", border.color = "255,255,255", color = "156,233,91")
 class MKJAtributo {
-	attr String name;
+	attr String nombre;
 
 }
 
-@gmf.node(label = "name",border.color = "255,255,255",color = "156,233,91")
+@gmf.node(label = "nombre",border.color = "255,255,255",color = "156,233,91")
 class MKJMetodo {
-	attr String name;
+	attr String nombre;
+	attr String semantics;
 	
 	val MKJAtributo[*] parametros;
 }
 
 class MKJRelacion {
-    attr String name;
+    attr String nombre;
     attr String multiplicidad1;
     attr String multiplicidad2;
     attr String rol1;

@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.MKJClaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getMetodos <em>Metodos</em>}</li>
@@ -43,24 +43,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
@@ -136,8 +136,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
@@ -145,11 +145,11 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_CLASE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_CLASE__NOMBRE, oldNombre, nombre));
 	}
 
 	/**
@@ -235,8 +235,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				return getName();
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				return getNombre();
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				return getRuta();
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
@@ -258,8 +258,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				setName((String)newValue);
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				setNombre((String)newValue);
 				return;
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				setRuta((String)newValue);
@@ -288,8 +288,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				setName(NAME_EDEFAULT);
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
 				return;
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				setRuta(RUTA_EDEFAULT);
@@ -315,8 +315,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
@@ -339,8 +339,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (nombre: ");
+		result.append(nombre);
 		result.append(", ruta: ");
 		result.append(ruta);
 		result.append(')');

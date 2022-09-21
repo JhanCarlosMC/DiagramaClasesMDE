@@ -16,14 +16,14 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link concreta.MKJClase#getIdentificador <em>Identificador</em>}</li>
- *   <li>{@link concreta.MKJClase#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.MKJClase#getNombre <em>Nombre</em>}</li>
  *   <li>{@link concreta.MKJClase#getRuta <em>Ruta</em>}</li>
  *   <li>{@link concreta.MKJClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link concreta.MKJClase#getMetodos <em>Metodos</em>}</li>
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJClase()
- * @model annotation="gmf.node label='name' color='156,233,91' border.color='0,0,0' margin='1'"
+ * @model annotation="gmf.node label='nombre' color='156,233,91' border.color='0,0,0' margin='1'"
  * @generated
  */
 public interface MKJClase extends EObject {
@@ -54,30 +54,30 @@ public interface MKJClase extends EObject {
 	void setIdentificador(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see concreta.ConcretaPackage#getMKJClase_Name()
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see concreta.ConcretaPackage#getMKJClase_Nombre()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link concreta.MKJClase#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link concreta.MKJClase#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
 	 * @generated
 	 */
-	void setName(String value);
+	void setNombre(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ruta</b></em>' attribute.

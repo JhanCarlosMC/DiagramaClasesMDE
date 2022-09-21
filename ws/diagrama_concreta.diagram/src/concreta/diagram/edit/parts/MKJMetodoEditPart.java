@@ -110,8 +110,8 @@ public class MKJMetodoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof MKJMetodoNameEditPart) {
-			((MKJMetodoNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureMKJMetodoLabelFigure());
+		if (childEditPart instanceof MKJMetodoNombreEditPart) {
+			((MKJMetodoNombreEditPart) childEditPart).setLabel(getPrimaryShape().getFigureMKJMetodoLabelFigure());
 			return true;
 		}
 		return false;
@@ -121,7 +121,7 @@ public class MKJMetodoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof MKJMetodoNameEditPart) {
+		if (childEditPart instanceof MKJMetodoNombreEditPart) {
 			return true;
 		}
 		return false;
@@ -244,7 +244,7 @@ public class MKJMetodoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(ConcretaVisualIDRegistry.getType(MKJMetodoNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(ConcretaVisualIDRegistry.getType(MKJMetodoNombreEditPart.VISUAL_ID));
 	}
 
 	/**

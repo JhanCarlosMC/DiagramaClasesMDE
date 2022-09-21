@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link concreta.MKJRelacion#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.MKJRelacion#getNombre <em>Nombre</em>}</li>
  *   <li>{@link concreta.MKJRelacion#getMultiplicidad1 <em>Multiplicidad1</em>}</li>
  *   <li>{@link concreta.MKJRelacion#getMultiplicidad2 <em>Multiplicidad2</em>}</li>
  *   <li>{@link concreta.MKJRelacion#getRol1 <em>Rol1</em>}</li>
@@ -28,30 +28,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MKJRelacion extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see concreta.ConcretaPackage#getMKJRelacion_Name()
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see concreta.ConcretaPackage#getMKJRelacion_Nombre()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link concreta.MKJRelacion#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link concreta.MKJRelacion#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
 	 * @generated
 	 */
-	void setName(String value);
+	void setNombre(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Multiplicidad1</b></em>' attribute.

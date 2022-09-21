@@ -112,7 +112,7 @@ public class MKJAsociacionItemProvider extends MKJRelacionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJAsociacion)object).getName();
+		String label = ((MKJAsociacion)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJAsociacion_type") :
 			getString("_UI_MKJAsociacion_type") + " " + label;

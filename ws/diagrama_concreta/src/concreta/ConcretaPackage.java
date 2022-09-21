@@ -249,13 +249,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_CLASE__IDENTIFICADOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE__NAME = 1;
+	int MKJ_CLASE__NOMBRE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
@@ -304,13 +304,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_ATRIBUTO = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ATRIBUTO__NAME = 0;
+	int MKJ_ATRIBUTO__NOMBRE = 0;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Atributo</em>' class.
@@ -332,13 +332,22 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_METODO = 5;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_METODO__NAME = 0;
+	int MKJ_METODO__NOMBRE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Semantics</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_METODO__SEMANTICS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
@@ -347,7 +356,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_METODO__PARAMETROS = 1;
+	int MKJ_METODO__PARAMETROS = 2;
 
 	/**
 	 * The number of structural features of the '<em>MKJ Metodo</em>' class.
@@ -356,7 +365,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_METODO_FEATURE_COUNT = 2;
+	int MKJ_METODO_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJRelacionImpl <em>MKJ Relacion</em>}' class.
@@ -369,13 +378,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_RELACION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_RELACION__NAME = 0;
+	int MKJ_RELACION__NOMBRE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -451,13 +460,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_ASOCIACION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ASOCIACION__NAME = MKJ_RELACION__NAME;
+	int MKJ_ASOCIACION__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -551,13 +560,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_CONTEINMENT = 8;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CONTEINMENT__NAME = MKJ_RELACION__NAME;
+	int MKJ_CONTEINMENT__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -651,13 +660,13 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_AGREGACION = 9;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_AGREGACION__NAME = MKJ_RELACION__NAME;
+	int MKJ_AGREGACION__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -1010,15 +1019,15 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMKJClase_Identificador();
 
 	/**
-	 * Returns the meta object for the attribute '{@link concreta.MKJClase#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link concreta.MKJClase#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see concreta.MKJClase#getName()
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see concreta.MKJClase#getNombre()
 	 * @see #getMKJClase()
 	 * @generated
 	 */
-	EAttribute getMKJClase_Name();
+	EAttribute getMKJClase_Nombre();
 
 	/**
 	 * Returns the meta object for the attribute '{@link concreta.MKJClase#getRuta <em>Ruta</em>}'.
@@ -1064,15 +1073,15 @@ public interface ConcretaPackage extends EPackage {
 	EClass getMKJAtributo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see concreta.MKJAtributo#getName()
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see concreta.MKJAtributo#getNombre()
 	 * @see #getMKJAtributo()
 	 * @generated
 	 */
-	EAttribute getMKJAtributo_Name();
+	EAttribute getMKJAtributo_Nombre();
 
 	/**
 	 * Returns the meta object for class '{@link concreta.MKJMetodo <em>MKJ Metodo</em>}'.
@@ -1085,15 +1094,26 @@ public interface ConcretaPackage extends EPackage {
 	EClass getMKJMetodo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link concreta.MKJMetodo#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link concreta.MKJMetodo#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see concreta.MKJMetodo#getName()
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see concreta.MKJMetodo#getNombre()
 	 * @see #getMKJMetodo()
 	 * @generated
 	 */
-	EAttribute getMKJMetodo_Name();
+	EAttribute getMKJMetodo_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJMetodo#getSemantics <em>Semantics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Semantics</em>'.
+	 * @see concreta.MKJMetodo#getSemantics()
+	 * @see #getMKJMetodo()
+	 * @generated
+	 */
+	EAttribute getMKJMetodo_Semantics();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link concreta.MKJMetodo#getParametros <em>Parametros</em>}'.
@@ -1117,15 +1137,15 @@ public interface ConcretaPackage extends EPackage {
 	EClass getMKJRelacion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see concreta.MKJRelacion#getName()
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see concreta.MKJRelacion#getNombre()
 	 * @see #getMKJRelacion()
 	 * @generated
 	 */
-	EAttribute getMKJRelacion_Name();
+	EAttribute getMKJRelacion_Nombre();
 
 	/**
 	 * Returns the meta object for the attribute '{@link concreta.MKJRelacion#getMultiplicidad1 <em>Multiplicidad1</em>}'.
@@ -1528,12 +1548,12 @@ public interface ConcretaPackage extends EPackage {
 		EAttribute MKJ_CLASE__IDENTIFICADOR = eINSTANCE.getMKJClase_Identificador();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_CLASE__NAME = eINSTANCE.getMKJClase_Name();
+		EAttribute MKJ_CLASE__NOMBRE = eINSTANCE.getMKJClase_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
@@ -1570,12 +1590,12 @@ public interface ConcretaPackage extends EPackage {
 		EClass MKJ_ATRIBUTO = eINSTANCE.getMKJAtributo();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_ATRIBUTO__NAME = eINSTANCE.getMKJAtributo_Name();
+		EAttribute MKJ_ATRIBUTO__NOMBRE = eINSTANCE.getMKJAtributo_Nombre();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
@@ -1588,12 +1608,20 @@ public interface ConcretaPackage extends EPackage {
 		EClass MKJ_METODO = eINSTANCE.getMKJMetodo();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_METODO__NAME = eINSTANCE.getMKJMetodo_Name();
+		EAttribute MKJ_METODO__NOMBRE = eINSTANCE.getMKJMetodo_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Semantics</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_METODO__SEMANTICS = eINSTANCE.getMKJMetodo_Semantics();
 
 		/**
 		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
@@ -1614,12 +1642,12 @@ public interface ConcretaPackage extends EPackage {
 		EClass MKJ_RELACION = eINSTANCE.getMKJRelacion();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_RELACION__NAME = eINSTANCE.getMKJRelacion_Name();
+		EAttribute MKJ_RELACION__NOMBRE = eINSTANCE.getMKJRelacion_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad1</b></em>' attribute feature.
