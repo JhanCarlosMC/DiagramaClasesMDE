@@ -128,6 +128,8 @@ public class MKJClaseItemProvider
 			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__ATRIBUTOS);
 			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__METODOS);
 			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES);
+			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__HERENCIAS);
+			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__INTERFACES);
 		}
 		return childrenFeatures;
 	}
@@ -190,6 +192,8 @@ public class MKJClaseItemProvider
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
 			case AbstractaPackage.MKJ_CLASE__METODOS:
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,6 +240,16 @@ public class MKJClaseItemProvider
 			(createChildParameter
 				(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES,
 				 AbstractaFactory.eINSTANCE.createMKJAgregacion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AbstractaPackage.Literals.MKJ_CLASE__HERENCIAS,
+				 AbstractaFactory.eINSTANCE.createMKJHerencia()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AbstractaPackage.Literals.MKJ_CLASE__INTERFACES,
+				 AbstractaFactory.eINSTANCE.createMKJInterface()));
 	}
 
 	/**

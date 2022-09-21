@@ -20,6 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.MKJClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.MKJClase#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.MKJClase#getRelaciones <em>Relaciones</em>}</li>
+ *   <li>{@link abstracta.MKJClase#getHerencias <em>Herencias</em>}</li>
+ *   <li>{@link abstracta.MKJClase#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getMKJClase()
@@ -126,5 +128,37 @@ public interface MKJClase extends EObject {
 	 * @generated
 	 */
 	EList<MKJRelacion> getRelaciones();
+
+	/**
+	 * Returns the value of the '<em><b>Herencias</b></em>' containment reference list.
+	 * The list contents are of type {@link abstracta.MKJHerencia}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Herencias</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Herencias</em>' containment reference list.
+	 * @see abstracta.AbstractaPackage#getMKJClase_Herencias()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MKJHerencia> getHerencias();
+
+	/**
+	 * Returns the value of the '<em><b>Interfaces</b></em>' containment reference list.
+	 * The list contents are of type {@link abstracta.MKJInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interfaces</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interfaces</em>' containment reference list.
+	 * @see abstracta.AbstractaPackage#getMKJClase_Interfaces()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MKJInterface> getInterfaces();
 
 } // MKJClase

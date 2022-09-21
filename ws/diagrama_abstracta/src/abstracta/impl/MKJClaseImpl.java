@@ -5,6 +5,8 @@ package abstracta.impl;
 import abstracta.AbstractaPackage;
 import abstracta.MKJAtributo;
 import abstracta.MKJClase;
+import abstracta.MKJHerencia;
+import abstracta.MKJInterface;
 import abstracta.MKJMetodo;
 import abstracta.MKJRelacion;
 
@@ -37,6 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link abstracta.impl.MKJClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getRelaciones <em>Relaciones</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getHerencias <em>Herencias</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +115,26 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * @ordered
 	 */
 	protected EList<MKJRelacion> relaciones;
+
+	/**
+	 * The cached value of the '{@link #getHerencias() <em>Herencias</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHerencias()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MKJHerencia> herencias;
+
+	/**
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterfaces()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MKJInterface> interfaces;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,6 +238,30 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MKJHerencia> getHerencias() {
+		if (herencias == null) {
+			herencias = new EObjectContainmentEList<MKJHerencia>(MKJHerencia.class, this, AbstractaPackage.MKJ_CLASE__HERENCIAS);
+		}
+		return herencias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MKJInterface> getInterfaces() {
+		if (interfaces == null) {
+			interfaces = new EObjectContainmentEList<MKJInterface>(MKJInterface.class, this, AbstractaPackage.MKJ_CLASE__INTERFACES);
+		}
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -223,6 +271,10 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return ((InternalEList<?>)getMetodos()).basicRemove(otherEnd, msgs);
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				return ((InternalEList<?>)getRelaciones()).basicRemove(otherEnd, msgs);
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				return ((InternalEList<?>)getHerencias()).basicRemove(otherEnd, msgs);
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -245,6 +297,10 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return getMetodos();
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				return getRelaciones();
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				return getHerencias();
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				return getInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -276,6 +332,14 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				getRelaciones().clear();
 				getRelaciones().addAll((Collection<? extends MKJRelacion>)newValue);
 				return;
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				getHerencias().clear();
+				getHerencias().addAll((Collection<? extends MKJHerencia>)newValue);
+				return;
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				getInterfaces().clear();
+				getInterfaces().addAll((Collection<? extends MKJInterface>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -303,6 +367,12 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				getRelaciones().clear();
 				return;
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				getHerencias().clear();
+				return;
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				getInterfaces().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -325,6 +395,10 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return metodos != null && !metodos.isEmpty();
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				return relaciones != null && !relaciones.isEmpty();
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				return herencias != null && !herencias.isEmpty();
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				return interfaces != null && !interfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

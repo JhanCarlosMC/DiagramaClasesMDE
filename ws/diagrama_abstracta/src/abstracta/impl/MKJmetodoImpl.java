@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link abstracta.impl.MKJMetodoImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.impl.MKJMetodoImpl#isRetorno <em>Retorno</em>}</li>
+ *   <li>{@link abstracta.impl.MKJMetodoImpl#getSemantics <em>Semantics</em>}</li>
  *   <li>{@link abstracta.impl.MKJMetodoImpl#getListaParametros <em>Lista Parametros</em>}</li>
  * </ul>
  *
@@ -59,24 +59,24 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isRetorno() <em>Retorno</em>}' attribute.
+	 * The default value of the '{@link #getSemantics() <em>Semantics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isRetorno()
+	 * @see #getSemantics()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean RETORNO_EDEFAULT = false;
+	protected static final String SEMANTICS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isRetorno() <em>Retorno</em>}' attribute.
+	 * The cached value of the '{@link #getSemantics() <em>Semantics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isRetorno()
+	 * @see #getSemantics()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean retorno = RETORNO_EDEFAULT;
+	protected String semantics = SEMANTICS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getListaParametros() <em>Lista Parametros</em>}' containment reference list.
@@ -133,8 +133,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isRetorno() {
-		return retorno;
+	public String getSemantics() {
+		return semantics;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRetorno(boolean newRetorno) {
-		boolean oldRetorno = retorno;
-		retorno = newRetorno;
+	public void setSemantics(String newSemantics) {
+		String oldSemantics = semantics;
+		semantics = newSemantics;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_METODO__RETORNO, oldRetorno, retorno));
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_METODO__SEMANTICS, oldSemantics, semantics));
 	}
 
 	/**
@@ -185,8 +185,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_METODO__NOMBRE:
 				return getNombre();
-			case AbstractaPackage.MKJ_METODO__RETORNO:
-				return isRetorno();
+			case AbstractaPackage.MKJ_METODO__SEMANTICS:
+				return getSemantics();
 			case AbstractaPackage.MKJ_METODO__LISTA_PARAMETROS:
 				return getListaParametros();
 		}
@@ -205,8 +205,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 			case AbstractaPackage.MKJ_METODO__NOMBRE:
 				setNombre((String)newValue);
 				return;
-			case AbstractaPackage.MKJ_METODO__RETORNO:
-				setRetorno((Boolean)newValue);
+			case AbstractaPackage.MKJ_METODO__SEMANTICS:
+				setSemantics((String)newValue);
 				return;
 			case AbstractaPackage.MKJ_METODO__LISTA_PARAMETROS:
 				getListaParametros().clear();
@@ -227,8 +227,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 			case AbstractaPackage.MKJ_METODO__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
-			case AbstractaPackage.MKJ_METODO__RETORNO:
-				setRetorno(RETORNO_EDEFAULT);
+			case AbstractaPackage.MKJ_METODO__SEMANTICS:
+				setSemantics(SEMANTICS_EDEFAULT);
 				return;
 			case AbstractaPackage.MKJ_METODO__LISTA_PARAMETROS:
 				getListaParametros().clear();
@@ -247,8 +247,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 		switch (featureID) {
 			case AbstractaPackage.MKJ_METODO__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-			case AbstractaPackage.MKJ_METODO__RETORNO:
-				return retorno != RETORNO_EDEFAULT;
+			case AbstractaPackage.MKJ_METODO__SEMANTICS:
+				return SEMANTICS_EDEFAULT == null ? semantics != null : !SEMANTICS_EDEFAULT.equals(semantics);
 			case AbstractaPackage.MKJ_METODO__LISTA_PARAMETROS:
 				return listaParametros != null && !listaParametros.isEmpty();
 		}
@@ -267,8 +267,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (nombre: ");
 		result.append(nombre);
-		result.append(", retorno: ");
-		result.append(retorno);
+		result.append(", semantics: ");
+		result.append(semantics);
 		result.append(')');
 		return result.toString();
 	}

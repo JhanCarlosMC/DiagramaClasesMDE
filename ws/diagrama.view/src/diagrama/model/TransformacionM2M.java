@@ -1,12 +1,14 @@
 package diagrama.model;
 
-import java.util.Iterator;
-
 import abstracta.AbstractaFactory;
+import concreta.MKJAgregacion;
 import concreta.MKJAsociacion;
 import concreta.MKJAtributo;
 import concreta.MKJClase;
+import concreta.MKJConteinment;
 import concreta.MKJDiagramaClases;
+import concreta.MKJHerencia;
+import concreta.MKJInterface;
 import concreta.MKJMetodo;
 import concreta.MKJPaquete;
 import concreta.ModelFactory;
@@ -42,9 +44,108 @@ public class TransformacionM2M {
 			for (MKJAsociacion asociacion : diagramaConcreta.getListaAsociaciones()) {
 				crearAsociacion(asociacion);
 			}
+			for (MKJAgregacion agregacion : diagramaConcreta.getListaAgregaciones()) {
+				crearAgregacion(agregacion);
+			}
+			for (MKJConteinment conteinment : diagramaConcreta.getListaConteiments()) {
+				crearContainment(conteinment);
+			}
+			for (MKJHerencia herencia : diagramaConcreta.getListaHerencias()) {
+				crearHerencia(herencia);
+			}
+			for (MKJInterface mkjInterface : diagramaConcreta.getListaInterfaces()) {
+				crearInterface(mkjInterface);
+			}
 		}
 
 		return mensaje;
+	}
+
+	private void crearInterface(MKJInterface mkjInterface) {
+		// TODO Auto-generated method stub
+		MKJClase sourceConcreta = mkjInterface.getSource();
+		MKJClase targetConcreta = mkjInterface.getTarget();
+
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+
+		abstracta.MKJInterface relacionSource = AbstractaFactory.eINSTANCE.createMKJInterface();
+		sourceAbstracta.getInterfaces().add(relacionSource);
+
+		abstracta.MKJInterface relacionTarget = AbstractaFactory.eINSTANCE.createMKJInterface();
+		targetAbstracta.getInterfaces().add(relacionTarget);
+	}
+
+	private void crearHerencia(MKJHerencia herencia) {
+		// TODO Auto-generated method stub
+		MKJClase sourceConcreta = herencia.getSource();
+		MKJClase targetConcreta = herencia.getTarget();
+
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+
+		abstracta.MKJHerencia relacionSource = AbstractaFactory.eINSTANCE.createMKJHerencia();
+		sourceAbstracta.getHerencias().add(relacionSource);
+
+		abstracta.MKJHerencia relacionTarget = AbstractaFactory.eINSTANCE.createMKJHerencia();
+		targetAbstracta.getHerencias().add(relacionTarget);
+	}
+
+	private void crearContainment(MKJConteinment conteinment) {
+		// TODO Auto-generated method stub
+		MKJClase sourceConcreta = conteinment.getSource();
+		MKJClase targetConcreta = conteinment.getTarget();
+
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+
+		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMKJContainment();
+		relacionSource.setMultiplicidad1(conteinment.getMultiplicidad1());
+		relacionSource.setMultiplicidad2(conteinment.getMultiplicidad2());
+		relacionSource.setNavegabilidad1(conteinment.getNavegabilidad1());
+		relacionSource.setNavegabilidad2(conteinment.getNavegabilidad2());
+		relacionSource.setRol1(conteinment.getRol1());
+		relacionSource.setRol2(conteinment.getRol2());
+
+		sourceAbstracta.getRelaciones().add(relacionSource);
+
+		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMKJContainment();
+		relacionTarget.setMultiplicidad1(conteinment.getMultiplicidad2());
+		relacionTarget.setMultiplicidad2(conteinment.getMultiplicidad1());
+		relacionTarget.setNavegabilidad1(conteinment.getNavegabilidad2());
+		relacionTarget.setNavegabilidad2(conteinment.getNavegabilidad1());
+		relacionTarget.setRol1(conteinment.getRol2());
+		relacionTarget.setRol2(conteinment.getRol1());
+
+		targetAbstracta.getRelaciones().add(relacionTarget);
+	}
+
+	private void crearAgregacion(MKJAgregacion agregacion) {
+		// TODO Auto-generated method stub
+		MKJClase sourceConcreta = agregacion.getSource();
+		MKJClase targetConcreta = agregacion.getTarget();
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+
+		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMKJAgregacion();
+		relacionSource.setMultiplicidad1(agregacion.getMultiplicidad1());
+		relacionSource.setMultiplicidad2(agregacion.getMultiplicidad2());
+		relacionSource.setNavegabilidad1(agregacion.getNavegabilidad1());
+		relacionSource.setNavegabilidad2(agregacion.getNavegabilidad2());
+		relacionSource.setRol1(agregacion.getRol1());
+		relacionSource.setRol2(agregacion.getRol2());
+
+		sourceAbstracta.getRelaciones().add(relacionSource);
+
+		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMHJAsociacion();
+		relacionTarget.setMultiplicidad1(agregacion.getMultiplicidad2());
+		relacionTarget.setMultiplicidad2(agregacion.getMultiplicidad1());
+		relacionTarget.setNavegabilidad1(agregacion.getNavegabilidad2());
+		relacionTarget.setNavegabilidad2(agregacion.getNavegabilidad1());
+		relacionTarget.setRol1(agregacion.getRol2());
+		relacionTarget.setRol2(agregacion.getRol1());
+
+		targetAbstracta.getRelaciones().add(relacionTarget);
 	}
 
 	private void crearAsociacion(MKJAsociacion asociacion) {
@@ -97,6 +198,7 @@ public class TransformacionM2M {
 			for (MKJMetodo metodo : clase.getMetodos()) {
 				abstracta.MKJMetodo mkjMetodo = AbstractaFactory.eINSTANCE.createMKJMetodo();
 				mkjMetodo.setNombre(metodo.getNombre());
+				mkjMetodo.setSemantics(metodo.getSemantics());
 				mkjClase.getMetodos().add(mkjMetodo);
 			}
 

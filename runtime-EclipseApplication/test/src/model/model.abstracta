@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="ASCII"?>
-<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasLasClases="//@paquetes.0/@paquetes.0/@clases.0 //@paquetes.0/@paquetes.0/@clases.1 //@paquetes.0/@paquetes.1/@clases.0" listaTodosLosPaquetes="//@paquetes.0/@paquetes.0 //@paquetes.0/@paquetes.1">
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasLasClases="//@paquetes.0/@paquetes.0/@clases.0 //@paquetes.0/@paquetes.1/@clases.0 //@paquetes.0/@paquetes.1/@clases.1 //@paquetes.0/@paquetes.0/@clases.1 //@paquetes.0/@paquetes.0/@clases.2" listaTodosLosPaquetes="//@paquetes.0 //@paquetes.0/@paquetes.0 //@paquetes.0/@paquetes.1">
   <paquetes nombre="Root" ruta="">
     <paquetes nombre="Principal" ruta="Root/">
-      <clases nombre="Colegio" ruta="Root/Principal/">
+      <clases nombre="Universidad" ruta="Root/Principal/">
         <atributos nombre="nombre"/>
-        <relaciones xsi:type="abstracta:MHJAsociacion" rol2=""/>
-        <relaciones xsi:type="abstracta:MHJAsociacion"/>
+        <atributos nombre="direccion"/>
+        <relaciones xsi:type="abstracta:MKJAgregacion" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaPersonas" navegabilidad1="una universidad tiene muchas personas" navegabilidad2="varias personas pertenecen a una universidad"/>
+        <relaciones xsi:type="abstracta:MKJContainment" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaProgramas" navegabilidad1="una universidad contiene muchos programas" navegabilidad2="varios programas pertenecen a una universidad"/>
       </clases>
-      <clases nombre="Profesor" ruta="Root/Principal/">
+      <clases nombre="Programa" ruta="Root/Principal/">
         <atributos nombre="nombre"/>
-        <atributos nombre="cedula"/>
-        <atributos nombre="especialidad"/>
-        <metodos/>
-        <relaciones xsi:type="abstracta:MHJAsociacion"/>
+        <atributos nombre="codigo"/>
+        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="*" rol1="listaProgramas" rol2="listaDocentes" navegabilidad1="1 o mas docentes pertenecen a 1 o mas programas " navegabilidad2="un programa tiene  muchos docentes"/>
+        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="1" rol1="listaEstudiantes" rol2="programa" navegabilidad1="1 o varios estudiantes pertenecen a un programas" navegabilidad2="un programa tiene muchos estudiantes"/>
+        <relaciones xsi:type="abstracta:MKJContainment" multiplicidad1="*" multiplicidad2="1" rol1="listaProgramas" rol2="universidad" navegabilidad1="varios programas pertenecen a una universidad" navegabilidad2="una universidad contiene muchos programas"/>
+      </clases>
+      <clases nombre="Persona" ruta="Root/Principal/">
+        <atributos nombre="nombre"/>
+        <atributos nombre="edad"/>
+        <atributos nombre="documentoIdentidad"/>
+        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="1" rol1="listaPersonas" rol2="universidad" navegabilidad1="varias personas pertenecen a una universidad" navegabilidad2="una universidad tiene muchas personas"/>
+        <herencias/>
+        <herencias/>
       </clases>
     </paquetes>
     <paquetes nombre="Secundario" ruta="Root/">
+      <clases nombre="Profesor" ruta="Root/Secundario/">
+        <atributos nombre="nroTarjetaProfesional"/>
+        <atributos nombre="aniosExperiencia"/>
+        <atributos nombre="especialidad"/>
+        <metodos nombre="obtenerEstudiantes" semantics="# Aqui va la semqntica del codigo"/>
+        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="*" multiplicidad2="*" rol1="listaDocentes" rol2="listaProgramas" navegabilidad1="un programa tiene  muchos docentes" navegabilidad2="1 o mas docentes pertenecen a 1 o mas programas "/>
+        <herencias/>
+      </clases>
       <clases nombre="Estudiante" ruta="Root/Secundario/">
-        <atributos nombre="nombre"/>
-        <atributos nombre="edad"/>
-        <atributos nombre="anioCursado"/>
-        <relaciones xsi:type="abstracta:MHJAsociacion" rol1=""/>
+        <atributos nombre="colegioEgresado"/>
+        <atributos nombre="sisben"/>
+        <atributos nombre="semestre"/>
+        <relaciones xsi:type="abstracta:MHJAsociacion" multiplicidad1="1" multiplicidad2="*" rol1="programa" rol2="listaEstudiantes" navegabilidad1="un programa tiene muchos estudiantes" navegabilidad2="1 o varios estudiantes pertenecen a un programas"/>
+        <herencias/>
       </clases>
     </paquetes>
   </paquetes>

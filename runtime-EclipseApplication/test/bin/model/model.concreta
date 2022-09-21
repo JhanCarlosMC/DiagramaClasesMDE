@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
   <listaDiagramas nombre="Diagrama Colegio">
-    <listaClases identificador="" nombre="Colegio" ruta="Root/Principal/">
+    <listaClases identificador="1" nombre="Universidad" ruta="Root/Principal/">
       <atributos nombre="nombre"/>
+      <atributos nombre="direccion"/>
     </listaClases>
-    <listaClases identificador="" nombre="Profesor" ruta="Root/Principal/">
-      <atributos nombre="nombre"/>
-      <atributos nombre="cedula"/>
+    <listaClases identificador="3" nombre="Profesor" ruta="Root/Secundario/">
+      <atributos nombre="nroTarjetaProfesional"/>
+      <atributos nombre="aniosExperiencia"/>
       <atributos nombre="especialidad"/>
-      <metodos/>
+      <metodos nombre="obtenerEstudiantes" semantics="# Aqui va la semqntica del codigo"/>
     </listaClases>
-    <listaClases identificador="" nombre="Estudiante" ruta="Root/Secundario/">
+    <listaClases identificador="4" nombre="Estudiante" ruta="Root/Secundario/">
+      <atributos nombre="colegioEgresado"/>
+      <atributos nombre="sisben"/>
+      <atributos nombre="semestre"/>
+    </listaClases>
+    <listaClases identificador="5" nombre="Programa" ruta="Root/Principal/">
+      <atributos nombre="nombre"/>
+      <atributos nombre="codigo"/>
+    </listaClases>
+    <listaClases identificador="2" nombre="Persona" ruta="Root/Principal/">
       <atributos nombre="nombre"/>
       <atributos nombre="edad"/>
-      <atributos nombre="anioCursado"/>
+      <atributos nombre="documentoIdentidad"/>
     </listaClases>
     <listaPaquetes nombre="Principal" ruta="Root/"/>
     <listaPaquetes nombre="Root" ruta=""/>
     <listaPaquetes nombre="Secundario" ruta="Root/"/>
-    <listaAsociaciones rol2="" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.2"/>
-    <listaAsociaciones source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaAsociaciones nombre="programa-docentes" multiplicidad1="*" multiplicidad2="*" rol1="listaProgramas" rol2="listaDocentes" navegabilidad1="1 o mas docentes pertenecen a 1 o mas programas " navegabilidad2="un programa tiene  muchos docentes" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaAsociaciones nombre="programa-estudiantes" multiplicidad1="1" multiplicidad2="*" rol1="programa" rol2="listaEstudiantes" navegabilidad1="un programa tiene muchos estudiantes" navegabilidad2="1 o varios estudiantes pertenecen a un programas" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.3"/>
+    <listaConteiments nombre="uni-programas" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaProgramas" navegabilidad1="una universidad contiene muchos programas" navegabilidad2="varios programas pertenecen a una universidad" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.3"/>
+    <listaAgregaciones nombre="uni-personas" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaPersonas" navegabilidad1="una universidad tiene muchas personas" navegabilidad2="varias personas pertenecen a una universidad" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.4"/>
+    <listaHerencias source="//@listaDiagramas.0/@listaClases.4" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaHerencias source="//@listaDiagramas.0/@listaClases.4" target="//@listaDiagramas.0/@listaClases.2"/>
   </listaDiagramas>
 </concreta:ModelFactory>

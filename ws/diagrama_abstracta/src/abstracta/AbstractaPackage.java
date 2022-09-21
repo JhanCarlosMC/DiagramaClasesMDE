@@ -230,13 +230,31 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_CLASE__RELACIONES = 4;
 
 	/**
+	 * The feature id for the '<em><b>Herencias</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CLASE__HERENCIAS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_CLASE__INTERFACES = 6;
+
+	/**
 	 * The number of structural features of the '<em>MKJ Clase</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_CLASE_FEATURE_COUNT = 5;
+	int MKJ_CLASE_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJAtributoImpl <em>MKJ Atributo</em>}' class.
@@ -286,13 +304,13 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_METODO__NOMBRE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Retorno</b></em>' attribute.
+	 * The feature id for the '<em><b>Semantics</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_METODO__RETORNO = 1;
+	int MKJ_METODO__SEMANTICS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
@@ -972,6 +990,28 @@ public interface AbstractaPackage extends EPackage {
 	EReference getMKJClase_Relaciones();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link abstracta.MKJClase#getHerencias <em>Herencias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Herencias</em>'.
+	 * @see abstracta.MKJClase#getHerencias()
+	 * @see #getMKJClase()
+	 * @generated
+	 */
+	EReference getMKJClase_Herencias();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link abstracta.MKJClase#getInterfaces <em>Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
+	 * @see abstracta.MKJClase#getInterfaces()
+	 * @see #getMKJClase()
+	 * @generated
+	 */
+	EReference getMKJClase_Interfaces();
+
+	/**
 	 * Returns the meta object for class '{@link abstracta.MKJAtributo <em>MKJ Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1014,15 +1054,15 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMKJMetodo_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.MKJMetodo#isRetorno <em>Retorno</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.MKJMetodo#getSemantics <em>Semantics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Retorno</em>'.
-	 * @see abstracta.MKJMetodo#isRetorno()
+	 * @return the meta object for the attribute '<em>Semantics</em>'.
+	 * @see abstracta.MKJMetodo#getSemantics()
 	 * @see #getMKJMetodo()
 	 * @generated
 	 */
-	EAttribute getMKJMetodo_Retorno();
+	EAttribute getMKJMetodo_Semantics();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link abstracta.MKJMetodo#getListaParametros <em>Lista Parametros</em>}'.
@@ -1403,6 +1443,22 @@ public interface AbstractaPackage extends EPackage {
 		EReference MKJ_CLASE__RELACIONES = eINSTANCE.getMKJClase_Relaciones();
 
 		/**
+		 * The meta object literal for the '<em><b>Herencias</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_CLASE__HERENCIAS = eINSTANCE.getMKJClase_Herencias();
+
+		/**
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MKJ_CLASE__INTERFACES = eINSTANCE.getMKJClase_Interfaces();
+
+		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJAtributoImpl <em>MKJ Atributo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1439,12 +1495,12 @@ public interface AbstractaPackage extends EPackage {
 		EAttribute MKJ_METODO__NOMBRE = eINSTANCE.getMKJMetodo_Nombre();
 
 		/**
-		 * The meta object literal for the '<em><b>Retorno</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Semantics</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MKJ_METODO__RETORNO = eINSTANCE.getMKJMetodo_Retorno();
+		EAttribute MKJ_METODO__SEMANTICS = eINSTANCE.getMKJMetodo_Semantics();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' containment reference list feature.

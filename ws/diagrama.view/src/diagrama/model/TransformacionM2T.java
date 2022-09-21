@@ -72,6 +72,7 @@ public class TransformacionM2T {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < clase.getMetodos().size(); i++) {
 			textoCodigo.append("\n	def " + clase.getMetodos().get(i).getNombre() + "(): \n");
+			textoCodigo.append("        "+clase.getMetodos().get(i).getSemantics() + "\n");
 			textoCodigo.append("		return null" + "\n");
 		}
 	}
@@ -104,6 +105,6 @@ public class TransformacionM2T {
 
 	private void agregarEncabezado(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-		textoCodigo.append("class " + clase.getNombre() + ": \n\n");
+			textoCodigo.append("class " + clase.getNombre() + ": \n\n");
 	}
 }
