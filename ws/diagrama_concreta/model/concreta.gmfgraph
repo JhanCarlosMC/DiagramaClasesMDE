@@ -85,12 +85,12 @@
       </actualFigure>
     </descriptors>
     <descriptors name="MKJConteinmentFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.0">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" targetDecoration="//@figures.0/@figures.0">
         <foregroundColor xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
     </descriptors>
     <descriptors name="MKJAgregacionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.1">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" targetDecoration="//@figures.0/@figures.1">
         <foregroundColor xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
     </descriptors>

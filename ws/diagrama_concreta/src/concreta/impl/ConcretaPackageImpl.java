@@ -960,7 +960,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 			 "target", "target",
 			 "style", "solid",
 			 "width", "2",
-			 "source.decoration", "filledrhomb",
+			 "target.decoration", "filledrhomb",
 			 "color", "0,0,0"
 		   });	
 		addAnnotation
@@ -971,7 +971,7 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 			 "target", "target",
 			 "style", "solid",
 			 "width", "2",
-			 "source.decoration", "rhomb",
+			 "target.decoration", "rhomb",
 			 "color", "0,0,0"
 		   });	
 		addAnnotation

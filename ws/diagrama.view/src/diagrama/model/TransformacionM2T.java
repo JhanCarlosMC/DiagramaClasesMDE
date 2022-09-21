@@ -47,7 +47,7 @@ public class TransformacionM2T {
 			if (archivo.exists() == false) {
 				archivo.mkdirs();
 			}
-			FileWriter escribir = new FileWriter(archivo + "/" + nombre + ".py", true);
+			FileWriter escribir = new FileWriter(archivo + "/" + nombre + ".py", false);
 			escribir.write(cadena);
 			escribir.close();
 			textoCod = new StringBuilder();
@@ -72,7 +72,7 @@ public class TransformacionM2T {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < clase.getMetodos().size(); i++) {
 			textoCodigo.append("\n	def " + clase.getMetodos().get(i).getNombre() + "(): \n");
-			textoCodigo.append("        "+clase.getMetodos().get(i).getSemantics() + "\n");
+			textoCodigo.append("        " + clase.getMetodos().get(i).getSemantics() + "\n");
 			textoCodigo.append("		return null" + "\n");
 		}
 	}
@@ -105,6 +105,10 @@ public class TransformacionM2T {
 
 	private void agregarEncabezado(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
+		if(clase.getHerencias().size() == 0)
 			textoCodigo.append("class " + clase.getNombre() + ": \n\n");
+		else if(clase.getHerencias().get(0).getSource() == clase) {
+			textoCodigo.append("class " + clase.getNombre() + "("+ clase.getHerencias().get(0).getTarget().getNombre()+")" +": \n\n");
+		}
 	}
 }

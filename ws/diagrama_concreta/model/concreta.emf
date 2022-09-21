@@ -73,13 +73,13 @@ class MKJAsociacion extends MKJRelacion{
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2", source.decoration = "filledrhomb", color = "0,0,0")
+@gmf.link(source="source", target="target", style="solid", width="2", target.decoration = "filledrhomb", color = "0,0,0")
 class MKJConteinment extends MKJRelacion{
     ref MKJClase source;
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2", source.decoration = "rhomb", color = "0,0,0")
+@gmf.link(source="source", target="target", style="solid", width="2", target.decoration = "rhomb", color = "0,0,0")
 class MKJAgregacion extends MKJRelacion{
     ref MKJClase source;
     ref MKJClase target;

@@ -17,7 +17,7 @@ package concreta;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJConteinment()
- * @model annotation="gmf.link source='source' target='target' style='solid' width='2' source.decoration='filledrhomb' color='0,0,0'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='2' target.decoration='filledrhomb' color='0,0,0'"
  * @generated
  */
 public interface MKJConteinment extends MKJRelacion {
