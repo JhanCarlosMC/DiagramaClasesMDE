@@ -3,6 +3,7 @@ package diagrama.model;
 import java.io.File;
 import java.io.FileWriter;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Shell;
@@ -88,6 +89,17 @@ public class TransformacionM2T {
 	private void agregarConstructor(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
 		textoCodigo.append("	def __init__(self,");
+
+		if (clase.getHerencias().size() > 0) {
+			if (clase.getHerencias().get(0).getSource() == clase) {
+
+				EList<MKJAtributo> atributosPadre = clase.getHerencias().get(0).getTarget().getAtributos();
+				for (int i = 0; i < atributosPadre.size(); i++) {
+					textoCodigo.append(atributosPadre.get(i).getNombre());
+				}
+			}
+		}
+
 		for (int i = 0; i < clase.getAtributos().size(); i++) {
 			textoCodigo.append(clase.getAtributos().get(i).getNombre());
 			if (i != clase.getAtributos().size() - 1) {
@@ -95,6 +107,20 @@ public class TransformacionM2T {
 			}
 		}
 		textoCodigo.append("): \n");
+
+		if (clase.getHerencias().size() > 0) {
+			if (clase.getHerencias().get(0).getSource() == clase) {
+				
+				textoCodigo.append("		super().__init__(");
+				EList<MKJAtributo> atributosPadre = clase.getHerencias().get(0).getTarget().getAtributos();
+				for (int i = 0; i < atributosPadre.size(); i++) {
+					textoCodigo.append(atributosPadre.get(i).getNombre());
+					if (i != atributosPadre.size() - 1) {
+						textoCodigo.append(",");
+					}
+				}
+			}
+		}
 
 		for (int i = 0; i < clase.getAtributos().size(); i++) {
 			textoCodigo.append("		self." + clase.getAtributos().get(i).getNombre() + "="
@@ -105,10 +131,11 @@ public class TransformacionM2T {
 
 	private void agregarEncabezado(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-		if(clase.getHerencias().size() == 0)
+		if (clase.getHerencias().size() == 0 || clase.getHerencias().get(0).getSource() != clase) {
 			textoCodigo.append("class " + clase.getNombre() + ": \n\n");
-		else if(clase.getHerencias().get(0).getSource() == clase) {
-			textoCodigo.append("class " + clase.getNombre() + "("+ clase.getHerencias().get(0).getTarget().getNombre()+")" +": \n\n");
+		} else if (clase.getHerencias().get(0).getSource() == clase) {
+			textoCodigo.append("class " + clase.getNombre() + "(" + clase.getHerencias().get(0).getTarget().getNombre()
+					+ ")" + ": \n\n");
 		}
 	}
 }
