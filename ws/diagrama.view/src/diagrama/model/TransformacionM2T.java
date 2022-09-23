@@ -96,6 +96,11 @@ public class TransformacionM2T {
 				EList<MKJAtributo> atributosPadre = clase.getHerencias().get(0).getTarget().getAtributos();
 				for (int i = 0; i < atributosPadre.size(); i++) {
 					textoCodigo.append(atributosPadre.get(i).getNombre());
+					System.out.println(atributosPadre.get(i).getNombre());
+					if (i < atributosPadre.size()) {
+						System.out.println("entro");
+						textoCodigo.append(",");
+					}
 				}
 			}
 		}
@@ -110,7 +115,6 @@ public class TransformacionM2T {
 
 		if (clase.getHerencias().size() > 0) {
 			if (clase.getHerencias().get(0).getSource() == clase) {
-				
 				textoCodigo.append("		super().__init__(");
 				EList<MKJAtributo> atributosPadre = clase.getHerencias().get(0).getTarget().getAtributos();
 				for (int i = 0; i < atributosPadre.size(); i++) {
@@ -131,15 +135,13 @@ public class TransformacionM2T {
 
 	private void agregarEncabezado(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		textoCodigo.append("class " + clase.getNombre() +": \n\n");
-=======
+		//textoCodigo.append("class " + clase.getNombre() +": \n\n");
+
 		if (clase.getHerencias().size() == 0 || clase.getHerencias().get(0).getSource() != clase) {
 			textoCodigo.append("class " + clase.getNombre() + ": \n\n");
 		} else if (clase.getHerencias().get(0).getSource() == clase) {
 			textoCodigo.append("class " + clase.getNombre() + "(" + clase.getHerencias().get(0).getTarget().getNombre()
 					+ ")" + ": \n\n");
 		}
->>>>>>> d82c33bb8a79ccbea692a5de41c685fb648f2f8e
 	}
 }
