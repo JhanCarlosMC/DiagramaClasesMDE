@@ -75,13 +75,13 @@ public class MKJAgregacionEditPart extends ConnectionNodeEditPart implements ITr
 			this.setLineWidth(2);
 			this.setForegroundColor(THIS_FORE);
 
-			setSourceDecoration(createSourceDecoration());
+			setTargetDecoration(createTargetDecoration());
 		}
 
 		/**
 		* @generated
 		*/
-		private RotatableDecoration createSourceDecoration() {
+		private RotatableDecoration createTargetDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 			df.setFill(true);
 			df.setBackgroundColor(ColorConstants.white);

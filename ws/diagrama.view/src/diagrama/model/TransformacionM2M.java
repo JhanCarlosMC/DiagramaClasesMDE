@@ -66,13 +66,19 @@ public class TransformacionM2M {
 		MKJClase sourceConcreta = mkjInterface.getSource();
 		MKJClase targetConcreta = mkjInterface.getTarget();
 
-		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
-		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),
+				sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),
+				targetConcreta.getRuta());
 
 		abstracta.MKJInterface relacionSource = AbstractaFactory.eINSTANCE.createMKJInterface();
+		relacionSource.setSource(sourceAbstracta);
+		relacionSource.setTarget(targetAbstracta);
 		sourceAbstracta.getInterfaces().add(relacionSource);
 
 		abstracta.MKJInterface relacionTarget = AbstractaFactory.eINSTANCE.createMKJInterface();
+		relacionTarget.setSource(sourceAbstracta);
+		relacionTarget.setTarget(targetAbstracta);
 		targetAbstracta.getInterfaces().add(relacionTarget);
 	}
 
@@ -81,13 +87,19 @@ public class TransformacionM2M {
 		MKJClase sourceConcreta = herencia.getSource();
 		MKJClase targetConcreta = herencia.getTarget();
 
-		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
-		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),
+				sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),
+				targetConcreta.getRuta());
 
 		abstracta.MKJHerencia relacionSource = AbstractaFactory.eINSTANCE.createMKJHerencia();
+		relacionSource.setTarget(targetAbstracta);
+		relacionSource.setSource(sourceAbstracta);
 		sourceAbstracta.getHerencias().add(relacionSource);
 
 		abstracta.MKJHerencia relacionTarget = AbstractaFactory.eINSTANCE.createMKJHerencia();
+		relacionTarget.setSource(sourceAbstracta);
+		relacionTarget.setTarget(targetAbstracta);
 		targetAbstracta.getHerencias().add(relacionTarget);
 	}
 
@@ -96,8 +108,10 @@ public class TransformacionM2M {
 		MKJClase sourceConcreta = conteinment.getSource();
 		MKJClase targetConcreta = conteinment.getTarget();
 
-		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
-		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),
+				sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),
+				targetConcreta.getRuta());
 
 		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMKJContainment();
 		relacionSource.setMultiplicidad1(conteinment.getMultiplicidad1());
@@ -106,6 +120,10 @@ public class TransformacionM2M {
 		relacionSource.setNavegabilidad2(conteinment.getNavegabilidad2());
 		relacionSource.setRol1(conteinment.getRol1());
 		relacionSource.setRol2(conteinment.getRol2());
+		relacionSource.setNombre(conteinment.getNombre());
+
+		relacionSource.setSource(sourceAbstracta);
+		relacionSource.setTarget(targetAbstracta);
 
 		sourceAbstracta.getRelaciones().add(relacionSource);
 
@@ -116,6 +134,10 @@ public class TransformacionM2M {
 		relacionTarget.setNavegabilidad2(conteinment.getNavegabilidad1());
 		relacionTarget.setRol1(conteinment.getRol2());
 		relacionTarget.setRol2(conteinment.getRol1());
+		relacionTarget.setNombre(conteinment.getNombre());
+
+		relacionTarget.setSource(sourceAbstracta);
+		relacionTarget.setTarget(targetAbstracta);
 
 		targetAbstracta.getRelaciones().add(relacionTarget);
 	}
@@ -124,8 +146,10 @@ public class TransformacionM2M {
 		// TODO Auto-generated method stub
 		MKJClase sourceConcreta = agregacion.getSource();
 		MKJClase targetConcreta = agregacion.getTarget();
-		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),sourceConcreta.getRuta());
-		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),targetConcreta.getRuta());
+		abstracta.MKJClase sourceAbstracta = obtenerClaseAbstracta(sourceConcreta.getNombre(),
+				sourceConcreta.getRuta());
+		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),
+				targetConcreta.getRuta());
 
 		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMKJAgregacion();
 		relacionSource.setMultiplicidad1(agregacion.getMultiplicidad1());
@@ -134,6 +158,10 @@ public class TransformacionM2M {
 		relacionSource.setNavegabilidad2(agregacion.getNavegabilidad2());
 		relacionSource.setRol1(agregacion.getRol1());
 		relacionSource.setRol2(agregacion.getRol2());
+		relacionSource.setNombre(agregacion.getNombre());
+
+		relacionSource.setSource(sourceAbstracta);
+		relacionSource.setTarget(targetAbstracta);
 
 		sourceAbstracta.getRelaciones().add(relacionSource);
 
@@ -144,6 +172,10 @@ public class TransformacionM2M {
 		relacionTarget.setNavegabilidad2(agregacion.getNavegabilidad1());
 		relacionTarget.setRol1(agregacion.getRol2());
 		relacionTarget.setRol2(agregacion.getRol1());
+		relacionTarget.setNombre(agregacion.getNombre());
+
+		relacionTarget.setSource(sourceAbstracta);
+		relacionTarget.setTarget(targetAbstracta);
 
 		targetAbstracta.getRelaciones().add(relacionTarget);
 	}
@@ -165,6 +197,10 @@ public class TransformacionM2M {
 		relacionSource.setNavegabilidad2(asociacion.getNavegabilidad2());
 		relacionSource.setRol1(asociacion.getRol1());
 		relacionSource.setRol2(asociacion.getRol2());
+		relacionSource.setNombre(asociacion.getNombre());
+
+		relacionSource.setSource(sourceAbstracta);
+		relacionSource.setTarget(targetAbstracta);
 
 		sourceAbstracta.getRelaciones().add(relacionSource);
 
@@ -175,6 +211,10 @@ public class TransformacionM2M {
 		relacionTarget.setNavegabilidad2(asociacion.getNavegabilidad1());
 		relacionTarget.setRol1(asociacion.getRol2());
 		relacionTarget.setRol2(asociacion.getRol1());
+		relacionTarget.setNombre(asociacion.getNombre());
+
+		relacionTarget.setSource(sourceAbstracta);
+		relacionTarget.setTarget(targetAbstracta);
 
 		targetAbstracta.getRelaciones().add(relacionTarget);
 	}
