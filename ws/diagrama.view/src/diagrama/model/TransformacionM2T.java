@@ -105,6 +105,6 @@ public class TransformacionM2T {
 
 	private void agregarEncabezado(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-			textoCodigo.append("class " + clase.getNombre() + ": \n\n");
+		textoCodigo.append("class " + clase.getNombre() +": \n\n");
 	}
 }
