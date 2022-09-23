@@ -81,9 +81,17 @@ public class TransformacionM2T {
 	private void agregarMetodosSetyGet(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < clase.getAtributos().size(); i++) {
-			textoCodigo.append("\n	def get" + clase.getAtributos().get(i).getNombre() + "(self): \n");
-			textoCodigo.append("		return self." + clase.getAtributos().get(i).getNombre() + "\n");
+			textoCodigo.append("\n	@property \n");
+			textoCodigo.append("	def get" + clase.getAtributos().get(i).getNombre() + "(self): \n");
+			textoCodigo.append("		return self." + clase.getAtributos().get(i).getNombre() + "\n\n");
+
+			textoCodigo.append("	@" + clase.getAtributos().get(i).getNombre() + ".setter \n");
+			textoCodigo.append("	def get" + clase.getAtributos().get(i).getNombre() + "(self, "
+					+ clase.getAtributos().get(i).getNombre() + "):\n");
+			textoCodigo.append("		self." + clase.getAtributos().get(i).getNombre() + " = "
+					+ clase.getAtributos().get(i).getNombre() + "\n");
 		}
+
 	}
 
 	private void agregarConstructor(abstracta.MKJClase clase, StringBuilder textoCodigo) {
