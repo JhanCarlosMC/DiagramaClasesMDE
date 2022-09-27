@@ -1,0 +1,63 @@
+@namespace(uri="ui_abstracta",prefix="ui_abstracta")
+
+package ui_abstracta;
+
+class ModelFactory{
+	val UserInterface listUI;
+}
+
+class UserInterface{
+	attr String title;
+    attr String positionX;
+    attr String positionY;
+    attr String width;
+    attr String heigth;
+    attr String backgroundColor;
+    attr String titleFont;
+    attr String titleFontSize;
+   
+}
+
+
+class Label{
+
+}
+class Button{
+	
+}
+class Checkbox{
+	
+}
+class Entry{
+	
+}
+class RadioButton{
+	
+}
+class Frame{
+	
+}
+class LabelFrame{
+	
+}
+class MenuButton{
+	
+}
+class ScrollBar{
+	
+}
+class SpinBox{
+	
+}
+class ComboBox{
+	
+}
+class Notebook{
+	
+}
+class Separator{
+	
+}
+class TreeView{
+	
+}
