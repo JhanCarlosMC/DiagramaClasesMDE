@@ -17,11 +17,12 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import concreta.ConcretaPackage;
-import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad2EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol2EditPart;
 import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
-import concreta.diagram.edit.parts.MKJClaseNameEditPart;
 import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
-import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
 import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 import concreta.diagram.parsers.MessageFormatParser;
@@ -103,6 +104,74 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
+	private IParser mKJAsociacionRol1_6001Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionRol1_6001Parser() {
+		if (mKJAsociacionRol1_6001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Rol1() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionRol1_6001Parser = parser;
+		}
+		return mKJAsociacionRol1_6001Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionRol2_6002Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionRol2_6002Parser() {
+		if (mKJAsociacionRol2_6002Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Rol2() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionRol2_6002Parser = parser;
+		}
+		return mKJAsociacionRol2_6002Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionMultiplicidad1_6003Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionMultiplicidad1_6003Parser() {
+		if (mKJAsociacionMultiplicidad1_6003Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Multiplicidad1() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionMultiplicidad1_6003Parser = parser;
+		}
+		return mKJAsociacionMultiplicidad1_6003Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionMultiplicidad2_6004Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionMultiplicidad2_6004Parser() {
+		if (mKJAsociacionMultiplicidad2_6004Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Multiplicidad2() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionMultiplicidad2_6004Parser = parser;
+		}
+		return mKJAsociacionMultiplicidad2_6004Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case MKJClaseNombreEditPart.VISUAL_ID:
@@ -113,6 +182,14 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 			return getMKJAtributoNombre_5001Parser();
 		case MKJMetodoNombreEditPart.VISUAL_ID:
 			return getMKJMetodoNombre_5002Parser();
+		case MKJAsociacionRol1EditPart.VISUAL_ID:
+			return getMKJAsociacionRol1_6001Parser();
+		case MKJAsociacionRol2EditPart.VISUAL_ID:
+			return getMKJAsociacionRol2_6002Parser();
+		case MKJAsociacionMultiplicidad1EditPart.VISUAL_ID:
+			return getMKJAsociacionMultiplicidad1_6003Parser();
+		case MKJAsociacionMultiplicidad2EditPart.VISUAL_ID:
+			return getMKJAsociacionMultiplicidad2_6004Parser();
 		}
 		return null;
 	}

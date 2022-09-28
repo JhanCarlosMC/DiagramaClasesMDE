@@ -37,8 +37,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="MKJClase">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
-      <details key="color" value="156,233,91"/>
-      <details key="border.color" value="0,0,0"/>
+      <details key="color" value="118,255,102"/>
+      <details key="border.color" value="69,143,60"/>
       <details key="margin" value="1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -61,16 +61,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="MKJAtributo">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
-      <details key="border.color" value="255,255,255"/>
-      <details key="color" value="156,233,91"/>
+      <details key="border.color" value="118,255,102"/>
+      <details key="color" value="118,255,102"/>
+      <details key="figure" value="rectangle"/>
+      <details key="border.width" value="1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJMetodo">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
-      <details key="border.color" value="255,255,255"/>
-      <details key="color" value="156,233,91"/>
+      <details key="border.color" value="118,255,102"/>
+      <details key="color" value="118,255,102"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semantics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

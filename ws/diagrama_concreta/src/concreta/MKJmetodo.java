@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJMetodo()
- * @model annotation="gmf.node label='nombre' border.color='255,255,255' color='156,233,91'"
+ * @model annotation="gmf.node label='nombre' border.color='118,255,102' color='118,255,102'"
  * @generated
  */
 public interface MKJMetodo extends EObject {

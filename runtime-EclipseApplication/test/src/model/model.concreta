@@ -28,8 +28,8 @@
     <listaPaquetes nombre="Principal" ruta="Root/"/>
     <listaPaquetes nombre="Root" ruta=""/>
     <listaPaquetes nombre="Secundario" ruta="Root/"/>
-    <listaAsociaciones nombre="programa-docentes" multiplicidad1="*" multiplicidad2="*" rol1="listaProgramas" rol2="listaDocentes" navegabilidad1="1 o mas docentes pertenecen a 1 o mas programas " navegabilidad2="un programa tiene  muchos docentes" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.1"/>
-    <listaAsociaciones nombre="programa-estudiantes" multiplicidad1="1" multiplicidad2="*" rol1="programa" rol2="listaEstudiantes" navegabilidad1="un programa tiene muchos estudiantes" navegabilidad2="1 o varios estudiantes pertenecen a un programas" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.3"/>
+    <listaAsociaciones nombre="" multiplicidad1="*" multiplicidad2="*" rol1="ListPrograma" rol2="ListProfesores" navegabilidad1="" navegabilidad2="" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.3"/>
+    <listaAsociaciones multiplicidad1="1" multiplicidad2="*" rol1="programa" rol2="ListEstudiantes" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.2"/>
     <listaConteiments nombre="uni-programas" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaProgramas" navegabilidad1="una universidad contiene muchos programas" navegabilidad2="varios programas pertenecen a una universidad" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.0"/>
     <listaAgregaciones nombre="uni-personas" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaPersonas" navegabilidad1="una universidad tiene muchas personas" navegabilidad2="varias personas pertenecen a una universidad" source="//@listaDiagramas.0/@listaClases.4" target="//@listaDiagramas.0/@listaClases.0"/>
     <listaHerencias source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.4"/>

@@ -399,13 +399,13 @@ public class MKJClaseEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	* @generated
-	*/
-	static final Color THIS_FORE = new Color(null, 0, 0, 0);
+	 * @generated
+	 */
+	static final Color THIS_FORE = new Color(null, 69, 143, 60);
 
 	/**
-	* @generated
-	*/
-	static final Color THIS_BACK = new Color(null, 156, 233, 91);
+	 * @generated
+	 */
+	static final Color THIS_BACK = new Color(null, 118, 255, 102);
 
 }

@@ -61,6 +61,18 @@ public class ConcretaEditPartFactory implements EditPartFactory {
 			case MKJAsociacionEditPart.VISUAL_ID:
 				return new MKJAsociacionEditPart(view);
 
+			case MKJAsociacionRol1EditPart.VISUAL_ID:
+				return new MKJAsociacionRol1EditPart(view);
+
+			case MKJAsociacionRol2EditPart.VISUAL_ID:
+				return new MKJAsociacionRol2EditPart(view);
+
+			case MKJAsociacionMultiplicidad1EditPart.VISUAL_ID:
+				return new MKJAsociacionMultiplicidad1EditPart(view);
+
+			case MKJAsociacionMultiplicidad2EditPart.VISUAL_ID:
+				return new MKJAsociacionMultiplicidad2EditPart(view);
+
 			case MKJConteinmentEditPart.VISUAL_ID:
 				return new MKJConteinmentEditPart(view);
 

@@ -29,7 +29,7 @@ class MKJPaquete{
 	attr String ruta;
 }
 
-@gmf.node(label = "nombre", color = "156,233,91", border.color ="0,0,0", margin="1")
+@gmf.node(label = "nombre", color = "118,255,102", border.color ="69,143,60", margin="1")
 class MKJClase {
 	attr String identificador;
 	attr String nombre;
@@ -41,13 +41,13 @@ class MKJClase {
     val MKJMetodo[*] metodos;
 }
 
-@gmf.node(label = "nombre", border.color = "255,255,255", color = "156,233,91")
+@gmf.node(label = "nombre", border.color = "118,255,102", color = "118,255,102", figure="rectangle", border.width = "1")
 class MKJAtributo {
 	attr String nombre;
 
 }
 
-@gmf.node(label = "nombre",border.color = "255,255,255",color = "156,233,91")
+@gmf.node(label = "nombre",border.color = "118,255,102",color = "118,255,102")
 class MKJMetodo {
 	attr String nombre;
 	attr String semantics;

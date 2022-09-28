@@ -6,6 +6,7 @@ package concreta.diagram.edit.parts;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.draw2d.ConnectionLocator;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Label;
 import org.eclipse.draw2d.geometry.Point;
@@ -21,9 +22,9 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.CompartmentEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.LabelEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.LabelDirectEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.l10n.DiagramColorRegistry;
 import org.eclipse.gmf.runtime.diagram.ui.label.ILabelDelegate;
@@ -37,7 +38,7 @@ import org.eclipse.gmf.runtime.notation.FontStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.draw2d.labels.SimpleLabelDelegate;
-import org.eclipse.gmf.tooling.runtime.edit.policies.DefaultNodeLabelDragPolicy;
+import org.eclipse.gmf.tooling.runtime.edit.policies.DefaultLinkLabelDragPolicy;
 import org.eclipse.gmf.tooling.runtime.edit.policies.labels.IRefreshableFeedbackEditPolicy;
 import org.eclipse.jface.text.contentassist.IContentAssistProcessor;
 import org.eclipse.jface.viewers.ICellEditorValidator;
@@ -55,12 +56,12 @@ import concreta.diagram.providers.ConcretaParserProvider;
 /**
  * @generated
  */
-public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAwareEditPart {
+public class MKJAsociacionRol1EditPart extends LabelEditPart implements ITextAwareEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 6001;
 
 	/**
 	* @generated
@@ -90,7 +91,16 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	/**
 	* @generated
 	*/
-	public MKJClaseNameEditPart(View view) {
+	static {
+		registerSnapBackPosition(
+				ConcretaVisualIDRegistry.getType(concreta.diagram.edit.parts.MKJAsociacionRol1EditPart.VISUAL_ID),
+				new Point(-50, 5));
+	}
+
+	/**
+	* @generated
+	*/
+	public MKJAsociacionRol1EditPart(View view) {
 		super(view);
 	}
 
@@ -99,9 +109,16 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE, new ConcretaTextSelectionEditPolicy());
 		installEditPolicy(EditPolicy.DIRECT_EDIT_ROLE, new LabelDirectEditPolicy());
-		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new DefaultNodeLabelDragPolicy());
+		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE, new ConcretaTextSelectionEditPolicy());
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new DefaultLinkLabelDragPolicy());
+	}
+
+	/**
+	* @generated
+	*/
+	public int getKeyPoint() {
+		return ConnectionLocator.TARGET;
 	}
 
 	/**
@@ -161,7 +178,7 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	/**
 	* @generated
 	*/
-	public void setLabel(WrappingLabel figure) {
+	public void setLabel(IFigure figure) {
 		unregisterVisuals();
 		setFigure(figure);
 		defaultText = getLabelTextHelper(figure);
@@ -195,11 +212,7 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	* @generated
 	*/
 	protected Image getLabelIcon() {
-		EObject parserElement = getParserElement();
-		if (parserElement == null) {
-			return null;
-		}
-		return ConcretaElementTypes.getImage(parserElement.eClass());
+		return null;
 	}
 
 	/**
@@ -295,8 +308,8 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJClase_2001, getParserElement(),
-					ConcretaVisualIDRegistry.getType(concreta.diagram.edit.parts.MKJClaseNameEditPart.VISUAL_ID));
+			parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJAsociacion_4001, getParserElement(),
+					ConcretaVisualIDRegistry.getType(concreta.diagram.edit.parts.MKJAsociacionRol1EditPart.VISUAL_ID));
 		}
 		return parser;
 	}
@@ -533,22 +546,6 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	/**
 	* @generated
 	*/
-	protected void addNotationalListeners() {
-		super.addNotationalListeners();
-		addListenerFilter("PrimaryView", this, getPrimaryView()); //$NON-NLS-1$
-	}
-
-	/**
-	* @generated
-	*/
-	protected void removeNotationalListeners() {
-		super.removeNotationalListeners();
-		removeListenerFilter("PrimaryView"); //$NON-NLS-1$
-	}
-
-	/**
-	* @generated
-	*/
 	protected void handleNotificationEvent(Notification event) {
 		Object feature = event.getFeature();
 		if (NotationPackage.eINSTANCE.getFontStyle_FontColor().equals(feature)) {
@@ -585,8 +582,30 @@ public class MKJClaseNameEditPart extends CompartmentEditPart implements ITextAw
 	* @generated
 	*/
 	protected IFigure createFigure() {
-		// Parent should assign one using setLabel() method
-		return null;
+		IFigure label = createFigurePrim();
+		defaultText = getLabelTextHelper(label);
+		return label;
+	}
+
+	/**
+	* @generated
+	*/
+	protected IFigure createFigurePrim() {
+		return new MKJAsociacionSourceLabelFigure();
+	}
+
+	/**
+	 * @generated
+	 */
+	public class MKJAsociacionSourceLabelFigure extends WrappingLabel {
+
+		/**
+		 * @generated
+		 */
+		public MKJAsociacionSourceLabelFigure() {
+			this.setText("Source");
+		}
+
 	}
 
 }

@@ -889,8 +889,8 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		   source, 
 		   new String[] {
 			 "label", "nombre",
-			 "color", "156,233,91",
-			 "border.color", "0,0,0",
+			 "color", "118,255,102",
+			 "border.color", "69,143,60",
 			 "margin", "1"
 		   });	
 		addAnnotation
@@ -898,16 +898,18 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		   source, 
 		   new String[] {
 			 "label", "nombre",
-			 "border.color", "255,255,255",
-			 "color", "156,233,91"
+			 "border.color", "118,255,102",
+			 "color", "118,255,102",
+			 "figure", "rectangle",
+			 "border.width", "1"
 		   });	
 		addAnnotation
 		  (mkjMetodoEClass, 
 		   source, 
 		   new String[] {
 			 "label", "nombre",
-			 "border.color", "255,255,255",
-			 "color", "156,233,91"
+			 "border.color", "118,255,102",
+			 "color", "118,255,102"
 		   });
 	}
 

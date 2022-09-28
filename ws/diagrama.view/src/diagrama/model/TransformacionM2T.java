@@ -64,9 +64,18 @@ public class TransformacionM2T {
 		textoCodigo.append("\n");
 
 		agregarEncabezado(clase, textoCodigo);
+		agregarVariables(clase, textoCodigo);
 		agregarConstructor(clase, textoCodigo);
 		agregarMetodosSetyGet(clase, textoCodigo);
 		agregarMetodos(clase, textoCodigo);
+	}
+
+	private void agregarVariables(abstracta.MKJClase clase, StringBuilder textoCodigo) {
+		// TODO Auto-generated method stub
+		for(int i = 0; i<clase.getAtributos().size(); i++) {
+			textoCodigo.append("	" + clase.getAtributos().get(i).getNombre() + " = ''\n");
+		}
+		textoCodigo.append("\n");
 	}
 
 	private void agregarMetodos(abstracta.MKJClase clase, StringBuilder textoCodigo) {
@@ -86,7 +95,7 @@ public class TransformacionM2T {
 			textoCodigo.append("		return self." + clase.getAtributos().get(i).getNombre() + "\n\n");
 
 			textoCodigo.append("	@" + clase.getAtributos().get(i).getNombre() + ".setter \n");
-			textoCodigo.append("	def get" + clase.getAtributos().get(i).getNombre() + "(self, "
+			textoCodigo.append("	def set" + clase.getAtributos().get(i).getNombre() + "(self, "
 					+ clase.getAtributos().get(i).getNombre() + "):\n");
 			textoCodigo.append("		self." + clase.getAtributos().get(i).getNombre() + " = "
 					+ clase.getAtributos().get(i).getNombre() + "\n");
@@ -96,29 +105,30 @@ public class TransformacionM2T {
 
 	private void agregarConstructor(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-		textoCodigo.append("	def __init__(self,");
+		textoCodigo.append("	def __init__(self");
 
-		if (clase.getHerencias().size() > 0) {
-			if (clase.getHerencias().get(0).getSource() == clase) {
-
-				EList<MKJAtributo> atributosPadre = clase.getHerencias().get(0).getTarget().getAtributos();
-				for (int i = 0; i < atributosPadre.size(); i++) {
-					textoCodigo.append(atributosPadre.get(i).getNombre());
-					System.out.println(atributosPadre.get(i).getNombre());
-					if (i < atributosPadre.size()) {
-						System.out.println("entro");
-						textoCodigo.append(",");
-					}
-				}
-			}
-		}
-
-		for (int i = 0; i < clase.getAtributos().size(); i++) {
-			textoCodigo.append(clase.getAtributos().get(i).getNombre());
-			if (i != clase.getAtributos().size() - 1) {
-				textoCodigo.append(",");
-			}
-		}
+		// if (clase.getHerencias().size() > 0) {
+		// if (clase.getHerencias().get(0).getSource() == clase) {
+		//
+		// EList<MKJAtributo> atributosPadre =
+		// clase.getHerencias().get(0).getTarget().getAtributos();
+		// for (int i = 0; i < atributosPadre.size(); i++) {
+		// textoCodigo.append(atributosPadre.get(i).getNombre());
+		// System.out.println(atributosPadre.get(i).getNombre());
+		// if (i < atributosPadre.size()) {
+		// System.out.println("entro");
+		// textoCodigo.append(",");
+		// }
+		// }
+		// }
+		// }
+		//
+		// for (int i = 0; i < clase.getAtributos().size(); i++) {
+		// textoCodigo.append(clase.getAtributos().get(i).getNombre());
+		// if (i != clase.getAtributos().size() - 1) {
+		// textoCodigo.append(",");
+		// }
+		// }
 		textoCodigo.append("): \n");
 
 		if (clase.getHerencias().size() > 0) {
@@ -131,19 +141,19 @@ public class TransformacionM2T {
 						textoCodigo.append(",");
 					}
 				}
+				textoCodigo.append("): \n");
 			}
 		}
 
 		for (int i = 0; i < clase.getAtributos().size(); i++) {
-			textoCodigo.append("		self." + clase.getAtributos().get(i).getNombre() + "="
-					+ clase.getAtributos().get(i).getNombre() + "\n");
+			textoCodigo.append("		self." + clase.getAtributos().get(i).getNombre() + " = ''\n");
 		}
 
 	}
 
 	private void agregarEncabezado(abstracta.MKJClase clase, StringBuilder textoCodigo) {
 		// TODO Auto-generated method stub
-		//textoCodigo.append("class " + clase.getNombre() +": \n\n");
+		// textoCodigo.append("class " + clase.getNombre() +": \n\n");
 
 		if (clase.getHerencias().size() == 0 || clase.getHerencias().get(0).getSource() != clase) {
 			textoCodigo.append("class " + clase.getNombre() + ": \n\n");

@@ -102,6 +102,34 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//MKJAsociacion"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionSourceLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/rol1"/>
+    </labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionTargetLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/rol2"/>
+    </labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionMultiplicidadSourceLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/multiplicidad1"/>
+    </labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionMultiplicidadTargetLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/multiplicidad2"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//MKJDiagramaClases/listaAsociaciones"/>
     <tool

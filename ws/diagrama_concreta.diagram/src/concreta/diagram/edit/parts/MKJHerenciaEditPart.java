@@ -5,9 +5,7 @@ package concreta.diagram.edit.parts;
 
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
-import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.PolygonDecoration;
-import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
@@ -15,8 +13,8 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
-
 import org.eclipse.swt.graphics.Color;
+
 import concreta.diagram.edit.policies.MKJHerenciaItemSemanticEditPolicy;
 
 /**
@@ -80,8 +78,8 @@ public class MKJHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 		}
 
 		/**
-		* @generated
-		*/
+		 * @generated
+		 */
 		private RotatableDecoration createTargetDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 			df.setFill(true);
@@ -99,8 +97,8 @@ public class MKJHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	static final Color THIS_FORE = new Color(null, 0, 0, 0);
 
 }

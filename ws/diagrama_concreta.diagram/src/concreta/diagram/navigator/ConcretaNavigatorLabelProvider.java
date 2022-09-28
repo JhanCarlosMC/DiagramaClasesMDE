@@ -21,25 +21,20 @@ import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
 import concreta.MKJAgregacion;
-import concreta.MKJAsociacion;
 import concreta.MKJConteinment;
 import concreta.MKJDiagramaClases;
-import concreta.MKJHerencia;
-import concreta.MKJInterface;
 import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol1EditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
-import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
 import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseEditPart;
-import concreta.diagram.edit.parts.MKJClaseNameEditPart;
 import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJConteinmentEditPart;
 import concreta.diagram.edit.parts.MKJDiagramaClasesEditPart;
 import concreta.diagram.edit.parts.MKJHerenciaEditPart;
 import concreta.diagram.edit.parts.MKJInterfaceEditPart;
 import concreta.diagram.edit.parts.MKJMetodoEditPart;
-import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
 import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
@@ -293,11 +288,14 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getMKJAsociacion_4001Text(View view) {
-		MKJAsociacion domainModelElement = (MKJAsociacion) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombre();
+		IParser parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJAsociacion_4001,
+				view.getElement() != null ? view.getElement() : view,
+				ConcretaVisualIDRegistry.getType(MKJAsociacionRol1EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
-			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+			ConcretaDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

@@ -14,20 +14,21 @@ import concreta.ConcretaPackage;
 import concreta.MKJDiagramaClases;
 import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad2EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol2EditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
-import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
 import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseMetodosCompartmentEditPart;
-import concreta.diagram.edit.parts.MKJClaseNameEditPart;
 import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJConteinmentEditPart;
 import concreta.diagram.edit.parts.MKJDiagramaClasesEditPart;
 import concreta.diagram.edit.parts.MKJHerenciaEditPart;
 import concreta.diagram.edit.parts.MKJInterfaceEditPart;
 import concreta.diagram.edit.parts.MKJMetodoEditPart;
-import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
 import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
@@ -215,6 +216,20 @@ public class ConcretaVisualIDRegistry {
 			break;
 		case MKJClaseMKJClaseMetodosCompartmentEditPart.VISUAL_ID:
 			if (MKJMetodoEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case MKJAsociacionEditPart.VISUAL_ID:
+			if (MKJAsociacionRol1EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (MKJAsociacionRol2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (MKJAsociacionMultiplicidad1EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (MKJAsociacionMultiplicidad2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
