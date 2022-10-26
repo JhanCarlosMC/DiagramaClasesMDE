@@ -5,8 +5,6 @@ package concreta.tests;
 import concreta.ConcretaFactory;
 import concreta.MKJAsociacion;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**

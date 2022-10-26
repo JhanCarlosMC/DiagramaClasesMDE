@@ -21,23 +21,21 @@ import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
 import concreta.MKJAgregacion;
-import concreta.MKJAsociacion;
 import concreta.MKJConteinment;
 import concreta.MKJDiagramaClases;
-import concreta.MKJHerencia;
-import concreta.MKJInterface;
 import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol1EditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
-import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
+import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseEditPart;
-import concreta.diagram.edit.parts.MKJClaseNameEditPart;
+import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJConteinmentEditPart;
 import concreta.diagram.edit.parts.MKJDiagramaClasesEditPart;
 import concreta.diagram.edit.parts.MKJHerenciaEditPart;
 import concreta.diagram.edit.parts.MKJInterfaceEditPart;
 import concreta.diagram.edit.parts.MKJMetodoEditPart;
-import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
+import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 import concreta.diagram.part.ConcretaDiagramEditorPlugin;
@@ -228,7 +226,7 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	private String getMKJClase_2001Text(View view) {
 		IParser parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJClase_2001,
 				view.getElement() != null ? view.getElement() : view,
-				ConcretaVisualIDRegistry.getType(MKJClaseNameEditPart.VISUAL_ID));
+				ConcretaVisualIDRegistry.getType(MKJClaseNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -260,7 +258,7 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	private String getMKJAtributo_3001Text(View view) {
 		IParser parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJAtributo_3001,
 				view.getElement() != null ? view.getElement() : view,
-				ConcretaVisualIDRegistry.getType(MKJAtributoNameEditPart.VISUAL_ID));
+				ConcretaVisualIDRegistry.getType(MKJAtributoNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -276,7 +274,7 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	private String getMKJMetodo_3002Text(View view) {
 		IParser parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJMetodo_3002,
 				view.getElement() != null ? view.getElement() : view,
-				ConcretaVisualIDRegistry.getType(MKJMetodoNameEditPart.VISUAL_ID));
+				ConcretaVisualIDRegistry.getType(MKJMetodoNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -290,11 +288,14 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getMKJAsociacion_4001Text(View view) {
-		MKJAsociacion domainModelElement = (MKJAsociacion) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
+		IParser parser = ConcretaParserProvider.getParser(ConcretaElementTypes.MKJAsociacion_4001,
+				view.getElement() != null ? view.getElement() : view,
+				ConcretaVisualIDRegistry.getType(MKJAsociacionRol1EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
-			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+			ConcretaDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -305,7 +306,7 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	private String getMKJConteinment_4002Text(View view) {
 		MKJConteinment domainModelElement = (MKJConteinment) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getName();
+			return domainModelElement.getNombre();
 		} else {
 			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
@@ -318,7 +319,7 @@ public class ConcretaNavigatorLabelProvider extends LabelProvider
 	private String getMKJAgregacion_4003Text(View view) {
 		MKJAgregacion domainModelElement = (MKJAgregacion) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getName();
+			return domainModelElement.getNombre();
 		} else {
 			ConcretaDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 4003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$

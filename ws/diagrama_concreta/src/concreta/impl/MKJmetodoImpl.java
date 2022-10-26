@@ -7,15 +7,18 @@ import concreta.MKJAtributo;
 import concreta.MKJMetodo;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -27,7 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link concreta.impl.MKJMetodoImpl#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.impl.MKJMetodoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link concreta.impl.MKJMetodoImpl#getSemantics <em>Semantics</em>}</li>
  *   <li>{@link concreta.impl.MKJMetodoImpl#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
@@ -35,24 +39,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSemantics() <em>Semantics</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSemantics()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SEMANTICS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSemantics() <em>Semantics</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSemantics()
+	 * @generated
+	 * @ordered
+	 */
+	protected String semantics = SEMANTICS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getParametros() <em>Parametros</em>}' containment reference list.
@@ -88,8 +112,8 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
@@ -97,11 +121,32 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_METODO__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_METODO__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSemantics() {
+		return semantics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSemantics(String newSemantics) {
+		String oldSemantics = semantics;
+		semantics = newSemantics;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_METODO__SEMANTICS, oldSemantics, semantics));
 	}
 
 	/**
@@ -138,8 +183,10 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_METODO__NAME:
-				return getName();
+			case ConcretaPackage.MKJ_METODO__NOMBRE:
+				return getNombre();
+			case ConcretaPackage.MKJ_METODO__SEMANTICS:
+				return getSemantics();
 			case ConcretaPackage.MKJ_METODO__PARAMETROS:
 				return getParametros();
 		}
@@ -155,8 +202,11 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_METODO__NAME:
-				setName((String)newValue);
+			case ConcretaPackage.MKJ_METODO__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case ConcretaPackage.MKJ_METODO__SEMANTICS:
+				setSemantics((String)newValue);
 				return;
 			case ConcretaPackage.MKJ_METODO__PARAMETROS:
 				getParametros().clear();
@@ -174,8 +224,11 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_METODO__NAME:
-				setName(NAME_EDEFAULT);
+			case ConcretaPackage.MKJ_METODO__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case ConcretaPackage.MKJ_METODO__SEMANTICS:
+				setSemantics(SEMANTICS_EDEFAULT);
 				return;
 			case ConcretaPackage.MKJ_METODO__PARAMETROS:
 				getParametros().clear();
@@ -192,8 +245,10 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_METODO__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ConcretaPackage.MKJ_METODO__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ConcretaPackage.MKJ_METODO__SEMANTICS:
+				return SEMANTICS_EDEFAULT == null ? semantics != null : !SEMANTICS_EDEFAULT.equals(semantics);
 			case ConcretaPackage.MKJ_METODO__PARAMETROS:
 				return parametros != null && !parametros.isEmpty();
 		}
@@ -210,8 +265,10 @@ public class MKJMetodoImpl extends EObjectImpl implements MKJMetodo {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (nombre: ");
+		result.append(nombre);
+		result.append(", semantics: ");
+		result.append(semantics);
 		result.append(')');
 		return result.toString();
 	}

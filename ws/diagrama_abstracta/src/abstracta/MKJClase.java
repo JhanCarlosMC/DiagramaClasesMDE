@@ -15,11 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link abstracta.MKJClase#getName <em>Name</em>}</li>
+ *   <li>{@link abstracta.MKJClase#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.MKJClase#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.MKJClase#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.MKJClase#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.MKJClase#getRelaciones <em>Relaciones</em>}</li>
+ *   <li>{@link abstracta.MKJClase#getHerencias <em>Herencias</em>}</li>
+ *   <li>{@link abstracta.MKJClase#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getMKJClase()
@@ -28,30 +30,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MKJClase extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see abstracta.AbstractaPackage#getMKJClase_Name()
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see abstracta.AbstractaPackage#getMKJClase_Nombre()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link abstracta.MKJClase#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.MKJClase#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
 	 * @generated
 	 */
-	void setName(String value);
+	void setNombre(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ruta</b></em>' attribute.
@@ -126,5 +128,37 @@ public interface MKJClase extends EObject {
 	 * @generated
 	 */
 	EList<MKJRelacion> getRelaciones();
+
+	/**
+	 * Returns the value of the '<em><b>Herencias</b></em>' containment reference list.
+	 * The list contents are of type {@link abstracta.MKJHerencia}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Herencias</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Herencias</em>' containment reference list.
+	 * @see abstracta.AbstractaPackage#getMKJClase_Herencias()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MKJHerencia> getHerencias();
+
+	/**
+	 * Returns the value of the '<em><b>Interfaces</b></em>' containment reference list.
+	 * The list contents are of type {@link abstracta.MKJInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interfaces</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interfaces</em>' containment reference list.
+	 * @see abstracta.AbstractaPackage#getMKJClase_Interfaces()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MKJInterface> getInterfaces();
 
 } // MKJClase

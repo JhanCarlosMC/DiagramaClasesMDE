@@ -64,7 +64,7 @@ public class MKJMetodoItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNombrePropertyDescriptor(object);
-			addRetornoPropertyDescriptor(object);
+			addSemanticsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,23 +92,23 @@ public class MKJMetodoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Retorno feature.
+	 * This adds a property descriptor for the Semantics feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRetornoPropertyDescriptor(Object object) {
+	protected void addSemanticsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MKJMetodo_retorno_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MKJMetodo_retorno_feature", "_UI_MKJMetodo_type"),
-				 AbstractaPackage.Literals.MKJ_METODO__RETORNO,
+				 getString("_UI_MKJMetodo_semantics_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJMetodo_semantics_feature", "_UI_MKJMetodo_type"),
+				 AbstractaPackage.Literals.MKJ_METODO__SEMANTICS,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -182,7 +182,7 @@ public class MKJMetodoItemProvider
 
 		switch (notification.getFeatureID(MKJMetodo.class)) {
 			case AbstractaPackage.MKJ_METODO__NOMBRE:
-			case AbstractaPackage.MKJ_METODO__RETORNO:
+			case AbstractaPackage.MKJ_METODO__SEMANTICS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AbstractaPackage.MKJ_METODO__LISTA_PARAMETROS:

@@ -17,9 +17,13 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import concreta.ConcretaPackage;
-import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
-import concreta.diagram.edit.parts.MKJClaseNameEditPart;
-import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad2EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol2EditPart;
+import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
+import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
+import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 import concreta.diagram.parsers.MessageFormatParser;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
@@ -32,18 +36,18 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser mKJClaseName_5003Parser;
+	private IParser mKJClaseNombre_5003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMKJClaseName_5003Parser() {
-		if (mKJClaseName_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJClase_Name() };
+	private IParser getMKJClaseNombre_5003Parser() {
+		if (mKJClaseNombre_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJClase_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			mKJClaseName_5003Parser = parser;
+			mKJClaseNombre_5003Parser = parser;
 		}
-		return mKJClaseName_5003Parser;
+		return mKJClaseNombre_5003Parser;
 	}
 
 	/**
@@ -66,35 +70,103 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser mKJAtributoName_5001Parser;
+	private IParser mKJAtributoNombre_5001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMKJAtributoName_5001Parser() {
-		if (mKJAtributoName_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJAtributo_Name() };
+	private IParser getMKJAtributoNombre_5001Parser() {
+		if (mKJAtributoNombre_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJAtributo_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			mKJAtributoName_5001Parser = parser;
+			mKJAtributoNombre_5001Parser = parser;
 		}
-		return mKJAtributoName_5001Parser;
+		return mKJAtributoNombre_5001Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser mKJMetodoName_5002Parser;
+	private IParser mKJMetodoNombre_5002Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMKJMetodoName_5002Parser() {
-		if (mKJMetodoName_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJMetodo_Name() };
+	private IParser getMKJMetodoNombre_5002Parser() {
+		if (mKJMetodoNombre_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJMetodo_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			mKJMetodoName_5002Parser = parser;
+			mKJMetodoNombre_5002Parser = parser;
 		}
-		return mKJMetodoName_5002Parser;
+		return mKJMetodoNombre_5002Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionRol1_6001Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionRol1_6001Parser() {
+		if (mKJAsociacionRol1_6001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Rol1() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionRol1_6001Parser = parser;
+		}
+		return mKJAsociacionRol1_6001Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionRol2_6002Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionRol2_6002Parser() {
+		if (mKJAsociacionRol2_6002Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Rol2() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionRol2_6002Parser = parser;
+		}
+		return mKJAsociacionRol2_6002Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionMultiplicidad1_6003Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionMultiplicidad1_6003Parser() {
+		if (mKJAsociacionMultiplicidad1_6003Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Multiplicidad1() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionMultiplicidad1_6003Parser = parser;
+		}
+		return mKJAsociacionMultiplicidad1_6003Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser mKJAsociacionMultiplicidad2_6004Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getMKJAsociacionMultiplicidad2_6004Parser() {
+		if (mKJAsociacionMultiplicidad2_6004Parser == null) {
+			EAttribute[] features = new EAttribute[] { ConcretaPackage.eINSTANCE.getMKJRelacion_Multiplicidad2() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			mKJAsociacionMultiplicidad2_6004Parser = parser;
+		}
+		return mKJAsociacionMultiplicidad2_6004Parser;
 	}
 
 	/**
@@ -102,14 +174,22 @@ public class ConcretaParserProvider extends AbstractProvider implements IParserP
 	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case MKJClaseNameEditPart.VISUAL_ID:
-			return getMKJClaseName_5003Parser();
+		case MKJClaseNombreEditPart.VISUAL_ID:
+			return getMKJClaseNombre_5003Parser();
 		case MKJPaqueteNombreEditPart.VISUAL_ID:
 			return getMKJPaqueteNombre_5004Parser();
-		case MKJAtributoNameEditPart.VISUAL_ID:
-			return getMKJAtributoName_5001Parser();
-		case MKJMetodoNameEditPart.VISUAL_ID:
-			return getMKJMetodoName_5002Parser();
+		case MKJAtributoNombreEditPart.VISUAL_ID:
+			return getMKJAtributoNombre_5001Parser();
+		case MKJMetodoNombreEditPart.VISUAL_ID:
+			return getMKJMetodoNombre_5002Parser();
+		case MKJAsociacionRol1EditPart.VISUAL_ID:
+			return getMKJAsociacionRol1_6001Parser();
+		case MKJAsociacionRol2EditPart.VISUAL_ID:
+			return getMKJAsociacionRol2_6002Parser();
+		case MKJAsociacionMultiplicidad1EditPart.VISUAL_ID:
+			return getMKJAsociacionMultiplicidad1_6003Parser();
+		case MKJAsociacionMultiplicidad2EditPart.VISUAL_ID:
+			return getMKJAsociacionMultiplicidad2_6004Parser();
 		}
 		return null;
 	}

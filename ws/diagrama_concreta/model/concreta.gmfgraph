@@ -42,8 +42,8 @@
     </descriptors>
     <descriptors name="MKJClaseFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJClaseFigure">
-        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
-        <backgroundColor xsi:type="gmfgraph:RGBColor" red="156" green="233" blue="91"/>
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="69" green="143" blue="60"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="118" green="255" blue="102"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="1" left="1" bottom="1" right="1"/>
         </border>
@@ -58,9 +58,9 @@
       <accessors accessor="getMKJClaseMetodosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors name="MKJAtributoFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJAtributoFigure">
-        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
-        <backgroundColor xsi:type="gmfgraph:RGBColor" red="156" green="233" blue="91"/>
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="MKJAtributoFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="118" green="255" blue="102"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="118" green="255" blue="102"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -70,8 +70,8 @@
     </descriptors>
     <descriptors name="MKJMetodoFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MKJMetodoFigure">
-        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
-        <backgroundColor xsi:type="gmfgraph:RGBColor" red="156" green="233" blue="91"/>
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="118" green="255" blue="102"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="118" green="255" blue="102"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -85,12 +85,12 @@
       </actualFigure>
     </descriptors>
     <descriptors name="MKJConteinmentFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.0">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJConteinmentFigure" lineWidth="2" targetDecoration="//@figures.0/@figures.0">
         <foregroundColor xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
     </descriptors>
     <descriptors name="MKJAgregacionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" sourceDecoration="//@figures.0/@figures.1">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJAgregacionFigure" lineWidth="2" targetDecoration="//@figures.0/@figures.1">
         <foregroundColor xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
     </descriptors>
@@ -103,6 +103,18 @@
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MKJInterfaceFigure" lineWidth="2" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.3">
         <foregroundColor xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
+    </descriptors>
+    <descriptors name="MKJAsociacionSourceLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="MKJAsociacionSourceLabel" text="Source"/>
+    </descriptors>
+    <descriptors name="MKJAsociacionTargetLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="MKJAsociacionTargetLabel" text="Target"/>
+    </descriptors>
+    <descriptors name="MKJAsociacionMultiplicidadSourceLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="MKJAsociacionMultiplicidadSourceLabel" text="MultiplicidadSource"/>
+    </descriptors>
+    <descriptors name="MKJAsociacionMultiplicidadTargetLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="MKJAsociacionMultiplicidadTargetLabel" text="MultiplicidadTarget"/>
     </descriptors>
   </figures>
   <nodes name="MKJPaquete" figure="MKJPaqueteFigure"/>
@@ -120,4 +132,20 @@
   <labels name="MKJClaseLabel" figure="MKJClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels name="MKJAtributoLabel" figure="MKJAtributoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels name="MKJMetodoLabel" figure="MKJMetodoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="MKJAsociacionSourceLabel" figure="MKJAsociacionSourceLabelFigure" elementIcon="false">
+    <facets xsi:type="gmfgraph:AlignmentFacet" alignment="END"/>
+    <facets xsi:type="gmfgraph:LabelOffsetFacet" x="-50" y="5"/>
+  </labels>
+  <labels name="MKJAsociacionTargetLabel" figure="MKJAsociacionTargetLabelFigure" elementIcon="false">
+    <facets xsi:type="gmfgraph:AlignmentFacet"/>
+    <facets xsi:type="gmfgraph:LabelOffsetFacet" x="50" y="-5"/>
+  </labels>
+  <labels name="MKJAsociacionMultiplicidadSourceLabel" figure="MKJAsociacionMultiplicidadSourceLabelFigure" elementIcon="false">
+    <facets xsi:type="gmfgraph:AlignmentFacet"/>
+    <facets xsi:type="gmfgraph:LabelOffsetFacet" x="-50" y="5"/>
+  </labels>
+  <labels name="MKJAsociacionMultiplicidadTargetLabel" figure="MKJAsociacionMultiplicidadTargetLabelFigure" elementIcon="false">
+    <facets xsi:type="gmfgraph:AlignmentFacet"/>
+    <facets xsi:type="gmfgraph:LabelOffsetFacet" x="50" y="-5"/>
+  </labels>
 </gmfgraph:Canvas>

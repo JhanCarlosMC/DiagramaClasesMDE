@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link abstracta.MKJMetodo#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.MKJMetodo#isRetorno <em>Retorno</em>}</li>
+ *   <li>{@link abstracta.MKJMetodo#getSemantics <em>Semantics</em>}</li>
  *   <li>{@link abstracta.MKJMetodo#getListaParametros <em>Lista Parametros</em>}</li>
  * </ul>
  *
@@ -52,30 +52,30 @@ public interface MKJMetodo extends EObject {
 	void setNombre(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Retorno</b></em>' attribute.
+	 * Returns the value of the '<em><b>Semantics</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Retorno</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Semantics</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Retorno</em>' attribute.
-	 * @see #setRetorno(boolean)
-	 * @see abstracta.AbstractaPackage#getMKJMetodo_Retorno()
+	 * @return the value of the '<em>Semantics</em>' attribute.
+	 * @see #setSemantics(String)
+	 * @see abstracta.AbstractaPackage#getMKJMetodo_Semantics()
 	 * @model
 	 * @generated
 	 */
-	boolean isRetorno();
+	String getSemantics();
 
 	/**
-	 * Sets the value of the '{@link abstracta.MKJMetodo#isRetorno <em>Retorno</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.MKJMetodo#getSemantics <em>Semantics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Retorno</em>' attribute.
-	 * @see #isRetorno()
+	 * @param value the new value of the '<em>Semantics</em>' attribute.
+	 * @see #getSemantics()
 	 * @generated
 	 */
-	void setRetorno(boolean value);
+	void setSemantics(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Lista Parametros</b></em>' containment reference list.

@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link concreta.impl.MKJRelacionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.impl.MKJRelacionImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link concreta.impl.MKJRelacionImpl#getMultiplicidad1 <em>Multiplicidad1</em>}</li>
  *   <li>{@link concreta.impl.MKJRelacionImpl#getMultiplicidad2 <em>Multiplicidad2</em>}</li>
  *   <li>{@link concreta.impl.MKJRelacionImpl#getRol1 <em>Rol1</em>}</li>
@@ -33,24 +33,24 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  */
 public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMultiplicidad1() <em>Multiplicidad1</em>}' attribute.
@@ -196,8 +196,8 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
@@ -205,11 +205,11 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_RELACION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_RELACION__NOMBRE, oldNombre, nombre));
 	}
 
 	/**
@@ -346,8 +346,8 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_RELACION__NAME:
-				return getName();
+			case ConcretaPackage.MKJ_RELACION__NOMBRE:
+				return getNombre();
 			case ConcretaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				return getMultiplicidad1();
 			case ConcretaPackage.MKJ_RELACION__MULTIPLICIDAD2:
@@ -372,8 +372,8 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_RELACION__NAME:
-				setName((String)newValue);
+			case ConcretaPackage.MKJ_RELACION__NOMBRE:
+				setNombre((String)newValue);
 				return;
 			case ConcretaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				setMultiplicidad1((String)newValue);
@@ -405,8 +405,8 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_RELACION__NAME:
-				setName(NAME_EDEFAULT);
+			case ConcretaPackage.MKJ_RELACION__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
 				return;
 			case ConcretaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				setMultiplicidad1(MULTIPLICIDAD1_EDEFAULT);
@@ -438,8 +438,8 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_RELACION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ConcretaPackage.MKJ_RELACION__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case ConcretaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 				return MULTIPLICIDAD1_EDEFAULT == null ? multiplicidad1 != null : !MULTIPLICIDAD1_EDEFAULT.equals(multiplicidad1);
 			case ConcretaPackage.MKJ_RELACION__MULTIPLICIDAD2:
@@ -466,8 +466,8 @@ public class MKJRelacionImpl extends EObjectImpl implements MKJRelacion {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (nombre: ");
+		result.append(nombre);
 		result.append(", multiplicidad1: ");
 		result.append(multiplicidad1);
 		result.append(", multiplicidad2: ");

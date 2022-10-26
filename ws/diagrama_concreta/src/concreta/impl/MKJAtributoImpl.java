@@ -20,31 +20,31 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link concreta.impl.MKJAtributoImpl#getName <em>Name</em>}</li>
+ *   <li>{@link concreta.impl.MKJAtributoImpl#getNombre <em>Nombre</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_ATRIBUTO__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MKJ_ATRIBUTO__NOMBRE, oldNombre, nombre));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_ATRIBUTO__NAME:
-				return getName();
+			case ConcretaPackage.MKJ_ATRIBUTO__NOMBRE:
+				return getNombre();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_ATRIBUTO__NAME:
-				setName((String)newValue);
+			case ConcretaPackage.MKJ_ATRIBUTO__NOMBRE:
+				setNombre((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_ATRIBUTO__NAME:
-				setName(NAME_EDEFAULT);
+			case ConcretaPackage.MKJ_ATRIBUTO__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ConcretaPackage.MKJ_ATRIBUTO__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ConcretaPackage.MKJ_ATRIBUTO__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +154,8 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (nombre: ");
+		result.append(nombre);
 		result.append(')');
 		return result.toString();
 	}

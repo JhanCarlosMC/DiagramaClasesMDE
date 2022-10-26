@@ -19,22 +19,24 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJPaquete/clases"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MKJClase">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJClase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJClase/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJClase/ruta"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/atributos"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/metodos"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/relaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/herencias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJClase/interfaces"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MKJAtributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/nombre"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MKJMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJMetodo/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJMetodo/retorno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJMetodo/semantics"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference abstracta.ecore#//MKJMetodo/listaParametros"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MKJRelacion">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/multiplicidad1"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/multiplicidad2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJRelacion/rol1"/>

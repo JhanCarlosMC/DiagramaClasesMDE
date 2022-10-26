@@ -2,7 +2,6 @@
  */
 package concreta;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see concreta.ConcretaPackage#getMKJAgregacion()
- * @model annotation="gmf.link source='source' target='target' style='solid' width='2' source.decoration='rhomb' color='0,0,0'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='2' target.decoration='rhomb' color='0,0,0'"
  * @generated
  */
 public interface MKJAgregacion extends MKJRelacion {

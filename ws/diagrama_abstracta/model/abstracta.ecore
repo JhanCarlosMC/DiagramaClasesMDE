@@ -20,7 +20,7 @@
         eType="#//MKJClase" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJClase">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//MKJAtributo" containment="true"/>
@@ -28,18 +28,22 @@
         eType="#//MKJMetodo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relaciones" upperBound="-1"
         eType="#//MKJRelacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herencias" upperBound="-1"
+        eType="#//MKJHerencia" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="#//MKJInterface" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJAtributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJMetodo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retorno" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semantics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaParametros" upperBound="-1"
         eType="#//MKJAtributo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJRelacion">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidad1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidad2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rol1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

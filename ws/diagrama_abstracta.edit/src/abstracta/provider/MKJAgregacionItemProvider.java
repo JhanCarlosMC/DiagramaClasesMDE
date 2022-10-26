@@ -64,7 +64,7 @@ public class MKJAgregacionItemProvider extends MKJRelacionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJAgregacion)object).getName();
+		String label = ((MKJAgregacion)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJAgregacion_type") :
 			getString("_UI_MKJAgregacion_type") + " " + label;

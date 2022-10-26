@@ -5,6 +5,8 @@ package abstracta.impl;
 import abstracta.AbstractaPackage;
 import abstracta.MKJAtributo;
 import abstracta.MKJClase;
+import abstracta.MKJHerencia;
+import abstracta.MKJInterface;
 import abstracta.MKJMetodo;
 import abstracta.MKJRelacion;
 
@@ -32,35 +34,37 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.MKJClaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getMetodos <em>Metodos</em>}</li>
  *   <li>{@link abstracta.impl.MKJClaseImpl#getRelaciones <em>Relaciones</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getHerencias <em>Herencias</em>}</li>
+ *   <li>{@link abstracta.impl.MKJClaseImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNombre()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
@@ -113,6 +117,26 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	protected EList<MKJRelacion> relaciones;
 
 	/**
+	 * The cached value of the '{@link #getHerencias() <em>Herencias</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHerencias()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MKJHerencia> herencias;
+
+	/**
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterfaces()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MKJInterface> interfaces;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,8 +160,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
@@ -145,11 +169,11 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_CLASE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_CLASE__NOMBRE, oldNombre, nombre));
 	}
 
 	/**
@@ -214,6 +238,30 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MKJHerencia> getHerencias() {
+		if (herencias == null) {
+			herencias = new EObjectContainmentEList<MKJHerencia>(MKJHerencia.class, this, AbstractaPackage.MKJ_CLASE__HERENCIAS);
+		}
+		return herencias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MKJInterface> getInterfaces() {
+		if (interfaces == null) {
+			interfaces = new EObjectContainmentEList<MKJInterface>(MKJInterface.class, this, AbstractaPackage.MKJ_CLASE__INTERFACES);
+		}
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -223,6 +271,10 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return ((InternalEList<?>)getMetodos()).basicRemove(otherEnd, msgs);
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				return ((InternalEList<?>)getRelaciones()).basicRemove(otherEnd, msgs);
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				return ((InternalEList<?>)getHerencias()).basicRemove(otherEnd, msgs);
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -235,8 +287,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				return getName();
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				return getNombre();
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				return getRuta();
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
@@ -245,6 +297,10 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return getMetodos();
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				return getRelaciones();
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				return getHerencias();
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				return getInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -258,8 +314,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				setName((String)newValue);
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				setNombre((String)newValue);
 				return;
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				setRuta((String)newValue);
@@ -276,6 +332,14 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				getRelaciones().clear();
 				getRelaciones().addAll((Collection<? extends MKJRelacion>)newValue);
 				return;
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				getHerencias().clear();
+				getHerencias().addAll((Collection<? extends MKJHerencia>)newValue);
+				return;
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				getInterfaces().clear();
+				getInterfaces().addAll((Collection<? extends MKJInterface>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -288,8 +352,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				setName(NAME_EDEFAULT);
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
 				return;
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				setRuta(RUTA_EDEFAULT);
@@ -303,6 +367,12 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				getRelaciones().clear();
 				return;
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				getHerencias().clear();
+				return;
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				getInterfaces().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -315,8 +385,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
@@ -325,6 +395,10 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 				return metodos != null && !metodos.isEmpty();
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
 				return relaciones != null && !relaciones.isEmpty();
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+				return herencias != null && !herencias.isEmpty();
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
+				return interfaces != null && !interfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -339,8 +413,8 @@ public class MKJClaseImpl extends EObjectImpl implements MKJClase {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (nombre: ");
+		result.append(nombre);
 		result.append(", ruta: ");
 		result.append(ruta);
 		result.append(')');

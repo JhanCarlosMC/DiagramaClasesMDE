@@ -21,11 +21,13 @@ class MKJPaquete{
 }
 
 class MKJClase {
-	attr String name;
+	attr String nombre;
 	attr String ruta;
     val MKJAtributo[*] atributos;
     val MKJMetodo[*] metodos;
     val MKJRelacion[*] relaciones;
+    val MKJHerencia[*] herencias;
+    val MKJInterface[*] interfaces;
 }
 
 class MKJAtributo {
@@ -35,14 +37,14 @@ class MKJAtributo {
 
 class MKJMetodo {
 	attr String nombre;
-	attr boolean retorno;
+	attr String semantics;
 	val MKJAtributo[*] listaParametros;
 }
 
 //heredar los atributos de las relaciones
 
 class MKJRelacion {
-    attr String name;
+    attr String nombre;
     attr String multiplicidad1;
     attr String multiplicidad2;
     attr String rol1;

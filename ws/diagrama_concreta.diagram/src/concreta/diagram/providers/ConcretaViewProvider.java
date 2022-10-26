@@ -25,18 +25,17 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.FigureUtilities;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
-import org.eclipse.gmf.runtime.notation.Connector;
 import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.Routing;
-import org.eclipse.gmf.runtime.notation.Shape;
 import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
@@ -47,18 +46,22 @@ import org.eclipse.swt.graphics.FontData;
 
 import concreta.diagram.edit.parts.MKJAgregacionEditPart;
 import concreta.diagram.edit.parts.MKJAsociacionEditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionMultiplicidad2EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol1EditPart;
+import concreta.diagram.edit.parts.MKJAsociacionRol2EditPart;
 import concreta.diagram.edit.parts.MKJAtributoEditPart;
-import concreta.diagram.edit.parts.MKJAtributoNameEditPart;
+import concreta.diagram.edit.parts.MKJAtributoNombreEditPart;
 import concreta.diagram.edit.parts.MKJClaseEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseAtributosCompartmentEditPart;
 import concreta.diagram.edit.parts.MKJClaseMKJClaseMetodosCompartmentEditPart;
-import concreta.diagram.edit.parts.MKJClaseNameEditPart;
+import concreta.diagram.edit.parts.MKJClaseNombreEditPart;
 import concreta.diagram.edit.parts.MKJConteinmentEditPart;
 import concreta.diagram.edit.parts.MKJDiagramaClasesEditPart;
 import concreta.diagram.edit.parts.MKJHerenciaEditPart;
 import concreta.diagram.edit.parts.MKJInterfaceEditPart;
 import concreta.diagram.edit.parts.MKJMetodoEditPart;
-import concreta.diagram.edit.parts.MKJMetodoNameEditPart;
+import concreta.diagram.edit.parts.MKJMetodoNombreEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteEditPart;
 import concreta.diagram.edit.parts.MKJPaqueteNombreEditPart;
 import concreta.diagram.part.ConcretaVisualIDRegistry;
@@ -277,7 +280,7 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		Node label5003 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJClaseNameEditPart.VISUAL_ID));
+		Node label5003 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJClaseNombreEditPart.VISUAL_ID));
 		createCompartment(node,
 				ConcretaVisualIDRegistry.getType(MKJClaseMKJClaseAtributosCompartmentEditPart.VISUAL_ID), true, false,
 				true, true);
@@ -347,7 +350,7 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		Node label5001 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJAtributoNameEditPart.VISUAL_ID));
+		Node label5001 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJAtributoNombreEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -376,7 +379,7 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		Node label5002 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJMetodoNameEditPart.VISUAL_ID));
+		Node label5002 = createLabel(node, ConcretaVisualIDRegistry.getType(MKJMetodoNombreEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -414,6 +417,28 @@ public class ConcretaViewProvider extends AbstractProvider implements IViewProvi
 		if (routing != null) {
 			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
 		}
+		Node label6001 = createLabel(edge, ConcretaVisualIDRegistry.getType(MKJAsociacionRol1EditPart.VISUAL_ID));
+		label6001.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(-50);
+		location6001.setY(5);
+		Node label6002 = createLabel(edge, ConcretaVisualIDRegistry.getType(MKJAsociacionRol2EditPart.VISUAL_ID));
+		label6002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6002 = (Location) label6002.getLayoutConstraint();
+		location6002.setX(50);
+		location6002.setY(-5);
+		Node label6003 = createLabel(edge,
+				ConcretaVisualIDRegistry.getType(MKJAsociacionMultiplicidad1EditPart.VISUAL_ID));
+		label6003.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6003 = (Location) label6003.getLayoutConstraint();
+		location6003.setX(-50);
+		location6003.setY(5);
+		Node label6004 = createLabel(edge,
+				ConcretaVisualIDRegistry.getType(MKJAsociacionMultiplicidad2EditPart.VISUAL_ID));
+		label6004.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6004 = (Location) label6004.getLayoutConstraint();
+		location6004.setX(50);
+		location6004.setY(-5);
 		return edge;
 	}
 

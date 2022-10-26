@@ -4,24 +4,16 @@ package concreta.provider;
 
 
 import concreta.ConcretaPackage;
-
 import concreta.MKJConteinment;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
  * This is the item provider adapter for a {@link concreta.MKJConteinment} object.
@@ -29,8 +21,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MKJConteinmentItemProvider 
-	extends MKJRelacionItemProvider {
+public class MKJConteinmentItemProvider extends MKJRelacionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -121,7 +112,7 @@ public class MKJConteinmentItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJConteinment)object).getName();
+		String label = ((MKJConteinment)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJConteinment_type") :
 			getString("_UI_MKJConteinment_type") + " " + label;

@@ -18,7 +18,7 @@
         <diagramLabel
             href="concreta.gmfgraph#MKJClaseLabel"/>
         <features
-            href="concreta.ecore#//MKJClase/name"/>
+            href="concreta.ecore#//MKJClase/nombre"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -37,7 +37,7 @@
             <diagramLabel
                 href="concreta.gmfgraph#MKJAtributoLabel"/>
             <features
-                href="concreta.ecore#//MKJAtributo/name"/>
+                href="concreta.ecore#//MKJAtributo/nombre"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -58,7 +58,7 @@
             <diagramLabel
                 href="concreta.gmfgraph#MKJMetodoLabel"/>
             <features
-                href="concreta.ecore#//MKJMetodo/name"/>
+                href="concreta.ecore#//MKJMetodo/nombre"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -102,6 +102,34 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//MKJAsociacion"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionSourceLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/rol1"/>
+    </labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionTargetLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/rol2"/>
+    </labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionMultiplicidadSourceLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/multiplicidad1"/>
+    </labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#MKJAsociacionMultiplicidadTargetLabel"/>
+      <features
+          href="concreta.ecore#//MKJRelacion/multiplicidad2"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//MKJDiagramaClases/listaAsociaciones"/>
     <tool

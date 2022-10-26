@@ -29,10 +29,10 @@ class MKJPaquete{
 	attr String ruta;
 }
 
-@gmf.node(label = "name", color = "156,233,91", border.color ="0,0,0", margin="1")
+@gmf.node(label = "nombre", color = "118,255,102", border.color ="69,143,60", margin="1")
 class MKJClase {
 	attr String identificador;
-	attr String name;
+	attr String nombre;
 	attr String ruta;
 	
     @gmf.compartment(layout = "list")
@@ -41,21 +41,22 @@ class MKJClase {
     val MKJMetodo[*] metodos;
 }
 
-@gmf.node(label = "name", border.color = "255,255,255", color = "156,233,91")
+@gmf.node(label = "nombre", border.color = "118,255,102", color = "118,255,102", figure="rectangle", border.width = "1")
 class MKJAtributo {
-	attr String name;
+	attr String nombre;
 
 }
 
-@gmf.node(label = "name",border.color = "255,255,255",color = "156,233,91")
+@gmf.node(label = "nombre",border.color = "118,255,102",color = "118,255,102")
 class MKJMetodo {
-	attr String name;
+	attr String nombre;
+	attr String semantics;
 	
 	val MKJAtributo[*] parametros;
 }
 
 class MKJRelacion {
-    attr String name;
+    attr String nombre;
     attr String multiplicidad1;
     attr String multiplicidad2;
     attr String rol1;
@@ -72,13 +73,13 @@ class MKJAsociacion extends MKJRelacion{
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2", source.decoration = "filledrhomb", color = "0,0,0")
+@gmf.link(source="source", target="target", style="solid", width="2", target.decoration = "filledrhomb", color = "0,0,0")
 class MKJConteinment extends MKJRelacion{
     ref MKJClase source;
     ref MKJClase target;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2", source.decoration = "rhomb", color = "0,0,0")
+@gmf.link(source="source", target="target", style="solid", width="2", target.decoration = "rhomb", color = "0,0,0")
 class MKJAgregacion extends MKJRelacion{
     ref MKJClase source;
     ref MKJClase target;

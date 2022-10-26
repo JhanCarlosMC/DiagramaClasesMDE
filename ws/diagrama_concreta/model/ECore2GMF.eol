@@ -1,0 +1,101 @@
+var association = ECore!EClass.all.selectOne(c|c.name = "MKJAsociacion");
+association.createLinkEndLabel("rol1", true);
+association.createLinkEndLabel("rol2", false);
+association.createLinkEndLabel("multiplicidad1", true);
+association.createLinkEndLabel("multiplicidad2", false);
+
+operation ECore!EClass createLinkEndLabel(attribute:String, source:Boolean){
+	
+	var endName;
+	if (source) {
+		if (attribute == "multiplicidad1"){
+			endName = "MultiplicidadSource";
+		}else{
+		
+			endName = "Source";
+		}
+	}
+	else {
+		if (attribute == "multiplicidad2"){
+			endName = "MultiplicidadTarget";
+		}else{
+			endName = "Target";
+		}
+	}
+	
+	var labelName = self.name + endName + "Label";
+	
+	// Create the figure descriptor and the label
+	var labelFigureDescriptor = 
+		createFigureDescriptor(labelName + "Figure");
+	var label = new GmfGraph!Label;
+	label.name = labelName;
+	label.text = endName;
+	labelFigureDescriptor.actualFigure = label;
+	
+	// Create the diagram label
+	var diagramLabel = new GmfGraph!DiagramLabel;
+	diagramLabel.figure = labelFigureDescriptor;
+	diagramLabel.name = labelName;
+	diagramLabel.elementIcon = false;
+	GmfGraph!Canvas.all.first().labels.add(diagramLabel);
+	
+	// Specify if the label will be placed at the beginning/end of the link
+	var alignmentFacet = new GmfGraph!AlignmentFacet;
+	if (source){
+		if (attribute == "multiplicidad1"){
+			alignmentFacet.alignment = GmfGraph!Alignment#BEGINNING;
+		}else{
+			alignmentFacet.alignment = GmfGraph!Alignment#END;
+		}
+	}
+	else {
+	if (attribute == "multiplicidad2"){
+			alignmentFacet.alignment = GmfGraph!Alignment#END;
+		}
+		alignmentFacet.alignment = GmfGraph!Alignment#BEGINNING;
+	}
+	diagramLabel.facets.add(alignmentFacet);
+	
+	// Specify how far the label should be from the line
+	var labelOffsetFacet = new GmfGraph!LabelOffsetFacet;
+		if (source){
+			labelOffsetFacet.x = -50;
+	labelOffsetFacet.y = 5;
+		
+		}else{
+				labelOffsetFacet.x = 50;
+	labelOffsetFacet.y = -5;
+			
+		}
+	diagramLabel.facets.add(labelOffsetFacet);
+	
+	// Create the label/attribute mapping in the .gmfmap model
+	var featureLabelMapping = new GmfMap!FeatureLabelMapping;
+	featureLabelMapping.diagramLabel = diagramLabel;
+	
+	featureLabelMapping.features.add(self.eAllStructuralFeatures.
+		selectOne(sf|sf.name = attribute));
+		
+	featureLabelMapping.readOnly = false;
+	var linkMapping = GmfMap!LinkMapping.all.
+		selectOne(lm|lm.domainMetaElement = self);
+		
+	linkMapping.labelMappings.add(featureLabelMapping);
+	
+	//var attributeFigure = GmfGraph!Rectangle.all.
+    //selectOne(r|r.name = 'MKJAtributo');
+    
+// ... delete its border
+	//delete attributeFigure.border;    
+	//attributeFigure.outline = false;
+
+}
+
+operation createFigureDescriptor(name : String) {
+	var figureDescriptor = new GmfGraph!FigureDescriptor;
+	figureDescriptor.name = name;
+	GmfGraph!FigureGallery.all.first().descriptors.add(figureDescriptor);
+	return figureDescriptor;
+}
+

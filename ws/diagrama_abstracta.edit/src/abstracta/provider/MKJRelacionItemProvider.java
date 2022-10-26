@@ -60,7 +60,7 @@ public class MKJRelacionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addNombrePropertyDescriptor(object);
 			addMultiplicidad1PropertyDescriptor(object);
 			addMultiplicidad2PropertyDescriptor(object);
 			addRol1PropertyDescriptor(object);
@@ -74,19 +74,19 @@ public class MKJRelacionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Nombre feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addNombrePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MKJRelacion_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MKJRelacion_name_feature", "_UI_MKJRelacion_type"),
-				 AbstractaPackage.Literals.MKJ_RELACION__NAME,
+				 getString("_UI_MKJRelacion_nombre_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJRelacion_nombre_feature", "_UI_MKJRelacion_type"),
+				 AbstractaPackage.Literals.MKJ_RELACION__NOMBRE,
 				 true,
 				 false,
 				 false,
@@ -290,7 +290,7 @@ public class MKJRelacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJRelacion)object).getName();
+		String label = ((MKJRelacion)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJRelacion_type") :
 			getString("_UI_MKJRelacion_type") + " " + label;
@@ -309,7 +309,7 @@ public class MKJRelacionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MKJRelacion.class)) {
-			case AbstractaPackage.MKJ_RELACION__NAME:
+			case AbstractaPackage.MKJ_RELACION__NOMBRE:
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD1:
 			case AbstractaPackage.MKJ_RELACION__MULTIPLICIDAD2:
 			case AbstractaPackage.MKJ_RELACION__ROL1:

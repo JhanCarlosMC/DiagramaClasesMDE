@@ -63,26 +63,26 @@ public class MKJClaseItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addNombrePropertyDescriptor(object);
 			addRutaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Nombre feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addNombrePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MKJClase_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MKJClase_name_feature", "_UI_MKJClase_type"),
-				 AbstractaPackage.Literals.MKJ_CLASE__NAME,
+				 getString("_UI_MKJClase_nombre_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJClase_nombre_feature", "_UI_MKJClase_type"),
+				 AbstractaPackage.Literals.MKJ_CLASE__NOMBRE,
 				 true,
 				 false,
 				 false,
@@ -128,6 +128,8 @@ public class MKJClaseItemProvider
 			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__ATRIBUTOS);
 			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__METODOS);
 			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES);
+			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__HERENCIAS);
+			childrenFeatures.add(AbstractaPackage.Literals.MKJ_CLASE__INTERFACES);
 		}
 		return childrenFeatures;
 	}
@@ -164,7 +166,7 @@ public class MKJClaseItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJClase)object).getName();
+		String label = ((MKJClase)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJClase_type") :
 			getString("_UI_MKJClase_type") + " " + label;
@@ -183,13 +185,15 @@ public class MKJClaseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MKJClase.class)) {
-			case AbstractaPackage.MKJ_CLASE__NAME:
+			case AbstractaPackage.MKJ_CLASE__NOMBRE:
 			case AbstractaPackage.MKJ_CLASE__RUTA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AbstractaPackage.MKJ_CLASE__ATRIBUTOS:
 			case AbstractaPackage.MKJ_CLASE__METODOS:
 			case AbstractaPackage.MKJ_CLASE__RELACIONES:
+			case AbstractaPackage.MKJ_CLASE__HERENCIAS:
+			case AbstractaPackage.MKJ_CLASE__INTERFACES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,6 +240,16 @@ public class MKJClaseItemProvider
 			(createChildParameter
 				(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES,
 				 AbstractaFactory.eINSTANCE.createMKJAgregacion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AbstractaPackage.Literals.MKJ_CLASE__HERENCIAS,
+				 AbstractaFactory.eINSTANCE.createMKJHerencia()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AbstractaPackage.Literals.MKJ_CLASE__INTERFACES,
+				 AbstractaFactory.eINSTANCE.createMKJInterface()));
 	}
 
 	/**

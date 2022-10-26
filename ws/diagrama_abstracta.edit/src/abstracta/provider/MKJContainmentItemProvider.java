@@ -64,7 +64,7 @@ public class MKJContainmentItemProvider extends MKJRelacionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MKJContainment)object).getName();
+		String label = ((MKJContainment)object).getNombre();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MKJContainment_type") :
 			getString("_UI_MKJContainment_type") + " " + label;

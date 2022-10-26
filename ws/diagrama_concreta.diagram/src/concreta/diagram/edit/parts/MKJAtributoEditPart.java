@@ -5,10 +5,9 @@ package concreta.diagram.edit.parts;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -110,8 +109,8 @@ public class MKJAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof MKJAtributoNameEditPart) {
-			((MKJAtributoNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureMKJAtributoLabelFigure());
+		if (childEditPart instanceof MKJAtributoNombreEditPart) {
+			((MKJAtributoNombreEditPart) childEditPart).setLabel(getPrimaryShape().getFigureMKJAtributoLabelFigure());
 			return true;
 		}
 		return false;
@@ -121,7 +120,7 @@ public class MKJAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof MKJAtributoNameEditPart) {
+		if (childEditPart instanceof MKJAtributoNombreEditPart) {
 			return true;
 		}
 		return false;
@@ -244,13 +243,13 @@ public class MKJAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(ConcretaVisualIDRegistry.getType(MKJAtributoNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(ConcretaVisualIDRegistry.getType(MKJAtributoNombreEditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
-	public class MKJAtributoFigure extends RoundedRectangle {
+	public class MKJAtributoFigure extends RectangleFigure {
 
 		/**
 		 * @generated
@@ -261,7 +260,6 @@ public class MKJAtributoEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public MKJAtributoFigure() {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			this.setForegroundColor(THIS_FORE);
 			this.setBackgroundColor(THIS_BACK);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
@@ -294,11 +292,11 @@ public class MKJAtributoEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 255, 255, 255);
+	static final Color THIS_FORE = new Color(null, 118, 255, 102);
 
 	/**
-	* @generated
-	*/
-	static final Color THIS_BACK = new Color(null, 156, 233, 91);
+	 * @generated
+	 */
+	static final Color THIS_BACK = new Color(null, 118, 255, 102);
 
 }
