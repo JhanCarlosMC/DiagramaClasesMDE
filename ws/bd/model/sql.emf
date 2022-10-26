@@ -1,0 +1,71 @@
+@namespace(uri="http://bd", prefix="bd")
+@gmf
+package bd;
+
+class ModelFactory {
+	 val Schema[*] lstSchema;
+}
+
+@gmf.diagram
+class Schema {
+	attr String name;
+	attr String user;
+	attr String password;
+
+    val Table[*] listTables;
+}
+
+@gmf.node(label = "name")
+class Table {
+	attr String name;
+
+	val PrimaryKey primaryKey;
+
+	val Index[*] listIndexes;
+	val Relation[*] listRelations;
+	val Column[*] listColumns;
+	val Trigger[*] listTriggers;
+	val ForeignKey[*] listForeignKey;
+}
+
+@gmf.node(label = "name")
+class Index {
+	attr String name;
+	attr String type;
+	
+}
+
+@gmf.node(label = "name")
+class Column {
+	attr String type;
+	attr String name;
+	attr boolean notNull;
+	attr boolean uniqueData;
+	attr boolean autoIncrement;
+	
+}
+
+@gmf.node(label = "name")
+class Relation {
+	attr String multiplicidadSource;
+	attr String multiplicidadTarget;
+
+	val Table tableSource;
+	val Table tableTarget;
+}
+
+@gmf.node(label = "name")
+class Trigger {
+	attr String name;
+	attr String momentType;
+	attr String actionType;
+}
+
+@gmf.node(label = "name")
+class PrimaryKey extends Column{
+}
+
+@gmf.node(label = "name")
+class ForeignKey extends Column{
+	
+}
