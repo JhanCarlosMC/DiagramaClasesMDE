@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfmap:Mapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <nodes>
+    <containmentFeature
+        href="sql.ecore#//Schema/listTables"/>
+    <ownedChild>
+      <domainMetaElement
+          href="sql.ecore#//Table"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="sql.gmfgraph#TableLabel"/>
+        <features
+            href="sql.ecore#//Table/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="sql.gmftool#//@palette/@tools.0/@tools.5"/>
+      <diagramNode
+          href="sql.gmfgraph#Table"/>
+    </ownedChild>
+  </nodes>
+  <diagram>
+    <diagramCanvas
+        href="sql.gmfgraph#bd"/>
+    <domainModel
+        href="sql.ecore#/"/>
+    <domainMetaElement
+        href="sql.ecore#//Schema"/>
+    <palette
+        href="sql.gmftool#//@palette"/>
+  </diagram>
+</gmfmap:Mapping>

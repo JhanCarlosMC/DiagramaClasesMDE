@@ -25,7 +25,6 @@ class Table {
 	val Relation[*] listRelations;
 	val Column[*] listColumns;
 	val Trigger[*] listTriggers;
-	val ForeignKey[*] listForeignKey;
 }
 
 @gmf.node(label = "name")
@@ -47,11 +46,12 @@ class Column {
 
 @gmf.node(label = "name")
 class Relation {
+	attr String name;
 	attr String multiplicidadSource;
 	attr String multiplicidadTarget;
 
-	val Table tableSource;
-	val Table tableTarget;
+	ref Table tableSource;
+	ref Table tableTarget;
 }
 
 @gmf.node(label = "name")
@@ -62,10 +62,13 @@ class Trigger {
 }
 
 @gmf.node(label = "name")
-class PrimaryKey extends Column{
+class PrimaryKey {
+	attr String type;
+	attr String name;
+	attr boolean autoIncrement;
 }
 
 @gmf.node(label = "name")
 class ForeignKey extends Column{
-	
+	ref Table tableReferenced;
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bd="http://bd">
+  <lstSchema name="Almacen" user="almacen" password="almacen">
+    <listTables name="Cliente">
+      <primaryKey type="INT" name="idCliente" autoIncrement="true"/>
+      <listColumns type="Varchar(45)" name="Nombre" notNull="true"/>
+      <listColumns type="Varchar(45)" name="Apellido" notNull="true"/>
+      <listColumns type="Date" name="Fecha_Nacimiento" notNull="true"/>
+      <listColumns type="Varchar(45)" name="Direccion" notNull="true"/>
+    </listTables>
+    <listTables name="Venta">
+      <primaryKey type="INT" name="idVenta" autoIncrement="true"/>
+      <listRelations name="venta-cliente" multiplicidadSource="*" multiplicidadTarget="1" tableSource="//@lstSchema.0/@listTables.1" tableTarget="//@lstSchema.0/@listTables.0"/>
+      <listColumns type="Date" name="Fecha" notNull="true"/>
+      <listColumns xsi:type="bd:ForeignKey" type="INT" name="idCliente" notNull="true" uniqueData="true" tableReferenced="//@lstSchema.0/@listTables.0"/>
+    </listTables>
+    <listTables name="Detalle_Venta">
+      <primaryKey type="INT" name="idDetalle" autoIncrement="true"/>
+      <listRelations name="detalleVenta-Venta" multiplicidadSource="*" multiplicidadTarget="1" tableSource="//@lstSchema.0/@listTables.2" tableTarget="//@lstSchema.0/@listTables.1"/>
+      <listRelations name="detalleVenta-Producto" multiplicidadSource="*" multiplicidadTarget="1" tableSource="//@lstSchema.0/@listTables.2" tableTarget="//@lstSchema.0/@listTables.3"/>
+      <listColumns type="INT" name="Cantidad"/>
+      <listColumns type="Decimal" name="Descuento"/>
+      <listColumns xsi:type="bd:ForeignKey" type="INT" name="idVenta" notNull="true" uniqueData="true" tableReferenced="//@lstSchema.0/@listTables.1"/>
+      <listColumns xsi:type="bd:ForeignKey" type="INT" name="idProducto" notNull="true" uniqueData="true" tableReferenced="//@lstSchema.0/@listTables.3"/>
+    </listTables>
+    <listTables name="Producto">
+      <primaryKey type="INT" name="idProducto"/>
+      <listColumns type="Varchar(45)" name="Nombre" notNull="true" uniqueData="true"/>
+      <listColumns type="DECIMAL()" name="Precio" notNull="true"/>
+    </listTables>
+  </lstSchema>
+</bd:ModelFactory>

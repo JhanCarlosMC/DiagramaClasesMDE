@@ -46,29 +46,29 @@ public class GeneratorView extends ViewPart {
 		btnGenerarMm.setText("Generar M2M");
 
 		Group grpGeneracionDeModelo_2 = new Group(parent, SWT.NONE);
-		grpGeneracionDeModelo_2.setText("Generacion de Modelo a Texto\r\n");
+		grpGeneracionDeModelo_2.setText("Generacion de Modelo Relacional");
 		grpGeneracionDeModelo_2.setBounds(10, 145, 692, 139);
 
 		Button btnGenerarMt = new Button(grpGeneracionDeModelo_2, SWT.NONE);
 		btnGenerarMt.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
-				mfm.generarM2T();
 				
 			}
 		});
-		btnGenerarMt.setText("Generar M2T");
+		btnGenerarMt.setText("Generar Modelo Relacional");
 		btnGenerarMt.setBounds(161, 73, 372, 38);
 		
 		Group grpGeneracionDeModelo_2_1 = new Group(parent, SWT.NONE);
-		grpGeneracionDeModelo_2_1.setText("Generacion de Modelo a Texto\r\n");
+		grpGeneracionDeModelo_2_1.setText("Generacion de SQL\r\n");
 		grpGeneracionDeModelo_2_1.setBounds(10, 290, 692, 139);
 		
 		Button btnGenerarSql = new Button(grpGeneracionDeModelo_2_1, SWT.NONE);
 		btnGenerarSql.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
+				mfm.generarM2T();
 			}
 		});
 		btnGenerarSql.setText("Generar SQL");

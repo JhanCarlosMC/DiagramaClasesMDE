@@ -1,0 +1,7 @@
+# Tracing options for the bd.diagram plug-in
+
+# Common issues
+bd.diagram/debug=false
+
+# Visual IDs
+bd.diagram/debug/visualID=false
