@@ -274,8 +274,17 @@ public class BdPackageImpl extends EPackageImpl implements BdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTable_ListTriggers() {
+	public EReference getTable_ListForeignKey() {
 		return (EReference)tableEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_ListTriggers() {
+		return (EReference)tableEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -546,6 +555,7 @@ public class BdPackageImpl extends EPackageImpl implements BdPackage {
 		createEReference(tableEClass, TABLE__LIST_INDEXES);
 		createEReference(tableEClass, TABLE__LIST_RELATIONS);
 		createEReference(tableEClass, TABLE__LIST_COLUMNS);
+		createEReference(tableEClass, TABLE__LIST_FOREIGN_KEY);
 		createEReference(tableEClass, TABLE__LIST_TRIGGERS);
 
 		indexEClass = createEClass(INDEX);
@@ -626,6 +636,7 @@ public class BdPackageImpl extends EPackageImpl implements BdPackage {
 		initEReference(getTable_ListIndexes(), this.getIndex(), null, "listIndexes", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTable_ListRelations(), this.getRelation(), null, "listRelations", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTable_ListColumns(), this.getColumn(), null, "listColumns", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_ListForeignKey(), this.getForeignKey(), null, "listForeignKey", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTable_ListTriggers(), this.getTrigger(), null, "listTriggers", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(indexEClass, Index.class, "Index", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

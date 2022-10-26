@@ -24,6 +24,7 @@ class Table {
 	val Index[*] listIndexes;
 	val Relation[*] listRelations;
 	val Column[*] listColumns;
+	val ForeignKey[*] listForeignKey;
 	val Trigger[*] listTriggers;
 }
 

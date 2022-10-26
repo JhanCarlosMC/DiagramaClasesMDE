@@ -40,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link bd.impl.TableImpl#getListIndexes <em>List Indexes</em>}</li>
  *   <li>{@link bd.impl.TableImpl#getListRelations <em>List Relations</em>}</li>
  *   <li>{@link bd.impl.TableImpl#getListColumns <em>List Columns</em>}</li>
+ *   <li>{@link bd.impl.TableImpl#getListForeignKey <em>List Foreign Key</em>}</li>
  *   <li>{@link bd.impl.TableImpl#getListTriggers <em>List Triggers</em>}</li>
  * </ul>
  *
@@ -105,6 +106,16 @@ public class TableImpl extends EObjectImpl implements Table {
 	 * @ordered
 	 */
 	protected EList<Column> listColumns;
+
+	/**
+	 * The cached value of the '{@link #getListForeignKey() <em>List Foreign Key</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getListForeignKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ForeignKey> listForeignKey;
 
 	/**
 	 * The cached value of the '{@link #getListTriggers() <em>List Triggers</em>}' containment reference list.
@@ -240,6 +251,18 @@ public class TableImpl extends EObjectImpl implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ForeignKey> getListForeignKey() {
+		if (listForeignKey == null) {
+			listForeignKey = new EObjectContainmentEList<ForeignKey>(ForeignKey.class, this, BdPackage.TABLE__LIST_FOREIGN_KEY);
+		}
+		return listForeignKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Trigger> getListTriggers() {
 		if (listTriggers == null) {
 			listTriggers = new EObjectContainmentEList<Trigger>(Trigger.class, this, BdPackage.TABLE__LIST_TRIGGERS);
@@ -263,6 +286,8 @@ public class TableImpl extends EObjectImpl implements Table {
 				return ((InternalEList<?>)getListRelations()).basicRemove(otherEnd, msgs);
 			case BdPackage.TABLE__LIST_COLUMNS:
 				return ((InternalEList<?>)getListColumns()).basicRemove(otherEnd, msgs);
+			case BdPackage.TABLE__LIST_FOREIGN_KEY:
+				return ((InternalEList<?>)getListForeignKey()).basicRemove(otherEnd, msgs);
 			case BdPackage.TABLE__LIST_TRIGGERS:
 				return ((InternalEList<?>)getListTriggers()).basicRemove(otherEnd, msgs);
 		}
@@ -287,6 +312,8 @@ public class TableImpl extends EObjectImpl implements Table {
 				return getListRelations();
 			case BdPackage.TABLE__LIST_COLUMNS:
 				return getListColumns();
+			case BdPackage.TABLE__LIST_FOREIGN_KEY:
+				return getListForeignKey();
 			case BdPackage.TABLE__LIST_TRIGGERS:
 				return getListTriggers();
 		}
@@ -320,6 +347,10 @@ public class TableImpl extends EObjectImpl implements Table {
 				getListColumns().clear();
 				getListColumns().addAll((Collection<? extends Column>)newValue);
 				return;
+			case BdPackage.TABLE__LIST_FOREIGN_KEY:
+				getListForeignKey().clear();
+				getListForeignKey().addAll((Collection<? extends ForeignKey>)newValue);
+				return;
 			case BdPackage.TABLE__LIST_TRIGGERS:
 				getListTriggers().clear();
 				getListTriggers().addAll((Collection<? extends Trigger>)newValue);
@@ -351,6 +382,9 @@ public class TableImpl extends EObjectImpl implements Table {
 			case BdPackage.TABLE__LIST_COLUMNS:
 				getListColumns().clear();
 				return;
+			case BdPackage.TABLE__LIST_FOREIGN_KEY:
+				getListForeignKey().clear();
+				return;
 			case BdPackage.TABLE__LIST_TRIGGERS:
 				getListTriggers().clear();
 				return;
@@ -376,6 +410,8 @@ public class TableImpl extends EObjectImpl implements Table {
 				return listRelations != null && !listRelations.isEmpty();
 			case BdPackage.TABLE__LIST_COLUMNS:
 				return listColumns != null && !listColumns.isEmpty();
+			case BdPackage.TABLE__LIST_FOREIGN_KEY:
+				return listForeignKey != null && !listForeignKey.isEmpty();
 			case BdPackage.TABLE__LIST_TRIGGERS:
 				return listTriggers != null && !listTriggers.isEmpty();
 		}

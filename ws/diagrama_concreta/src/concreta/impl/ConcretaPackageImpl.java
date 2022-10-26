@@ -397,6 +397,24 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMKJAtributo_PrimaryKey() {
+		return (EAttribute)mkjAtributoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJAtributo_ForeignKey() {
+		return (EAttribute)mkjAtributoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMKJMetodo() {
 		return mkjMetodoEClass;
 	}
@@ -691,6 +709,8 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 
 		mkjAtributoEClass = createEClass(MKJ_ATRIBUTO);
 		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__NOMBRE);
+		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__PRIMARY_KEY);
+		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__FOREIGN_KEY);
 
 		mkjMetodoEClass = createEClass(MKJ_METODO);
 		createEAttribute(mkjMetodoEClass, MKJ_METODO__NOMBRE);
@@ -788,6 +808,8 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 
 		initEClass(mkjAtributoEClass, MKJAtributo.class, "MKJAtributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJAtributo_PrimaryKey(), ecorePackage.getEBoolean(), "primaryKey", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJAtributo_ForeignKey(), ecorePackage.getEBoolean(), "foreignKey", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjMetodoEClass, MKJMetodo.class, "MKJMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJMetodo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

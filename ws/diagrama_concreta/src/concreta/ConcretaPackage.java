@@ -313,13 +313,31 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_ATRIBUTO__NOMBRE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ATRIBUTO__PRIMARY_KEY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Foreign Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ATRIBUTO__FOREIGN_KEY = 2;
+
+	/**
 	 * The number of structural features of the '<em>MKJ Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ATRIBUTO_FEATURE_COUNT = 1;
+	int MKJ_ATRIBUTO_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
@@ -1084,6 +1102,28 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMKJAtributo_Nombre();
 
 	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#isPrimaryKey <em>Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Primary Key</em>'.
+	 * @see concreta.MKJAtributo#isPrimaryKey()
+	 * @see #getMKJAtributo()
+	 * @generated
+	 */
+	EAttribute getMKJAtributo_PrimaryKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#isForeignKey <em>Foreign Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Foreign Key</em>'.
+	 * @see concreta.MKJAtributo#isForeignKey()
+	 * @see #getMKJAtributo()
+	 * @generated
+	 */
+	EAttribute getMKJAtributo_ForeignKey();
+
+	/**
 	 * Returns the meta object for class '{@link concreta.MKJMetodo <em>MKJ Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1596,6 +1636,22 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MKJ_ATRIBUTO__NOMBRE = eINSTANCE.getMKJAtributo_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Primary Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_ATRIBUTO__PRIMARY_KEY = eINSTANCE.getMKJAtributo_PrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Foreign Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_ATRIBUTO__FOREIGN_KEY = eINSTANCE.getMKJAtributo_ForeignKey();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.

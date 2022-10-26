@@ -53,7 +53,8 @@ public class GeneratorView extends ViewPart {
 		btnGenerarMt.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				
+				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
+				mfm.generarRelacional();
 			}
 		});
 		btnGenerarMt.setText("Generar Modelo Relacional");

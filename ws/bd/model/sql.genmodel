@@ -19,6 +19,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sql.ecore#//Table/listIndexes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sql.ecore#//Table/listRelations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sql.ecore#//Table/listColumns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sql.ecore#//Table/listForeignKey"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sql.ecore#//Table/listTriggers"/>
     </genClasses>
     <genClasses ecoreClass="sql.ecore#//Index">

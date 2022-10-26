@@ -33,6 +33,8 @@
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MKJAtributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/primaryKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/foreignKey"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MKJMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJMetodo/nombre"/>

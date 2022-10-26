@@ -61,6 +61,8 @@ public class MKJAtributoItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNombrePropertyDescriptor(object);
+			addPrimaryKeyPropertyDescriptor(object);
+			addForeignKeyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,6 +85,50 @@ public class MKJAtributoItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Primary Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPrimaryKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJAtributo_primaryKey_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJAtributo_primaryKey_feature", "_UI_MKJAtributo_type"),
+				 ConcretaPackage.Literals.MKJ_ATRIBUTO__PRIMARY_KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Foreign Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addForeignKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJAtributo_foreignKey_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJAtributo_foreignKey_feature", "_UI_MKJAtributo_type"),
+				 ConcretaPackage.Literals.MKJ_ATRIBUTO__FOREIGN_KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -126,6 +172,8 @@ public class MKJAtributoItemProvider
 
 		switch (notification.getFeatureID(MKJAtributo.class)) {
 			case ConcretaPackage.MKJ_ATRIBUTO__NOMBRE:
+			case ConcretaPackage.MKJ_ATRIBUTO__PRIMARY_KEY:
+			case ConcretaPackage.MKJ_ATRIBUTO__FOREIGN_KEY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

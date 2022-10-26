@@ -194,13 +194,22 @@ public interface BdPackage extends EPackage {
 	int TABLE__LIST_COLUMNS = 4;
 
 	/**
+	 * The feature id for the '<em><b>List Foreign Key</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__LIST_FOREIGN_KEY = 5;
+
+	/**
 	 * The feature id for the '<em><b>List Triggers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__LIST_TRIGGERS = 5;
+	int TABLE__LIST_TRIGGERS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -209,7 +218,7 @@ public interface BdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = 6;
+	int TABLE_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link bd.impl.IndexImpl <em>Index</em>}' class.
@@ -683,6 +692,17 @@ public interface BdPackage extends EPackage {
 	EReference getTable_ListColumns();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link bd.Table#getListForeignKey <em>List Foreign Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>List Foreign Key</em>'.
+	 * @see bd.Table#getListForeignKey()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_ListForeignKey();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link bd.Table#getListTriggers <em>List Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1093,6 +1113,14 @@ public interface BdPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TABLE__LIST_COLUMNS = eINSTANCE.getTable_ListColumns();
+
+		/**
+		 * The meta object literal for the '<em><b>List Foreign Key</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__LIST_FOREIGN_KEY = eINSTANCE.getTable_ListForeignKey();
 
 		/**
 		 * The meta object literal for the '<em><b>List Triggers</b></em>' containment reference list feature.

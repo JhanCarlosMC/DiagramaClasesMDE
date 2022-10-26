@@ -2,6 +2,7 @@ package diagrama.model;
 
 import java.util.ArrayList;
 
+import bd.BdFactory;
 import concreta.*;
 
 public class ModelFactoryModel {
@@ -24,6 +25,7 @@ public class ModelFactoryModel {
 	ModelFactory modelFactory = ConcretaFactory.eINSTANCE.createModelFactory();
 	private ModelFactory modelFactoryConcreta;
 	private abstracta.ModelFactory modelFactoryAbstracta;
+	private bd.ModelFactory modelFactoryBd;
 
 	public ModelFactoryModel() {
 		// TODO Auto-generated constructor stub
@@ -86,6 +88,32 @@ public class ModelFactoryModel {
 		}
 		return modelFactory;
 	}
+	
+	public bd.ModelFactory cargarBdAbstracta() {
+		bd.ModelFactory modelFactory = null;
+
+		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
+
+		// EXISTEN 3 FORMAS DE CARGAR EL RECURSO
+
+		// 1. CON LA SIGUIENTE RUTA (platform:/resource) SE CARGAR EL RECURSO CUANDO SE
+		// HACE UNA NUEVA INSTANCIA DE ECLIPSE, EN DONDE SE CREA UN PROYECTO(test)
+		// QUE CONTIENE LAS PRODUCCIONES, DONDE SE ESPECIFICA QUE RECURSO CARGAR
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI
+				.createURI("platform:/resource/test/src/model/model.bd");
+
+		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
+
+		try {
+			resource.load(null);
+			modelFactory = (bd.ModelFactory) resource.getContents().get(0);
+			System.out.println("loaded: " + modelFactory);
+		} catch (java.io.IOException e) {
+			System.out.println("failed to read " + uri);
+			System.out.println(e);
+		}
+		return modelFactory;
+	}
 
 	public void salvarAbstracta() {
 
@@ -122,6 +150,16 @@ public class ModelFactoryModel {
 		TransformacionM2T transformacionM2T = new TransformacionM2T(modelFactoryAbstracta);
 		transformacionM2T.transformarM2T();
 		salvarAbstracta();
+	}
+
+	public void generarRelacional() {
+		modelFactoryAbstracta = cargarAbstracta();
+		modelFactoryBd = cargarBdAbstracta();
+		
+		TransformacionRelacional transformacionR = new TransformacionRelacional(modelFactoryAbstracta, modelFactoryBd);
+		transformacionR.transformarAbstractaToRelacional();
+		salvarAbstracta();
+		
 	}
 
 }

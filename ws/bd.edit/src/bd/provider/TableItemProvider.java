@@ -106,6 +106,7 @@ public class TableItemProvider
 			childrenFeatures.add(BdPackage.Literals.TABLE__LIST_INDEXES);
 			childrenFeatures.add(BdPackage.Literals.TABLE__LIST_RELATIONS);
 			childrenFeatures.add(BdPackage.Literals.TABLE__LIST_COLUMNS);
+			childrenFeatures.add(BdPackage.Literals.TABLE__LIST_FOREIGN_KEY);
 			childrenFeatures.add(BdPackage.Literals.TABLE__LIST_TRIGGERS);
 		}
 		return childrenFeatures;
@@ -169,6 +170,7 @@ public class TableItemProvider
 			case BdPackage.TABLE__LIST_INDEXES:
 			case BdPackage.TABLE__LIST_RELATIONS:
 			case BdPackage.TABLE__LIST_COLUMNS:
+			case BdPackage.TABLE__LIST_FOREIGN_KEY:
 			case BdPackage.TABLE__LIST_TRIGGERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -214,8 +216,36 @@ public class TableItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(BdPackage.Literals.TABLE__LIST_FOREIGN_KEY,
+				 BdFactory.eINSTANCE.createForeignKey()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(BdPackage.Literals.TABLE__LIST_TRIGGERS,
 				 BdFactory.eINSTANCE.createTrigger()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == BdPackage.Literals.TABLE__LIST_COLUMNS ||
+			childFeature == BdPackage.Literals.TABLE__LIST_FOREIGN_KEY;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**
