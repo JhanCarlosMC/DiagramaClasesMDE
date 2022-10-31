@@ -2,27 +2,32 @@
 <bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd">
   <lstSchema>
     <listTables name="Universidad">
+      <primaryKey type="INT" name="idU" autoIncrement="true"/>
       <listColumns name="nombre"/>
       <listColumns name="direccion"/>
     </listTables>
     <listTables name="Profesor">
+      <primaryKey type="INT" name="idProfesor" autoIncrement="true"/>
       <listColumns name="nroTarjetaProfesional"/>
       <listColumns name="aniosExperiencia"/>
       <listColumns name="especialidad"/>
     </listTables>
     <listTables name="Estudiante">
+      <primaryKey type="INT" name="idEstudiante" autoIncrement="true"/>
       <listColumns name="colegioEgresado"/>
       <listColumns name="sisben"/>
       <listColumns name="semestre"/>
     </listTables>
     <listTables name="Programa">
+      <primaryKey type="INT" name="idPrograma" autoIncrement="true"/>
       <listColumns name="nombre"/>
       <listColumns name="codigo"/>
+      <listForeignKey name="idU"/>
     </listTables>
     <listTables name="Persona">
+      <primaryKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
       <listColumns name="nombre"/>
       <listColumns name="edad"/>
-      <listColumns name="documentoIdentidad"/>
     </listTables>
   </lstSchema>
 </bd:ModelFactory>

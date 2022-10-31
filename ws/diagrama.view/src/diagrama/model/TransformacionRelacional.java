@@ -80,6 +80,7 @@ public class TransformacionRelacional {
 		
 	}
 
+
 	private abstracta.MKJClase obtenerClaseAbstracta(String name, String ruta) {
 
 		abstracta.MKJPaquete mkjPaquete = modelFactoryAbstracta.getPaquetes().get(0);

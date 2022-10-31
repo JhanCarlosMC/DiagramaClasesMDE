@@ -4,26 +4,31 @@
     <listaClases identificador="1" nombre="Universidad" ruta="Root/Principal/">
       <atributos nombre="nombre"/>
       <atributos nombre="direccion"/>
+      <atributos nombre="idU" primaryKey="true"/>
     </listaClases>
     <listaClases identificador="3" nombre="Profesor" ruta="Root/Secundario/">
       <atributos nombre="nroTarjetaProfesional"/>
       <atributos nombre="aniosExperiencia"/>
       <atributos nombre="especialidad"/>
+      <atributos nombre="idProfesor" primaryKey="true"/>
       <metodos nombre="obtenerEstudiantes" semantics="# Aqui va la semqntica del codigo"/>
     </listaClases>
     <listaClases identificador="4" nombre="Estudiante" ruta="Root/Secundario/">
       <atributos nombre="colegioEgresado"/>
       <atributos nombre="sisben"/>
       <atributos nombre="semestre"/>
+      <atributos nombre="idEstudiante" primaryKey="true"/>
     </listaClases>
     <listaClases identificador="5" nombre="Programa" ruta="Root/Principal/">
       <atributos nombre="nombre"/>
       <atributos nombre="codigo"/>
+      <atributos nombre="idPrograma" primaryKey="true"/>
+      <atributos nombre="idU" foreignKey="true"/>
     </listaClases>
     <listaClases identificador="2" nombre="Persona" ruta="Root/Principal/">
       <atributos nombre="nombre"/>
       <atributos nombre="edad"/>
-      <atributos nombre="documentoIdentidad"/>
+      <atributos nombre="documentoIdentidad" primaryKey="true"/>
     </listaClases>
     <listaPaquetes nombre="Principal" ruta="Root/"/>
     <listaPaquetes nombre="Root" ruta=""/>
