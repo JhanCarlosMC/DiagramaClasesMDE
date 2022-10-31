@@ -1,2 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd"/>
+<?xml version="1.0" encoding="ASCII"?>
+<bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd">
+  <lstSchema>
+    <listTables name="Universidad">
+      <listColumns name="nombre"/>
+      <listColumns name="direccion"/>
+    </listTables>
+    <listTables name="Profesor">
+      <listColumns name="nroTarjetaProfesional"/>
+      <listColumns name="aniosExperiencia"/>
+      <listColumns name="especialidad"/>
+    </listTables>
+    <listTables name="Estudiante">
+      <listColumns name="colegioEgresado"/>
+      <listColumns name="sisben"/>
+      <listColumns name="semestre"/>
+    </listTables>
+    <listTables name="Programa">
+      <listColumns name="nombre"/>
+      <listColumns name="codigo"/>
+    </listTables>
+    <listTables name="Persona">
+      <listColumns name="nombre"/>
+      <listColumns name="edad"/>
+      <listColumns name="documentoIdentidad"/>
+    </listTables>
+  </lstSchema>
+</bd:ModelFactory>
