@@ -67,7 +67,6 @@ public class TransformacionRelacional {
 				clavePrimaria.setType("INT");
 				clavePrimaria.setAutoIncrement(true);
 				tablaNueva.setPrimaryKey(clavePrimaria);
-				System.out.println("columna " + clavePrimaria.getName() + " creada");
 				
 			}else {
 				bd.Column columnaNueva = BdFactory.eINSTANCE.createColumn();
@@ -79,8 +78,6 @@ public class TransformacionRelacional {
 				columnaNueva.setType(atributo.getType());
 				
 				tablaNueva.getListColumns().add(columnaNueva);
-				System.out.println("tabla " +columnaNueva.getName() + " creada");
-				
 			}
 		}
 	}
@@ -99,6 +96,7 @@ public class TransformacionRelacional {
 							claveForanea.setName(atributo.getNombre());
 							claveForanea.setType("INT");
 							claveForanea.setAutoIncrement(true);
+							claveForanea.setTableReferenced(obtenerTable(relacion.getTarget().getNombre()));
 							break;
 						}
 					}
@@ -119,6 +117,7 @@ public class TransformacionRelacional {
 							claveForanea.setName(atributo.getNombre());
 							claveForanea.setType("INT");
 							claveForanea.setAutoIncrement(true);
+							claveForanea.setTableReferenced(obtenerTable(herencia.getTarget().getNombre()));
 							break;
 						}
 					}
@@ -127,6 +126,17 @@ public class TransformacionRelacional {
 				}
 			}
 		}
+	}
+
+	private bd.Table obtenerTable(String nombre) {
+		// TODO Auto-generated method stub
+		bd.Table tablaEnontrada = null;
+		for (bd.Table tabla : modelFactoryBd.getLstSchema().get(0).getListTables()) {
+			if(tabla.getName().equalsIgnoreCase(nombre)) {
+				tablaEnontrada= tabla;
+			}
+		}
+		return tablaEnontrada;
 	}
 
 	private abstracta.MKJClase obtenerClaseAbstracta(String name, String ruta) {

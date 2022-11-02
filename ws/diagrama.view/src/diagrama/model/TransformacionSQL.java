@@ -74,9 +74,9 @@ public class TransformacionSQL {
 			for(int j = 0; j < schema.getListTables().get(i).getListColumns().size(); j++) {
 				textoSQL2.append(schema.getListTables().get(i).getListColumns().get(j).getName()+" "+schema.getListTables().get(i).getListColumns().get(j).getType());
 				
-//				if(schema.getListTables().get(i).getListColumns().get(j).getType().equals("VARCHAR")) {
-//					textoSQL2.append(" (255) ");
-//				}
+				if(schema.getListTables().get(i).getListColumns().get(j).getType()!=null && schema.getListTables().get(i).getListColumns().get(j).getType().equals("VARCHAR")) {
+					textoSQL2.append(" (255)");
+				}
 				
 				if(schema.getListTables().get(i).getListColumns().get(j).isNotNull()) {
 					textoSQL2.append(" NOT NULL");
@@ -92,13 +92,24 @@ public class TransformacionSQL {
 				
 				textoSQL2.append(",\n");	
 
-
 			}
 			
-			textoSQL2.append("PRIMARY KEY (" +schema.getListTables().get(i).getPrimaryKey().getName()+"),\n");
+			textoSQL2.append("PRIMARY KEY (" +schema.getListTables().get(i).getPrimaryKey().getName()+")");
+			if(schema.getListTables().get(i).getListForeignKey().size() > 0) {
+				textoSQL2.append(",\n");
+				
+				for(int j=0; j<schema.getListTables().get(i).getListForeignKey().size(); j++) {
+					textoSQL2.append("CONSTRAINT " + schema.getListTables().get(i).getName() + "_" + schema.getListTables().get(i).getListForeignKey().get(j).getName() + "_FK\n");
+					
+				}
+				
+			}else {
+				textoSQL2.append(");\n");
+			}
 			
 			textoSQL2.append("\n");
 		}
-	}
+	}	
+
 	
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd">
-  <lstSchema name="Script">
+  <lstSchema>
     <listTables name="Universidad">
       <primaryKey type="INT" name="idU" autoIncrement="true"/>
       <listColumns type="VARCHAR" name="nombre"/>
-      <listColumns type="VARCHAR" name="direccion" notNull="true"/>
+      <listColumns type="VARCHAR" name="direccion"/>
     </listTables>
     <listTables name="Profesor">
       <primaryKey type="INT" name="idProfesor" autoIncrement="true"/>
@@ -24,14 +24,14 @@
       <primaryKey type="INT" name="idPrograma" autoIncrement="true"/>
       <listColumns type="VARCHAR" name="nombre"/>
       <listColumns name="codigo"/>
-      <listForeignKey type="INT" name="idEstudiante" autoIncrement="true"/>
-      <listForeignKey type="INT" name="idU" autoIncrement="true"/>
+      <listForeignKey type="INT" name="idEstudiante" autoIncrement="true" tableReferenced="//@lstSchema.0/@listTables.2"/>
+      <listForeignKey type="INT" name="idU" autoIncrement="true" tableReferenced="//@lstSchema.0/@listTables.0"/>
     </listTables>
     <listTables name="Persona">
       <primaryKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
       <listColumns type="VARCHAR" name="nombre"/>
       <listColumns type="INT" name="edad"/>
-      <listForeignKey type="INT" name="idU" autoIncrement="true"/>
+      <listForeignKey type="INT" name="idU" autoIncrement="true" tableReferenced="//@lstSchema.0/@listTables.0"/>
     </listTables>
   </lstSchema>
 </bd:ModelFactory>
