@@ -62,7 +62,7 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 			case AbstractaPackage.MKJ_ATRIBUTO: return createMKJAtributo();
 			case AbstractaPackage.MKJ_METODO: return createMKJMetodo();
 			case AbstractaPackage.MKJ_RELACION: return createMKJRelacion();
-			case AbstractaPackage.MHJ_ASOCIACION: return createMHJAsociacion();
+			case AbstractaPackage.MKJ_ASOCIACION: return createMKJAsociacion();
 			case AbstractaPackage.MKJ_CONTAINMENT: return createMKJContainment();
 			case AbstractaPackage.MKJ_AGREGACION: return createMKJAgregacion();
 			case AbstractaPackage.MKJ_HERENCIA: return createMKJHerencia();
@@ -137,9 +137,9 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MHJAsociacion createMHJAsociacion() {
-		MHJAsociacionImpl mhjAsociacion = new MHJAsociacionImpl();
-		return mhjAsociacion;
+	public MKJAsociacion createMKJAsociacion() {
+		MKJAsociacionImpl mkjAsociacion = new MKJAsociacionImpl();
+		return mkjAsociacion;
 	}
 
 	/**

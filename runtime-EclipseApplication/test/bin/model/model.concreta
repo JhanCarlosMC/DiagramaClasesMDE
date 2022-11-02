@@ -23,7 +23,7 @@
       <atributos nombre="nombre"/>
       <atributos nombre="codigo"/>
       <atributos nombre="idPrograma" primaryKey="true"/>
-      <atributos nombre="idU" foreignKey="true"/>
+      <atributos nombre="idU"/>
     </listaClases>
     <listaClases identificador="2" nombre="Persona" ruta="Root/Principal/">
       <atributos nombre="nombre"/>

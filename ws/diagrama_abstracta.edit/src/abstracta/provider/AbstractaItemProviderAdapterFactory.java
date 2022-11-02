@@ -210,26 +210,26 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link abstracta.MHJAsociacion} instances.
+	 * This keeps track of the one adapter used for all {@link abstracta.MKJAsociacion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MHJAsociacionItemProvider mhjAsociacionItemProvider;
+	protected MKJAsociacionItemProvider mkjAsociacionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link abstracta.MHJAsociacion}.
+	 * This creates an adapter for a {@link abstracta.MKJAsociacion}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMHJAsociacionAdapter() {
-		if (mhjAsociacionItemProvider == null) {
-			mhjAsociacionItemProvider = new MHJAsociacionItemProvider(this);
+	public Adapter createMKJAsociacionAdapter() {
+		if (mkjAsociacionItemProvider == null) {
+			mkjAsociacionItemProvider = new MKJAsociacionItemProvider(this);
 		}
 
-		return mhjAsociacionItemProvider;
+		return mkjAsociacionItemProvider;
 	}
 
 	/**
@@ -429,7 +429,7 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 		if (mkjAtributoItemProvider != null) mkjAtributoItemProvider.dispose();
 		if (mkjMetodoItemProvider != null) mkjMetodoItemProvider.dispose();
 		if (mkjRelacionItemProvider != null) mkjRelacionItemProvider.dispose();
-		if (mhjAsociacionItemProvider != null) mhjAsociacionItemProvider.dispose();
+		if (mkjAsociacionItemProvider != null) mkjAsociacionItemProvider.dispose();
 		if (mkjContainmentItemProvider != null) mkjContainmentItemProvider.dispose();
 		if (mkjAgregacionItemProvider != null) mkjAgregacionItemProvider.dispose();
 		if (mkjHerenciaItemProvider != null) mkjHerenciaItemProvider.dispose();

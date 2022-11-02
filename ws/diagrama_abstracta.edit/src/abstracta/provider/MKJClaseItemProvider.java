@@ -229,7 +229,7 @@ public class MKJClaseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(AbstractaPackage.Literals.MKJ_CLASE__RELACIONES,
-				 AbstractaFactory.eINSTANCE.createMHJAsociacion()));
+				 AbstractaFactory.eINSTANCE.createMKJAsociacion()));
 
 		newChildDescriptors.add
 			(createChildParameter

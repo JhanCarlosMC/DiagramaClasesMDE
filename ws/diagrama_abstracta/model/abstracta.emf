@@ -9,6 +9,12 @@ class ModelFactory{
 	val MKJPaquete[*] paquetes;
 	ref MKJClase[*] listaTodasLasClases;
 	ref MKJPaquete[*] listaTodosLosPaquetes;
+
+    ref MKJAsociacion[*] listaAsociaciones;
+    ref MKJContainment[*] listaConteiments;
+    ref MKJAgregacion[*] listaAgregaciones;
+    ref MKJHerencia[*] listaHerencias;
+    ref MKJInterface[*] listaInterfaces;
 }
 
 class MKJPaquete{
@@ -58,7 +64,7 @@ class MKJRelacion {
     ref MKJClase target;
 }
 
-class MHJAsociacion extends MKJRelacion{
+class MKJAsociacion extends MKJRelacion{
 	
 }
 

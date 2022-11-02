@@ -6,6 +6,7 @@ import abstracta.AbstractaFactory;
 import abstracta.AbstractaPackage;
 import abstracta.MHJAsociacion;
 import abstracta.MKJAgregacion;
+import abstracta.MKJAsociacion;
 import abstracta.MKJAtributo;
 import abstracta.MKJClase;
 import abstracta.MKJContainment;
@@ -77,7 +78,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mhjAsociacionEClass = null;
+	private EClass mkjAsociacionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +221,51 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 */
 	public EReference getModelFactory_ListaTodosLosPaquetes() {
 		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelFactory_ListaAsociaciones() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelFactory_ListaConteiments() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelFactory_ListaAgregaciones() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelFactory_ListaHerencias() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelFactory_ListaInterfaces() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -506,8 +552,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMHJAsociacion() {
-		return mhjAsociacionEClass;
+	public EClass getMKJAsociacion() {
+		return mkjAsociacionEClass;
 	}
 
 	/**
@@ -616,6 +662,11 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(modelFactoryEClass, MODEL_FACTORY__PAQUETES);
 		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_TODAS_LAS_CLASES);
 		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_ASOCIACIONES);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_CONTEIMENTS);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_AGREGACIONES);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_HERENCIAS);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_INTERFACES);
 
 		mkjPaqueteEClass = createEClass(MKJ_PAQUETE);
 		createEAttribute(mkjPaqueteEClass, MKJ_PAQUETE__NOMBRE);
@@ -653,7 +704,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(mkjRelacionEClass, MKJ_RELACION__SOURCE);
 		createEReference(mkjRelacionEClass, MKJ_RELACION__TARGET);
 
-		mhjAsociacionEClass = createEClass(MHJ_ASOCIACION);
+		mkjAsociacionEClass = createEClass(MKJ_ASOCIACION);
 
 		mkjContainmentEClass = createEClass(MKJ_CONTAINMENT);
 
@@ -696,7 +747,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		mhjAsociacionEClass.getESuperTypes().add(this.getMKJRelacion());
+		mkjAsociacionEClass.getESuperTypes().add(this.getMKJRelacion());
 		mkjContainmentEClass.getESuperTypes().add(this.getMKJRelacion());
 		mkjAgregacionEClass.getESuperTypes().add(this.getMKJRelacion());
 
@@ -707,6 +758,11 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getModelFactory_Paquetes(), this.getMKJPaquete(), null, "paquetes", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelFactory_ListaTodasLasClases(), this.getMKJClase(), null, "listaTodasLasClases", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelFactory_ListaTodosLosPaquetes(), this.getMKJPaquete(), null, "listaTodosLosPaquetes", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaAsociaciones(), this.getMKJAsociacion(), null, "listaAsociaciones", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaConteiments(), this.getMKJContainment(), null, "listaConteiments", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaAgregaciones(), this.getMKJAgregacion(), null, "listaAgregaciones", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaHerencias(), this.getMKJHerencia(), null, "listaHerencias", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaInterfaces(), this.getMKJInterface(), null, "listaInterfaces", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjPaqueteEClass, MKJPaquete.class, "MKJPaquete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJPaquete_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJPaquete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -744,7 +800,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getMKJRelacion_Source(), this.getMKJClase(), null, "source", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMKJRelacion_Target(), this.getMKJClase(), null, "target", null, 0, 1, MKJRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mhjAsociacionEClass, MHJAsociacion.class, "MHJAsociacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(mkjAsociacionEClass, MKJAsociacion.class, "MKJAsociacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mkjContainmentEClass, MKJContainment.class, "MKJContainment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

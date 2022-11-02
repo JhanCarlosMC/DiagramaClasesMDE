@@ -111,13 +111,58 @@ public interface AbstractaPackage extends EPackage {
 	int MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES = 4;
 
 	/**
+	 * The feature id for the '<em><b>Lista Asociaciones</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_ASOCIACIONES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Lista Conteiments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_CONTEIMENTS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Lista Agregaciones</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_AGREGACIONES = 7;
+
+	/**
+	 * The feature id for the '<em><b>Lista Herencias</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_HERENCIAS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Lista Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_INTERFACES = 9;
+
+	/**
 	 * The number of structural features of the '<em>Model Factory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FACTORY_FEATURE_COUNT = 5;
+	int MODEL_FACTORY_FEATURE_COUNT = 10;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
@@ -449,14 +494,14 @@ public interface AbstractaPackage extends EPackage {
 	int MKJ_RELACION_FEATURE_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.MHJAsociacionImpl <em>MHJ Asociacion</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.MKJAsociacionImpl <em>MKJ Asociacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.MHJAsociacionImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getMHJAsociacion()
+	 * @see abstracta.impl.MKJAsociacionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getMKJAsociacion()
 	 * @generated
 	 */
-	int MHJ_ASOCIACION = 6;
+	int MKJ_ASOCIACION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -465,7 +510,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__NOMBRE = MKJ_RELACION__NOMBRE;
+	int MKJ_ASOCIACION__NOMBRE = MKJ_RELACION__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad1</b></em>' attribute.
@@ -474,7 +519,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
+	int MKJ_ASOCIACION__MULTIPLICIDAD1 = MKJ_RELACION__MULTIPLICIDAD1;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad2</b></em>' attribute.
@@ -483,7 +528,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
+	int MKJ_ASOCIACION__MULTIPLICIDAD2 = MKJ_RELACION__MULTIPLICIDAD2;
 
 	/**
 	 * The feature id for the '<em><b>Rol1</b></em>' attribute.
@@ -492,7 +537,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__ROL1 = MKJ_RELACION__ROL1;
+	int MKJ_ASOCIACION__ROL1 = MKJ_RELACION__ROL1;
 
 	/**
 	 * The feature id for the '<em><b>Rol2</b></em>' attribute.
@@ -501,7 +546,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__ROL2 = MKJ_RELACION__ROL2;
+	int MKJ_ASOCIACION__ROL2 = MKJ_RELACION__ROL2;
 
 	/**
 	 * The feature id for the '<em><b>Navegabilidad1</b></em>' attribute.
@@ -510,7 +555,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
+	int MKJ_ASOCIACION__NAVEGABILIDAD1 = MKJ_RELACION__NAVEGABILIDAD1;
 
 	/**
 	 * The feature id for the '<em><b>Navegabilidad2</b></em>' attribute.
@@ -519,7 +564,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
+	int MKJ_ASOCIACION__NAVEGABILIDAD2 = MKJ_RELACION__NAVEGABILIDAD2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -528,7 +573,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__SOURCE = MKJ_RELACION__SOURCE;
+	int MKJ_ASOCIACION__SOURCE = MKJ_RELACION__SOURCE;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -537,16 +582,16 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION__TARGET = MKJ_RELACION__TARGET;
+	int MKJ_ASOCIACION__TARGET = MKJ_RELACION__TARGET;
 
 	/**
-	 * The number of structural features of the '<em>MHJ Asociacion</em>' class.
+	 * The number of structural features of the '<em>MKJ Asociacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MHJ_ASOCIACION_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
+	int MKJ_ASOCIACION_FEATURE_COUNT = MKJ_RELACION_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MKJContainmentImpl <em>MKJ Containment</em>}' class.
@@ -889,6 +934,61 @@ public interface AbstractaPackage extends EPackage {
 	EReference getModelFactory_ListaTodosLosPaquetes();
 
 	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaAsociaciones <em>Lista Asociaciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Asociaciones</em>'.
+	 * @see abstracta.ModelFactory#getListaAsociaciones()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaAsociaciones();
+
+	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaConteiments <em>Lista Conteiments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Conteiments</em>'.
+	 * @see abstracta.ModelFactory#getListaConteiments()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaConteiments();
+
+	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaAgregaciones <em>Lista Agregaciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Agregaciones</em>'.
+	 * @see abstracta.ModelFactory#getListaAgregaciones()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaAgregaciones();
+
+	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaHerencias <em>Lista Herencias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Herencias</em>'.
+	 * @see abstracta.ModelFactory#getListaHerencias()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaHerencias();
+
+	/**
+	 * Returns the meta object for the reference list '{@link abstracta.ModelFactory#getListaInterfaces <em>Lista Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Interfaces</em>'.
+	 * @see abstracta.ModelFactory#getListaInterfaces()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaInterfaces();
+
+	/**
 	 * Returns the meta object for class '{@link abstracta.MKJPaquete <em>MKJ Paquete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1225,14 +1325,14 @@ public interface AbstractaPackage extends EPackage {
 	EReference getMKJRelacion_Target();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.MHJAsociacion <em>MHJ Asociacion</em>}'.
+	 * Returns the meta object for class '{@link abstracta.MKJAsociacion <em>MKJ Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MHJ Asociacion</em>'.
-	 * @see abstracta.MHJAsociacion
+	 * @return the meta object for class '<em>MKJ Asociacion</em>'.
+	 * @see abstracta.MKJAsociacion
 	 * @generated
 	 */
-	EClass getMHJAsociacion();
+	EClass getMKJAsociacion();
 
 	/**
 	 * Returns the meta object for class '{@link abstracta.MKJContainment <em>MKJ Containment</em>}'.
@@ -1389,6 +1489,46 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES = eINSTANCE.getModelFactory_ListaTodosLosPaquetes();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Asociaciones</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_ASOCIACIONES = eINSTANCE.getModelFactory_ListaAsociaciones();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Conteiments</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_CONTEIMENTS = eINSTANCE.getModelFactory_ListaConteiments();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Agregaciones</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_AGREGACIONES = eINSTANCE.getModelFactory_ListaAgregaciones();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Herencias</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_HERENCIAS = eINSTANCE.getModelFactory_ListaHerencias();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Interfaces</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_INTERFACES = eINSTANCE.getModelFactory_ListaInterfaces();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJPaqueteImpl <em>MKJ Paquete</em>}' class.
@@ -1649,14 +1789,14 @@ public interface AbstractaPackage extends EPackage {
 		EReference MKJ_RELACION__TARGET = eINSTANCE.getMKJRelacion_Target();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.MHJAsociacionImpl <em>MHJ Asociacion</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.MKJAsociacionImpl <em>MKJ Asociacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.MHJAsociacionImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getMHJAsociacion()
+		 * @see abstracta.impl.MKJAsociacionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getMKJAsociacion()
 		 * @generated
 		 */
-		EClass MHJ_ASOCIACION = eINSTANCE.getMHJAsociacion();
+		EClass MKJ_ASOCIACION = eINSTANCE.getMKJAsociacion();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MKJContainmentImpl <em>MKJ Containment</em>}' class.

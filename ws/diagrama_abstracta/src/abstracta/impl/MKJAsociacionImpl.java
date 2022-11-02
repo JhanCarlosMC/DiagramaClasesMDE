@@ -3,24 +3,24 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.MHJAsociacion;
+import abstracta.MKJAsociacion;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>MHJ Asociacion</b></em>'.
+ * An implementation of the model object '<em><b>MKJ Asociacion</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class MHJAsociacionImpl extends MKJRelacionImpl implements MHJAsociacion {
+public class MKJAsociacionImpl extends MKJRelacionImpl implements MKJAsociacion {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MHJAsociacionImpl() {
+	protected MKJAsociacionImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class MHJAsociacionImpl extends MKJRelacionImpl implements MHJAsociacion 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AbstractaPackage.Literals.MHJ_ASOCIACION;
+		return AbstractaPackage.Literals.MKJ_ASOCIACION;
 	}
 
-} //MHJAsociacionImpl
+} //MKJAsociacionImpl

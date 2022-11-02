@@ -3,17 +3,17 @@
 package abstracta.tests;
 
 import abstracta.AbstractaFactory;
-import abstracta.MHJAsociacion;
+import abstracta.MKJAsociacion;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>MHJ Asociacion</b></em>'.
+ * A test case for the model object '<em><b>MKJ Asociacion</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class MHJAsociacionTest extends MKJRelacionTest {
+public class MKJAsociacionTest extends MKJRelacionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class MHJAsociacionTest extends MKJRelacionTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(MHJAsociacionTest.class);
+		TestRunner.run(MKJAsociacionTest.class);
 	}
 
 	/**
-	 * Constructs a new MHJ Asociacion test case with the given name.
+	 * Constructs a new MKJ Asociacion test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MHJAsociacionTest(String name) {
+	public MKJAsociacionTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this MHJ Asociacion test case.
+	 * Returns the fixture for this MKJ Asociacion test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected MHJAsociacion getFixture() {
-		return (MHJAsociacion)fixture;
+	protected MKJAsociacion getFixture() {
+		return (MKJAsociacion)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class MHJAsociacionTest extends MKJRelacionTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(AbstractaFactory.eINSTANCE.createMHJAsociacion());
+		setFixture(AbstractaFactory.eINSTANCE.createMKJAsociacion());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class MHJAsociacionTest extends MKJRelacionTest {
 		setFixture(null);
 	}
 
-} //MHJAsociacionTest
+} //MKJAsociacionTest

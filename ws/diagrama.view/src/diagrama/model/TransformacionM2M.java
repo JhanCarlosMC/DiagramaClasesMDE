@@ -1,6 +1,7 @@
 package diagrama.model;
 
 import abstracta.AbstractaFactory;
+import abstracta.MKJContainment;
 import concreta.MKJAgregacion;
 import concreta.MKJAsociacion;
 import concreta.MKJAtributo;
@@ -31,6 +32,12 @@ public class TransformacionM2M {
 			modelFactoryAbstracta.getPaquetes().get(0).getPaquetes().clear();
 			modelFactoryAbstracta.getListaTodasLasClases().clear();
 			modelFactoryAbstracta.getListaTodosLosPaquetes().clear();
+			
+			modelFactoryAbstracta.getListaAgregaciones().clear();
+			modelFactoryAbstracta.getListaAsociaciones().clear();
+			modelFactoryAbstracta.getListaConteiments().clear();
+			modelFactoryAbstracta.getListaHerencias().clear();
+			modelFactoryAbstracta.getListaInterfaces().clear();
 		}
 
 		for (MKJDiagramaClases diagramaConcreta : modelFactoryConcreta.getListaDiagramas()) {
@@ -75,6 +82,8 @@ public class TransformacionM2M {
 		relacionSource.setSource(sourceAbstracta);
 		relacionSource.setTarget(targetAbstracta);
 		sourceAbstracta.getInterfaces().add(relacionSource);
+		
+		modelFactoryAbstracta.getListaInterfaces().add((abstracta.MKJInterface) relacionSource);
 
 		abstracta.MKJInterface relacionTarget = AbstractaFactory.eINSTANCE.createMKJInterface();
 		relacionTarget.setSource(sourceAbstracta);
@@ -96,6 +105,8 @@ public class TransformacionM2M {
 		relacionSource.setTarget(targetAbstracta);
 		relacionSource.setSource(sourceAbstracta);
 		sourceAbstracta.getHerencias().add(relacionSource);
+		
+		modelFactoryAbstracta.getListaHerencias().add((abstracta.MKJHerencia) relacionSource);
 
 		abstracta.MKJHerencia relacionTarget = AbstractaFactory.eINSTANCE.createMKJHerencia();
 		relacionTarget.setSource(sourceAbstracta);
@@ -126,6 +137,8 @@ public class TransformacionM2M {
 		relacionSource.setTarget(targetAbstracta);
 
 		sourceAbstracta.getRelaciones().add(relacionSource);
+		
+		modelFactoryAbstracta.getListaConteiments().add((MKJContainment) relacionSource);
 
 		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMKJContainment();
 		relacionTarget.setMultiplicidad1(conteinment.getMultiplicidad2());
@@ -164,8 +177,10 @@ public class TransformacionM2M {
 		relacionSource.setTarget(targetAbstracta);
 
 		sourceAbstracta.getRelaciones().add(relacionSource);
+		
+		modelFactoryAbstracta.getListaAgregaciones().add((abstracta.MKJAgregacion) relacionSource);
 
-		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMHJAsociacion();
+		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMKJAsociacion();
 		relacionTarget.setMultiplicidad1(agregacion.getMultiplicidad2());
 		relacionTarget.setMultiplicidad2(agregacion.getMultiplicidad1());
 		relacionTarget.setNavegabilidad1(agregacion.getNavegabilidad2());
@@ -190,7 +205,7 @@ public class TransformacionM2M {
 		abstracta.MKJClase targetAbstracta = obtenerClaseAbstracta(targetConcreta.getNombre(),
 				targetConcreta.getRuta());
 
-		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMHJAsociacion();
+		abstracta.MKJRelacion relacionSource = AbstractaFactory.eINSTANCE.createMKJAsociacion();
 		relacionSource.setMultiplicidad1(asociacion.getMultiplicidad1());
 		relacionSource.setMultiplicidad2(asociacion.getMultiplicidad2());
 		relacionSource.setNavegabilidad1(asociacion.getNavegabilidad1());
@@ -203,8 +218,10 @@ public class TransformacionM2M {
 		relacionSource.setTarget(targetAbstracta);
 
 		sourceAbstracta.getRelaciones().add(relacionSource);
+		
+		modelFactoryAbstracta.getListaAsociaciones().add((abstracta.MKJAsociacion) relacionSource);
 
-		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMHJAsociacion();
+		abstracta.MKJRelacion relacionTarget = AbstractaFactory.eINSTANCE.createMKJAsociacion();
 		relacionTarget.setMultiplicidad1(asociacion.getMultiplicidad2());
 		relacionTarget.setMultiplicidad2(asociacion.getMultiplicidad1());
 		relacionTarget.setNavegabilidad1(asociacion.getNavegabilidad2());

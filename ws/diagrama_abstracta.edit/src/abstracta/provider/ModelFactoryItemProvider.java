@@ -67,6 +67,11 @@ public class ModelFactoryItemProvider
 			addRutaPropertyDescriptor(object);
 			addListaTodasLasClasesPropertyDescriptor(object);
 			addListaTodosLosPaquetesPropertyDescriptor(object);
+			addListaAsociacionesPropertyDescriptor(object);
+			addListaConteimentsPropertyDescriptor(object);
+			addListaAgregacionesPropertyDescriptor(object);
+			addListaHerenciasPropertyDescriptor(object);
+			addListaInterfacesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -151,6 +156,116 @@ public class ModelFactoryItemProvider
 				 getString("_UI_ModelFactory_listaTodosLosPaquetes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelFactory_listaTodosLosPaquetes_feature", "_UI_ModelFactory_type"),
 				 AbstractaPackage.Literals.MODEL_FACTORY__LISTA_TODOS_LOS_PAQUETES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lista Asociaciones feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addListaAsociacionesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelFactory_listaAsociaciones_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelFactory_listaAsociaciones_feature", "_UI_ModelFactory_type"),
+				 AbstractaPackage.Literals.MODEL_FACTORY__LISTA_ASOCIACIONES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lista Conteiments feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addListaConteimentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelFactory_listaConteiments_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelFactory_listaConteiments_feature", "_UI_ModelFactory_type"),
+				 AbstractaPackage.Literals.MODEL_FACTORY__LISTA_CONTEIMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lista Agregaciones feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addListaAgregacionesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelFactory_listaAgregaciones_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelFactory_listaAgregaciones_feature", "_UI_ModelFactory_type"),
+				 AbstractaPackage.Literals.MODEL_FACTORY__LISTA_AGREGACIONES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lista Herencias feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addListaHerenciasPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelFactory_listaHerencias_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelFactory_listaHerencias_feature", "_UI_ModelFactory_type"),
+				 AbstractaPackage.Literals.MODEL_FACTORY__LISTA_HERENCIAS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lista Interfaces feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addListaInterfacesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelFactory_listaInterfaces_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelFactory_listaInterfaces_feature", "_UI_ModelFactory_type"),
+				 AbstractaPackage.Literals.MODEL_FACTORY__LISTA_INTERFACES,
 				 true,
 				 false,
 				 true,

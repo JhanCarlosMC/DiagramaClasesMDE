@@ -76,13 +76,13 @@ public interface AbstractaFactory extends EFactory {
 	MKJRelacion createMKJRelacion();
 
 	/**
-	 * Returns a new object of class '<em>MHJ Asociacion</em>'.
+	 * Returns a new object of class '<em>MKJ Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MHJ Asociacion</em>'.
+	 * @return a new object of class '<em>MKJ Asociacion</em>'.
 	 * @generated
 	 */
-	MHJAsociacion createMHJAsociacion();
+	MKJAsociacion createMKJAsociacion();
 
 	/**
 	 * Returns a new object of class '<em>MKJ Containment</em>'.

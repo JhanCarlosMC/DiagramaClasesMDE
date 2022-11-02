@@ -92,8 +92,8 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 				return createMKJRelacionAdapter();
 			}
 			@Override
-			public Adapter caseMHJAsociacion(MHJAsociacion object) {
-				return createMHJAsociacionAdapter();
+			public Adapter caseMKJAsociacion(MKJAsociacion object) {
+				return createMKJAsociacionAdapter();
 			}
 			@Override
 			public Adapter caseMKJContainment(MKJContainment object) {
@@ -216,16 +216,16 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.MHJAsociacion <em>MHJ Asociacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.MKJAsociacion <em>MKJ Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.MHJAsociacion
+	 * @see abstracta.MKJAsociacion
 	 * @generated
 	 */
-	public Adapter createMHJAsociacionAdapter() {
+	public Adapter createMKJAsociacionAdapter() {
 		return null;
 	}
 

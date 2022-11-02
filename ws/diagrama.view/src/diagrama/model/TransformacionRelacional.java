@@ -24,10 +24,10 @@ public class TransformacionRelacional {
 
 	public String transformarAbstractaToRelacional() {
 		if (modelFactoryBd.getLstSchema().size() !=0) {
-			System.out.println("Entroooooooooooo");
 			modelFactoryBd.getLstSchema().get(0).getListTables().clear();
 			modelFactoryBd.getLstSchema().clear();
 		}
+		
 		bd.Schema esquemaNuevo = BdFactory.eINSTANCE.createSchema();
 		modelFactoryBd.getLstSchema().add(esquemaNuevo);
 		System.out.println("Se creo el esquema");
@@ -36,12 +36,12 @@ public class TransformacionRelacional {
 			System.out.println("Generando transformación");
 			crearTable(clase, esquemaNuevo);
 		}
-		return "Se ha realizado la transofrmación";
+		return "Se ha realizado la transformación";
 	}
 
 	private void crearTable(abstracta.MKJClase clase, bd.Schema esquemaNuevo) {
 		// TODO Auto-generated method stub
-		String ruta = clase.getRuta();
+		//String ruta = clase.getRuta();
 		String name = clase.getNombre();
 		System.out.println("Creando tablas");
 
@@ -49,9 +49,12 @@ public class TransformacionRelacional {
 		tablaNueva.setName(name);
 		esquemaNuevo.getListTables().add(tablaNueva);
 		System.out.println("tabla " + tablaNueva.getName() + " creada");
+		
 		if(clase.getAtributos().size() > 0) {
 			crearColumnas(clase, tablaNueva);
 		}
+		
+		crearForeignKeys(clase, tablaNueva);
 	}
 	
 	private void crearColumnas(abstracta.MKJClase clase, Table tablaNueva) {
@@ -65,21 +68,67 @@ public class TransformacionRelacional {
 				clavePrimaria.setAutoIncrement(true);
 				tablaNueva.setPrimaryKey(clavePrimaria);
 				System.out.println("columna " + clavePrimaria.getName() + " creada");
-			}else if(atributo.isForeignKey()) {
-				bd.ForeignKey claveForanea = BdFactory.eINSTANCE.createForeignKey();
-				claveForanea.setName(atributo.getNombre());
-				tablaNueva.getListForeignKey().add(claveForanea);
-				System.out.println("columna " + claveForanea.getName() + " creada");
+				
+//			}
+//			else if(atributo.isForeignKey()) {
+//				bd.ForeignKey claveForanea = BdFactory.eINSTANCE.createForeignKey();
+//				claveForanea.setName(atributo.getNombre());
+//				tablaNueva.getListForeignKey().add(claveForanea);
+//				System.out.println("columna " + claveForanea.getName() + " creada");
+				
 			}else {
 				bd.Column columnaNueva = BdFactory.eINSTANCE.createColumn();
 				columnaNueva.setName(atributo.getNombre());
 				tablaNueva.getListColumns().add(columnaNueva);
 				System.out.println("tabla " +columnaNueva.getName() + " creada");
+				
+			}
+		}
+	}
+
+
+	private void crearForeignKeys(abstracta.MKJClase clase, Table tablaNueva) {
+		// TODO Auto-generated method stub
+		if(clase.getRelaciones().size() > 0) {
+			for(abstracta.MKJRelacion relacion: clase.getRelaciones()) {
+				
+				if(relacion.getMultiplicidad1().equals("1")) {
+					bd.ForeignKey claveForanea = BdFactory.eINSTANCE.createForeignKey();
+					
+					for(abstracta.MKJAtributo atributo: relacion.getTarget().getAtributos()) {
+						if(atributo.isPrimaryKey()) {
+							claveForanea.setName(atributo.getNombre());
+							claveForanea.setType("INT");
+							claveForanea.setAutoIncrement(true);
+							break;
+						}
+					}
+
+					tablaNueva.getListForeignKey().add(claveForanea);
+				}
 			}
 		}
 		
-	}
+		if(clase.getHerencias().size() > 0) {
+			for(abstracta.MKJHerencia herencia: clase.getHerencias()) {
+				
+				if(herencia.getSource().getNombre().equals(clase.getNombre())) {
+					bd.ForeignKey claveForanea = BdFactory.eINSTANCE.createForeignKey();
+					
+					for(abstracta.MKJAtributo atributo: herencia.getTarget().getAtributos()) {
+						if(atributo.isPrimaryKey()) {
+							claveForanea.setName(atributo.getNombre());
+							claveForanea.setType("INT");
+							claveForanea.setAutoIncrement(true);
+							break;
+						}
+					}
 
+					tablaNueva.getListForeignKey().add(claveForanea);
+				}
+			}
+		}
+	}
 
 	private abstracta.MKJClase obtenerClaseAbstracta(String name, String ruta) {
 

@@ -10,6 +10,16 @@
         eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaTodosLosPaquetes"
         upperBound="-1" eType="#//MKJPaquete"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaAsociaciones" upperBound="-1"
+        eType="#//MKJAsociacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaConteiments" upperBound="-1"
+        eType="#//MKJContainment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaAgregaciones" upperBound="-1"
+        eType="#//MKJAgregacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaHerencias" upperBound="-1"
+        eType="#//MKJHerencia"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaInterfaces" upperBound="-1"
+        eType="#//MKJInterface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MKJPaquete">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -55,7 +65,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//MKJClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//MKJClase"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MHJAsociacion" eSuperTypes="#//MKJRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MKJAsociacion" eSuperTypes="#//MKJRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="MKJContainment" eSuperTypes="#//MKJRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="MKJAgregacion" eSuperTypes="#//MKJRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="MKJHerencia">

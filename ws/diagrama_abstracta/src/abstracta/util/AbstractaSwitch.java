@@ -102,10 +102,10 @@ public class AbstractaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AbstractaPackage.MHJ_ASOCIACION: {
-				MHJAsociacion mhjAsociacion = (MHJAsociacion)theEObject;
-				T result = caseMHJAsociacion(mhjAsociacion);
-				if (result == null) result = caseMKJRelacion(mhjAsociacion);
+			case AbstractaPackage.MKJ_ASOCIACION: {
+				MKJAsociacion mkjAsociacion = (MKJAsociacion)theEObject;
+				T result = caseMKJAsociacion(mkjAsociacion);
+				if (result == null) result = caseMKJRelacion(mkjAsociacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -230,17 +230,17 @@ public class AbstractaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MHJ Asociacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>MKJ Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MHJ Asociacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>MKJ Asociacion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMHJAsociacion(MHJAsociacion object) {
+	public T caseMKJAsociacion(MKJAsociacion object) {
 		return null;
 	}
 
