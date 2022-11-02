@@ -69,16 +69,15 @@ public class TransformacionRelacional {
 				tablaNueva.setPrimaryKey(clavePrimaria);
 				System.out.println("columna " + clavePrimaria.getName() + " creada");
 				
-//			}
-//			else if(atributo.isForeignKey()) {
-//				bd.ForeignKey claveForanea = BdFactory.eINSTANCE.createForeignKey();
-//				claveForanea.setName(atributo.getNombre());
-//				tablaNueva.getListForeignKey().add(claveForanea);
-//				System.out.println("columna " + claveForanea.getName() + " creada");
-				
 			}else {
 				bd.Column columnaNueva = BdFactory.eINSTANCE.createColumn();
 				columnaNueva.setName(atributo.getNombre());
+
+				columnaNueva.setNotNull(atributo.isNotNull());
+				columnaNueva.setAutoIncrement(atributo.isAutoIncrement());
+				columnaNueva.setUniqueData(atributo.isUniqueData());
+				columnaNueva.setType(atributo.getType());
+				
 				tablaNueva.getListColumns().add(columnaNueva);
 				System.out.println("tabla " +columnaNueva.getName() + " creada");
 				

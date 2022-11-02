@@ -249,6 +249,11 @@ public class TransformacionM2M {
 			for (MKJAtributo atributo : clase.getAtributos()) {
 				abstracta.MKJAtributo mkjAtributo = AbstractaFactory.eINSTANCE.createMKJAtributo();
 				mkjAtributo.setNombre(atributo.getNombre());
+				mkjAtributo.setNotNull(atributo.isNotNull());
+				mkjAtributo.setAutoIncrement(atributo.isAutoIncrement());
+				mkjAtributo.setUniqueData(atributo.isUniqueData());
+				mkjAtributo.setType(atributo.getType());
+				
 				if(atributo.isPrimaryKey()) {
 					mkjAtributo.setPrimaryKey(true);
 				}

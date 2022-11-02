@@ -426,6 +426,42 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMKJAtributo_Type() {
+		return (EAttribute)mkjAtributoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJAtributo_NotNull() {
+		return (EAttribute)mkjAtributoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJAtributo_UniqueData() {
+		return (EAttribute)mkjAtributoEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMKJAtributo_AutoIncrement() {
+		return (EAttribute)mkjAtributoEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMKJMetodo() {
 		return mkjMetodoEClass;
 	}
@@ -687,6 +723,10 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__NOMBRE);
 		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__PRIMARY_KEY);
 		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__FOREIGN_KEY);
+		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__TYPE);
+		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__NOT_NULL);
+		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__UNIQUE_DATA);
+		createEAttribute(mkjAtributoEClass, MKJ_ATRIBUTO__AUTO_INCREMENT);
 
 		mkjMetodoEClass = createEClass(MKJ_METODO);
 		createEAttribute(mkjMetodoEClass, MKJ_METODO__NOMBRE);
@@ -783,6 +823,10 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getMKJAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJAtributo_PrimaryKey(), ecorePackage.getEBoolean(), "primaryKey", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMKJAtributo_ForeignKey(), ecorePackage.getEBoolean(), "foreignKey", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJAtributo_Type(), ecorePackage.getEString(), "type", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJAtributo_NotNull(), ecorePackage.getEBoolean(), "notNull", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJAtributo_UniqueData(), ecorePackage.getEBoolean(), "uniqueData", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMKJAtributo_AutoIncrement(), ecorePackage.getEBoolean(), "autoIncrement", null, 0, 1, MKJAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mkjMetodoEClass, MKJMetodo.class, "MKJMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMKJMetodo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MKJMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

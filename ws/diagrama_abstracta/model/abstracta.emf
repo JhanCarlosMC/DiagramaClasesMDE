@@ -41,6 +41,11 @@ class MKJAtributo {
 	attr String nombre;
 	attr boolean primaryKey;
 	attr boolean foreignKey;
+	
+	attr String type;
+	attr boolean notNull;
+	attr boolean uniqueData;
+	attr boolean autoIncrement;
 }
 
 class MKJMetodo {

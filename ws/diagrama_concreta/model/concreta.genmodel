@@ -35,6 +35,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/primaryKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/foreignKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/notNull"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/uniqueData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJAtributo/autoIncrement"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//MKJMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MKJMetodo/nombre"/>

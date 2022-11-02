@@ -2,32 +2,31 @@
 <concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
   <listaDiagramas nombre="Diagrama Colegio">
     <listaClases identificador="1" nombre="Universidad" ruta="Root/Principal/">
-      <atributos nombre="nombre"/>
-      <atributos nombre="direccion"/>
-      <atributos nombre="idU" primaryKey="true"/>
+      <atributos nombre="nombre" type="VARCHAR"/>
+      <atributos nombre="direccion" type="VARCHAR"/>
+      <atributos nombre="idU" primaryKey="true" type=""/>
     </listaClases>
     <listaClases identificador="3" nombre="Profesor" ruta="Root/Secundario/">
-      <atributos nombre="nroTarjetaProfesional"/>
-      <atributos nombre="aniosExperiencia"/>
-      <atributos nombre="especialidad"/>
+      <atributos nombre="nroTarjetaProfesional" type="VARCHAR"/>
+      <atributos nombre="aniosExperiencia" type="INT"/>
+      <atributos nombre="especialidad" type="VARCHAR"/>
       <atributos nombre="idProfesor" primaryKey="true"/>
       <metodos nombre="obtenerEstudiantes" semantics="# Aqui va la semqntica del codigo"/>
     </listaClases>
     <listaClases identificador="4" nombre="Estudiante" ruta="Root/Secundario/">
-      <atributos nombre="colegioEgresado"/>
-      <atributos nombre="sisben"/>
+      <atributos nombre="colegioEgresado" type="VARCHAR"/>
+      <atributos nombre="sisben" type="VARCHAR"/>
       <atributos nombre="semestre"/>
       <atributos nombre="idEstudiante" primaryKey="true"/>
     </listaClases>
     <listaClases identificador="5" nombre="Programa" ruta="Root/Principal/">
-      <atributos nombre="nombre"/>
+      <atributos nombre="nombre" type="VARCHAR"/>
       <atributos nombre="codigo"/>
       <atributos nombre="idPrograma" primaryKey="true"/>
-      <atributos nombre="idU"/>
     </listaClases>
     <listaClases identificador="2" nombre="Persona" ruta="Root/Principal/">
-      <atributos nombre="nombre"/>
-      <atributos nombre="edad"/>
+      <atributos nombre="nombre" type="VARCHAR"/>
+      <atributos nombre="edad" type="INT"/>
       <atributos nombre="documentoIdentidad" primaryKey="true"/>
     </listaClases>
     <listaPaquetes nombre="Principal" ruta="Root/"/>

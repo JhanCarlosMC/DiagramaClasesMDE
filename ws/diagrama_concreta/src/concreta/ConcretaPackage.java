@@ -331,13 +331,49 @@ public interface ConcretaPackage extends EPackage {
 	int MKJ_ATRIBUTO__FOREIGN_KEY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ATRIBUTO__TYPE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Not Null</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ATRIBUTO__NOT_NULL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Unique Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ATRIBUTO__UNIQUE_DATA = 5;
+
+	/**
+	 * The feature id for the '<em><b>Auto Increment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MKJ_ATRIBUTO__AUTO_INCREMENT = 6;
+
+	/**
 	 * The number of structural features of the '<em>MKJ Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MKJ_ATRIBUTO_FEATURE_COUNT = 3;
+	int MKJ_ATRIBUTO_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.
@@ -1124,6 +1160,50 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMKJAtributo_ForeignKey();
 
 	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see concreta.MKJAtributo#getType()
+	 * @see #getMKJAtributo()
+	 * @generated
+	 */
+	EAttribute getMKJAtributo_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#isNotNull <em>Not Null</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Not Null</em>'.
+	 * @see concreta.MKJAtributo#isNotNull()
+	 * @see #getMKJAtributo()
+	 * @generated
+	 */
+	EAttribute getMKJAtributo_NotNull();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#isUniqueData <em>Unique Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unique Data</em>'.
+	 * @see concreta.MKJAtributo#isUniqueData()
+	 * @see #getMKJAtributo()
+	 * @generated
+	 */
+	EAttribute getMKJAtributo_UniqueData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link concreta.MKJAtributo#isAutoIncrement <em>Auto Increment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Increment</em>'.
+	 * @see concreta.MKJAtributo#isAutoIncrement()
+	 * @see #getMKJAtributo()
+	 * @generated
+	 */
+	EAttribute getMKJAtributo_AutoIncrement();
+
+	/**
 	 * Returns the meta object for class '{@link concreta.MKJMetodo <em>MKJ Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1652,6 +1732,38 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MKJ_ATRIBUTO__FOREIGN_KEY = eINSTANCE.getMKJAtributo_ForeignKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_ATRIBUTO__TYPE = eINSTANCE.getMKJAtributo_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Not Null</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_ATRIBUTO__NOT_NULL = eINSTANCE.getMKJAtributo_NotNull();
+
+		/**
+		 * The meta object literal for the '<em><b>Unique Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_ATRIBUTO__UNIQUE_DATA = eINSTANCE.getMKJAtributo_UniqueData();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Increment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MKJ_ATRIBUTO__AUTO_INCREMENT = eINSTANCE.getMKJAtributo_AutoIncrement();
 
 		/**
 		 * The meta object literal for the '{@link concreta.impl.MKJMetodoImpl <em>MKJ Metodo</em>}' class.

@@ -36,6 +36,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/primaryKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/foreignKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/notNull"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/uniqueData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJAtributo/autoIncrement"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//MKJMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//MKJMetodo/nombre"/>

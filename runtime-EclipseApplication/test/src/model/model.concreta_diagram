@@ -149,13 +149,6 @@
         <element xmi:type="concreta:MKJAtributo" href="model.concreta#//@listaDiagramas.0/@listaClases.3/@atributos.2"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sV2sY1ktEe2iCu-vPBVyPQ"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_z4leAFktEe2iCu-vPBVyPQ" type="3001">
-        <children xmi:type="notation:DecorationNode" xmi:id="_z4leBFktEe2iCu-vPBVyPQ" type="5001"/>
-        <styles xmi:type="notation:DescriptionStyle" xmi:id="_z4leAVktEe2iCu-vPBVyPQ"/>
-        <styles xmi:type="notation:FontStyle" xmi:id="_z4leAlktEe2iCu-vPBVyPQ" fontName="Segoe UI"/>
-        <element xmi:type="concreta:MKJAtributo" href="model.concreta#//@listaDiagramas.0/@listaClases.3/@atributos.3"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z4leA1ktEe2iCu-vPBVyPQ"/>
-      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_JSriXjuFEe2wzo5DaoQiBQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_JSriXzuFEe2wzo5DaoQiBQ"/>
     </children>

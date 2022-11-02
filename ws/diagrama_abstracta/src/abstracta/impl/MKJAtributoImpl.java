@@ -23,6 +23,10 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link abstracta.impl.MKJAtributoImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.MKJAtributoImpl#isPrimaryKey <em>Primary Key</em>}</li>
  *   <li>{@link abstracta.impl.MKJAtributoImpl#isForeignKey <em>Foreign Key</em>}</li>
+ *   <li>{@link abstracta.impl.MKJAtributoImpl#getType <em>Type</em>}</li>
+ *   <li>{@link abstracta.impl.MKJAtributoImpl#isNotNull <em>Not Null</em>}</li>
+ *   <li>{@link abstracta.impl.MKJAtributoImpl#isUniqueData <em>Unique Data</em>}</li>
+ *   <li>{@link abstracta.impl.MKJAtributoImpl#isAutoIncrement <em>Auto Increment</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +91,86 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	 * @ordered
 	 */
 	protected boolean foreignKey = FOREIGN_KEY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNotNull() <em>Not Null</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNotNull()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NOT_NULL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNotNull() <em>Not Null</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNotNull()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean notNull = NOT_NULL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isUniqueData() <em>Unique Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUniqueData()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean UNIQUE_DATA_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUniqueData() <em>Unique Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUniqueData()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean uniqueData = UNIQUE_DATA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isAutoIncrement() <em>Auto Increment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoIncrement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean AUTO_INCREMENT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAutoIncrement() <em>Auto Increment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoIncrement()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean autoIncrement = AUTO_INCREMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +259,90 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_ATRIBUTO__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNotNull() {
+		return notNull;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNotNull(boolean newNotNull) {
+		boolean oldNotNull = notNull;
+		notNull = newNotNull;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_ATRIBUTO__NOT_NULL, oldNotNull, notNull));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUniqueData() {
+		return uniqueData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUniqueData(boolean newUniqueData) {
+		boolean oldUniqueData = uniqueData;
+		uniqueData = newUniqueData;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_ATRIBUTO__UNIQUE_DATA, oldUniqueData, uniqueData));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAutoIncrement() {
+		return autoIncrement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAutoIncrement(boolean newAutoIncrement) {
+		boolean oldAutoIncrement = autoIncrement;
+		autoIncrement = newAutoIncrement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MKJ_ATRIBUTO__AUTO_INCREMENT, oldAutoIncrement, autoIncrement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +352,14 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 				return isPrimaryKey();
 			case AbstractaPackage.MKJ_ATRIBUTO__FOREIGN_KEY:
 				return isForeignKey();
+			case AbstractaPackage.MKJ_ATRIBUTO__TYPE:
+				return getType();
+			case AbstractaPackage.MKJ_ATRIBUTO__NOT_NULL:
+				return isNotNull();
+			case AbstractaPackage.MKJ_ATRIBUTO__UNIQUE_DATA:
+				return isUniqueData();
+			case AbstractaPackage.MKJ_ATRIBUTO__AUTO_INCREMENT:
+				return isAutoIncrement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +380,18 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 				return;
 			case AbstractaPackage.MKJ_ATRIBUTO__FOREIGN_KEY:
 				setForeignKey((Boolean)newValue);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__TYPE:
+				setType((String)newValue);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__NOT_NULL:
+				setNotNull((Boolean)newValue);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__UNIQUE_DATA:
+				setUniqueData((Boolean)newValue);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__AUTO_INCREMENT:
+				setAutoIncrement((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +414,18 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 			case AbstractaPackage.MKJ_ATRIBUTO__FOREIGN_KEY:
 				setForeignKey(FOREIGN_KEY_EDEFAULT);
 				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__NOT_NULL:
+				setNotNull(NOT_NULL_EDEFAULT);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__UNIQUE_DATA:
+				setUniqueData(UNIQUE_DATA_EDEFAULT);
+				return;
+			case AbstractaPackage.MKJ_ATRIBUTO__AUTO_INCREMENT:
+				setAutoIncrement(AUTO_INCREMENT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +444,14 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 				return primaryKey != PRIMARY_KEY_EDEFAULT;
 			case AbstractaPackage.MKJ_ATRIBUTO__FOREIGN_KEY:
 				return foreignKey != FOREIGN_KEY_EDEFAULT;
+			case AbstractaPackage.MKJ_ATRIBUTO__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case AbstractaPackage.MKJ_ATRIBUTO__NOT_NULL:
+				return notNull != NOT_NULL_EDEFAULT;
+			case AbstractaPackage.MKJ_ATRIBUTO__UNIQUE_DATA:
+				return uniqueData != UNIQUE_DATA_EDEFAULT;
+			case AbstractaPackage.MKJ_ATRIBUTO__AUTO_INCREMENT:
+				return autoIncrement != AUTO_INCREMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,6 +472,14 @@ public class MKJAtributoImpl extends EObjectImpl implements MKJAtributo {
 		result.append(primaryKey);
 		result.append(", foreignKey: ");
 		result.append(foreignKey);
+		result.append(", type: ");
+		result.append(type);
+		result.append(", notNull: ");
+		result.append(notNull);
+		result.append(", uniqueData: ");
+		result.append(uniqueData);
+		result.append(", autoIncrement: ");
+		result.append(autoIncrement);
 		result.append(')');
 		return result.toString();
 	}

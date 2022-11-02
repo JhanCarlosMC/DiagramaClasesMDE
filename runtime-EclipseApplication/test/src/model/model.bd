@@ -3,35 +3,34 @@
   <lstSchema>
     <listTables name="Universidad">
       <primaryKey type="INT" name="idU" autoIncrement="true"/>
-      <listColumns name="nombre"/>
-      <listColumns name="direccion"/>
+      <listColumns type="VARCHAR" name="nombre"/>
+      <listColumns type="VARCHAR" name="direccion"/>
     </listTables>
     <listTables name="Profesor">
       <primaryKey type="INT" name="idProfesor" autoIncrement="true"/>
-      <listColumns name="nroTarjetaProfesional"/>
-      <listColumns name="aniosExperiencia"/>
-      <listColumns name="especialidad"/>
-      <listForeignKey name="documentoIdentidad"/>
+      <listColumns type="VARCHAR" name="nroTarjetaProfesional"/>
+      <listColumns type="INT" name="aniosExperiencia"/>
+      <listColumns type="VARCHAR" name="especialidad"/>
+      <listForeignKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
     </listTables>
     <listTables name="Estudiante">
       <primaryKey type="INT" name="idEstudiante" autoIncrement="true"/>
-      <listColumns name="colegioEgresado"/>
-      <listColumns name="sisben"/>
+      <listColumns type="VARCHAR" name="colegioEgresado"/>
+      <listColumns type="VARCHAR" name="sisben"/>
       <listColumns name="semestre"/>
-      <listForeignKey name="documentoIdentidad"/>
+      <listForeignKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
     </listTables>
     <listTables name="Programa">
       <primaryKey type="INT" name="idPrograma" autoIncrement="true"/>
-      <listColumns name="nombre"/>
+      <listColumns type="VARCHAR" name="nombre"/>
       <listColumns name="codigo"/>
-      <listColumns name="idU"/>
       <listForeignKey type="INT" name="idEstudiante" autoIncrement="true"/>
       <listForeignKey type="INT" name="idU" autoIncrement="true"/>
     </listTables>
     <listTables name="Persona">
       <primaryKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
-      <listColumns name="nombre"/>
-      <listColumns name="edad"/>
+      <listColumns type="VARCHAR" name="nombre"/>
+      <listColumns type="INT" name="edad"/>
       <listForeignKey type="INT" name="idU" autoIncrement="true"/>
     </listTables>
   </lstSchema>

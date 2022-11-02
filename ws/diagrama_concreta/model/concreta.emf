@@ -47,6 +47,11 @@ class MKJAtributo {
 	attr boolean primaryKey;
 	attr boolean foreignKey;
 	
+	attr String type;
+	attr boolean notNull;
+	attr boolean uniqueData;
+	attr boolean autoIncrement;
+	
 }
 
 @gmf.node(label = "nombre",border.color = "118,255,102",color = "118,255,102")

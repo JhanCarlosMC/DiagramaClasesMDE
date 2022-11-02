@@ -63,6 +63,10 @@ public class MKJAtributoItemProvider
 			addNombrePropertyDescriptor(object);
 			addPrimaryKeyPropertyDescriptor(object);
 			addForeignKeyPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
+			addNotNullPropertyDescriptor(object);
+			addUniqueDataPropertyDescriptor(object);
+			addAutoIncrementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -134,6 +138,94 @@ public class MKJAtributoItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJAtributo_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJAtributo_type_feature", "_UI_MKJAtributo_type"),
+				 ConcretaPackage.Literals.MKJ_ATRIBUTO__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Not Null feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNotNullPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJAtributo_notNull_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJAtributo_notNull_feature", "_UI_MKJAtributo_type"),
+				 ConcretaPackage.Literals.MKJ_ATRIBUTO__NOT_NULL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Unique Data feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUniqueDataPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJAtributo_uniqueData_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJAtributo_uniqueData_feature", "_UI_MKJAtributo_type"),
+				 ConcretaPackage.Literals.MKJ_ATRIBUTO__UNIQUE_DATA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Auto Increment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAutoIncrementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MKJAtributo_autoIncrement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MKJAtributo_autoIncrement_feature", "_UI_MKJAtributo_type"),
+				 ConcretaPackage.Literals.MKJ_ATRIBUTO__AUTO_INCREMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MKJAtributo.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,6 +266,10 @@ public class MKJAtributoItemProvider
 			case ConcretaPackage.MKJ_ATRIBUTO__NOMBRE:
 			case ConcretaPackage.MKJ_ATRIBUTO__PRIMARY_KEY:
 			case ConcretaPackage.MKJ_ATRIBUTO__FOREIGN_KEY:
+			case ConcretaPackage.MKJ_ATRIBUTO__TYPE:
+			case ConcretaPackage.MKJ_ATRIBUTO__NOT_NULL:
+			case ConcretaPackage.MKJ_ATRIBUTO__UNIQUE_DATA:
+			case ConcretaPackage.MKJ_ATRIBUTO__AUTO_INCREMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
