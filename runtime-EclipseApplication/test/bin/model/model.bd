@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd">
-  <lstSchema>
+  <lstSchema name="Script">
     <listTables name="Universidad">
       <primaryKey type="INT" name="idU" autoIncrement="true"/>
       <listColumns type="VARCHAR" name="nombre"/>
-      <listColumns type="VARCHAR" name="direccion"/>
+      <listColumns type="VARCHAR" name="direccion" notNull="true"/>
     </listTables>
     <listTables name="Profesor">
       <primaryKey type="INT" name="idProfesor" autoIncrement="true"/>

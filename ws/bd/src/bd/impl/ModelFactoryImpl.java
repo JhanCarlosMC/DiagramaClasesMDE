@@ -6,6 +6,7 @@ import bd.BdPackage;
 import bd.ModelFactory;
 import bd.Schema;
 
+import bd.Table;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -29,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link bd.impl.ModelFactoryImpl#getLstSchema <em>Lst Schema</em>}</li>
+ *   <li>{@link bd.impl.ModelFactoryImpl#getListaTablas <em>Lista Tablas</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +46,16 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 * @ordered
 	 */
 	protected EList<Schema> lstSchema;
+
+	/**
+	 * The cached value of the '{@link #getListaTablas() <em>Lista Tablas</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getListaTablas()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Table> listaTablas;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,6 +93,18 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Table> getListaTablas() {
+		if (listaTablas == null) {
+			listaTablas = new EObjectResolvingEList<Table>(Table.class, this, BdPackage.MODEL_FACTORY__LISTA_TABLAS);
+		}
+		return listaTablas;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -99,6 +124,8 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 		switch (featureID) {
 			case BdPackage.MODEL_FACTORY__LST_SCHEMA:
 				return getLstSchema();
+			case BdPackage.MODEL_FACTORY__LISTA_TABLAS:
+				return getListaTablas();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +143,10 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 				getLstSchema().clear();
 				getLstSchema().addAll((Collection<? extends Schema>)newValue);
 				return;
+			case BdPackage.MODEL_FACTORY__LISTA_TABLAS:
+				getListaTablas().clear();
+				getListaTablas().addAll((Collection<? extends Table>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +162,9 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 			case BdPackage.MODEL_FACTORY__LST_SCHEMA:
 				getLstSchema().clear();
 				return;
+			case BdPackage.MODEL_FACTORY__LISTA_TABLAS:
+				getListaTablas().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,6 +179,8 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 		switch (featureID) {
 			case BdPackage.MODEL_FACTORY__LST_SCHEMA:
 				return lstSchema != null && !lstSchema.isEmpty();
+			case BdPackage.MODEL_FACTORY__LISTA_TABLAS:
+				return listaTablas != null && !listaTablas.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

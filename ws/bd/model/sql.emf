@@ -4,6 +4,8 @@ package bd;
 
 class ModelFactory {
 	 val Schema[*] lstSchema;
+	 
+	 ref Table[*] listaTablas;
 }
 
 @gmf.diagram

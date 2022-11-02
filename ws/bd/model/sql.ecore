@@ -5,6 +5,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lstSchema" upperBound="-1"
         eType="#//Schema" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaTablas" upperBound="-1"
+        eType="#//Table"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Schema">
     <eAnnotations source="gmf.diagram"/>

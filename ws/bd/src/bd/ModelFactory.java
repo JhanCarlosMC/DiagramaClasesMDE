@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link bd.ModelFactory#getLstSchema <em>Lst Schema</em>}</li>
+ *   <li>{@link bd.ModelFactory#getListaTablas <em>Lista Tablas</em>}</li>
  * </ul>
  *
  * @see bd.BdPackage#getModelFactory()
@@ -38,5 +39,21 @@ public interface ModelFactory extends EObject {
 	 * @generated
 	 */
 	EList<Schema> getLstSchema();
+
+	/**
+	 * Returns the value of the '<em><b>Lista Tablas</b></em>' reference list.
+	 * The list contents are of type {@link bd.Table}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lista Tablas</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lista Tablas</em>' reference list.
+	 * @see bd.BdPackage#getModelFactory_ListaTablas()
+	 * @model
+	 * @generated
+	 */
+	EList<Table> getListaTablas();
 
 } // ModelFactory

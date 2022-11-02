@@ -75,13 +75,22 @@ public interface BdPackage extends EPackage {
 	int MODEL_FACTORY__LST_SCHEMA = 0;
 
 	/**
+	 * The feature id for the '<em><b>Lista Tablas</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_TABLAS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Model Factory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FACTORY_FEATURE_COUNT = 1;
+	int MODEL_FACTORY_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link bd.impl.SchemaImpl <em>Schema</em>}' class.
@@ -573,6 +582,17 @@ public interface BdPackage extends EPackage {
 	EReference getModelFactory_LstSchema();
 
 	/**
+	 * Returns the meta object for the reference list '{@link bd.ModelFactory#getListaTablas <em>Lista Tablas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lista Tablas</em>'.
+	 * @see bd.ModelFactory#getListaTablas()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaTablas();
+
+	/**
 	 * Returns the meta object for class '{@link bd.Schema <em>Schema</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1021,6 +1041,14 @@ public interface BdPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODEL_FACTORY__LST_SCHEMA = eINSTANCE.getModelFactory_LstSchema();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Tablas</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_TABLAS = eINSTANCE.getModelFactory_ListaTablas();
 
 		/**
 		 * The meta object literal for the '{@link bd.impl.SchemaImpl <em>Schema</em>}' class.

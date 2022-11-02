@@ -173,5 +173,14 @@ public class ModelFactoryModel {
 		salvarRelacional();
 		
 	}
+	
+	public void generarSQL() {
+		modelFactoryAbstracta = cargarAbstracta();
+		modelFactoryBd = cargarBdAbstracta();
+		
+		TransformacionSQL transformacionSQL = new TransformacionSQL(modelFactoryBd);
+		transformacionSQL.transformarSQL();
+		salvarRelacional();
+	}
 
 }

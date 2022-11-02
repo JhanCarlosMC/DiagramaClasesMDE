@@ -69,7 +69,7 @@ public class GeneratorView extends ViewPart {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
-				mfm.generarM2T();
+				mfm.generarSQL();
 			}
 		});
 		btnGenerarSql.setText("Generar SQL");

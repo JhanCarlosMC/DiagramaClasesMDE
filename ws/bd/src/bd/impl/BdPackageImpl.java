@@ -175,6 +175,15 @@ public class BdPackageImpl extends EPackageImpl implements BdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getModelFactory_ListaTablas() {
+		return (EReference)modelFactoryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSchema() {
 		return schemaEClass;
 	}
@@ -542,6 +551,7 @@ public class BdPackageImpl extends EPackageImpl implements BdPackage {
 		// Create classes and their features
 		modelFactoryEClass = createEClass(MODEL_FACTORY);
 		createEReference(modelFactoryEClass, MODEL_FACTORY__LST_SCHEMA);
+		createEReference(modelFactoryEClass, MODEL_FACTORY__LISTA_TABLAS);
 
 		schemaEClass = createEClass(SCHEMA);
 		createEAttribute(schemaEClass, SCHEMA__NAME);
@@ -623,6 +633,7 @@ public class BdPackageImpl extends EPackageImpl implements BdPackage {
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelFactoryEClass, ModelFactory.class, "ModelFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModelFactory_LstSchema(), this.getSchema(), null, "lstSchema", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelFactory_ListaTablas(), this.getTable(), null, "listaTablas", null, 0, -1, ModelFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSchema_Name(), ecorePackage.getEString(), "name", null, 0, 1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
