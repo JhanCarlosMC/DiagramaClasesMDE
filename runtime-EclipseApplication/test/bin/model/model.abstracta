@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="ASCII"?>
-<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasLasClases="//@paquetes.0/@paquetes.0/@clases.0 //@paquetes.0/@paquetes.1/@clases.0 //@paquetes.0/@paquetes.1/@clases.1 //@paquetes.0/@paquetes.0/@clases.1 //@paquetes.0/@paquetes.0/@clases.2" listaTodosLosPaquetes="//@paquetes.0/@paquetes.0 //@paquetes.0/@paquetes.1" listaAsociaciones="//@paquetes.0/@paquetes.1/@clases.0/@relaciones.0 //@paquetes.0/@paquetes.0/@clases.1/@relaciones.1" listaConteiments="//@paquetes.0/@paquetes.0/@clases.1/@relaciones.2" listaAgregaciones="//@paquetes.0/@paquetes.0/@clases.2/@relaciones.0" listaHerencias="//@paquetes.0/@paquetes.1/@clases.0/@herencias.0 //@paquetes.0/@paquetes.1/@clases.1/@herencias.0">
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasLasClases="//@paquetes.0/@paquetes.0/@clases.0 //@paquetes.0/@paquetes.1/@clases.0 //@paquetes.0/@paquetes.1/@clases.1 //@paquetes.0/@paquetes.0/@clases.1 //@paquetes.0/@paquetes.0/@clases.2" listaTodosLosPaquetes="//@paquetes.0/@paquetes.0 //@paquetes.0/@paquetes.1" listaAsociaciones="//@paquetes.0/@paquetes.1/@clases.0/@relaciones.0 //@paquetes.0/@paquetes.1/@clases.1/@relaciones.0" listaConteiments="//@paquetes.0/@paquetes.0/@clases.1/@relaciones.2" listaAgregaciones="//@paquetes.0/@paquetes.0/@clases.2/@relaciones.0" listaHerencias="//@paquetes.0/@paquetes.1/@clases.0/@herencias.0 //@paquetes.0/@paquetes.1/@clases.1/@herencias.0">
   <paquetes nombre="Root" ruta="">
     <paquetes nombre="Principal" ruta="Root/">
       <clases nombre="Universidad" ruta="Root/Principal/">
         <atributos nombre="nombre" type="VARCHAR"/>
         <atributos nombre="direccion" type="VARCHAR"/>
-        <atributos nombre="idU" primaryKey="true" type=""/>
+        <atributos nombre="idU" primaryKey="true" type="String"/>
         <relaciones xsi:type="abstracta:MKJAsociacion" nombre="uni-personas" multiplicidad1="*" multiplicidad2="1" rol1="listaPersonas" rol2="universidad" navegabilidad1="varias personas pertenecen a una universidad" navegabilidad2="una universidad tiene muchas personas" source="//@paquetes.0/@paquetes.0/@clases.2" target="//@paquetes.0/@paquetes.0/@clases.0"/>
         <relaciones xsi:type="abstracta:MKJContainment" nombre="uni-programas" multiplicidad1="*" multiplicidad2="1" rol1="listaProgramas" rol2="universidad" navegabilidad1="varios programas pertenecen a una universidad" navegabilidad2="una universidad contiene muchos programas" source="//@paquetes.0/@paquetes.0/@clases.1" target="//@paquetes.0/@paquetes.0/@clases.0"/>
       </clases>
       <clases nombre="Programa" ruta="Root/Principal/">
         <atributos nombre="nombre" type="VARCHAR"/>
-        <atributos nombre="codigo"/>
-        <atributos nombre="idPrograma" primaryKey="true"/>
+        <atributos nombre="codigo" type="String"/>
+        <atributos nombre="idPrograma" primaryKey="true" type="String"/>
         <relaciones xsi:type="abstracta:MKJAsociacion" nombre="" multiplicidad1="*" multiplicidad2="*" rol1="ListProfesores" rol2="ListPrograma" navegabilidad1="" navegabilidad2="" source="//@paquetes.0/@paquetes.1/@clases.0" target="//@paquetes.0/@paquetes.0/@clases.1"/>
-        <relaciones xsi:type="abstracta:MKJAsociacion" multiplicidad1="1" multiplicidad2="*" rol1="programa" rol2="ListEstudiantes" source="//@paquetes.0/@paquetes.0/@clases.1" target="//@paquetes.0/@paquetes.1/@clases.1"/>
+        <relaciones xsi:type="abstracta:MKJAsociacion" multiplicidad1="*" multiplicidad2="1" rol1="ListEstudiantes" rol2="programa" source="//@paquetes.0/@paquetes.1/@clases.1" target="//@paquetes.0/@paquetes.0/@clases.1"/>
         <relaciones xsi:type="abstracta:MKJContainment" nombre="uni-programas" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaProgramas" navegabilidad1="una universidad contiene muchos programas" navegabilidad2="varios programas pertenecen a una universidad" source="//@paquetes.0/@paquetes.0/@clases.1" target="//@paquetes.0/@paquetes.0/@clases.0"/>
       </clases>
       <clases nombre="Persona" ruta="Root/Principal/">
         <atributos nombre="nombre" type="VARCHAR"/>
         <atributos nombre="edad" type="INT"/>
-        <atributos nombre="documentoIdentidad" primaryKey="true"/>
+        <atributos nombre="documentoIdentidad" primaryKey="true" type="String"/>
         <relaciones xsi:type="abstracta:MKJAgregacion" nombre="uni-personas" multiplicidad1="1" multiplicidad2="*" rol1="universidad" rol2="listaPersonas" navegabilidad1="una universidad tiene muchas personas" navegabilidad2="varias personas pertenecen a una universidad" source="//@paquetes.0/@paquetes.0/@clases.2" target="//@paquetes.0/@paquetes.0/@clases.0"/>
         <herencias source="//@paquetes.0/@paquetes.1/@clases.0" target="//@paquetes.0/@paquetes.0/@clases.2"/>
         <herencias source="//@paquetes.0/@paquetes.1/@clases.1" target="//@paquetes.0/@paquetes.0/@clases.2"/>
@@ -31,7 +31,7 @@
         <atributos nombre="nroTarjetaProfesional" type="VARCHAR"/>
         <atributos nombre="aniosExperiencia" type="INT"/>
         <atributos nombre="especialidad" type="VARCHAR"/>
-        <atributos nombre="idProfesor" primaryKey="true"/>
+        <atributos nombre="idProfesor" primaryKey="true" type="String"/>
         <metodos nombre="obtenerEstudiantes" semantics="# Aqui va la semqntica del codigo"/>
         <relaciones xsi:type="abstracta:MKJAsociacion" nombre="" multiplicidad1="*" multiplicidad2="*" rol1="ListPrograma" rol2="ListProfesores" navegabilidad1="" navegabilidad2="" source="//@paquetes.0/@paquetes.1/@clases.0" target="//@paquetes.0/@paquetes.0/@clases.1"/>
         <herencias source="//@paquetes.0/@paquetes.1/@clases.0" target="//@paquetes.0/@paquetes.0/@clases.2"/>
@@ -39,9 +39,9 @@
       <clases nombre="Estudiante" ruta="Root/Secundario/">
         <atributos nombre="colegioEgresado" type="VARCHAR"/>
         <atributos nombre="sisben" type="VARCHAR"/>
-        <atributos nombre="semestre"/>
-        <atributos nombre="idEstudiante" primaryKey="true"/>
-        <relaciones xsi:type="abstracta:MKJAsociacion" multiplicidad1="*" multiplicidad2="1" rol1="ListEstudiantes" rol2="programa" source="//@paquetes.0/@paquetes.0/@clases.1" target="//@paquetes.0/@paquetes.1/@clases.1"/>
+        <atributos nombre="semestre" type="Int"/>
+        <atributos nombre="idEstudiante" primaryKey="true" type="String"/>
+        <relaciones xsi:type="abstracta:MKJAsociacion" multiplicidad1="1" multiplicidad2="*" rol1="programa" rol2="ListEstudiantes" source="//@paquetes.0/@paquetes.1/@clases.1" target="//@paquetes.0/@paquetes.0/@clases.1"/>
         <herencias source="//@paquetes.0/@paquetes.1/@clases.1" target="//@paquetes.0/@paquetes.0/@clases.2"/>
       </clases>
     </paquetes>

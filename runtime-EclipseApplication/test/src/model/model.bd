@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="ASCII"?>
-<bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd">
-  <lstSchema>
+<bd:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bd="http://bd" listaTablas="//@lstSchema.0/@listTables.0 //@lstSchema.0/@listTables.1 //@lstSchema.0/@listTables.2 //@lstSchema.0/@listTables.3 //@lstSchema.0/@listTables.4 //@lstSchema.0/@listTables.5">
+  <lstSchema name="Root">
     <listTables name="Universidad">
-      <primaryKey type="INT" name="idU" autoIncrement="true"/>
-      <listColumns type="VARCHAR" name="nombre"/>
-      <listColumns type="VARCHAR" name="direccion"/>
+      <primaryKey type="varchar(10)" name="idU"/>
+      <listColumns type="varchar(150)" name="nombre"/>
+      <listColumns type="varchar(150)" name="direccion"/>
     </listTables>
     <listTables name="Profesor">
-      <primaryKey type="INT" name="idProfesor" autoIncrement="true"/>
-      <listColumns type="VARCHAR" name="nroTarjetaProfesional"/>
+      <primaryKey type="varchar(10)" name="idProfesor"/>
+      <listColumns type="varchar(150)" name="nroTarjetaProfesional"/>
       <listColumns type="INT" name="aniosExperiencia"/>
-      <listColumns type="VARCHAR" name="especialidad"/>
-      <listForeignKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
+      <listColumns type="varchar(150)" name="especialidad"/>
+      <listColumns type="varchar(150)" name="nombre"/>
+      <listColumns type="INT" name="edad"/>
+      <listColumns type="varchar(150)" name="nombre"/>
+      <listColumns type="INT" name="edad"/>
     </listTables>
     <listTables name="Estudiante">
-      <primaryKey type="INT" name="idEstudiante" autoIncrement="true"/>
-      <listColumns type="VARCHAR" name="colegioEgresado"/>
-      <listColumns type="VARCHAR" name="sisben"/>
-      <listColumns name="semestre"/>
-      <listForeignKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
+      <primaryKey type="varchar(10)" name="idEstudiante"/>
+      <listColumns type="varchar(150)" name="colegioEgresado"/>
+      <listColumns type="varchar(150)" name="sisben"/>
+      <listColumns type="integer" name="semestre"/>
+      <listColumns type="varchar(150)" name="nombre"/>
+      <listColumns type="INT" name="edad"/>
+      <listColumns type="varchar(150)" name="nombre"/>
+      <listColumns type="INT" name="edad"/>
+      <listForeignKey type="varchar(60)" name="idPrograma" tableReferenced="//@lstSchema.0/@listTables.3"/>
     </listTables>
     <listTables name="Programa">
-      <primaryKey type="INT" name="idPrograma" autoIncrement="true"/>
-      <listColumns type="VARCHAR" name="nombre"/>
-      <listColumns name="codigo"/>
-      <listForeignKey type="INT" name="idEstudiante" autoIncrement="true" tableReferenced="//@lstSchema.0/@listTables.2"/>
-      <listForeignKey type="INT" name="idU" autoIncrement="true" tableReferenced="//@lstSchema.0/@listTables.0"/>
+      <primaryKey type="varchar(10)" name="idPrograma"/>
+      <listColumns type="varchar(150)" name="nombre"/>
+      <listColumns type="varchar(150)" name="codigo"/>
+      <listForeignKey type="varchar(60)" name="idU" tableReferenced="//@lstSchema.0/@listTables.0"/>
     </listTables>
     <listTables name="Persona">
-      <primaryKey type="INT" name="documentoIdentidad" autoIncrement="true"/>
-      <listColumns type="VARCHAR" name="nombre"/>
+      <primaryKey type="varchar(10)" name="documentoIdentidad"/>
+      <listColumns type="varchar(150)" name="nombre"/>
       <listColumns type="INT" name="edad"/>
-      <listForeignKey type="INT" name="idU" autoIncrement="true" tableReferenced="//@lstSchema.0/@listTables.0"/>
+      <listForeignKey type="varchar(60)" name="idU" tableReferenced="//@lstSchema.0/@listTables.0"/>
+    </listTables>
+    <listTables name="Profesor_Programa">
+      <primaryKey type="integer" name="id"/>
+      <listForeignKey type="varchar(10)" name="idProfesor" notNull="true" tableReferenced="//@lstSchema.0/@listTables.1"/>
+      <listForeignKey type="varchar(10)" name="idPrograma" notNull="true" tableReferenced="//@lstSchema.0/@listTables.3"/>
     </listTables>
   </lstSchema>
 </bd:ModelFactory>
